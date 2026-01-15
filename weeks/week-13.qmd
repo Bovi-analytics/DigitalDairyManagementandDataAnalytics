@@ -11,7 +11,7 @@ editor: visual
 
 # Activities/Tasks 
 -   Lecture (4/21): Integrating data for strategic decision-making 
--   Lecture (4/23): SWOT analysis framework and capstone expectations [provide examples from past years if available] 
+-   Lecture (4/23): SWOT analysis framework and capstone expectations 
 -   Lab (4/23):  
   -   Teams begin synthesizing semester data (milk, reproduction, health, nutrition, economics) 
   -   Develop draft SWOT analysis for CURC 
