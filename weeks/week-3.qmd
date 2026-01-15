@@ -18,7 +18,8 @@ editor: visual
     -   Create visualizations (histograms, time series plots) 
     -   Brainstorm: What questions can these data answer? 
 
-# Due Dates: None (focusing on skill building) 
+# Due Dates: 
+-   None (focusing on skill building) 
 
 # Datasets/Resources 
 -   CURC DHI (Dairy Herd Improvement) records 
