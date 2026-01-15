@@ -1,7 +1,25 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 9: Animal Health & Mastitis Data Analysis "
+subtitle: "Health Data & Mastitis Management "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics 
+-   Somatic cell count (SCC) trends and interpretation 
+-   Disease incidence rates (mastitis, lameness, metabolic disorders) 
+-   Linking health data to milk production losses 
+
+# Activities/Tasks 
+-   Lecture (3/17): Animal health monitoring and data-driven interventions 
+-   Lecture (3/19): SCC interpretation and mastitis economics 
+-   Lab (3/19):  
+    -   Analyze CURC SCC trends over time 
+    -   Calculate mastitis incidence rates 
+    -   Explore correlations between health events and production 
+
+# Due Dates: 
+-   None 
+
+# Datasets/Resources: 
+-   CURC SCC records, disease event logs 
+
