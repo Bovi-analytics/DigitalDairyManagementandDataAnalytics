@@ -1,7 +1,27 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 12: Farm Economics & Data-Driven Decision Making "
+subtitle: "Economic Analysis & Profitability "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics 
+-   Income over feed cost (IOFC) 
+-   Breakeven analysis 
+-   Linking biological data to financial outcomes 
+-   Introduction to decision-support tools 
+
+# Activities/Tasks 
+-   Lecture (4/14): Economics of dairy production: key metrics and data needs 
+-   Lecture (4/16): Case study: Using data to evaluate management changes 
+-   Lab (4/16):  
+    -   Calculate IOFC from CURC data 
+    -   Simple economic modeling exercise (e.g., cost of disease, value of improved reproduction) 
+    -   Discuss ethical considerations in data interpretation
+
+# Due Dates: 
+-   Economics lab worksheet (due start of Week 13) 
+
+# Datasets/Resources 
+-   CURC production and financial summary data 
+-   Milk and feed price data 
+
