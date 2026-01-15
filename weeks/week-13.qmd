@@ -1,7 +1,25 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 13: Data Integration & SWOT Analysis Preparation "
+subtitle: "Synthesizing Data Across Management Areas "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics: 
+-   Building a holistic view of herd performance 
+-   Introduction to SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) 
+-   Preparing data visualizations and summary reports 
+
+# Activities/Tasks 
+-   Lecture (4/21): Integrating data for strategic decision-making 
+-   Lecture (4/23): SWOT analysis framework and capstone expectations [provide examples from past years if available] 
+-   Lab (4/23):  
+  -   Teams begin synthesizing semester data (milk, reproduction, health, nutrition, economics) 
+  -   Develop draft SWOT analysis for CURC 
+  -   Create visual dashboards/summaries (Tableau, or PowerPoint) 
+
+# Due Dates: 
+-   Draft SWOT outline (due start of Week 14) 
+
+# Datasets/Resources: 
+-   All CURC datasets from semester; Tableau/visualization software 
+
