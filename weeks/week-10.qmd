@@ -1,7 +1,25 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 10: Nutrition & Feed Management Data "
+subtitle: "Nutrition & Feeding Records "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics: 
+-   Total mixed ration (TMR) composition and analysis 
+-   Feed intake monitoring 
+-   Body condition scoring (BCS) and relationships to nutrition/production 
+
+# Activities/Tasks 
+-   Lecture (3/24): Nutrition basics and data-driven feeding strategies 
+-   Lecture (3/26): Interpreting feed analysis reports and intake data 
+-   Lab (3/26):  
+    -   CURC Visit #3: Observe feed preparation, delivery, and intake measurement [schedule this early - feeding happens AM] 
+    -   Review CURC feed records and TMR composition data 
+    -   Brainstorm: How do nutrition data inform management decisions? 
+
+# Due Dates: 
+-   Reflection on nutrition systems (due after Spring Break) 
+
+# Datasets/Resources: 
+-   CURC feed composition, intake records, BCS data 
+
