@@ -2,32 +2,57 @@
 title: "Digital Dairy Management and Data Analytics"
 tbl-colwidths: [5,5,15,5,5,5,5,5,5,5]
 --- 
-
 This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.
 
 ::: column-screen-inset-right
 | Week | Date | Topic | Teachers | Prepare | Lecture |
 |:----------:|:-----------|------------|------------|:----------:|:----------:|
-| 1 | 1/20 | Introduction | Dr. Hostens | 📖 | [🖥️](slides/lec-1.html) |
-| 2 | 1/27 | Data science basics | Dr. Hostens | 📖 | [🖥️](slides/lec-2.html) |
-| 3 | 2/3 | Visualisation basics | Dr. Hostens | 📖 | [🖥️](https://prezi.com/view/WqkTyXcILsWRmOvVBM1M/) |
-| 4 | 2/10 | Simple linear regression | Dr. Hostens | 📖 | [🖥️](slides/lec-4.html) |
+| 1 | 1/20 | Introductory Multiple Choice Questions and Inventory Management | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
+| 1 | 1/22 | Syllabus Review and Introduction | Dr. Hostens | 📖 | 🖥️ |
+| 1 | 1/22 | (LAB) CURC Farm Tour & Presentation from CURC Manager | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
+| 2 | 1/27 | Principles of Data Collection and Visualization | Dr. Hostens | 📖 | 🖥️ |
+| 2 | 1/29 | Data Cleaning Workflows and Common Issues | Dr. Hostens | 📖 | 🖥️ |
+| 2 | 1/29 | (LAB) Clean Messy CURC Dataset | Dr. Hostens | 📖 | 🖥️ |
+| 3 | 2/3 | Understanding Milk Production Data and KPIs | Dr. Hostens | 📖 | 🖥️ |
+| 3 | 2/5 | Introduction to R/Python for Data Analysis | Dr. Hostens | 📖 | 🖥️ |
+| 3 | 2/5 | (LAB) Analyze CURC Milk Production Records | Dr. Hostens | 📖 | 🖥️ |
+| 4 | 2/10 | Effective Data Visualization and Communication Strategies | Dr. Hostens | 📖 | 🖥️ |
+| 4 | 2/12 | Student Team Presentations on Milk Production | Dr. Hostens | 📖 | 🖥️ |
+| 4 | 2/12 | (LAB) Peer Evaluation & Discussion | Dr. Hostens | 📖 | 🖥️ |
 | 5 | 2/17 | February break (no class) |  |  |  |
-| 6 | 2/24 | Multiple linear regression | Dr. Hostens and S. Hayu | 📖 | [🖥️](slides/lec-5.html) |
-| 7 | 3/3 | Logistic regression | Dr. Hostens | 📖 | [🖥️](slides/lec-6.html) |
-| 8 | 3/10 | Data joining | Dr. Hostens | 📖 | [🖥️](slides/lec-7.html) |
-| 9 | 3/17 | Data transformations - logical vectors | Dr. Hostens | 📖 | [🖥️](slides/lec-8.html) |
-| 10 | 3/24 | Data transformations - numerical vectors | Dr. Hostens | 📖 | [🖥️](slides/lec-9.html) |
-| 11 | 3/31 | Spring Break (no class) |  |  |  |
-| 12 | 4/7 | Data transformations - datetimes & factors | Dr. Hostens | 📖 | factors =\>[🖥️](slides/lec-10.html) datetimes=\> [🖥️](slides/lec-11.html) |
-| 13 | 4/14 | Decision trees | S. Hayu | 📖 | [🖥️](slides/lec-12.html) |
-| 14 | 4/21 | Regular expressions | Dr. Hostens | 📖 | [🖥️](slides/lec-13.html) |
-| 15 | 4/28 | TBD | TBD | 📖 | 🖥️ |
-| 16 | 5/5 | TBD | TBD | 📖 |  |
-| 17 | 5/12 | TBD | TBD | 📖 |  |
-| 18 | 5/17 | Project presentation & report |  |  |  |
+| 5 | 2/19 | Reproductive Biology Basics and Key Metrics | Dr. Hostens | 📖 | 🖥️ |
+| 5 | 2/19 | (LAB) CURC Visit - Reproductive Management | Dr. Hostens | 📖 | 🖥️ |
+| 6 | 2/24 | Methods for Analyzing Reproductive Performance | Dr. Hostens | 📖 | 🖥️ |
+| 6 | 2/26 | Case Study: Using Reproductive Data to Troubleshoot | Dr. Hostens | 📖 | 🖥️ |
+| 6 | 2/26 | (LAB) Calculate Reproductive Metrics | Dr. Hostens | 📖 | 🖥️ |
+| 7 | 3/3 | Integrating Reproductive Management with Farm Systems | Dr. Hostens | 📖 | 🖥️ |
+| 7 | 3/5 | Student Team Presentations on Reproductive Analysis | Dr. Hostens | 📖 | 🖥️ |
+| 7 | 3/5 | (LAB) Peer Evaluation & CURC Discussion | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/10 | Review Session for Midterm Exam | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/12 | Midterm Exam | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/12 | (LAB) Introduction to CURC Health Records | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/17 | Animal Health Monitoring and Data-Driven Interventions | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/19 | SCC Interpretation and Mastitis Economics | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/19 | (LAB) Analyze CURC SCC Trends | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/24 | Nutrition Basics and Data-Driven Feeding Strategies | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/26 | Interpreting Feed Analysis Reports and Intake Data | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/26 | (LAB) CURC Visit - Feed Systems | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/31 | Spring Break (no class) |  |  |  |
+| 10 | 4/2 | Spring Break (no class) |  |  |  |
+| 11 | 4/7 | Systems Thinking: Connecting Health, Nutrition, and Production | Dr. Hostens | 📖 | 🖥️ |
+| 11 | 4/9 | Student Team Presentations on Health/Nutrition | Dr. Hostens | 📖 | 🖥️ |
+| 11 | 4/9 | (LAB) Peer Evaluation & Group Discussion | Dr. Hostens | 📖 | 🖥️ |
+| 12 | 4/14 | Economics of Dairy Production: Key Metrics and Data Needs | Dr. Hostens | 📖 | 🖥️ |
+| 12 | 4/16 | Case Study: Using Data to Evaluate Management Changes | Dr. Hostens | 📖 | 🖥️ |
+| 12 | 4/16 | (LAB) Calculate IOFC & Economic Modeling | Dr. Hostens | 📖 | 🖥️ |
+| 13 | 4/21 | Integrating Data for Strategic Decision-Making | Dr. Hostens | 📖 | 🖥️ |
+| 13 | 4/23 | SWOT Analysis Framework and Capstone Expectations | Dr. Hostens | 📖 | 🖥️ |
+| 13 | 4/23 | (LAB) Synthesize Data & Draft SWOT | Dr. Hostens | 📖 | 🖥️ |
+| 14 | 4/28 | Effective Communication for Decision-Makers | Dr. Hostens | 📖 | 🖥️ |
+| 14 | 4/30 | Practice Presentations (Internal Peer Review) | Dr. Hostens | 📖 | 🖥️ |
+| 14 | 4/30 | (LAB) Finalize SWOT & Peer Feedback | Dr. Hostens | 📖 | 🖥️ |
+| 15 | 5/5 | Capstone Management Meeting & Course Wrap-Up | Dr. Hostens | 📖 | 🖥️ |
 :::
-
 ```{r echo = FALSE}
 knitr::knit_exit()
 ```
