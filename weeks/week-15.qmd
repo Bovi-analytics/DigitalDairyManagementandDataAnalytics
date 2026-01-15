@@ -1,0 +1,28 @@
+---
+title: "WEEK 15: Capstone Management Meeting & Course Wrap-Up "
+subtitle:Topic: Capstone Management Meeting & Course Reflection 
+editor: visual
+---
+
+# Details/Subtopics: 
+-   Final SWOT analysis presentations to CURC stakeholders 
+-   Q&A and discussion of recommendations 
+-   Course reflection and future applications of data analytics 
+
+# Activities/Tasks 
+-   Capstone Presentations (5/5 AM): [reserve room with good A/V setup - maybe invite dept chair?]  
+    -   Teams present comprehensive SWOT analysis to CURC farm managers and invited guests 
+    -   Include strengths, weaknesses, opportunities, threats, and actionable recommendations 
+    -   Professional format with data visualizations, evidence-based arguments 
+-   Wrap-Up & Reflection (5/5 PM):  
+    -   Stakeholder feedback to students 
+    -   Class discussion: What did we learn? How will you use these skills? 
+    -   Course evaluations 
+
+# Due Dates: Capstone presentations (5/5) 
+-   Graded by instructor and stakeholders (20% of grade) 
+
+# Datasets/Resources: 
+-   Final student SWOT reports and dashboards 
+
+
