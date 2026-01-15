@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 21:24:04 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 21:48:37 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -1336,7 +1336,7 @@
     "href": "index.html",
     "title": "Digital Dairy Management and Data Analytics",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nLecture\n\n\n\n\n1\n1/20\nIntroduction\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/27\nData science basics\nDr. Hostens\n📖\n🖥️\n\n\n3\n2/3\nVisualisation basics\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/10\nSimple linear regression\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/17\nFebruary break (no class)\n\n\n\n\n\n6\n2/24\nMultiple linear regression\nDr. Hostens and S. Hayu\n📖\n🖥️\n\n\n7\n3/3\nLogistic regression\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/10\nData joining\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/17\nData transformations - logical vectors\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/24\nData transformations - numerical vectors\nDr. Hostens\n📖\n🖥️\n\n\n11\n3/31\nSpring Break (no class)\n\n\n\n\n\n12\n4/7\nData transformations - datetimes & factors\nDr. Hostens\n📖\nfactors =&gt;🖥️ datetimes=&gt; 🖥️\n\n\n13\n4/14\nDecision trees\nS. Hayu\n📖\n🖥️\n\n\n14\n4/21\nRegular expressions\nDr. Hostens\n📖\n🖥️\n\n\n15\n4/28\nTBD\nTBD\n📖\n🖥️\n\n\n16\n5/5\nTBD\nTBD\n📖\n\n\n\n17\n5/12\nTBD\nTBD\n📖\n\n\n\n18\n5/17\nProject presentation & report",
+    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nLecture\n\n\n\n\n1\n1/20\nIntroductory Multiple Choice Questions and Inventory Management\nDr. Hostens and Sumit Sharma\n📖\n🖥️\n\n\n1\n1/22\nSyllabus Review and Introduction\nDr. Hostens\n📖\n🖥️\n\n\n1\n1/22\n(LAB) CURC Farm Tour & Presentation from CURC Manager\nDr. Hostens and Sumit Sharma\n📖\n🖥️\n\n\n2\n1/27\nPrinciples of Data Collection and Visualization\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/29\nData Cleaning Workflows and Common Issues\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/29\n(LAB) Clean Messy CURC Dataset\nDr. Hostens\n📖\n🖥️\n\n\n3\n2/3\nUnderstanding Milk Production Data and KPIs\nDr. Hostens\n📖\n🖥️\n\n\n3\n2/5\nIntroduction to R/Python for Data Analysis\nDr. Hostens\n📖\n🖥️\n\n\n3\n2/5\n(LAB) Analyze CURC Milk Production Records\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/10\nEffective Data Visualization and Communication Strategies\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/12\nStudent Team Presentations on Milk Production\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/12\n(LAB) Peer Evaluation & Discussion\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/17\nFebruary break (no class)\n\n\n\n\n\n5\n2/19\nReproductive Biology Basics and Key Metrics\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/19\n(LAB) CURC Visit - Reproductive Management\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/24\nMethods for Analyzing Reproductive Performance\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/26\nCase Study: Using Reproductive Data to Troubleshoot\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/26\n(LAB) Calculate Reproductive Metrics\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/3\nIntegrating Reproductive Management with Farm Systems\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/5\nStudent Team Presentations on Reproductive Analysis\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/5\n(LAB) Peer Evaluation & CURC Discussion\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/10\nReview Session for Midterm Exam\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/12\nMidterm Exam\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/12\n(LAB) Introduction to CURC Health Records\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/17\nAnimal Health Monitoring and Data-Driven Interventions\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/19\nSCC Interpretation and Mastitis Economics\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/19\n(LAB) Analyze CURC SCC Trends\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/24\nNutrition Basics and Data-Driven Feeding Strategies\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/26\nInterpreting Feed Analysis Reports and Intake Data\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/26\n(LAB) CURC Visit - Feed Systems\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/31\nSpring Break (no class)\n\n\n\n\n\n10\n4/2\nSpring Break (no class)\n\n\n\n\n\n11\n4/7\nSystems Thinking: Connecting Health, Nutrition, and Production\nDr. Hostens\n📖\n🖥️\n\n\n11\n4/9\nStudent Team Presentations on Health/Nutrition\nDr. Hostens\n📖\n🖥️\n\n\n11\n4/9\n(LAB) Peer Evaluation & Group Discussion\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/14\nEconomics of Dairy Production: Key Metrics and Data Needs\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/16\nCase Study: Using Data to Evaluate Management Changes\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/16\n(LAB) Calculate IOFC & Economic Modeling\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/21\nIntegrating Data for Strategic Decision-Making\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/23\nSWOT Analysis Framework and Capstone Expectations\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/23\n(LAB) Synthesize Data & Draft SWOT\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/28\nEffective Communication for Decision-Makers\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/30\nPractice Presentations (Internal Peer Review)\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/30\n(LAB) Finalize SWOT & Peer Feedback\nDr. Hostens\n📖\n🖥️\n\n\n15\n5/5\nCapstone Management Meeting & Course Wrap-Up\nDr. Hostens\n📖\n🖥️",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -1367,9 +1367,9 @@
   {
     "objectID": "weeks/week-14.html",
     "href": "weeks/week-14.html",
-    "title": "Week 5",
+    "title": "WEEK 14: Capstone Preparation & Practice Presentations",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics\n\nRefining SWOT analysis and actionable recommendations\nCommunicating with non-technical audiences (farm managers, stakeholders)\nProfessional presentation skills\n\n\n\nActivities/Tasks:\n\nLecture (4/28): Effective communication for decision-makers\nLecture (4/30): Practice presentations (internal peer review)\nLab (4/30):\n\nTeams finalize SWOT presentations\nPeer feedback on clarity, data use, and professionalism\nRefine visualizations and messaging\n\n\n\n\nDue Dates:\n\nPeer feedback on practice presentations\n\n\n\nDatasets/Resources:\n\nStudent-generated dashboards and reports",
     "crumbs": [
       "Weekly materials",
       "Week 14"
@@ -1411,9 +1411,9 @@
   {
     "objectID": "weeks/week-12.html",
     "href": "weeks/week-12.html",
-    "title": "Week 5",
+    "title": "WEEK 12: Farm Economics & Data-Driven Decision Making",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics\n\nIncome over feed cost (IOFC)\nBreakeven analysis\nLinking biological data to financial outcomes\nIntroduction to decision-support tools\n\n\n\nActivities/Tasks\n\nLecture (4/14): Economics of dairy production: key metrics and data needs\nLecture (4/16): Case study: Using data to evaluate management changes\nLab (4/16):\n\nCalculate IOFC from CURC data\nSimple economic modeling exercise (e.g., cost of disease, value of improved reproduction)\nDiscuss ethical considerations in data interpretation\n\n\n\n\nDue Dates:\n\nEconomics lab worksheet (due start of Week 13)\n\n\n\nDatasets/Resources\n\nCURC production and financial summary data\nMilk and feed price data",
     "crumbs": [
       "Weekly materials",
       "Week 12"
@@ -1458,9 +1458,9 @@
   {
     "objectID": "weeks/week-13.html",
     "href": "weeks/week-13.html",
-    "title": "Week 5",
+    "title": "WEEK 13: Data Integration & SWOT Analysis Preparation",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics:\n\nBuilding a holistic view of herd performance\nIntroduction to SWOT analysis (Strengths, Weaknesses, Opportunities, Threats)\nPreparing data visualizations and summary reports\n\n\n\nActivities/Tasks\n\nLecture (4/21): Integrating data for strategic decision-making\nLecture (4/23): SWOT analysis framework and capstone expectations\nLab (4/23):\n\nTeams begin synthesizing semester data (milk, reproduction, health, nutrition, economics)\nDevelop draft SWOT analysis for CURC\nCreate visual dashboards/summaries (Tableau, or PowerPoint)\n\n\n\nDue Dates:\n\nDraft SWOT outline (due start of Week 14)\n\n\n\nDatasets/Resources:\n\nAll CURC datasets from semester; Tableau/visualization software",
     "crumbs": [
       "Weekly materials",
       "Week 13"
