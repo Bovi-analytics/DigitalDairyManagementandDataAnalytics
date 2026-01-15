@@ -1,4 +1,4 @@
-# Website for DataDigital Agriculture (Dier & Data) at Utrecht University
+# Website for Digital Dairy Management and Data Analytics
 
 🔗 https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/
 
