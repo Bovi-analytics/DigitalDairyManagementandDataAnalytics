@@ -1,7 +1,23 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 11: Student Presentations – Health & Nutrition Insights "
+subtitle: "Integrating Health and Nutrition Data "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics 
+-   Presenting findings on health and nutrition management 
+-   Discussion of multi-system interactions (e.g., nutrition impacts on health) 
+
+# Activities/Tasks: 
+-   Lecture (4/7): Systems thinking: connecting health, nutrition, and production 
+-   Lecture (4/9): Student team presentations on health/nutrition analysis 
+-   Lab (4/9):  
+    -   Peer evaluation 
+    -   Group discussion: Connecting data across management areas 
+
+# Due Dates: Team presentations (4/9) 
+-   Peer evaluation due 
+
+# Datasets/Resources: 
+-   Student analyses 
+
