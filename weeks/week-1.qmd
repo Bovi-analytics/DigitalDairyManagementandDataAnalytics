@@ -1,5 +1,5 @@
 ---
-title: "Week 1: Course Introduction & Farm Orientation"
+title: "WEEK 1: Course Introduction & Farm Orientation"
 subtitle: Course Overview and Introduction to Digital Dairy Management
 editor: visual
 ---
