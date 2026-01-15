@@ -1,7 +1,25 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 14: Capstone Preparation & Practice Presentations "
+subtitle: "Capstone Management Meeting Preparation "
 editor: visual
 ---
 
-coming soon
+Details/Subtopics 
+-   Refining SWOT analysis and actionable recommendations 
+-   Communicating with non-technical audiences (farm managers, stakeholders) 
+-   Professional presentation skills 
+
+Activities/Tasks: 
+-   Lecture (4/28): Effective communication for decision-makers 
+-   Lecture (4/30): Practice presentations (internal peer review) 
+-   Lab (4/30):  
+    -   Teams finalize SWOT presentations 
+    -   Peer feedback on clarity, data use, and professionalism 
+    -   Refine visualizations and messaging 
+
+Due Dates: 
+-   Peer feedback on practice presentations 
+
+Datasets/Resources: 
+-   Student-generated dashboards and reports 
+
