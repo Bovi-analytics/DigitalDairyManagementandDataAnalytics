@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -76,10 +111,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Project tips + resources – Beasts &amp; Bytes">
-<meta property="og:description" content="Homepage for Beasts &amp; Bytes">
 <meta property="og:site_name" content="Beasts &amp; Bytes">
 <meta name="twitter:title" content="Project tips + resources – Beasts &amp; Bytes">
-<meta name="twitter:description" content="Homepage for Beasts &amp; Bytes">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/BeastAndBytes/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens">
 <meta name="twitter:card" content="summary_large_image">
@@ -497,8 +530,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link active" data-scroll-target="#data-sources">Data sources</a>
+  <ul class="collapse">
+  <li><a href="#some-resources-that-may-be-helpful-as-you-find-data" id="toc-some-resources-that-may-be-helpful-as-you-find-data" class="nav-link" data-scroll-target="#some-resources-that-may-be-helpful-as-you-find-data">Some resources that may be helpful as you find data:</a></li>
+  <li><a href="#other-data-repositories" id="toc-other-data-repositories" class="nav-link" data-scroll-target="#other-data-repositories">Other data repositories</a></li>
+  </ul></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  <li><a href="#formatting-communication-tips" id="toc-formatting-communication-tips" class="nav-link" data-scroll-target="#formatting-communication-tips">Formatting + communication tips</a>
+  <ul class="collapse">
+  <li><a href="#suppress-code-warnings-messages" id="toc-suppress-code-warnings-messages" class="nav-link" data-scroll-target="#suppress-code-warnings-messages">Suppress Code, Warnings, &amp; Messages</a></li>
+  <li><a href="#headers" id="toc-headers" class="nav-link" data-scroll-target="#headers">Headers</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  <li><a href="#resize-figures" id="toc-resize-figures" class="nav-link" data-scroll-target="#resize-figures">Resize figures</a></li>
+  <li><a href="#arranging-plots" id="toc-arranging-plots" class="nav-link" data-scroll-target="#arranging-plots">Arranging plots</a></li>
+  <li><a href="#plot-titles-and-axis-labels" id="toc-plot-titles-and-axis-labels" class="nav-link" data-scroll-target="#plot-titles-and-axis-labels">Plot titles and axis labels</a></li>
+  <li><a href="#do-a-little-more-to-make-the-plot-look-professional" id="toc-do-a-little-more-to-make-the-plot-look-professional" class="nav-link" data-scroll-target="#do-a-little-more-to-make-the-plot-look-professional">Do a little more to make the plot look professional!</a></li>
+  <li><a href="#tables-and-model-output" id="toc-tables-and-model-output" class="nav-link" data-scroll-target="#tables-and-model-output">Tables and model output</a></li>
+  <li><a href="#guidelines-for-communicating-results" id="toc-guidelines-for-communicating-results" class="nav-link" data-scroll-target="#guidelines-for-communicating-results">Guidelines for communicating results</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Bovi-analytics/BeastAndBytes/edit/main/project-tips-resources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Bovi-analytics/BeastAndBytes/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -523,9 +581,179 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Coming soon</p>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data sources</h2>
+<section id="some-resources-that-may-be-helpful-as-you-find-data" class="level3">
+<h3 class="anchored" data-anchor-id="some-resources-that-may-be-helpful-as-you-find-data">Some resources that may be helpful as you find data:</h3>
+<ul>
+<li><a href="https://data.fivethirtyeight.com/">FiveThirtyEight data</a></li>
+</ul>
+</section>
+<section id="other-data-repositories" class="level3">
+<h3 class="anchored" data-anchor-id="other-data-repositories">Other data repositories</h3>
+<ul>
+<li><a href="https://www.who.int/gho/database/en/">World Health Organization</a></li>
+<li><a href="https://data.nber.org/data/">The National Bureau of Economic Research</a></li>
+<li><a href="https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&amp;sId=1479329328660">International Monetary Fund</a></li>
+<li><a href="http://gss.norc.org/">General Social Survey</a></li>
+<li><a href="http://data.un.org/">United Nations Data</a></li>
+<li><a href="https://unstats.un.org/home/">United Nations Statistics Division</a></li>
+<li><a href="https://data.gov.uk/">U.K. Data</a></li>
+<li><a href="https://www.data.gov/">U.S. Data</a></li>
+<li><a href="https://www.census.gov/data.html">U.S. Census Data</a></li>
+<li><a href="https://ec.europa.eu/eurostat/">European Statistics</a></li>
+<li><a href="https://www.statcan.gc.ca/eng/start">Statistics Canada</a></li>
+<li><a href="https://www.pewresearch.org/download-datasets/">Pew Research</a></li>
+<li><a href="https://data.unicef.org/">UNICEF</a></li>
+<li><a href="https://www.cdc.gov/datastatistics/index.html">CDC</a></li>
+<li><a href="https://datacatalog.worldbank.org/">World Bank</a></li>
+<li><a href="https://electionstudies.org//">Election Studies</a></li>
+</ul>
+</section>
+</section>
+<section id="tips" class="level2">
+<h2 class="anchored" data-anchor-id="tips">Tips</h2>
+<ul>
+<li><p>Ask questions if any of the expectations are unclear.</p></li>
+<li><p><strong>Code:</strong> In your write up your code should be hidden so that your document is neat and easy to read. However your document should include all your code such that if I re-knit your qmd file I should be able to obtain the results you presented.</p>
+<ul>
+<li><strong>Exception:</strong> If you want to highlight something specific about a piece of code, you’re welcome to show that portion.</li>
+</ul></li>
+<li><p>Merge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.</p></li>
+<li><p>Make sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).</p></li>
+<li><p>All team members are expected to contribute equally to the completion of this assignment and group assessments will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade penalized. While different teams members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment works.</p></li>
+<li><p>You can also chose to visualize your results after data processing in Tableau. Tableau is a powerfull and intuitive data visualisation tool with many options to make figures look nice.</p></li>
+<li><p>On the website of the Bovi-Analytics lab there are also tons of tutorials to help get you started using the tools in the course. <a href="https://bovi-analytics.com/tutorials/">tutorials</a></p></li>
+</ul>
+</section>
+<section id="formatting-communication-tips" class="level2">
+<h2 class="anchored" data-anchor-id="formatting-communication-tips">Formatting + communication tips</h2>
+<section id="suppress-code-warnings-messages" class="level3">
+<h3 class="anchored" data-anchor-id="suppress-code-warnings-messages">Suppress Code, Warnings, &amp; Messages</h3>
+<ul>
+<li>Include the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="headers" class="level3">
+<h3 class="anchored" data-anchor-id="headers">Headers</h3>
+<ul>
+<li>Use headers to clearly label each section.</li>
+<li>Inspect the document outline to review your headers and sub-headers.</li>
+</ul>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ul>
+<li>Include all references in a section called “References” at the end of the report.</li>
+<li>This course does not have specific requirements for formatting citations and references.</li>
+</ul>
+</section>
+<section id="appendix" class="level3">
+<h3 class="anchored" data-anchor-id="appendix">Appendix</h3>
+<ul>
+<li>If you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.</li>
+<li>The items in the appendix should be properly labeled.</li>
+<li>The appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.</li>
+</ul>
+</section>
+<section id="resize-figures" class="level3">
+<h3 class="anchored" data-anchor-id="resize-figures">Resize figures</h3>
+<p>Resize plots and figures, so you have more space for the narrative. Example:</p>
+<p>#| fig-width: 6 #| fig-height: 4</p>
+</section>
+<section id="arranging-plots" class="level3">
+<h3 class="anchored" data-anchor-id="arranging-plots">Arranging plots</h3>
+<p>Arrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions. In Python Matplotlib has a function subplot() to do this. Look for documentation and examples how to make graphs look nice at <a href="https://matplotlib.org/stable/tutorials/index">matplotlib tutorials</a>.</p>
+</section>
+<section id="plot-titles-and-axis-labels" class="level3">
+<h3 class="anchored" data-anchor-id="plot-titles-and-axis-labels">Plot titles and axis labels</h3>
+<p>Be sure all plot titles and axis labels are visible and easy to read.</p>
+<ul>
+<li>Use informative titles, <em>not</em> variable names, for titles and axis labels.</li>
+</ul>
+<p>❌ <strong>NO! The x-axis is hard to read because the names overlap.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>mpg, x<span class="op">=</span><span class="st">"manufacturer"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>✅ <strong>YES! Names are readable</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>mpg, y<span class="op">=</span><span class="st">"manufacturer"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="do-a-little-more-to-make-the-plot-look-professional" class="level3">
+<h3 class="anchored" data-anchor-id="do-a-little-more-to-make-the-plot-look-professional">Do a little more to make the plot look professional!</h3>
+<ul>
+<li>Informative title and axis labels</li>
+<li>Flipped coordinates to make names readable</li>
+<li>Arranged bars based on count</li>
+<li>Capitalized manufacturer names</li>
+<li><em>Optional: Added color - Use a coordinated color scheme throughout paper / presentation</em></li>
+<li><em>Optional: Applied a theme - Use same theme throughout paper / presentation</em></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> (</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mpg[<span class="st">"manufacturer"</span>]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>.<span class="bu">str</span>.title()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>.value_counts()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>.sort_values()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">5</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>counts.plot(kind<span class="op">=</span><span class="st">"barh"</span>, color<span class="op">=</span><span class="st">"steelblue"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Count"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Manufacturer"</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Most Common Car Manufacturers"</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="tables-and-model-output" class="level3">
+<h3 class="anchored" data-anchor-id="tables-and-model-output">Tables and model output</h3>
+<ul>
+<li><p>Use the <code>kable</code> function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.</p>
+<ul>
+<li>Use the <code>digits</code> argument to display only 3 or 4 significant digits.</li>
+<li>Use the <code>caption</code> argument to add captions to your table.</li>
+</ul></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> smf.ols(<span class="st">"mpg ~ hp"</span>, data<span class="op">=</span>mtcars).fit()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>model.summary2().tables[<span class="dv">1</span>].<span class="bu">round</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="guidelines-for-communicating-results" class="level3">
+<h3 class="anchored" data-anchor-id="guidelines-for-communicating-results">Guidelines for communicating results</h3>
+<ul>
+<li><p><strong>Don’t use variable names in your narrative!</strong> Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.</p>
+<ul>
+<li>❌ There is a negative linear relationship between mpg and hp.</li>
+<li>✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.</li>
+</ul></li>
+<li><p><strong>Know your audience:</strong> Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.</p></li>
+<li><p><strong>Avoid subject matter jargon:</strong> Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.</p></li>
+<li><p><strong>Tell the “so what”:</strong> Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e.&nbsp;what you want the audience to know about your topic after reading your report or viewing your presentation.</p>
+<ul>
+<li>❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.</li>
+<li>✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.</li>
+</ul></li>
+<li><p><strong>Tell a story:</strong> All visualizations, tables, model output, and narrative should tell a cohesive story!</p></li>
+<li><p><strong>Use one voice:</strong> Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document.</p></li>
+</ul>
+</section>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
+<ul>
+<li><p><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python for Data Science</a></p></li>
+<li><p><a href="https://greenteapress.com/wp/think-stats-3e/">Think stats ebook about using python for data science</a></p></li>
+<li><p><a href="https://quarto.org/">Quarto Documentation</a></p></li>
+<li><p>Data visualization</p>
+<ul>
+<li><a href="https://medium.com/@nomannayeem/mastering-data-visualization-with-python-an-end-to-end-guide-84334b28087c">Data Visualization in python</a></li>
+<li><a href="https://bovi-analytics.com/tutorials/tableau.html">Get a license for Tableau, a powerfull data visualisation platform</a></li>
+</ul></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -961,7 +1189,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/Bovi-analytics/BeastAndBytes/edit/main/project-tips-resources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Bovi-analytics/BeastAndBytes/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Bovi-analytics/BeastAndBytes/edit/main/project-tips-resources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Bovi-analytics/BeastAndBytes/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

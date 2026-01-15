@@ -13,9 +13,9 @@
   {
     "objectID": "supplemental/operations-in-r.html",
     "href": "supplemental/operations-in-r.html",
-    "title": "Operations with R",
+    "title": "Python Code Examples",
     "section": "",
-    "text": "Let’s define some values named ‘x’, ‘y’, and ‘z’.\n\nx &lt;- 1:10 \ny &lt;- 5.8 \nz &lt;- 1+5i\n\nWhat type of value is x? (use “class” function). What about y and z?\n\nclass(x)\n\n[1] \"integer\"\n\n\nWhat is the product of x times y?\n\nx*y\n\n [1]  5.8 11.6 17.4 23.2 29.0 34.8 40.6 46.4 52.2 58.0\n\n\nThe function “c” combine values into a vector or list. Characters needs to be between ““. The semicolon or a new line separates processes.\nWhat are the differences between the three x values created below? what is the final value for x?\n\nx &lt;- c(TRUE, TRUE, FALSE); x\n\n[1]  TRUE  TRUE FALSE\n\nx &lt;-c(\"yes\", \"yes\", \"no\", \"yes\"); x\n\n[1] \"yes\" \"yes\" \"no\"  \"yes\"\n\nx &lt;- as.factor(c(\"yes\", \"yes\", \"no\", \"yes\")); x\n\n[1] yes yes no  yes\nLevels: no yes\n\n\nHow many “yes” or “no” the value x has?\n\ntable(x)\n\nx\n no yes \n  1   3 \n\n\nCan I transform these character values to numbers?\n\nunclass(x)\n\n[1] 2 2 1 2\nattr(,\"levels\")\n[1] \"no\"  \"yes\"\n\n\nWhat these functions do?\n\nrep(10,4); seq(1,5,by=0.1)\n\n[1] 10 10 10 10\n\n\n [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8\n[20] 2.9 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3 4.4 4.5 4.6 4.7\n[39] 4.8 4.9 5.0\n\n\nLet’s create a matrix\n\nm &lt;- matrix(1:6, nrow = 2, ncol = 3)\n\nHow many rows and columns the matrix named ‘m’ has?\n\ndim(m)\n\n[1] 2 3\n\n\nLet’s create a data frame\n\ndf &lt;- data.frame(num = 1:4, boo = c(T, T, F,F), chr = c(\"yes\",\"no\",\"perhaps\",\"whynot\"));\n\nLook at the differences in the matrix and data.frame functions. In the matrix, ‘nrow’and ’ncol’ are arguments for the function. In the data frame, ‘num’, ‘boo’, and ‘chr’ are column names.\nWhat are the dimensions of the data frame?\n\ndim(df)\n\n[1] 4 3\n\n\nHow are are the columns named?\n\ncolnames(df)\n\n[1] \"num\" \"boo\" \"chr\"\n\n\nCan I rename those columns as ‘meh’, ‘mih’, and ‘moh’, for example?\n\ncolnames(df)&lt;-c(\"meh\",\"mih\",\"moh\")\n\nI want to look at the values contained in the column named “moh” (the third column). How can I do that?\n\ndf$moh; df[[3]]; df[,3] ; df[,-(1:2)]; df[[\"moh\"]] \n\n[1] \"yes\"     \"no\"      \"perhaps\" \"whynot\" \n\n\n[1] \"yes\"     \"no\"      \"perhaps\" \"whynot\" \n\n\n[1] \"yes\"     \"no\"      \"perhaps\" \"whynot\" \n\n\n[1] \"yes\"     \"no\"      \"perhaps\" \"whynot\" \n\n\n[1] \"yes\"     \"no\"      \"perhaps\" \"whynot\" \n\n\nI want to look at the value contained in the first row and the third column. How can I do that?\n\ndf[1,3] \n\n[1] \"yes\"\n\n\nHow can I assign the values contained in the third column to a new value?\n\nnew_val &lt;- df[[\"moh\"]]\n\nWhat type of value is this?\n\nclass(new_val)\n\n[1] \"character\"\n\n\nHow can I create a new data frame with the values contained in the second and third column?\n\nnew_df &lt;- df[2:3]\n\nAre you sure it is a data frame?\n\nclass(new_df)\n\n[1] \"data.frame\"\n\n\nWhat about with the values contained in the first and third column?\n\nnew_df2 &lt;- df[c(1,3)]\n\nCan you think on another way to get this new_df2?",
+    "text": "#Coming soon",
     "crumbs": [
       "Supplemental notes",
       "Operations in R"
@@ -26,7 +26,51 @@
     "href": "project-tips-resources.html",
     "title": "Project tips + resources",
     "section": "",
-    "text": "Coming soon",
+    "text": "FiveThirtyEight data\n\n\n\n\n\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nU.K. Data\nU.S. Data\nU.S. Census Data\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies",
+    "crumbs": [
+      "Project",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "project-tips-resources.html#data-sources",
+    "href": "project-tips-resources.html#data-sources",
+    "title": "Project tips + resources",
+    "section": "",
+    "text": "FiveThirtyEight data\n\n\n\n\n\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nU.K. Data\nU.S. Data\nU.S. Census Data\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies",
+    "crumbs": [
+      "Project",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "project-tips-resources.html#tips",
+    "href": "project-tips-resources.html#tips",
+    "title": "Project tips + resources",
+    "section": "Tips",
+    "text": "Tips\n\nAsk questions if any of the expectations are unclear.\nCode: In your write up your code should be hidden so that your document is neat and easy to read. However your document should include all your code such that if I re-knit your qmd file I should be able to obtain the results you presented.\n\nException: If you want to highlight something specific about a piece of code, you’re welcome to show that portion.\n\nMerge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.\nMake sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).\nAll team members are expected to contribute equally to the completion of this assignment and group assessments will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade penalized. While different teams members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment works.\nYou can also chose to visualize your results after data processing in Tableau. Tableau is a powerfull and intuitive data visualisation tool with many options to make figures look nice.\nOn the website of the Bovi-Analytics lab there are also tons of tutorials to help get you started using the tools in the course. tutorials",
+    "crumbs": [
+      "Project",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "project-tips-resources.html#formatting-communication-tips",
+    "href": "project-tips-resources.html#formatting-communication-tips",
+    "title": "Project tips + resources",
+    "section": "Formatting + communication tips",
+    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages.\n\nimport warnings\nwarnings.filterwarnings(\"ignore\")\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative. Example:\n#| fig-width: 6 #| fig-height: 4\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions. In Python Matplotlib has a function subplot() to do this. Look for documentation and examples how to make graphs look nice at matplotlib tutorials.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\nsns.countplot(data=mpg, x=\"manufacturer\")\nplt.show()\n✅ YES! Names are readable\nsns.countplot(data=mpg, y=\"manufacturer\")\nplt.show()\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\ncounts = (\nmpg[\"manufacturer\"]\n.str.title()\n.value_counts()\n.sort_values()\n)\n\nplt.figure(figsize=(6, 5))\ncounts.plot(kind=\"barh\", color=\"steelblue\")\nplt.xlabel(\"Count\")\nplt.ylabel(\"Manufacturer\")\nplt.title(\"Most Common Car Manufacturers\")\nplt.tight_layout()\nplt.show()\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\nimport statsmodels.formula.api as smf\n\nmodel = smf.ols(\"mpg ~ hp\", data=mtcars).fit()\nmodel.summary2().tables[1].round(3)\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document.",
+    "crumbs": [
+      "Project",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "project-tips-resources.html#additional-resources",
+    "href": "project-tips-resources.html#additional-resources",
+    "title": "Project tips + resources",
+    "section": "Additional resources",
+    "text": "Additional resources\n\nPython for Data Science\nThink stats ebook about using python for data science\nQuarto Documentation\nData visualization\n\nData Visualization in python\nGet a license for Tableau, a powerfull data visualisation platform",
     "crumbs": [
       "Project",
       "Tips + resources"
@@ -735,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 17:54:43 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 18:40:34 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -1290,7 +1334,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Data Science Applications in Agriculture",
+    "title": "Digital Dairy Management and Data Analytics",
     "section": "",
     "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nLecture\n\n\n\n\n1\n1/20\nIntroduction\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/27\nData science basics\nDr. Hostens\n📖\n🖥️\n\n\n3\n2/3\nVisualisation basics\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/10\nSimple linear regression\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/17\nFebruary break (no class)\n\n\n\n\n\n6\n2/24\nMultiple linear regression\nDr. Hostens and S. Hayu\n📖\n🖥️\n\n\n7\n3/3\nLogistic regression\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/10\nData joining\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/17\nData transformations - logical vectors\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/24\nData transformations - numerical vectors\nDr. Hostens\n📖\n🖥️\n\n\n11\n3/31\nSpring Break (no class)\n\n\n\n\n\n12\n4/7\nData transformations - datetimes & factors\nDr. Hostens\n📖\nfactors =&gt;🖥️ datetimes=&gt; 🖥️\n\n\n13\n4/14\nDecision trees\nS. Hayu\n📖\n🖥️\n\n\n14\n4/21\nRegular expressions\nDr. Hostens\n📖\n🖥️\n\n\n15\n4/28\nTBD\nTBD\n📖\n🖥️\n\n\n16\n5/5\nTBD\nTBD\n📖\n\n\n\n17\n5/12\nTBD\nTBD\n📖\n\n\n\n18\n5/17\nProject presentation & report",
     "crumbs": [
@@ -2763,7 +2807,106 @@
     "href": "course-overview.html",
     "title": "Digital Dairy Management and Data Analytics",
     "section": "",
-    "text": "Coming soon",
+    "text": "This course introduces students to the principles and applications of data analytics in modern dairy herd management. Students will learn how to collect, clean, analyze, and interpret farm- level data from the Cornell University Research Dairy. Through hands-on labs, students will apply statistical and computational tools to evaluate herd performance in key management areas, including nutrition, reproduction, animal health, and farm economics. By the end of the course, students will integrate these data into a digital management framework and engage in a managerial decision-making exercise, including a SWOT analysis with farm stakeholders. This course emphasizes data literacy, statistical reasoning, and ethical interpretation of agri- cultural data. It satisfies the CALS Data Literacy (Statistics) requirement by develop- ing student competencies in data manipulation, analysis, interpretation, and communication within the context of dairy science.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#general-week-format",
+    "href": "course-overview.html#general-week-format",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "General week format",
+    "text": "General week format\n\n\n\n\n\n\n\n\n\n\n\n\nMonday\nTuesday\nWednesday\nThursday\nFriday\n\n\n\n\n10:10-11:00 am\n\nLecture\n\nLecture\n\n\n\n1:25-4:25 pm\n\n\n\nLab - Project",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#lectures",
+    "href": "course-overview.html#lectures",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Lectures",
+    "text": "Lectures\nThe goal of the lectures is to have them as interactive as possible (which requires your attendance and participation). My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#labs",
+    "href": "course-overview.html#labs",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Labs",
+    "text": "Labs\nLabs will use real-world datasets from the Cornell University Research Centre. Students will work individually and in teams to: • Work with herd management software across the different management domains. • Clean and curate datasets (Excel, R, Python and Tableau). • Conduct statistical analyses on herd-level data. • Develop visualizations, reports and presentations for practical decision-making. • Interact with students and herd managers to interpret results in a farm management context.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#group-assessment",
+    "href": "course-overview.html#group-assessment",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Group assessment",
+    "text": "Group assessment\n\n\n\n\n\n\n\n\nComponent graded\nRemark\nWeight\n\n\n\n\nPeer evaluation by team members\n\n40%\n\n\nMultiple Choice Questions\n\n40%\n\n\nProject\n\n20%",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#individual-assessment",
+    "href": "course-overview.html#individual-assessment",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Individual assessment",
+    "text": "Individual assessment\nIt is very important to read this part as your individual assessments will be influencing your individual gradings.\nAt the end of the course you will be evaluated on the % of weekly assignments you have coded correctly in the Dodona framework (which you will learn during the course). That percentage will be multiplied with the overal group project grade, resulting in your final individual grade.\nFor example:\n\nThe group project was finally graded at 95%\nStudent A successfully finished 75% of the coding assignments within each deadline. As a result student A gets 95% x 75% = 71% as the final individual grade.\nStudent B successfully finished 100% of the coding assignments within each deadline. As a result student B gets 95% x 100% as the final individual grade.\n\nFinishing each of the assignments within each deadline is not that difficult. You “just” need to devote the time to it. I have used this method a lot during my courses. It is not to annoy students, but to make sure the entire group keeps progressing on the programming skills during the project. You will thank me for that at a certain moment. For full transparency, I learned to code Python using a similar approach. Once I understood why this was done, I started appreciating this method as one of the most inspiring learning methods I have ever seen.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#final-grading-scale",
+    "href": "course-overview.html#final-grading-scale",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Final grading scale",
+    "text": "Final grading scale\n\n\n\nGrade\nLow\nHigh\n\n\n\n\nA+\n99.80\n100.0\n\n\nA\n93.33\n99.80\n\n\nA-\n90.00\n93.33\n\n\nB+\n86.66\n90.00\n\n\nB\n83.33\n86.66\n\n\nB-\n80.00\n83.33\n\n\nC+\n76.66\n80.00\n\n\nC\n73.33\n76.66\n\n\nC-\n70.00\n73.33\n\n\nD+\n66.66\n70.00\n\n\nD\n63.33\n66.66\n\n\nD-\n60.00\n63.36\n\n\nF\n0.00\n60.00\n\n\n\nEach grade range includes the score on the left, and excludes the score on the right. For example, a 90.0 is an A-, and not a B+. An 89.99 is a B+, not an A-.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#inclusive-community",
+    "href": "course-overview.html#inclusive-community",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Inclusive community",
+    "text": "Inclusive community\nI grew up in a family in which values as diversity, equity and inclusion were at the core of our everyday life. My parents were both involved taking care of people struggling with equity and inclusion, and as a result these values are deeply embedded in my character.\nI aim to ensure that students from all diverse backgrounds and perspectives are well-served by this course. I strive to address students’ learning needs both in and out of class, and to view the diversity that students bring as a resource, strength, and benefit. My goal is to present materials and activities that respect diversity and align with Cornell University’s core values. Sometimes it might fade during busy times, don’t be afraid to recall someone, we’re all humans after all. “Your suggestions are truely encouraged and appreciated”. Please let me know how I can improve the course’s effectiveness for you personally, or for other students or student groups.\nAdditionally, I aim to foster a learning environment that embraces a diversity of thoughts, perspectives, and experiences, and respects your identities. If your experiences outside of class are affecting your performance, please feel free to talk with me. Alternatively, your academic dean is a great resource if you prefer to speak with someone outside the course.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#academic-integrity",
+    "href": "course-overview.html#academic-integrity",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Academic Integrity",
+    "text": "Academic Integrity\nAbsolute integrity is expected of every Cornell student in all academic undertakings. Integrity entails a firm adherence to a set of values, and the values most essential to an academic community are grounded on the concept of honesty with respect to the intellectual efforts of oneself and others, and free and open inquiry and discussion in the classroom. Academic integrity is expected not only in formal coursework situations, but in all University relationships and interactions connected to the educational process, including the use of University resources. While both students and faculty of Cornell assume the responsibility of maintaining and furthering these values, this document is concerned specifically with the conduct of students.\nA Cornell student’s submission of work for academic credit indicates that the work is the student’s own. All outside assistance should be acknowledged, and the student’s academic position truthfully reported at all times. In addition, Cornell students have a right to expect academic integrity from each of their peers.\nThis a guideline for students offered through the Office of the Dean of Faculty",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#responsible-use-of-generative-tools",
+    "href": "course-overview.html#responsible-use-of-generative-tools",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "Responsible Use of Generative Tools",
+    "text": "Responsible Use of Generative Tools\nIn this class, we recognize the potential of generative tools to enhance learning and creativity. However, it is crucial to use these tools responsibly and ethically. Here are some guidelines to ensure their proper use:\n\nAcademic Integrity: Always attribute the work generated by these tools appropriately. Do not present AI-generated content as your own original work without proper citation.\nCritical Thinking: Use generative tools as a supplement to your own thinking and analysis. Evaluate the outputs critically and ensure they align with the academic standards and objectives of our course.\nEthical Considerations: Be mindful of the ethical implications of using generative tools. Avoid generating content that could be harmful, misleading, or inappropriate.\nPrivacy and Security: Respect privacy and confidentiality when using generative tools. Do not input sensitive or personal information into these tools.",
     "crumbs": [
       "Course information",
       "Overview"
