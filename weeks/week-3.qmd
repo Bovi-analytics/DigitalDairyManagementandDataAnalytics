@@ -1,7 +1,0 @@
----
-title: "Week 3"
-subtitle: "Welcome Beasts & Bytes"
-editor: visual
----
-
-coming soon

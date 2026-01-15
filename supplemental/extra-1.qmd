@@ -1,9 +1,0 @@
----
-title: "Extras"
-execute: 
-  echo: false
----
-
-::: callout-note
-Coming soon
-:::

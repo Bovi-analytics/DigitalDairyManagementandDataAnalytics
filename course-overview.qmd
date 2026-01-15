@@ -1,6 +1,0 @@
----
-title: "Digital Dairy Management and Data Analytics "
-subtitle: "Beasts & Bytes"
----
-
-Coming soon

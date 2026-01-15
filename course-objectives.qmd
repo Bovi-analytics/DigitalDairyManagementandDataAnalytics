@@ -1,9 +1,0 @@
----
-title: "Learning objectives"
----
-
-## Learning objectives
-
-This course plan follows the lecture → lab → presentation cycle, emphasizing hands-on learning with real farm data from the Cornell University Research Dairy (CURC). Topics are selected based on their data accessibility and practical applicability, avoiding overly theoretical content. CURC visits are strategically integrated to support data understanding and collection. 
-
-## 
