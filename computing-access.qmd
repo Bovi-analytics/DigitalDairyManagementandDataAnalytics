@@ -2,14 +2,6 @@
 title: "Computing access"
 ---
 
-You can choose 2 ways of working with R.
-
-# Offline
-
-You can choose to install R ('*the engine*') and R-studio ('*the dashboard*') on your own computer. This works well when you want to learn to use R in a simple way. The downside if the local approach is that when working in a team the use of additional tools is needed (eg. GitHub).
-
-Follow the Dodona tutorial on the use of R and R studio ([here](https://dodona.be/en/courses/2982/series/32096/activities/1261547186/)).
-
 # Online
 
 To access computing resources for the introductory data science courses offered by Utrecht University we will make use of the [Google Colab](https://colab.research.google.com/) computing services linked to the course drive storage.
