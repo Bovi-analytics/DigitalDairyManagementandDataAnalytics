@@ -13,7 +13,7 @@ editor: visual
 -   Lecture (3/24): Nutrition basics and data-driven feeding strategies 
 -   Lecture (3/26): Interpreting feed analysis reports and intake data 
 -   Lab (3/26):  
-    -   CURC Visit #3: Observe feed preparation, delivery, and intake measurement [schedule this early - feeding happens AM] 
+    -   CURC Visit #3: Observe feed preparation, delivery, and intake measurement 
     -   Review CURC feed records and TMR composition data 
     -   Brainstorm: How do nutrition data inform management decisions? 
 
