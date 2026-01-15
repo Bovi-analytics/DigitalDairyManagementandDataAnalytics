@@ -4,6 +4,17 @@ title: "Learning objectives"
 
 ## Learning objectives
 
-This course plan follows the lecture → lab → presentation cycle, emphasizing hands-on learning with real farm data from the Cornell University Research Dairy (CURC). Topics are selected based on their data accessibility and practical applicability, avoiding overly theoretical content. CURC visits are strategically integrated to support data understanding and collection. 
+Upon successful completion of this course, students will be able to:
 
+1. Collect, organize, and clean dairy farm datasets derived from herd management systems.
+
+2. Apply statistical and computational tools (e.g., Excel, R, Python, or similar software) to analyze dairy performance data.
+
+3. Evaluate the strengths, weaknesses, and limitations of different data types used in dairy management.
+
+4. Interpret and critically assess dairy datasets within biological, economic, and management contexts.
+
+5. Create effective data visualizations, written reports, and presentations that communicate data-driven insights while adhering to ethical data use principles.
+
+6. Synthesize herd-level data into a decision-support framework and collaboratively contribute to SWOT analyses with herd managers.
 ## 
