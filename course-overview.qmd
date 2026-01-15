@@ -3,4 +3,199 @@ title: "Digital Dairy Management and Data Analytics "
 subtitle: "Beasts & Bytes"
 ---
 
-Coming soon
+# Course description and aims
+
+This course introduces students to the principles and applications of data analytics in modern
+dairy herd management. Students will learn how to collect, clean, analyze, and interpret farm-
+level data from the Cornell University Research Dairy. Through hands-on labs, students will
+apply statistical and computational tools to evaluate herd performance in key management
+areas, including nutrition, reproduction, animal health, and farm economics. By the end of the
+course, students will integrate these data into a digital management framework and engage in
+a managerial decision-making exercise, including a SWOT analysis with farm stakeholders.
+This course emphasizes data literacy, statistical reasoning, and ethical interpretation of agri-
+cultural data. It satisfies the CALS Data Literacy (Statistics) requirement by develop-
+ing student competencies in data manipulation, analysis, interpretation, and communication
+within the context of dairy science.
+
+# Credits
+
+This course accounts for 3 credits
+
+# Prerequisites
+
+A statistical course such one of the following is not required but strongly advised:
+
+-  STSCI 2150/5150 Introductory Statistics for Biology
+- BTRY3010/STSCI2200 & BTRY5010/STSCI5200: Biological Statistics I
+- ILRST/STSCI 2100: Introductory Statistics
+
+# Learning outcomes
+
+Upon successful completion of the course, students will be able to:
+1. Collect, organize, and clean dairy farm datasets from herd management.
+2. Apply statistical and computational methods (e.g., Excel, R, Python, or similar tools)
+to analyze dairy performance data.
+3. Identify strengths, weaknesses, and limitations of different data types used in dairy man-
+agement.
+4. Interpret and critique dairy datasets in relation to biological, economic, and management
+contexts.
+5. Create visualizations, written reports or presentations to communicate data-driven in-
+sights with consideration for ethical use of data.
+6. Synthesize herd-level data into a decision support framework and contribute to a SWOT
+analysis in collaboration with herd managers.
+(Outcomes 2, 3, 4, and 5 directly address Data Literacy: Statistics competencies.)
+
+# Outline
+
+As this course is the first of its kind, expect updates to happen to this course outline during the spring semester of 2025.
+
+# Format
+
+This course will consist of a combination of lectures, hands-on practical lab sessions, group
+discussions, and guest lectures from domain experts. Students will have the opportunity to
+work with data from the Cornell University Research Centre (CURC).
+
+## General week format
+
++----------------+----------+----------+--------------------+----------+--------------------+
+|                | Monday   | Tuesday  | Wednesday          | Thursday | Friday             |
++================+==========+==========+====================+==========+====================+
+| 10:10-11:00 am |          |Lecture   |                    | Lecture  |                    |
++----------------+----------+----------+--------------------+----------+--------------------+
+| 1:25-4:25 pm   |          |          |                    | Lab  -   |                    |
+|                |          |          |                    | Project  |                    |
+|                |          |          |                    |          |                    |
++----------------+----------+----------+--------------------+----------+--------------------+
+
+## Lectures
+
+The goal of the lectures is to have them as interactive as possible (which requires your attendance and participation). My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them.
+
+## Labs
+
+Labs will use real-world datasets from the Cornell University Research Centre. Students will
+work individually and in teams to:
+• Work with herd management software across the different management domains.
+• Clean and curate datasets (Excel, R, Python and Tableau).
+• Conduct statistical analyses on herd-level data.
+• Develop visualizations, reports and presentations for practical decision-making.
+• Interact with students and herd managers to interpret results in a farm management
+context.
+
+# Project
+
+The course culminates in a capstone management meeting in which student teams present
+a comprehensive SWOT (Strengths, Weaknesses, Opportunities, and Threats) analysis of
+the Cornell University Research Dairy to farm managers and invited stakeholders. Drawing
+on data from across the semester—including feeding, reproduction, health, and economics—
+students will synthesize their findings into a decision-support framework that highlights both
+current performance and future strategies for improvement. The meeting emphasizes not only
+technical accuracy and analytical depth but also clarity of communication, professional pre-
+sentation, and the ability to translate complex datasets into actionable insights for practical
+dairy management. This exercise mirrors real-world decision-making processes and challenges
+students to engage directly with farm leaders in a professional, evidence-based dialogue, but
+within a safe environment of CURC.
+
+# Textbook
+
+While there is no official textbook for the course, we will be assigning readings from the following some of the textbooks mentioned in the class.
+
+# Website
+
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website at [bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/).
+
+Although I will try to avoid last minute changes to the schedule this might happen given this challenged based learning course. I will send course announcements via email.
+
+# Assessment & grading
+
+This course fulfills the Data Literacy: Statistics (DLS-AG) requirement by focusing on:
+• Data Manipulating & Analysis (primary competency): applying statistical methods to
+agricultural data.
+• Data Reading, Cleaning, Curating, Securing: preparing and standardizing raw dairy
+datasets.
+• Data Interpretation & Critique: understanding strengths, limitations, and biases in farm
+data.
+• Communicating & Arguing with Data: visualizing and presenting data ethically to sup-
+port arguments.
+At least 75% of course content is centered on these competencies, and Learning Outcomes 2,
+3, 4, and 5 explicitly support them.
+
+## Group assessment
+
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Component graded                                                                           | Remark                                                                                                                                                          | Weight      |
++============================================================================================+=================================================================================================================================================================+=============+
+| Peer evaluation by team members                                                            |                                                                                                                                                                 | 40%         |
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Multiple Choice Questions                                                                  |                                                                                                                                                                 | 40%         |
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| Project                                                                                    |                                                                                                                                                                 | 20%         |
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+
+
+## Individual assessment
+
+**It is very important to read this part as your individual assessments will be influencing your individual gradings.**
+
+At the end of the course you will be evaluated on the % of weekly assignments you have coded correctly in the Dodona framework (which you will learn during the course). That percentage will be multiplied with the overal group project grade, resulting in your final individual grade.
+
+For example:
+
+-   The group project was finally graded at 95%
+
+-   Student A successfully finished 75% of the coding assignments within each deadline. As a result student A gets 95% x 75% = 71% as the final individual grade.
+
+-   Student B successfully finished 100% of the coding assignments within each deadline. As a result student B gets 95% x 100% as the final individual grade.
+
+Finishing each of the assignments within each deadline is not that difficult. You "just" need to devote the time to it. I have used this method a lot during my courses. It is not to annoy students, but to make sure the entire group keeps progressing on the programming skills during the project. You will thank me for that at a certain moment. For full transparency, I learned to code Python using a similar approach. Once I understood why this was done, I started appreciating this method as one of the most inspiring learning methods I have ever seen.
+
+## Final grading scale
+
+| Grade | Low   | High  |
+|:------|:------|:------|
+| A+    | 99.80 | 100.0 |
+| A     | 93.33 | 99.80 |
+| A-    | 90.00 | 93.33 |
+| B+    | 86.66 | 90.00 |
+| B     | 83.33 | 86.66 |
+| B-    | 80.00 | 83.33 |
+| C+    | 76.66 | 80.00 |
+| C     | 73.33 | 76.66 |
+| C-    | 70.00 | 73.33 |
+| D+    | 66.66 | 70.00 |
+| D     | 63.33 | 66.66 |
+| D-    | 60.00 | 63.36 |
+| F     | 0.00  | 60.00 |
+
+Each grade range includes the score on the left, and excludes the score on the right. For example, a 90.0 is an A-, and not a B+. An 89.99 is a B+, not an A-.
+
+# Policies
+
+## Inclusive community
+
+I grew up in a family in which values as diversity, equity and inclusion were at the core of our everyday life. My parents were both involved taking care of people struggling with equity and inclusion, and as a result these values are deeply embedded in my character.
+
+I aim to ensure that students from all diverse backgrounds and perspectives are well-served by this course. I strive to address students’ learning needs both in and out of class, and to view the diversity that students bring as a resource, strength, and benefit. My goal is to present materials and activities that respect diversity and align with Cornell University’s core values. Sometimes it might fade during busy times, don't be afraid to recall someone, we're all humans after all. "*Your suggestions are truely encouraged and appreciated"*. Please let me know how I can improve the course’s effectiveness for you personally, or for other students or student groups.
+
+Additionally, I aim to foster a learning environment that embraces a diversity of thoughts, perspectives, and experiences, and respects your identities. If your experiences outside of class are affecting your performance, please feel free to talk with me. Alternatively, your academic dean is a great resource if you prefer to speak with someone outside the course.
+
+## Academic Integrity
+
+Absolute integrity is expected of every Cornell student in all academic undertakings. Integrity entails a firm adherence to a set of values, and the values most essential to an academic community are grounded on the concept of honesty with respect to the intellectual efforts of oneself and others, and free and open inquiry and discussion in the classroom. Academic integrity is expected not only in formal coursework situations, but in all University relationships and interactions connected to the educational process, including the use of University resources. While both students and faculty of Cornell assume the responsibility of maintaining and furthering these values, this document is concerned specifically with the conduct of students.
+
+A Cornell student’s submission of work for academic credit indicates that the work is the student’s own. All outside assistance should be acknowledged, and the student’s academic position truthfully reported at all times. In addition, Cornell students have a right to expect academic integrity from each of their peers.
+
+This a [guideline for students](https://deanoffaculty.cornell.edu/faculty-and-academic-affairs/academic-integrity/guidelines-for-students/) offered through the [Office of the Dean of Faculty](https://deanoffaculty.cornell.edu/)
+
+## **Responsible Use of Generative Tools**
+
+In this class, we recognize the potential of generative tools to enhance learning and creativity. However, it is crucial to use these tools responsibly and ethically. Here are some guidelines to ensure their proper use:
+
+1.  **Academic Integrity**: Always attribute the work generated by these tools appropriately. Do not present AI-generated content as your own original work without proper citation.
+
+2.  **Critical Thinking**: Use generative tools as a supplement to your own thinking and analysis. Evaluate the outputs critically and ensure they align with the academic standards and objectives of our course.
+
+3.  **Ethical Considerations**: Be mindful of the ethical implications of using generative tools. Avoid generating content that could be harmful, misleading, or inappropriate.
+
+4.  **Privacy and Security**: Respect privacy and confidentiality when using generative tools. Do not input sensitive or personal information into these tools.
+
