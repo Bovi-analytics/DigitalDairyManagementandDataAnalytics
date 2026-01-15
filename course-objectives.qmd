@@ -4,16 +4,6 @@ title: "Learning objectives"
 
 ## Learning objectives
 
-1.  Explain the fundamentals of data science and digital agriculture including their interdisciplinary challenges.
-
-2.  Implement the various data science technologies, precision farming techniques and digital tools used in modern agriculture.
-
-3.  Conduct data collection, visualization, analysis, and interpretation within the context of digital agriculture.
-
-4.  Acquire practical skills through hands-on programming activities.
-
-5.  Explore the applications of machine learning and artificial intelligence in agriculture.
-
-6.  Recognize the significance of, and apply data privacy and security techniques in digital agriculture.
+This course plan follows the lecture → lab → presentation cycle, emphasizing hands-on learning with real farm data from the Cornell University Research Dairy (CURC). Topics are selected based on their data accessibility and practical applicability, avoiding overly theoretical content. CURC visits are strategically integrated to support data understanding and collection. 
 
 ## 
