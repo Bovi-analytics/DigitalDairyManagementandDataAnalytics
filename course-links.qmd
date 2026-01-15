@@ -6,5 +6,4 @@ title: "Useful links"
 |----|----|
 | Google colab | 🔗 on [Google colaboratory notebooks](https://colab.research.google.com/) |
 | Dodona | 🔗 on [Dodona](https://dodona.ugent.be) |
-| R | 🔗 on [R programming language](https://cran.r-project.org/) |
 | Virtual meetings | 🔗 on Teams |
