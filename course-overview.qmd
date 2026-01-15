@@ -24,23 +24,23 @@ This course accounts for 3 credits
 
 A statistical course such one of the following is not required but strongly advised:
 
--  STSCI 2150/5150 Introductory Statistics for Biology
-- BTRY3010/STSCI2200 & BTRY5010/STSCI5200: Biological Statistics I
-- ILRST/STSCI 2100: Introductory Statistics
+-   STSCI 2150/5150 Introductory Statistics for Biology
+-   BTRY3010/STSCI2200 & BTRY5010/STSCI5200: Biological Statistics I
+-   ILRST/STSCI 2100: Introductory Statistics
 
 # Learning outcomes
 
 Upon successful completion of the course, students will be able to:
--  Collect, organize, and clean dairy farm datasets from herd management.
--  Apply statistical and computational methods (e.g., Excel, R, Python, or similar tools)
+-   Collect, organize, and clean dairy farm datasets from herd management.
+-   Apply statistical and computational methods (e.g., Excel, R, Python, or similar tools)
 to analyze dairy performance data.
--  Identify strengths, weaknesses, and limitations of different data types used in dairy man-
+-   Identify strengths, weaknesses, and limitations of different data types used in dairy man-
 agement.
--  Interpret and critique dairy datasets in relation to biological, economic, and management
+-   Interpret and critique dairy datasets in relation to biological, economic, and management
 contexts.
--  Create visualizations, written reports or presentations to communicate data-driven in-
+-   Create visualizations, written reports or presentations to communicate data-driven in-
 sights with consideration for ethical use of data.
--  Synthesize herd-level data into a decision support framework and contribute to a SWOT
+-   Synthesize herd-level data into a decision support framework and contribute to a SWOT
 analysis in collaboration with herd managers.
 
 # Outline
@@ -73,11 +73,11 @@ The goal of the lectures is to have them as interactive as possible (which requi
 
 Labs will use real-world datasets from the Cornell University Research Centre. Students will
 work individually and in teams to:
--  Work with herd management software across the different management domains.
--  Clean and curate datasets (Excel, R, Python and Tableau).
--  Conduct statistical analyses on herd-level data.
--  Develop visualizations, reports and presentations for practical decision-making.
--  Interact with students and herd managers to interpret results in a farm management
+-   Work with herd management software across the different management domains.
+-   Clean and curate datasets (Excel, R, Python and Tableau).
+-   Conduct statistical analyses on herd-level data.
+-   Develop visualizations, reports and presentations for practical decision-making.
+-   Interact with students and herd managers to interpret results in a farm management
 context.
 
 # Project
@@ -107,13 +107,13 @@ Although I will try to avoid last minute changes to the schedule this might happ
 # Assessment & grading
 
 This course fulfills the Data Literacy: Statistics (DLS-AG) requirement by focusing on:
-- Data Manipulating & Analysis (primary competency): applying statistical methods to
+-   Data Manipulating & Analysis (primary competency): applying statistical methods to
 agricultural data.
-- Data Reading, Cleaning, Curating, Securing: preparing and standardizing raw dairy
+-   Data Reading, Cleaning, Curating, Securing: preparing and standardizing raw dairy
 datasets.
-- Data Interpretation & Critique: understanding strengths, limitations, and biases in farm
+-   Data Interpretation & Critique: understanding strengths, limitations, and biases in farm
 data.
-- Communicating & Arguing with Data: visualizing and presenting data ethically to sup-
+-   Communicating & Arguing with Data: visualizing and presenting data ethically to sup-
 port arguments.
 At least 75% of course content is centered on these competencies, and Learning Outcomes 2,
 3, 4, and 5 explicitly support them.
