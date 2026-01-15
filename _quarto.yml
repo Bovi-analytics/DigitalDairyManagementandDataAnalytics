@@ -3,9 +3,9 @@ project:
 website:
   page-navigation: true
   title: "Beasts & Bytes"
-  description: "Homepage for Beasts & Bytes"
-  site-url: "https://bovi-analytics.github.io/BeastAndBytes/"
-  repo-url: https://github.com/Bovi-analytics/BeastAndBytes/
+  description: "Homepage for Digital Dairy Management and Data Analytics"
+  site-url: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/"
+  repo-url: https://github.com/Bovi-analytics/DigitalDairyManagementandDataAnalytics/
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -21,7 +21,7 @@ website:
 
   sidebar:
     background: "#D7DEDC"
-    logo: "images/B&BLogo.png"
+    logo: "images/Bovi-Analytics-SmallLogo.png"
     pinned: true
     align: center
     tools:
