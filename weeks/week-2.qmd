@@ -1,29 +1,24 @@
 ---
-title: "Week 2"
-subtitle: "Applying statistical techniques to real world problems"
+title: "WEEK 2: Data Collection & Organization Fundamentals "
+subtitle: "Data Collection, Cleaning, and Organization "
 editor: visual
 ---
 
-# Learning goals
+# Details/Subtopics: 
+-   Types of dairy data: continuous vs. categorical, time-series, event-based 
+-   Data quality: accuracy, completeness, consistency 
+-   Introduction to Excel/spreadsheet organization 
+-   Basic data cleaning techniques 
 
-1.  Apply statistical techniques to (biological) project data
+# Activities/Tasks 
+-   Lecture (1/27): Principles of data collection, Visualization 
+-   Lecture (1/29): Data cleaning workflows and common issues in farm data 
+-   Lab (1/29):  
+    -   Hands-on: Clean a "messy" CURC dataset (provided with intentional errors) 
+    -   Practice Excel functions for data organization 
+    -   Identify data quality issues and document cleaning steps 
 
-2.  Acquire, understand and apply visualization techniques
+# Due Dates: Lab worksheet on data cleaning (due start of Week 3) 
 
-3.  Submit programming assignment by Friday 17:00
+# Datasets/Resources: Sample CURC dataset with quality issues, Excel templates 
 
-# Topics
-
-## Modelling biological linear processes (WC)
-
-📖 Re-familiarize yourself with linear regression models using the bachelor material which is available [here](weeks/week2/Statistiek_epidemiologie_en_economie.pdf) and [here](weeks/week2/Werkcolleges%20en%20Zelfstudies%20Blok%20EE%202022.pdf).
-
-## Visualisation techniques for biological processes (WC)
-
-💻 Make sure to have 3 programs installed on your computer for the course
-
-1.  Excel (available for all students through [Office365](https://portal.office.com))
-
-2.  Tableau (available with an academic license as documented [here](https://bovi-analytics.com/tutorials/tableau.html))
-
-3.  R & R-studio
