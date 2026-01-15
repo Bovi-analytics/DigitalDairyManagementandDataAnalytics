@@ -1,7 +1,25 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 6: Analyzing Reproductive Performance "
+subtitle: "Reproductive Data Analysis "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics 
+-   Calculating reproductive efficiency metrics 
+-   Identifying reproductive problems from data patterns 
+-   Comparison across lactation groups or seasons 
+
+# Activities/Tasks: 
+-   Lecture (2/24): Methods for analyzing reproductive performance 
+-   Lecture (2/26): Case study: Using reproductive data to troubleshoot herd issues 
+-   Lab (2/26):  
+    -   Calculate key reproductive metrics from CURC data 
+    -   Compare primiparous vs. multiparous cows 
+    -   Create summary visualizations 
+
+# Due Dates: 
+-   Lab report on reproductive metrics (due start of Week 7) 
+
+# Datasets/Resources: 
+-   CURC breeding and pregnancy records 
+
