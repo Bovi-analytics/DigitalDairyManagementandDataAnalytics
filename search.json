@@ -92,7 +92,7 @@
     "href": "course-objectives.html",
     "title": "Learning objectives",
     "section": "",
-    "text": "This course plan follows the lecture → lab → presentation cycle, emphasizing hands-on learning with real farm data from the Cornell University Research Dairy (CURC). Topics are selected based on their data accessibility and practical applicability, avoiding overly theoretical content. CURC visits are strategically integrated to support data understanding and collection.",
+    "text": "Upon successful completion of this course, students will be able to:\n\nCollect, organize, and clean dairy farm datasets derived from herd management systems.\nApply statistical and computational tools (e.g., Excel, R, Python, or similar software) to analyze dairy performance data.\nEvaluate the strengths, weaknesses, and limitations of different data types used in dairy management.\nInterpret and critically assess dairy datasets within biological, economic, and management contexts.\nCreate effective data visualizations, written reports, and presentations that communicate data-driven insights while adhering to ethical data use principles.\nSynthesize herd-level data into a decision-support framework and collaboratively contribute to SWOT analyses with herd managers. ##",
     "crumbs": [
       "Course information",
       "Course objectives"
@@ -103,7 +103,7 @@
     "href": "course-objectives.html#learning-objectives",
     "title": "Learning objectives",
     "section": "",
-    "text": "This course plan follows the lecture → lab → presentation cycle, emphasizing hands-on learning with real farm data from the Cornell University Research Dairy (CURC). Topics are selected based on their data accessibility and practical applicability, avoiding overly theoretical content. CURC visits are strategically integrated to support data understanding and collection.",
+    "text": "Upon successful completion of this course, students will be able to:\n\nCollect, organize, and clean dairy farm datasets derived from herd management systems.\nApply statistical and computational tools (e.g., Excel, R, Python, or similar software) to analyze dairy performance data.\nEvaluate the strengths, weaknesses, and limitations of different data types used in dairy management.\nInterpret and critically assess dairy datasets within biological, economic, and management contexts.\nCreate effective data visualizations, written reports, and presentations that communicate data-driven insights while adhering to ethical data use principles.\nSynthesize herd-level data into a decision-support framework and collaboratively contribute to SWOT analyses with herd managers. ##",
     "crumbs": [
       "Course information",
       "Course objectives"
@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 18:52:13 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 20:15:49 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
