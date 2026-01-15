@@ -1,7 +1,23 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 8: Midterm Exam & Health Data Introduction "
+subtitle: "Midterm Assessment / Introduction to Health Data "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics 
+-   Review of course concepts to date 
+-   Introduction to animal health records: disease events, treatments, SCC trends 
+
+# Activities/Tasks: 
+-   Lecture (3/10): Review session for midterm exam 
+-   Exam (3/12 AM): Multiple-choice midterm exam (concepts, data literacy, statistics) 
+-   Lab (3/12 PM):  
+    -   Introduction to CURC health records 
+    -   Brainstorm: What health data are available? What questions can they answer? 
+
+# Due Dates: 
+-   Midterm exam (3/12) 
+
+# Datasets/Resources: 
+-   CURC health/treatment records, SCC data 
+
