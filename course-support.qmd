@@ -10,11 +10,8 @@ If you have a question during lecture or lab, feel free to ask it! There are lik
 
 ## Office hours
 
-The entire teaching team is here to help you be successful in the course. You are encouraged to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so pass by during office hours. I encourage each and every one of you to take advantage of this resource! If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone's office [here](/course-team.html).
+The entire teaching team is here to help you be successful in the course. You are encouraged to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so pass by during office hours. I encourage each and every one of you to take advantage of this resource! If you truly have no questions to ask, just stop by and say hi and introduce yourself.
 
-## Weekly assignments
-
-As you can see in the [course overview](/course-overview.html), each week holds a 'Programming assignment deadline' at the end of the week. It is important that you stick to these deadlines as your correct submissions for this deadline will be used for the final grading. You are welcome to work on that during the week in your own time, but dedicated lab hours are blocked within each week.
 
 Teaching assistants will be available during these hours if you require help or feedback.
 
