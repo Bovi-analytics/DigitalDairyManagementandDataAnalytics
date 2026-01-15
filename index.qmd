@@ -1,7 +1,7 @@
 ---
 title: "Data Science Applications in Agriculture"
 tbl-colwidths: [5,5,15,5,5,5,5,5,5,5]
----
+--- 
 
 This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.
 
