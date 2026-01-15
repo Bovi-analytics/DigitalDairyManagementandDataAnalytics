@@ -1,7 +1,26 @@
 ---
-title: "Week 3"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 3: Milk Production & Herd Performance Metrics "
+subtitle: "Milk Production Analysis "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics 
+-   Milk yield metrics: daily, 305-day, lactation curves 
+-   Milk components: fat, protein, somatic cell count (SCC) 
+-   Visualizing production data 
+
+# Activities/Tasks: 
+-   Lecture (2/3): Understanding milk production data and key performance indicators 
+-   Lecture (2/5): Introduction to R/Python for data analysis (or advanced Excel) [decide which software to prioritize - maybe poll students?] 
+-   Lab (2/5):  
+-   Analyze CURC milk production records 
+    -   Calculate herd averages, identify high/low performers 
+    -   Create visualizations (histograms, time series plots) 
+    -   Brainstorm: What questions can these data answer? 
+
+# Due Dates: None (focusing on skill building) 
+
+# Datasets/Resources 
+-   CURC DHI (Dairy Herd Improvement) records 
+-   R/Python tutorial materials 
+
