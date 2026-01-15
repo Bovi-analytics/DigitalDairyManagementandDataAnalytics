@@ -1,7 +1,24 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 5 (Shortened): Reproductive Management & Data "
+subtitle: "Reproduction & Reproductive Performance "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics: 
+-   Reproductive metrics: conception rate, days to first service, pregnancy rate 
+-   Heat detection data and estrus synchronization records 
+-   Introduction to event-based data analysis 
+
+# Activities/Tasks 
+-   Lecture (2/19): Reproductive biology basics and key data-driven metrics 
+-   Lab (2/19):  
+    -   CURC Visit #2: Observe reproductive management practices (AI, pregnancy checks) 
+    -   Collect/discuss available reproductive data from CURC records 
+    -   Brainstorm questions: How can reproductive data improve management? 
+
+# Due Dates: 
+-   Reflection assignment on CURC visit (due start of Week 6) 
+
+# Datasets/Resources: 
+-   CURC reproductive records (breeding dates, pregnancy outcomes) 
+
