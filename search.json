@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 20:19:31 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 20:52:56 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -1356,31 +1356,9 @@
   {
     "objectID": "weeks/week-2.html",
     "href": "weeks/week-2.html",
-    "title": "Week 2",
+    "title": "WEEK 2: Data Collection & Organization Fundamentals",
     "section": "",
-    "text": "Apply statistical techniques to (biological) project data\nAcquire, understand and apply visualization techniques\nSubmit programming assignment by Friday 17:00",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#modelling-biological-linear-processes-wc",
-    "href": "weeks/week-2.html#modelling-biological-linear-processes-wc",
-    "title": "Week 2",
-    "section": "Modelling biological linear processes (WC)",
-    "text": "Modelling biological linear processes (WC)\n📖 Re-familiarize yourself with linear regression models using the bachelor material which is available here and here.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html#visualisation-techniques-for-biological-processes-wc",
-    "href": "weeks/week-2.html#visualisation-techniques-for-biological-processes-wc",
-    "title": "Week 2",
-    "section": "Visualisation techniques for biological processes (WC)",
-    "text": "Visualisation techniques for biological processes (WC)\n💻 Make sure to have 3 programs installed on your computer for the course\n\nExcel (available for all students through Office365)\nTableau (available with an academic license as documented here)\nR & R-studio",
+    "text": "Details/Subtopics:\n\nTypes of dairy data: continuous vs. categorical, time-series, event-based\nData quality: accuracy, completeness, consistency\nIntroduction to Excel/spreadsheet organization\nBasic data cleaning techniques\n\n\n\nActivities/Tasks\n\nLecture (1/27): Principles of data collection, Visualization\nLecture (1/29): Data cleaning workflows and common issues in farm data\nLab (1/29):\n\nHands-on: Clean a “messy” CURC dataset (provided with intentional errors)\nPractice Excel functions for data organization\nIdentify data quality issues and document cleaning steps\n\n\n\n\nDue Dates: Lab worksheet on data cleaning (due start of Week 3)\n\n\nDatasets/Resources: Sample CURC dataset with quality issues, Excel templates",
     "crumbs": [
       "Weekly materials",
       "Week 2"
@@ -1458,9 +1436,9 @@
   {
     "objectID": "weeks/week-3.html",
     "href": "weeks/week-3.html",
-    "title": "Week 3",
+    "title": "WEEK 3: Milk Production & Herd Performance Metrics",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics\n\nMilk yield metrics: daily, 305-day, lactation curves\nMilk components: fat, protein, somatic cell count (SCC)\nVisualizing production data\n\n\n\nActivities/Tasks:\n\nLecture (2/3): Understanding milk production data and key performance indicators\nLecture (2/5): Introduction to R/Python for data analysis (or advanced Excel) [decide which software to prioritize - maybe poll students?]\nLab (2/5):\n\nAnalyze CURC milk production records\n\nCalculate herd averages, identify high/low performers\nCreate visualizations (histograms, time series plots)\nBrainstorm: What questions can these data answer?\n\n\n\n\nDue Dates: None (focusing on skill building)\n\n\nDatasets/Resources\n\nCURC DHI (Dairy Herd Improvement) records\nR/Python tutorial materials",
     "crumbs": [
       "Weekly materials",
       "Week 3"
@@ -1502,31 +1480,9 @@
   {
     "objectID": "weeks/week-1.html",
     "href": "weeks/week-1.html",
-    "title": "Week 1",
+    "title": "Week 1: Course Introduction & Farm Orientation",
     "section": "",
-    "text": "Welcome to the exciting realm of Digital Agriculture! In this innovative course, we delve into the intersection of cutting-edge technologies and traditional farming practices. Explore how data analytics, sensor technologies, and precision farming methods revolutionize animal management, resource optimization, and decision-making processes. Gain insights into the transformative potential of digital tools in enhancing agricultural sustainability and productivity. Whether you’re an early-stage veterinary MSc or a tech enthusiast, join us on a journey to harness the power of digital advancements for a smarter and more efficient future in agriculture.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html#introduction-to-statistical-programming-wc",
-    "href": "weeks/week-1.html#introduction-to-statistical-programming-wc",
-    "title": "Week 1",
-    "section": "Introduction to statistical programming (WC)",
-    "text": "Introduction to statistical programming (WC)\n📖 Within the statistical programming labs, we will follow the Introduction to Data Science handbook by Rafael Irizarry.\n📧 Send email with your Gmail address to me (miel.hostens@cornell.edu) so I can give you access to Google Drive and Google Colab.\n💻 You will have to install R & R-studio on your computer.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html#a-guideline-to-reproducible-fair-data-science-ic",
-    "href": "weeks/week-1.html#a-guideline-to-reproducible-fair-data-science-ic",
-    "title": "Week 1",
-    "section": "A guideline to reproducible & FAIR data science (IC)",
-    "text": "A guideline to reproducible & FAIR data science (IC)\n📺 Get familiar with FAIR by looking at this video.\n📖 Read the intial publication on The FAIR Guiding Principles for scientific data management and stewardschip.\n🔬 Explore the vision of Cornell University on FAIR principles and their Fair checklist.\n💻 Check for reproducible advise in the tutorials at the bovi-analytics website.\n🧑🏽‍🏫 Discuss with the entire team and Dr. Miel Hostens (contact him on his desk) on how this will reflect on your team project.\n\nBack to course schedule ⏎",
+    "text": "Details/Subtopics:\n\nCourse structure, learning outcomes, and assessment methods\nIntroduction to dairy data ecosystems: what data exist on a dairy farm?\nOverview of CURC operations and data systems\nIntroduction to data literacy in agriculture\n\n\n\nActivities/Tasks\n\nLecture (1/20): Multiple Choice Questions/Expectations/ Hybrid (Course introduction )\nLecture (1/22):, Syllabus review, expectations– Miel\n\nLab (1/22):\n\nCURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)\nGuest lecture from CURC farm manager – “(topic could be something like) A Day in the Life of Dairy Data Manager” [confirm guest speaker/ or Topic availability]\nIntroduction to CURC herd management software\nForm project teams\n\n\n\nDue Dates: Team formation by end of lab\n\n\nDatasets/Resources\n\nCURC overview materials\nHerd management software demo",
     "crumbs": [
       "Weekly materials",
       "Week 1"
@@ -2840,7 +2796,7 @@
     "href": "course-overview.html#labs",
     "title": "Digital Dairy Management and Data Analytics",
     "section": "Labs",
-    "text": "Labs\nLabs will use real-world datasets from the Cornell University Research Centre. Students will work individually and in teams to: • Work with herd management software across the different management domains. • Clean and curate datasets (Excel, R, Python and Tableau). • Conduct statistical analyses on herd-level data. • Develop visualizations, reports and presentations for practical decision-making. • Interact with students and herd managers to interpret results in a farm management context.",
+    "text": "Labs\nLabs will use real-world datasets from the Cornell University Research Centre. Students will work individually and in teams to: - Work with herd management software across the different management domains. - Clean and curate datasets (Excel, R, Python and Tableau). - Conduct statistical analyses on herd-level data. - Develop visualizations, reports and presentations for practical decision-making. - Interact with students and herd managers to interpret results in a farm management context.",
     "crumbs": [
       "Course information",
       "Overview"
