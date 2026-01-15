@@ -1,7 +1,23 @@
 ---
-title: "Week 5"
-subtitle: "Welcome Beasts & Bytes"
+title: "WEEK 7: Student Presentations; Reproductive Insights "
+subtitle: "Communicating Reproductive Data Insights "
 editor: visual
 ---
 
-coming soon
+# Details/Subtopics: 
+-   Presenting reproductive performance findings 
+-   Implications for breeding strategies and herd fertility 
+
+# Activities/Tasks 
+-   Lecture (3/3): Discussion: Integrating reproductive management with other farm systems 
+-   Lecture (3/5): Student team presentations on reproductive analysis 
+-   Lab (3/5):  
+    -   Peer evaluation 
+    -   Discussion with CURC manager (if available): Are these insights actionable? 
+
+# Due Dates: 
+-   Team presentations (3/5) – peer evaluation due 
+
+# Datasets/Resources: 
+-   Student analyses 
+
