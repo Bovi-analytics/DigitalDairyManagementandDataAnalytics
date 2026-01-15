@@ -94,7 +94,7 @@ website:
       - section: "Supplemental notes"
         contents:
           - href: supplemental/operations-in-r.qmd
-            text: Operations in R
+            text: Python Code Examples
 
 
 format:
