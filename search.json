@@ -15,7 +15,7 @@
     "href": "supplemental/operations-in-r.html",
     "title": "Python Code Examples",
     "section": "",
-    "text": "#Coming soon",
+    "text": "Available upon request",
     "crumbs": [
       "Supplemental notes",
       "Python Code Examples"
@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-15\"\n\nnow()\n\n[1] \"2026-01-15 21:48:37 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-16\"\n\nnow()\n\n[1] \"2026-01-16 15:50:45 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -884,14 +884,14 @@
     "href": "slides/lec-11.html#sec-duration-1",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 15969 days"
+    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 15970 days"
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-2",
     "href": "slides/lec-11.html#sec-duration-2",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1379721600s (~43.72 years)\""
+    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1379808000s (~43.72 years)\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-3",
@@ -919,7 +919,7 @@
     "href": "slides/lec-11.html#sec-duration-6",
     "title": "Data transformations",
     "section": "Add and substract durations",
-    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-01-16\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-01-14 18:00:00 UTC\""
+    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-01-17\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-01-15 18:00:00 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-7",
@@ -1345,9 +1345,9 @@
   {
     "objectID": "weeks/week-8.html",
     "href": "weeks/week-8.html",
-    "title": "Week 5",
+    "title": "WEEK 8: Midterm Exam & Health Data Introduction",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics\n\nReview of course concepts to date\nIntroduction to animal health records: disease events, treatments, SCC trends\n\n\n\nActivities/Tasks:\n\nLecture (3/10): Review session for midterm exam\nExam (3/12 AM): Multiple-choice midterm exam (concepts, data literacy, statistics)\nLab (3/12 PM):\n\nIntroduction to CURC health records\nBrainstorm: What health data are available? What questions can they answer?\n\n\n\n\nDue Dates:\n\nMidterm exam (3/12)\n\n\n\nDatasets/Resources:\n\nCURC health/treatment records, SCC data",
     "crumbs": [
       "Weekly materials",
       "Week 8"
@@ -1378,9 +1378,9 @@
   {
     "objectID": "weeks/week-7.html",
     "href": "weeks/week-7.html",
-    "title": "Week 5",
+    "title": "WEEK 7: Student Presentations; Reproductive Insights",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics:\n\nPresenting reproductive performance findings\nImplications for breeding strategies and herd fertility\n\n\n\nActivities/Tasks\n\nLecture (3/3): Discussion: Integrating reproductive management with other farm systems\nLecture (3/5): Student team presentations on reproductive analysis\nLab (3/5):\n\nPeer evaluation\nDiscussion with CURC manager (if available): Are these insights actionable?\n\n\n\n\nDue Dates:\n\nTeam presentations (3/5) – peer evaluation due\n\n\n\nDatasets/Resources:\n\nStudent analyses",
     "crumbs": [
       "Weekly materials",
       "Week 7"
@@ -1389,9 +1389,9 @@
   {
     "objectID": "weeks/week-10.html",
     "href": "weeks/week-10.html",
-    "title": "Week 5",
+    "title": "WEEK 10: Nutrition & Feed Management Data",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics:\n\nTotal mixed ration (TMR) composition and analysis\nFeed intake monitoring\nBody condition scoring (BCS) and relationships to nutrition/production\n\n\n\nActivities/Tasks\n\nLecture (3/24): Nutrition basics and data-driven feeding strategies\nLecture (3/26): Interpreting feed analysis reports and intake data\nLab (3/26):\n\nCURC Visit #3: Observe feed preparation, delivery, and intake measurement\nReview CURC feed records and TMR composition data\nBrainstorm: How do nutrition data inform management decisions?\n\n\n\n\nDue Dates:\n\nReflection on nutrition systems (due after Spring Break)\n\n\n\nDatasets/Resources:\n\nCURC feed composition, intake records, BCS data",
     "crumbs": [
       "Weekly materials",
       "Week 10"
@@ -1400,9 +1400,9 @@
   {
     "objectID": "weeks/week-9.html",
     "href": "weeks/week-9.html",
-    "title": "Week 5",
+    "title": "WEEK 9: Animal Health & Mastitis Data Analysis",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics\n\nSomatic cell count (SCC) trends and interpretation\nDisease incidence rates (mastitis, lameness, metabolic disorders)\nLinking health data to milk production losses\n\n\n\nActivities/Tasks\n\nLecture (3/17): Animal health monitoring and data-driven interventions\nLecture (3/19): SCC interpretation and mastitis economics\nLab (3/19):\n\nAnalyze CURC SCC trends over time\nCalculate mastitis incidence rates\nExplore correlations between health events and production\n\n\n\n\nDue Dates:\n\nNone\n\n\n\nDatasets/Resources:\n\nCURC SCC records, disease event logs",
     "crumbs": [
       "Weekly materials",
       "Week 9"
@@ -1480,9 +1480,9 @@
   {
     "objectID": "weeks/week-11.html",
     "href": "weeks/week-11.html",
-    "title": "Week 5",
+    "title": "WEEK 11: Student Presentations – Health & Nutrition Insights",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics\n\nPresenting findings on health and nutrition management\nDiscussion of multi-system interactions (e.g., nutrition impacts on health)\n\n\n\nActivities/Tasks:\n\nLecture (4/7): Systems thinking: connecting health, nutrition, and production\nLecture (4/9): Student team presentations on health/nutrition analysis\nLab (4/9):\n\nPeer evaluation\nGroup discussion: Connecting data across management areas\n\n\n\n\nDue Dates: Team presentations (4/9)\n\nPeer evaluation due\n\n\n\nDatasets/Resources:\n\nStudent analyses",
     "crumbs": [
       "Weekly materials",
       "Week 11"
@@ -1502,9 +1502,9 @@
   {
     "objectID": "weeks/week-6.html",
     "href": "weeks/week-6.html",
-    "title": "Week 5",
+    "title": "WEEK 6: Analyzing Reproductive Performance",
     "section": "",
-    "text": "coming soon",
+    "text": "Details/Subtopics\n\nCalculating reproductive efficiency metrics\nIdentifying reproductive problems from data patterns\nComparison across lactation groups or seasons\n\n\n\nActivities/Tasks:\n\nLecture (2/24): Methods for analyzing reproductive performance\nLecture (2/26): Case study: Using reproductive data to troubleshoot herd issues\nLab (2/26):\n\nCalculate key reproductive metrics from CURC data\nCompare primiparous vs. multiparous cows\nCreate summary visualizations\n\n\n\n\nDue Dates:\n\nLab report on reproductive metrics (due start of Week 7)\n\n\n\nDatasets/Resources:\n\nCURC breeding and pregnancy records",
     "crumbs": [
       "Weekly materials",
       "Week 6"
