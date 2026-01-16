@@ -2,7 +2,7 @@ project:
   type: website
 website:
   page-navigation: true
-  title: "Beasts & Bytes"
+  title: "ANSC4940"
   description: "Homepage for Digital Dairy Management and Data Analytics"
   site-url: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/"
   repo-url: https://github.com/Bovi-analytics/DigitalDairyManagementandDataAnalytics/
@@ -11,12 +11,12 @@ website:
   open-graph: true
 
   twitter-card:
-    creator: "@MielHostens"
+    creator: "@MielHostens @EnhongLiu"
     image: "images/twitter-card.png"
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2024, Miel Hostens"
+    left: "&copy; Copyright 2025, Miel Hostens & Enhong Liu"
     background: "#D7DEDC"
 
   sidebar:
