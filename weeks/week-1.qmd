@@ -11,8 +11,8 @@ editor: visual
 -   Introduction to data literacy in agriculture 
 
 # Activities/Tasks 
--   Lecture (1/20): Multiple Choice Questions/Expectations/ Hybrid (Course introduction ) 
--   Lecture (1/22):, Syllabus review, expectations-- Miel  
+-   Lecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz
+-   Lecture (1/22):, Syllabus review and Expectations
 -   Lab (1/22):   
     -   CURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records) 
     -   Guest lecture from CURC farm manager – "(topic could be something like) A Day in the Life of Dairy Data Manager" [confirm guest speaker/ or Topic availability] 
