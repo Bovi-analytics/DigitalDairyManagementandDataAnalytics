@@ -21,7 +21,11 @@ editor: visual
 
 # Due Dates: 
 -   Team formation by end of lab 
-
+- Please take a moment to fill in this forms so we can tailor the course to your needs: [Pre-course questionnaire](https://forms.office.com/r/L4yqeFjh6V) 
 # Datasets/Resources 
 -   CURC overview materials 
 -   Herd management software demo 
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
