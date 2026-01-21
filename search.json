@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-21\"\n\nnow()\n\n[1] \"2026-01-21 19:07:37 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-21\"\n\nnow()\n\n[1] \"2026-01-21 19:17:09 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -1493,7 +1493,7 @@
     "href": "weeks/week-1.html",
     "title": "WEEK 1: Course Introduction & Farm Orientation",
     "section": "",
-    "text": "Details/Subtopics:\n\nCourse structure, learning outcomes, and assessment methods\nIntroduction to dairy data ecosystems: what data exist on a dairy farm?\nOverview of CURC operations and data systems\nIntroduction to data literacy in agriculture\n\n\n\nActivities/Tasks\n\nLecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz\nLecture (1/22):, Syllabus review and Expectations\nLab (1/22):\n\nCURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)\nGuest lecture from CURC farm manager – “(topic could be something like) A Day in the Life of Dairy Data Manager” [confirm guest speaker/ or Topic availability]\nIntroduction to CURC herd management software\nForm project teams\n\n\n\n\nDue Dates:\n\nTeam formation by end of lab\nPlease take a moment to fill in this forms so we can tailor the course to your needs: Pre-course questionnaire # Datasets/Resources\nCURC overview materials\nHerd management software demo\n\n\nBack to course schedule ⏎",
+    "text": "Details/Subtopics:\n\nCourse structure, learning outcomes, and assessment methods\nIntroduction to dairy data ecosystems: what data exist on a dairy farm?\nOverview of CURC operations and data systems\nIntroduction to data literacy in agriculture\n\n\n\nActivities/Tasks\n\nLecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz\nLecture (1/22):, Syllabus review and Expectations\nLab (1/22):\n\nCURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)\nGuest lecture from CURC farm manager – “A Day in the Life of Dairy Data Manager”.\nIntroduction to CURC herd management software\nForm project teams\n\n\n\n\nDue Dates:\n\nTeam formation by end of lab\nPlease take a moment to complete the MCQs for the pre-course knowledge assessment so we can better tailor the course to your needs: Pre-course MCQS\nPlease take a moment to fill in this forms so we can tailor the course to your needs: Pre-course questionnaire # Datasets/Resources\nCURC overview materials\nHerd management software demo\n\n\nBack to course schedule ⏎",
     "crumbs": [
       "Weekly materials",
       "Week 1"
@@ -2686,7 +2686,7 @@
     "href": "course-team.html#teaching-assistants",
     "title": "Teaching team",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n\n\nName\nLocation\n\n\n\n\n\nSumit Sharma\nB29 Morrison Hall\n\n\n\nOffice Hours: 11:00 AM – 12:00 PM on Wednesdays. Alternatively, you may email to schedule an appointment.",
+    "text": "Teaching assistants\n\n\n\n\nName\nLocation\n\n\n\n\n\nSumit Sharma\nB29 Morrison Hall\n\n\n\nOffice Hours: 11:00 AM – 12:00 PM on Wednesdays. Alternatively, you may email at ss4452@cornell.edu to schedule an appointment.",
     "crumbs": [
       "Course information",
       "Teaching team"
