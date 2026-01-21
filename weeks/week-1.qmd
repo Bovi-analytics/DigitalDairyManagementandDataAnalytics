@@ -15,12 +15,13 @@ editor: visual
 -   Lecture (1/22):, Syllabus review and Expectations
 -   Lab (1/22):   
     -   CURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records) 
-    -   Guest lecture from CURC farm manager – "(topic could be something like) A Day in the Life of Dairy Data Manager" [confirm guest speaker/ or Topic availability] 
+    -   Guest lecture from CURC farm manager – "A Day in the Life of Dairy Data Manager".
     -   Introduction to CURC herd management software 
     -   Form project teams 
 
 # Due Dates: 
--   Team formation by end of lab 
+-   Team formation by end of lab
+- Please take a moment to complete the MCQs for the pre-course knowledge assessment so we can better tailor the course to your needs: [Pre-course MCQS](https://forms.office.com/r/z5R3PVDvvG)
 - Please take a moment to fill in this forms so we can tailor the course to your needs: [Pre-course questionnaire](https://forms.office.com/r/L4yqeFjh6V) 
 # Datasets/Resources 
 -   CURC overview materials 
