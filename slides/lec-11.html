@@ -250,11 +250,11 @@
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">today</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-01-19"</code></pre>
+<pre><code>[1] "2026-01-21"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">now</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-01-19 18:36:16 UTC"</code></pre>
+<pre><code>[1] "2026-01-21 18:53:06 UTC"</code></pre>
 </div>
 </div>
 </section>
@@ -584,7 +584,7 @@ date (1): date
 <span id="cb40-2"><a></a>h_age <span class="ot">&lt;-</span> <span class="fu">today</span>() <span class="sc">-</span> <span class="fu">ymd</span>(<span class="st">"1982-04-27"</span>)</span>
 <span id="cb40-3"><a></a>h_age</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Time difference of 15973 days</code></pre>
+<pre><code>Time difference of 15975 days</code></pre>
 </div>
 </div>
 </section>
@@ -595,7 +595,7 @@ date (1): date
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">as.duration</span>(h_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "1380067200s (~43.73 years)"</code></pre>
+<pre><code>[1] "1380240000s (~43.74 years)"</code></pre>
 </div>
 </div>
 </section>
@@ -661,12 +661,12 @@ date (1): date
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>tomorrow <span class="ot">&lt;-</span> <span class="fu">today</span>() <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span>
 <span id="cb60-2"><a></a>tomorrow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-01-20"</code></pre>
+<pre><code>[1] "2026-01-22"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>last_year <span class="ot">&lt;-</span> <span class="fu">today</span>() <span class="sc">-</span> <span class="fu">dyears</span>(<span class="dv">1</span>)</span>
 <span id="cb62-2"><a></a>last_year</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-18 18:00:00 UTC"</code></pre>
+<pre><code>[1] "2025-01-20 18:00:00 UTC"</code></pre>
 </div>
 </div>
 </section>

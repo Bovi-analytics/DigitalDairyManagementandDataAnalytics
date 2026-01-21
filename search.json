@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-19\"\n\nnow()\n\n[1] \"2026-01-19 18:36:16 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-21\"\n\nnow()\n\n[1] \"2026-01-21 18:53:06 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -884,14 +884,14 @@
     "href": "slides/lec-11.html#sec-duration-1",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 15973 days"
+    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 15975 days"
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-2",
     "href": "slides/lec-11.html#sec-duration-2",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1380067200s (~43.73 years)\""
+    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1380240000s (~43.74 years)\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-3",
@@ -919,7 +919,7 @@
     "href": "slides/lec-11.html#sec-duration-6",
     "title": "Data transformations",
     "section": "Add and substract durations",
-    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-01-20\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-01-18 18:00:00 UTC\""
+    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-01-22\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-01-20 18:00:00 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-7",
@@ -1493,7 +1493,7 @@
     "href": "weeks/week-1.html",
     "title": "WEEK 1: Course Introduction & Farm Orientation",
     "section": "",
-    "text": "Details/Subtopics:\n\nCourse structure, learning outcomes, and assessment methods\nIntroduction to dairy data ecosystems: what data exist on a dairy farm?\nOverview of CURC operations and data systems\nIntroduction to data literacy in agriculture\n\n\n\nActivities/Tasks\n\nLecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz\nLecture (1/22):, Syllabus review and Expectations\nLab (1/22):\n\nCURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)\nGuest lecture from CURC farm manager – “(topic could be something like) A Day in the Life of Dairy Data Manager” [confirm guest speaker/ or Topic availability]\nIntroduction to CURC herd management software\nForm project teams\n\n\n\n\nDue Dates:\n\nTeam formation by end of lab\n\n\n\nDatasets/Resources\n\nCURC overview materials\nHerd management software demo",
+    "text": "Details/Subtopics:\n\nCourse structure, learning outcomes, and assessment methods\nIntroduction to dairy data ecosystems: what data exist on a dairy farm?\nOverview of CURC operations and data systems\nIntroduction to data literacy in agriculture\n\n\n\nActivities/Tasks\n\nLecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz\nLecture (1/22):, Syllabus review and Expectations\nLab (1/22):\n\nCURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)\nGuest lecture from CURC farm manager – “(topic could be something like) A Day in the Life of Dairy Data Manager” [confirm guest speaker/ or Topic availability]\nIntroduction to CURC herd management software\nForm project teams\n\n\n\n\nDue Dates:\n\nTeam formation by end of lab\nPlease take a moment to fill in this forms so we can tailor the course to your needs: Pre-course questionnaire # Datasets/Resources\nCURC overview materials\nHerd management software demo\n\n\nBack to course schedule ⏎",
     "crumbs": [
       "Weekly materials",
       "Week 1"
