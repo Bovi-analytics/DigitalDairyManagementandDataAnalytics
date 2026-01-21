@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-21\"\n\nnow()\n\n[1] \"2026-01-21 18:53:06 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-01-21\"\n\nnow()\n\n[1] \"2026-01-21 19:00:32 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -2686,7 +2686,7 @@
     "href": "course-team.html#teaching-assistants",
     "title": "Teaching team",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n\n\nName\nLocation\n\n\n\n\n\nSumit Sharma\nB26 Morrison Hall",
+    "text": "Teaching assistants\n\n\n\n\nName\nLocation\n\n\n\n\n\nSumit Sharma\nB29 Morrison Hall\n\n\nOffice Hours: 11:00 AM – 1:00 PM. Alternatively, you may email [your email] to schedule an appointment.",
     "crumbs": [
       "Course information",
       "Teaching team"
