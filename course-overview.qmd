@@ -80,7 +80,7 @@ work individually and in teams to:
 -   Interact with students and herd managers to interpret results in a farm management
 context.
 
-# Project
+# Project(Capstone management meeting)
 
 The course culminates in a capstone management meeting in which student teams present
 a comprehensive SWOT (Strengths, Weaknesses, Opportunities, and Threats) analysis of
