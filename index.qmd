@@ -12,7 +12,7 @@ This page contains an outline of the topics, content, and assignments for the co
 | 1 | 1/22 | (LAB) CURC Farm Tour & Presentation from CURC Manager | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
 | 2 | 1/27 | Principles of Data Collection | Dr. Hostens | 📖 | 🖥️ |
 | 2 | 1/29 | Principles of Data Visualization | Dr. Hostens | [📖](https://www.tableau.com/academic/students) | [🖥️](https://prezi.com/view/8Pgr5LLExlIaYtktADox/) |
-| 2 | 1/29 | (LAB) Effective visualization using Tableau | Dr. Hostens | [📖]() | 🖥️ |
+| 2 | 1/29 | (LAB) Effective visualization using Tableau | Dr. Hostens | [📖](https://github.com/Bovi-analytics/DigitalDairyManagementandDataAnalytics/tree/main/data) | 🖥️ |
 | 3 | 2/3 | Understanding Milk Production Data (1) | Meike van Leerdam | 📖 | 🖥️ |
 | 3 | 2/5 | Understanding Milk Production Data (2) | Meike van Leerdam | 📖 | 🖥️ |
 | 3 | 2/5 | (LAB) Analyze CURC Milk Production Records | Meike van Leerdam | 📖 | 🖥️ |
