@@ -2,15 +2,7 @@
 
 🔗 https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/
 
-## After updating R
-
-[Source](https://inbo.github.io/tutorials/tutorials/r_renv_update/)
-
-``` r
-renv::upgrade() # upgrades renv, if new version is available 
-renv::hydrate(update = "all") 
-renv::snapshot() # inspect the message before confirming to overwrite renv.lock
-```
+The source code is automatically compiled using GitHub actions.
 
 ## Attribution
 

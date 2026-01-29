@@ -10,12 +10,12 @@ This page contains an outline of the topics, content, and assignments for the co
 | 1 | 1/20 | Introductory Multiple Choice Questions and Inventory Management | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
 | 1 | 1/22 | Syllabus Review and Introduction | Dr. Hostens | 📖 | 🖥️ |
 | 1 | 1/22 | (LAB) CURC Farm Tour & Presentation from CURC Manager | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
-| 2 | 1/27 | Principles of Data Collection and Visualization | Dr. Hostens | 📖 | 🖥️ |
-| 2 | 1/29 | Data Cleaning Workflows and Common Issues | Dr. Hostens | 📖 | 🖥️ |
-| 2 | 1/29 | (LAB) Clean Messy CURC Dataset | Dr. Hostens | 📖 | 🖥️ |
-| 3 | 2/3 | Understanding Milk Production Data and KPIs | Dr. Hostens | 📖 | 🖥️ |
-| 3 | 2/5 | Introduction to R/Python for Data Analysis | Dr. Hostens | 📖 | 🖥️ |
-| 3 | 2/5 | (LAB) Analyze CURC Milk Production Records | Dr. Hostens | 📖 | 🖥️ |
+| 2 | 1/27 | Principles of Data Collection | Dr. Hostens | 📖 | 🖥️ |
+| 2 | 1/29 | Principles of Data Visualization | Dr. Hostens | [📖](https://www.tableau.com/academic/students) | [🖥️](https://prezi.com/view/8Pgr5LLExlIaYtktADox/) |
+| 2 | 1/29 | (LAB) Effective visualization using Tableau | Dr. Hostens | [📖]() | 🖥️ |
+| 3 | 2/3 | Understanding Milk Production Data (1) | Meike van Leerdam | 📖 | 🖥️ |
+| 3 | 2/5 | Understanding Milk Production Data (2) | Meike van Leerdam | 📖 | 🖥️ |
+| 3 | 2/5 | (LAB) Analyze CURC Milk Production Records | Meike van Leerdam | 📖 | 🖥️ |
 | 4 | 2/10 | Effective Data Visualization and Communication Strategies | Dr. Hostens | 📖 | 🖥️ |
 | 4 | 2/12 | Student Team Presentations on Milk Production | Dr. Hostens | 📖 | 🖥️ |
 | 4 | 2/12 | (LAB) Peer Evaluation & Discussion | Dr. Hostens | 📖 | 🖥️ |
