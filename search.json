@@ -779,7 +779,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-02\"\n\nnow()\n\n[1] \"2026-02-02 15:32:17 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-02\"\n\nnow()\n\n[1] \"2026-02-02 15:41:15 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
