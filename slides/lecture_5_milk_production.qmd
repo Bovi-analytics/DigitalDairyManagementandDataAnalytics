@@ -1,0 +1,112 @@
+---
+
+title: "Lecture 5 - Milk production data"
+subtitle: "ANSCI 4940 - Spring 2026"
+author: "Meike van Leerdam"
+footer: "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
+revealjs:
+theme: slides.scss
+transition: fade
+slide-number: true
+editor: visual
+execute:
+freeze: auto
+------------
+
+```{r}
+#| include: false
+library(countdown)
+```
+
+# Milk production
+
+## Measuring milk yield
+
+::::: columns
+::: {.column width="50%"}
+![](images/milk_production.png){fig-alt="milk_production" fig-align="center" width="164"}
+:::
+
+::: {.column width="50%"}
+:::
+:::::
+
+## Why?
+
+* DHI
+* Management
+
+## How?
+
+* Test-day milk recording
+* Milk meters
+
+## Lactation yield
+
+::::: columns
+::: {.column width="50%"}
+![](images/wood.png){fig-alt="milk_production_wood" fig-align="center" width="164"}
+:::
+
+::: {.column width="50%"}
+:::
+:::::
+
+## Cumulative yield
+
+* Test interval method
+* Best prediction
+
+## Total production is not the whole picture
+
+::::: columns
+::: {.column width="50%"}
+![](images/LC-Characteristics.png){fig-alt="characteristics" fig-align="center" width="164"}
+:::
+
+::: {.column width="50%"}
+:::
+:::::
+
+## Which lactation is better?
+
+::::: columns
+::: {.column width="50%"}
+![](images/comparing_two_lc.png){fig-alt="comparing_two_lactations" fig-align="center" width="164"}
+:::
+
+::: {.column width="50%"}
+:::
+:::::
+
+## Making lactations comparable
+
+### Energy-corrected milk (ECM)
+
+Adjusting to 3.5% fat and 3.2% protein:
+
+ECM = 0.327 × milk (lb) + 12.95 × fat (lb) + 7.2 × protein (lb)
+
+## 305-ME / 305-AA
+
+Applying correction factors:
+
+* Age at freshening
+* Parity
+* Season of calving
+* Milking frequency
+* Previous days open
+* Breed
+* Climate regions
+
+## Management Level Milk (MLM)
+
+Estimated average milk production on test day if all cows were:
+
+* 150 days in milk
+* In second lactation
+* Producing milk with 4.0% fat and 3.3% protein
+
+MLM is only calculated on cows with less than 306 days in milk
