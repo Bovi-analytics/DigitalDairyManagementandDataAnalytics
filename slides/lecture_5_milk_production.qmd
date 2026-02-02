@@ -81,6 +81,10 @@ library(countdown)
 :::
 :::::
 
+##Question
+
+Which factors influence the lactationcurve? 
+
 ## Making lactations comparable
 
 ### Energy-corrected milk (ECM)
