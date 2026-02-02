@@ -1,19 +1,18 @@
 ---
-
 title: "Lecture 5 - Milk production data"
 subtitle: "ANSCI 4940 - Spring 2026"
 author: "Meike van Leerdam"
-footer: "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+footer: "https://bovi-analytics.github.io/BeastsAndBytes/"
 logo: "images/Bovi-Analytics-SmallLogo.png"
 format:
-revealjs:
-theme: slides.scss
-transition: fade
-slide-number: true
+  revealjs:
+    theme: slides.scss
+    transition: fade
+    slide-number: true
 editor: visual
 execute:
-freeze: auto
-------------
+  freeze: auto
+---
 
 ```{r}
 #| include: false
