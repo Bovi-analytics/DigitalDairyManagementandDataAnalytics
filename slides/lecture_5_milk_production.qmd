@@ -25,7 +25,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/milk_production.png){fig-alt="milk_production" fig-align="center" width="164"}
+![](../images/milk_production.png){fig-alt="milk_production" fig-align="center" width="90%"}
 :::
 
 ::: {.column width="50%"}
@@ -46,7 +46,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/wood.png){fig-alt="milk_production_wood" fig-align="center" width="164"}
+![](../images/wood.png){fig-alt="milk_production_wood" fig-align="center" width="90%"}
 :::
 
 ::: {.column width="50%"}
@@ -62,7 +62,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/LC-Characteristics.png){fig-alt="characteristics" fig-align="center" width="164"}
+![](../images/LC-Characteristics.png){fig-alt="characteristics" fig-align="center" width="90%"}
 :::
 
 ::: {.column width="50%"}
@@ -73,7 +73,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/comparing_two_lc.png){fig-alt="comparing_two_lactations" fig-align="center" width="164"}
+![](../images/comparing_two_lc.png){fig-alt="comparing_two_lactations" fig-align="center" width="90%"}
 :::
 
 ::: {.column width="50%"}
@@ -113,3 +113,5 @@ Estimated average milk production on test day if all cows were:
 * Producing milk with 4.0% fat and 3.3% protein
 
 MLM is only calculated on cows with less than 306 days in milk
+
+
