@@ -25,7 +25,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/milk_production.png){fig-alt="milk_production" fig-align="center" width="95%"}
+![](../images/milk_production.png){fig-alt="milk_production" fig-align="center" width="100%"}
 :::
 
 ::: {.column width="50%"}
@@ -46,7 +46,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/wood.png){fig-alt="milk_production_wood" fig-align="center" width="95%"}
+![](../images/wood.png){fig-alt="milk_production_wood" fig-align="center" width="100%"}
 :::
 
 ::: {.column width="50%"}
@@ -62,7 +62,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/LC-Characteristics.png){fig-alt="characteristics" fig-align="center" width="95%"}
+![](../images/LC-Characteristics.png){fig-alt="characteristics" fig-align="center" width="100%"}
 :::
 
 ::: {.column width="50%"}
@@ -73,7 +73,7 @@ library(countdown)
 
 ::::: columns
 ::: {.column width="50%"}
-![](../images/comparing_two_lc.png){fig-alt="comparing_two_lactations" fig-align="center" width="95%"}
+![](../images/comparing_two_lc.png){fig-alt="comparing_two_lactations" fig-align="center" width="100%"}
 :::
 
 ::: {.column width="50%"}
