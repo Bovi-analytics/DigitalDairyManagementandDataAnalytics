@@ -765,7 +765,7 @@
     "href": "slides/lecture_5_milk_production.html#why",
     "title": "Lecture 5 - Milk production data",
     "section": "Why?",
-    "text": "Why?\n\nDHI\nManagement"
+    "text": "Why?\n\nDHI\nManagement\nResearch"
   },
   {
     "objectID": "slides/lecture_5_milk_production.html#how",
@@ -821,7 +821,7 @@
     "href": "slides/lecture_5_milk_production.html#management-level-milk-mlm",
     "title": "Lecture 5 - Milk production data",
     "section": "Management Level Milk (MLM)",
-    "text": "Management Level Milk (MLM)\nEstimated average milk production on test day if all cows were:\n\n150 days in milk\nIn second lactation\nProducing milk with 4.0% fat and 3.3% protein\n\nMLM is only calculated on cows with less than 306 days in milk"
+    "text": "Management Level Milk (MLM)\nEstimated average milk production on test day if all cows were:\n\n150 days in milk\nIn second lactation\nProducing milk with 4.0% fat and 3.3% protein\n\nMLM is only calculated on cows with less than 306 days in milk\n##Assignment Look at the milk production summaries of CURC and tell me what you think. What is going well, what is a potential weakness?"
   },
   {
     "objectID": "slides/lec-8.html#sec-goals-1",
@@ -1894,7 +1894,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-03\"\n\nnow()\n\n[1] \"2026-02-03 14:34:55 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-03\"\n\nnow()\n\n[1] \"2026-02-03 14:57:25 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
