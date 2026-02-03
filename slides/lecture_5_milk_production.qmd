@@ -36,6 +36,7 @@ library(countdown)
 
 * DHI
 * Management
+* Research 
 
 ## How?
 
@@ -113,6 +114,12 @@ Estimated average milk production on test day if all cows were:
 * Producing milk with 4.0% fat and 3.3% protein
 
 MLM is only calculated on cows with less than 306 days in milk
+
+##Assignment 
+Look at the milk production summaries of CURC and tell me what you think. 
+What is going well, what is a potential weakness? 
+
+
 
 
 
