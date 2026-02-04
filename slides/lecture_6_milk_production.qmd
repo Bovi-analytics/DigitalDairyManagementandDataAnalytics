@@ -25,19 +25,22 @@ library(countdown)
 
 ## Bias 
 ::::: columns
-::: {.column width="80%"}
+::: {.column width="100%"}
 ![](../images/average_bias.png){fig-alt="average bias" fig-align="center" width="100%"}
 :::
 
-::: {.column width="80%"}
+::: {.column width="100%"}
 :::
 :::::
 
 ## Past/Present/Future
 
 Past: Rolling average 
+
 Present: Test day average
+
 Future: Production < 100 DIM
+
 Far Future: Heifer production 
 
 ::::: columns
@@ -52,9 +55,10 @@ Far Future: Heifer production
 
 ## Genetics 
 
-**Net merit dollar value* 
+**Net merit dollar value** 
 
 The expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.
+
 
 *“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”*
 
@@ -70,21 +74,21 @@ The expected difference in lifetime profit (in USD) of a cow (or bull’s daught
 
 ## Different indexes
 ::::: columns
-::: {.column width="80%"}
+::: {.column width="100%"}
 ![](../images/different_merrits.png){fig-alt="different_merit" fig-align="center" width="100%"}
 :::
 
-::: {.column width="80%"}
+::: {.column width="100%"}
 :::
 :::::
 
 ## 
 ::::: columns
-::: {.column width="80%"}
+::: {.column width="100%"}
 ![](../images/grazing_merit.png){fig-alt="different_merit" fig-align="center" width="100%"}
 :::
 
-::: {.column width="80%"}
+::: {.column width="100%"}
 :::
 :::::
 
