@@ -1,0 +1,100 @@
+---
+title: "Lecture 6 - Milk production data (II)"
+subtitle: "ANSCI 4940 - Spring 2026"
+author: "Meike van Leerdam"
+footer: "https://bovi-analytics.github.io/BeastsAndBytes/"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
+  revealjs:
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+```{r}
+#| include: false
+library(countdown)
+```
+
+## Things to take into account looking at data 
+
+- Test day average vs rolling averages 
+
+## Bias 
+::::: columns
+::: {.column width="80%"}
+![](../images/average_bias.png){fig-alt="average bias" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+## Past/Present/Future
+
+Past: Rolling average 
+Present: Test day average
+Future: Production < 100 DIM
+Far Future: Heifer production 
+
+::::: columns
+::: {.column width="80%"}
+![](../images/lc_over_time.png){fig-alt="average bias" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+
+## Genetics 
+
+**Net merit dollar value* 
+
+The expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.
+
+*“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”*
+
+## What is in it?
+::::: columns
+::: {.column width="80%"}
+![](../images/net_merrit.png){fig-alt="net_merit" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+## Different indexes
+::::: columns
+::: {.column width="80%"}
+![](../images/different_merrits.png){fig-alt="different_merit" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+## 
+::::: columns
+::: {.column width="80%"}
+![](../images/grazing_merit.png){fig-alt="different_merit" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+## Shift to prezi 
+[presentation](https://prezi.com/p/k31siqxpdgv6/?present=1)
+
+
+
+
+
+
+
+
