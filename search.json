@@ -1726,14 +1726,14 @@
     "href": "slides/lecture_6_milk_production.html#pastpresentfuture",
     "title": "Lecture 6 - Milk production data (II)",
     "section": "Past/Present/Future",
-    "text": "Past/Present/Future\nPast: Rolling average Present: Test day average Future: Production &lt; 100 DIM Far Future: Heifer production"
+    "text": "Past/Present/Future\nPast: Rolling average\nPresent: Test day average\nFuture: Production &lt; 100 DIM\nFar Future: Heifer production"
   },
   {
     "objectID": "slides/lecture_6_milk_production.html#genetics",
     "href": "slides/lecture_6_milk_production.html#genetics",
     "title": "Lecture 6 - Milk production data (II)",
     "section": "Genetics",
-    "text": "Genetics\n**Net merit dollar value*\nThe expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.\n“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”"
+    "text": "Genetics\nNet merit dollar value\nThe expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.\n“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”"
   },
   {
     "objectID": "slides/lecture_6_milk_production.html#what-is-in-it",
@@ -1950,7 +1950,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-04\"\n\nnow()\n\n[1] \"2026-02-04 19:51:59 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-04\"\n\nnow()\n\n[1] \"2026-02-04 20:02:16 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
