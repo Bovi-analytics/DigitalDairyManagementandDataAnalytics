@@ -84,11 +84,11 @@ The expected difference in lifetime profit (in USD) of a cow (or bull’s daught
 
 ## 
 ::::: columns
-::: {.column width="100%"}
+::: {.column width="80%"}
 ![](../images/grazing_merit.png){fig-alt="different_merit" fig-align="center" width="100%"}
 :::
 
-::: {.column width="100%"}
+::: {.column width="80%"}
 :::
 :::::
 
