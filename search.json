@@ -1307,218 +1307,6 @@
     "text": "Logistic regression interpretation 2\n\nexp(confint(cows_fit))\n\n                2.5 %    97.5 %\n(Intercept) 0.4164167 0.4294401\nParity2     0.8621356 0.9050095\nParity&gt;2    0.7865882 0.8227859"
   },
   {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Coming soon",
-    "crumbs": [
-      "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "weeks/week-5.html",
-    "href": "weeks/week-5.html",
-    "title": "WEEK 5 (Shortened): Reproductive Management & Data",
-    "section": "",
-    "text": "Details/Subtopics:\n\nReproductive metrics: conception rate, days to first service, pregnancy rate\nHeat detection data and estrus synchronization records\nIntroduction to event-based data analysis\n\n\n\nActivities/Tasks\n\nLecture (2/19): Reproductive biology basics and key data-driven metrics\nLab (2/19):\n\nCURC Visit #2: Observe reproductive management practices (AI, pregnancy checks)\nCollect/discuss available reproductive data from CURC records\nBrainstorm questions: How can reproductive data improve management?\n\n\n\n\nDue Dates:\n\nReflection assignment on CURC visit (due start of Week 6)\n\n\n\nDatasets/Resources:\n\nCURC reproductive records (breeding dates, pregnancy outcomes)",
-    "crumbs": [
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "weeks/week-6.html",
-    "href": "weeks/week-6.html",
-    "title": "WEEK 6: Analyzing Reproductive Performance",
-    "section": "",
-    "text": "Details/Subtopics\n\nCalculating reproductive efficiency metrics\nIdentifying reproductive problems from data patterns\nComparison across lactation groups or seasons\n\n\n\nActivities/Tasks:\n\nLecture (2/24): Methods for analyzing reproductive performance\nLecture (2/26): Case study: Using reproductive data to troubleshoot herd issues\nLab (2/26):\n\nCalculate key reproductive metrics from CURC data\nCompare primiparous vs. multiparous cows\nCreate summary visualizations\n\n\n\n\nDue Dates:\n\nLab report on reproductive metrics (due start of Week 7)\n\n\n\nDatasets/Resources:\n\nCURC breeding and pregnancy records",
-    "crumbs": [
-      "Weekly materials",
-      "Week 6"
-    ]
-  },
-  {
-    "objectID": "weeks/week-1.html",
-    "href": "weeks/week-1.html",
-    "title": "WEEK 1: Course Introduction & Farm Orientation",
-    "section": "",
-    "text": "Details/Subtopics:\n\nCourse structure, learning outcomes, and assessment methods\nIntroduction to dairy data ecosystems: what data exist on a dairy farm?\nOverview of CURC operations and data systems\nIntroduction to data literacy in agriculture\n\n\n\nActivities/Tasks\n\nLecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz\nLecture (1/22):, Syllabus review and Expectations\nLab (1/22):\n\nCURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)\nGuest lecture from CURC farm manager – “A Day in the Life of Dairy Data Manager”.\nIntroduction to CURC herd management software\nForm project teams\n\n\n\n\nDue Dates:\n\nTeam formation by end of lab\nPlease take a moment to complete the MCQs for the pre-course knowledge assessment so we can better tailor the course to your needs: Pre-course MCQS\nPlease take a moment to fill in this forms so we can tailor the course to your needs: Pre-course questionnaire # Datasets/Resources\nCURC overview materials\nHerd management software demo\n\n\nBack to course schedule ⏎",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "weeks/week-11.html",
-    "href": "weeks/week-11.html",
-    "title": "WEEK 11: Student Presentations – Health & Nutrition Insights",
-    "section": "",
-    "text": "Details/Subtopics\n\nPresenting findings on health and nutrition management\nDiscussion of multi-system interactions (e.g., nutrition impacts on health)\n\n\n\nActivities/Tasks:\n\nLecture (4/7): Systems thinking: connecting health, nutrition, and production\nLecture (4/9): Student team presentations on health/nutrition analysis\nLab (4/9):\n\nPeer evaluation\nGroup discussion: Connecting data across management areas\n\n\n\n\nDue Dates: Team presentations (4/9)\n\nPeer evaluation due\n\n\n\nDatasets/Resources:\n\nStudent analyses",
-    "crumbs": [
-      "Weekly materials",
-      "Week 11"
-    ]
-  },
-  {
-    "objectID": "weeks/week-4.html",
-    "href": "weeks/week-4.html",
-    "title": "WEEK 4: Student Presentations – Milk Production Insights",
-    "section": "",
-    "text": "Details/Subtopics\n\nInterpreting milk production trends\nDiscussing implications for herd management\nPeer evaluation and feedback\n\n\n\nActivities/Tasks\n\nLecture (2/10): Effective data visualization and communication strategies\nLecture (2/12): Student team presentations on milk production analysis\nLab (2/12):\n\nPeer evaluation of presentations\nDiscussion: What did we learn? What management decisions could be informed?\n\n\n\n\nDue Dates:\n\nTeam presentations (2/12) – peer evaluation forms due\n\n\n\nDatasets/Resources:\n\nStudent-generated analyses and visualizations",
-    "crumbs": [
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "weeks/week-13.html",
-    "href": "weeks/week-13.html",
-    "title": "WEEK 13: Data Integration & SWOT Analysis Preparation",
-    "section": "",
-    "text": "Details/Subtopics:\n\nBuilding a holistic view of herd performance\nIntroduction to SWOT analysis (Strengths, Weaknesses, Opportunities, Threats)\nPreparing data visualizations and summary reports\n\n\n\nActivities/Tasks\n\nLecture (4/21): Integrating data for strategic decision-making\nLecture (4/23): SWOT analysis framework and capstone expectations\nLab (4/23):\n\nTeams begin synthesizing semester data (milk, reproduction, health, nutrition, economics)\nDevelop draft SWOT analysis for CURC\nCreate visual dashboards/summaries (Tableau, or PowerPoint)\n\n\n\nDue Dates:\n\nDraft SWOT outline (due start of Week 14)\n\n\n\nDatasets/Resources:\n\nAll CURC datasets from semester; Tableau/visualization software",
-    "crumbs": [
-      "Weekly materials",
-      "Week 13"
-    ]
-  },
-  {
-    "objectID": "weeks/week-3.html",
-    "href": "weeks/week-3.html",
-    "title": "WEEK 3: Milk Production & Herd Performance Metrics",
-    "section": "",
-    "text": "Details/Subtopics\n\nMilk yield metrics: daily, 305-day, lactation curves\nMilk components: fat, protein, somatic cell count (SCC)\nVisualizing production data\n\n\n\nActivities/Tasks:\n\nLecture (2/3): Understanding milk production data and key performance indicators\nLecture (2/5): How to monitor milk production\nLab (2/5):\n\nAnalyze CURC milk production records\n\nCalculate herd averages, identify high/low performers\nCreate visualizations (histograms, time series plots)\nBrainstorm: What questions can these data answer?\nAnalyse difference between tie stall and free stall barn\n\n\n\n\nDue Dates:\n\nNone (focusing on skill building)\n\n\n\nDatasets/Resources\n\nCURC DHI (Dairy Herd Improvement) records &gt; available at files in CANVAS",
-    "crumbs": [
-      "Weekly materials",
-      "Week 3"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html",
-    "href": "weeks/week-15.html",
-    "title": "WEEK 15: Capstone Management Meeting & Course Wrap-Up",
-    "section": "",
-    "text": "Details/Subtopics:\n\nFinal SWOT analysis presentations to CURC stakeholders\nQ&A and discussion of recommendations\nCourse reflection and future applications of data analytics\n\n\n\nActivities/Tasks\n\nCapstone Presentations (5/5 AM): [reserve room with good A/V setup - maybe invite dept chair?]\n\nTeams present comprehensive SWOT analysis to CURC farm managers and invited guests\nInclude strengths, weaknesses, opportunities, threats, and actionable recommendations\nProfessional format with data visualizations, evidence-based arguments\n\nWrap-Up & Reflection (5/5 PM):\n\nStakeholder feedback to students\nClass discussion: What did we learn? How will you use these skills?\nCourse evaluations\n\n\n\n\nDue Dates: Capstone presentations (5/5)\n\nGraded by instructor and stakeholders (20% of grade)\n\n\n\nDatasets/Resources:\n\nFinal student SWOT reports and dashboards",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15"
-    ]
-  },
-  {
-    "objectID": "labs/lab-0.html",
-    "href": "labs/lab-0.html",
-    "title": "Lab 0 - Meet + greet",
-    "section": "",
-    "text": "Today’s lab is short and sweet! We just need you to fill out the “Getting to know you” survey. Please go here to take it. You will need to log on to Sakai to access to survey.\nYour answers can be brief. Some of your answers will be used to guide what application examples might be of interest to a majority of students in the course and some of your answers will be used to help guide team formation. We expect this will take you ~10 minutes."
-  },
-  {
-    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "title": "Attribution-ShareAlike 4.0 International",
-    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
-    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
-  },
-  {
-    "objectID": "weeks/week-12.html",
-    "href": "weeks/week-12.html",
-    "title": "WEEK 12: Farm Economics & Data-Driven Decision Making",
-    "section": "",
-    "text": "Details/Subtopics\n\nIncome over feed cost (IOFC)\nBreakeven analysis\nLinking biological data to financial outcomes\nIntroduction to decision-support tools\n\n\n\nActivities/Tasks\n\nLecture (4/14): Economics of dairy production: key metrics and data needs\nLecture (4/16): Case study: Using data to evaluate management changes\nLab (4/16):\n\nCalculate IOFC from CURC data\nSimple economic modeling exercise (e.g., cost of disease, value of improved reproduction)\nDiscuss ethical considerations in data interpretation\n\n\n\n\nDue Dates:\n\nEconomics lab worksheet (due start of Week 13)\n\n\n\nDatasets/Resources\n\nCURC production and financial summary data\nMilk and feed price data",
-    "crumbs": [
-      "Weekly materials",
-      "Week 12"
-    ]
-  },
-  {
-    "objectID": "weeks/week-9.html",
-    "href": "weeks/week-9.html",
-    "title": "WEEK 9: Animal Health & Mastitis Data Analysis",
-    "section": "",
-    "text": "Details/Subtopics\n\nSomatic cell count (SCC) trends and interpretation\nDisease incidence rates (mastitis, lameness, metabolic disorders)\nLinking health data to milk production losses\n\n\n\nActivities/Tasks\n\nLecture (3/17): Animal health monitoring and data-driven interventions\nLecture (3/19): SCC interpretation and mastitis economics\nLab (3/19):\n\nAnalyze CURC SCC trends over time\nCalculate mastitis incidence rates\nExplore correlations between health events and production\n\n\n\n\nDue Dates:\n\nNone\n\n\n\nDatasets/Resources:\n\nCURC SCC records, disease event logs",
-    "crumbs": [
-      "Weekly materials",
-      "Week 9"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html",
-    "href": "weeks/week-10.html",
-    "title": "WEEK 10: Nutrition & Feed Management Data",
-    "section": "",
-    "text": "Details/Subtopics:\n\nTotal mixed ration (TMR) composition and analysis\nFeed intake monitoring\nBody condition scoring (BCS) and relationships to nutrition/production\n\n\n\nActivities/Tasks\n\nLecture (3/24): Nutrition basics and data-driven feeding strategies\nLecture (3/26): Interpreting feed analysis reports and intake data\nLab (3/26):\n\nCURC Visit #3: Observe feed preparation, delivery, and intake measurement\nReview CURC feed records and TMR composition data\nBrainstorm: How do nutrition data inform management decisions?\n\n\n\n\nDue Dates:\n\nReflection on nutrition systems (due after Spring Break)\n\n\n\nDatasets/Resources:\n\nCURC feed composition, intake records, BCS data",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10"
-    ]
-  },
-  {
-    "objectID": "weeks/week-7.html",
-    "href": "weeks/week-7.html",
-    "title": "WEEK 7: Student Presentations; Reproductive Insights",
-    "section": "",
-    "text": "Details/Subtopics:\n\nPresenting reproductive performance findings\nImplications for breeding strategies and herd fertility\n\n\n\nActivities/Tasks\n\nLecture (3/3): Discussion: Integrating reproductive management with other farm systems\nLecture (3/5): Student team presentations on reproductive analysis\nLab (3/5):\n\nPeer evaluation\nDiscussion with CURC manager (if available): Are these insights actionable?\n\n\n\n\nDue Dates:\n\nTeam presentations (3/5) – peer evaluation due\n\n\n\nDatasets/Resources:\n\nStudent analyses",
-    "crumbs": [
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "weeks/week-14.html",
-    "href": "weeks/week-14.html",
-    "title": "WEEK 14: Capstone Preparation & Practice Presentations",
-    "section": "",
-    "text": "Details/Subtopics\n\nRefining SWOT analysis and actionable recommendations\nCommunicating with non-technical audiences (farm managers, stakeholders)\nProfessional presentation skills\n\n\n\nActivities/Tasks:\n\nLecture (4/28): Effective communication for decision-makers\nLecture (4/30): Practice presentations (internal peer review)\nLab (4/30):\n\nTeams finalize SWOT presentations\nPeer feedback on clarity, data use, and professionalism\nRefine visualizations and messaging\n\n\n\n\nDue Dates:\n\nPeer feedback on practice presentations\n\n\n\nDatasets/Resources:\n\nStudent-generated dashboards and reports",
-    "crumbs": [
-      "Weekly materials",
-      "Week 14"
-    ]
-  },
-  {
-    "objectID": "weeks/week-2.html",
-    "href": "weeks/week-2.html",
-    "title": "WEEK 2: Data Collection & Organization Fundamentals",
-    "section": "",
-    "text": "Details/Subtopics:\n\nTypes of dairy data: continuous vs. categorical, time-series, event-based\nData quality: accuracy, completeness, consistency\nIntroduction to Excel/spreadsheet organization\nBasic data cleaning techniques\n\n\n\nActivities/Tasks\n\nLecture (1/27): Principles of data collection, Visualization\nLecture (1/29): Data cleaning workflows and common issues in farm data\nLab (1/29):\n\nHands-on: Clean a “messy” CURC dataset (provided with intentional errors)\nPractice Excel functions for data organization\nIdentify data quality issues and document cleaning steps\n\n\n\n\nDue Dates:\n\nLab worksheet on data cleaning (due start of Week 3)\n\n\n\nDatasets/Resources:\n\nSample CURC dataset with quality issues, Excel templates",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "weeks/week-8.html",
-    "href": "weeks/week-8.html",
-    "title": "WEEK 8: Midterm Exam & Health Data Introduction",
-    "section": "",
-    "text": "Details/Subtopics\n\nReview of course concepts to date\nIntroduction to animal health records: disease events, treatments, SCC trends\n\n\n\nActivities/Tasks:\n\nLecture (3/10): Review session for midterm exam\nExam (3/12 AM): Multiple-choice midterm exam (concepts, data literacy, statistics)\nLab (3/12 PM):\n\nIntroduction to CURC health records\nBrainstorm: What health data are available? What questions can they answer?\n\n\n\n\nDue Dates:\n\nMidterm exam (3/12)\n\n\n\nDatasets/Resources:\n\nCURC health/treatment records, SCC data",
-    "crumbs": [
-      "Weekly materials",
-      "Week 8"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Digital Dairy Management and Data Analytics",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nLecture\n\n\n\n\n1\n1/20\nIntroductory Multiple Choice Questions and Inventory Management\nDr. Hostens and Sumit Sharma\n📖\n🖥️\n\n\n1\n1/22\nSyllabus Review and Introduction\nDr. Hostens\n📖\n🖥️\n\n\n1\n1/22\n(LAB) CURC Farm Tour & Presentation from CURC Manager\nDr. Hostens and Sumit Sharma\n📖\n🖥️\n\n\n2\n1/27\nPrinciples of Data Collection\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/29\nPrinciples of Data Visualization\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/29\n(LAB) Effective visualization using Tableau\nDr. Hostens\n📖\n🖥️\n\n\n3\n2/3\nUnderstanding Milk Production Data (1)\nMeike van Leerdam\n📖\n🖥️\n\n\n3\n2/5\nUnderstanding Milk Production Data (2)\nMeike van Leerdam\n📖\n[🖥️] (slides/lecture_6_milk_production.html)\n\n\n3\n2/5\n(LAB) Analyze CURC Milk Production Records\nMeike van Leerdam\n📖\n🖥️\n\n\n4\n2/10\nEffective Data Visualization and Communication Strategies\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/12\nStudent Team Presentations on Milk Production\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/12\n(LAB) Peer Evaluation & Discussion\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/17\nFebruary break (no class)\n\n\n\n\n\n5\n2/19\nReproductive Biology Basics and Key Metrics\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/19\n(LAB) CURC Visit - Reproductive Management\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/24\nMethods for Analyzing Reproductive Performance\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/26\nCase Study: Using Reproductive Data to Troubleshoot\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/26\n(LAB) Calculate Reproductive Metrics\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/3\nIntegrating Reproductive Management with Farm Systems\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/5\nStudent Team Presentations on Reproductive Analysis\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/5\n(LAB) Peer Evaluation & CURC Discussion\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/10\nReview Session for Midterm Exam\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/12\nMidterm Exam\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/12\n(LAB) Introduction to CURC Health Records\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/17\nAnimal Health Monitoring and Data-Driven Interventions\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/19\nSCC Interpretation and Mastitis Economics\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/19\n(LAB) Analyze CURC SCC Trends\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/24\nNutrition Basics and Data-Driven Feeding Strategies\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/26\nInterpreting Feed Analysis Reports and Intake Data\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/26\n(LAB) CURC Visit - Feed Systems\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/31\nSpring Break (no class)\n\n\n\n\n\n10\n4/2\nSpring Break (no class)\n\n\n\n\n\n11\n4/7\nSystems Thinking: Connecting Health, Nutrition, and Production\nDr. Hostens\n📖\n🖥️\n\n\n11\n4/9\nStudent Team Presentations on Health/Nutrition\nDr. Hostens\n📖\n🖥️\n\n\n11\n4/9\n(LAB) Peer Evaluation & Group Discussion\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/14\nEconomics of Dairy Production: Key Metrics and Data Needs\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/16\nCase Study: Using Data to Evaluate Management Changes\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/16\n(LAB) Calculate IOFC & Economic Modeling\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/21\nIntegrating Data for Strategic Decision-Making\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/23\nSWOT Analysis Framework and Capstone Expectations\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/23\n(LAB) Synthesize Data & Draft SWOT\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/28\nEffective Communication for Decision-Makers\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/30\nPractice Presentations (Internal Peer Review)\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/30\n(LAB) Finalize SWOT & Peer Feedback\nDr. Hostens\n📖\n🖥️\n\n\n15\n5/5\nCapstone Management Meeting & Course Wrap-Up\nDr. Hostens\n📖\n🖥️",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
-    "section": "",
-    "text": "Google colab\n🔗 on Google colaboratory notebooks\n\n\nDodona\n🔗 on Dodona\n\n\nVirtual meetings\n🔗 on Teams",
-    "crumbs": [
-      "Course information",
-      "Useful links"
-    ]
-  },
-  {
     "objectID": "slides/lec-7.html#goals",
     "href": "slides/lec-7.html#goals",
     "title": "Joining datasets",
@@ -1706,6 +1494,267 @@
     "title": "Joining datasets",
     "section": "Overlap joins",
     "text": "Overlap joins\n\nbetween(x, y_lower, y_upper) is short for x &gt;= y_lower, x &lt;= y_upper.\nwithin(x_lower, x_upper, y_lower, y_upper) is short for x_lower &gt;= y_lower, x_upper &lt;= y_upper.\noverlaps(x_lower, x_upper, y_lower, y_upper) is short for x_lower &lt;= y_upper, x_upper &gt;= y_lower."
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Google colab\n🔗 on Google colaboratory notebooks\n\n\nDodona\n🔗 on Dodona\n\n\nVirtual meetings\n🔗 on Teams",
+    "crumbs": [
+      "Course information",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Digital Dairy Management and Data Analytics",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nLecture\n\n\n\n\n1\n1/20\nIntroductory Multiple Choice Questions and Inventory Management\nDr. Hostens and Sumit Sharma\n📖\n🖥️\n\n\n1\n1/22\nSyllabus Review and Introduction\nDr. Hostens\n📖\n🖥️\n\n\n1\n1/22\n(LAB) CURC Farm Tour & Presentation from CURC Manager\nDr. Hostens and Sumit Sharma\n📖\n🖥️\n\n\n2\n1/27\nPrinciples of Data Collection\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/29\nPrinciples of Data Visualization\nDr. Hostens\n📖\n🖥️\n\n\n2\n1/29\n(LAB) Effective visualization using Tableau\nDr. Hostens\n📖\n🖥️\n\n\n3\n2/3\nUnderstanding Milk Production Data (1)\nMeike van Leerdam\n📖\n🖥️\n\n\n3\n2/5\nUnderstanding Milk Production Data (2)\nMeike van Leerdam\n📖\n[🖥️] (slides/lecture_6_milk_production.html)\n\n\n3\n2/5\n(LAB) Analyze CURC Milk Production Records\nMeike van Leerdam\n📖\n🖥️\n\n\n4\n2/10\nEffective Data Visualization and Communication Strategies\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/12\nStudent Team Presentations on Milk Production\nDr. Hostens\n📖\n🖥️\n\n\n4\n2/12\n(LAB) Peer Evaluation & Discussion\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/17\nFebruary break (no class)\n\n\n\n\n\n5\n2/19\nReproductive Biology Basics and Key Metrics\nDr. Hostens\n📖\n🖥️\n\n\n5\n2/19\n(LAB) CURC Visit - Reproductive Management\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/24\nMethods for Analyzing Reproductive Performance\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/26\nCase Study: Using Reproductive Data to Troubleshoot\nDr. Hostens\n📖\n🖥️\n\n\n6\n2/26\n(LAB) Calculate Reproductive Metrics\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/3\nIntegrating Reproductive Management with Farm Systems\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/5\nStudent Team Presentations on Reproductive Analysis\nDr. Hostens\n📖\n🖥️\n\n\n7\n3/5\n(LAB) Peer Evaluation & CURC Discussion\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/10\nReview Session for Midterm Exam\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/12\nMidterm Exam\nDr. Hostens\n📖\n🖥️\n\n\n8\n3/12\n(LAB) Introduction to CURC Health Records\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/17\nAnimal Health Monitoring and Data-Driven Interventions\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/19\nSCC Interpretation and Mastitis Economics\nDr. Hostens\n📖\n🖥️\n\n\n9\n3/19\n(LAB) Analyze CURC SCC Trends\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/24\nNutrition Basics and Data-Driven Feeding Strategies\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/26\nInterpreting Feed Analysis Reports and Intake Data\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/26\n(LAB) CURC Visit - Feed Systems\nDr. Hostens\n📖\n🖥️\n\n\n10\n3/31\nSpring Break (no class)\n\n\n\n\n\n10\n4/2\nSpring Break (no class)\n\n\n\n\n\n11\n4/7\nSystems Thinking: Connecting Health, Nutrition, and Production\nDr. Hostens\n📖\n🖥️\n\n\n11\n4/9\nStudent Team Presentations on Health/Nutrition\nDr. Hostens\n📖\n🖥️\n\n\n11\n4/9\n(LAB) Peer Evaluation & Group Discussion\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/14\nEconomics of Dairy Production: Key Metrics and Data Needs\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/16\nCase Study: Using Data to Evaluate Management Changes\nDr. Hostens\n📖\n🖥️\n\n\n12\n4/16\n(LAB) Calculate IOFC & Economic Modeling\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/21\nIntegrating Data for Strategic Decision-Making\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/23\nSWOT Analysis Framework and Capstone Expectations\nDr. Hostens\n📖\n🖥️\n\n\n13\n4/23\n(LAB) Synthesize Data & Draft SWOT\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/28\nEffective Communication for Decision-Makers\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/30\nPractice Presentations (Internal Peer Review)\nDr. Hostens\n📖\n🖥️\n\n\n14\n4/30\n(LAB) Finalize SWOT & Peer Feedback\nDr. Hostens\n📖\n🖥️\n\n\n15\n5/5\nCapstone Management Meeting & Course Wrap-Up\nDr. Hostens\n📖\n🖥️",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "weeks/week-8.html",
+    "href": "weeks/week-8.html",
+    "title": "WEEK 8: Midterm Exam & Health Data Introduction",
+    "section": "",
+    "text": "Details/Subtopics\n\nReview of course concepts to date\nIntroduction to animal health records: disease events, treatments, SCC trends\n\n\n\nActivities/Tasks:\n\nLecture (3/10): Review session for midterm exam\nExam (3/12 AM): Multiple-choice midterm exam (concepts, data literacy, statistics)\nLab (3/12 PM):\n\nIntroduction to CURC health records\nBrainstorm: What health data are available? What questions can they answer?\n\n\n\n\nDue Dates:\n\nMidterm exam (3/12)\n\n\n\nDatasets/Resources:\n\nCURC health/treatment records, SCC data",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "weeks/week-2.html",
+    "href": "weeks/week-2.html",
+    "title": "WEEK 2: Data Collection & Organization Fundamentals",
+    "section": "",
+    "text": "Details/Subtopics:\n\nTypes of dairy data: continuous vs. categorical, time-series, event-based\nData quality: accuracy, completeness, consistency\nIntroduction to Excel/spreadsheet organization\nBasic data cleaning techniques\n\n\n\nActivities/Tasks\n\nLecture (1/27): Principles of data collection, Visualization\nLecture (1/29): Data cleaning workflows and common issues in farm data\nLab (1/29):\n\nHands-on: Clean a “messy” CURC dataset (provided with intentional errors)\nPractice Excel functions for data organization\nIdentify data quality issues and document cleaning steps\n\n\n\n\nDue Dates:\n\nLab worksheet on data cleaning (due start of Week 3)\n\n\n\nDatasets/Resources:\n\nSample CURC dataset with quality issues, Excel templates",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html",
+    "href": "weeks/week-14.html",
+    "title": "WEEK 14: Capstone Preparation & Practice Presentations",
+    "section": "",
+    "text": "Details/Subtopics\n\nRefining SWOT analysis and actionable recommendations\nCommunicating with non-technical audiences (farm managers, stakeholders)\nProfessional presentation skills\n\n\n\nActivities/Tasks:\n\nLecture (4/28): Effective communication for decision-makers\nLecture (4/30): Practice presentations (internal peer review)\nLab (4/30):\n\nTeams finalize SWOT presentations\nPeer feedback on clarity, data use, and professionalism\nRefine visualizations and messaging\n\n\n\n\nDue Dates:\n\nPeer feedback on practice presentations\n\n\n\nDatasets/Resources:\n\nStudent-generated dashboards and reports",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14"
+    ]
+  },
+  {
+    "objectID": "weeks/week-7.html",
+    "href": "weeks/week-7.html",
+    "title": "WEEK 7: Student Presentations; Reproductive Insights",
+    "section": "",
+    "text": "Details/Subtopics:\n\nPresenting reproductive performance findings\nImplications for breeding strategies and herd fertility\n\n\n\nActivities/Tasks\n\nLecture (3/3): Discussion: Integrating reproductive management with other farm systems\nLecture (3/5): Student team presentations on reproductive analysis\nLab (3/5):\n\nPeer evaluation\nDiscussion with CURC manager (if available): Are these insights actionable?\n\n\n\n\nDue Dates:\n\nTeam presentations (3/5) – peer evaluation due\n\n\n\nDatasets/Resources:\n\nStudent analyses",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "WEEK 10: Nutrition & Feed Management Data",
+    "section": "",
+    "text": "Details/Subtopics:\n\nTotal mixed ration (TMR) composition and analysis\nFeed intake monitoring\nBody condition scoring (BCS) and relationships to nutrition/production\n\n\n\nActivities/Tasks\n\nLecture (3/24): Nutrition basics and data-driven feeding strategies\nLecture (3/26): Interpreting feed analysis reports and intake data\nLab (3/26):\n\nCURC Visit #3: Observe feed preparation, delivery, and intake measurement\nReview CURC feed records and TMR composition data\nBrainstorm: How do nutrition data inform management decisions?\n\n\n\n\nDue Dates:\n\nReflection on nutrition systems (due after Spring Break)\n\n\n\nDatasets/Resources:\n\nCURC feed composition, intake records, BCS data",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10"
+    ]
+  },
+  {
+    "objectID": "weeks/week-9.html",
+    "href": "weeks/week-9.html",
+    "title": "WEEK 9: Animal Health & Mastitis Data Analysis",
+    "section": "",
+    "text": "Details/Subtopics\n\nSomatic cell count (SCC) trends and interpretation\nDisease incidence rates (mastitis, lameness, metabolic disorders)\nLinking health data to milk production losses\n\n\n\nActivities/Tasks\n\nLecture (3/17): Animal health monitoring and data-driven interventions\nLecture (3/19): SCC interpretation and mastitis economics\nLab (3/19):\n\nAnalyze CURC SCC trends over time\nCalculate mastitis incidence rates\nExplore correlations between health events and production\n\n\n\n\nDue Dates:\n\nNone\n\n\n\nDatasets/Resources:\n\nCURC SCC records, disease event logs",
+    "crumbs": [
+      "Weekly materials",
+      "Week 9"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html",
+    "href": "weeks/week-12.html",
+    "title": "WEEK 12: Farm Economics & Data-Driven Decision Making",
+    "section": "",
+    "text": "Details/Subtopics\n\nIncome over feed cost (IOFC)\nBreakeven analysis\nLinking biological data to financial outcomes\nIntroduction to decision-support tools\n\n\n\nActivities/Tasks\n\nLecture (4/14): Economics of dairy production: key metrics and data needs\nLecture (4/16): Case study: Using data to evaluate management changes\nLab (4/16):\n\nCalculate IOFC from CURC data\nSimple economic modeling exercise (e.g., cost of disease, value of improved reproduction)\nDiscuss ethical considerations in data interpretation\n\n\n\n\nDue Dates:\n\nEconomics lab worksheet (due start of Week 13)\n\n\n\nDatasets/Resources\n\nCURC production and financial summary data\nMilk and feed price data",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+  },
+  {
+    "objectID": "labs/lab-0.html",
+    "href": "labs/lab-0.html",
+    "title": "Lab 0 - Meet + greet",
+    "section": "",
+    "text": "Today’s lab is short and sweet! We just need you to fill out the “Getting to know you” survey. Please go here to take it. You will need to log on to Sakai to access to survey.\nYour answers can be brief. Some of your answers will be used to guide what application examples might be of interest to a majority of students in the course and some of your answers will be used to help guide team formation. We expect this will take you ~10 minutes."
+  },
+  {
+    "objectID": "weeks/week-15.html",
+    "href": "weeks/week-15.html",
+    "title": "WEEK 15: Capstone Management Meeting & Course Wrap-Up",
+    "section": "",
+    "text": "Details/Subtopics:\n\nFinal SWOT analysis presentations to CURC stakeholders\nQ&A and discussion of recommendations\nCourse reflection and future applications of data analytics\n\n\n\nActivities/Tasks\n\nCapstone Presentations (5/5 AM): [reserve room with good A/V setup - maybe invite dept chair?]\n\nTeams present comprehensive SWOT analysis to CURC farm managers and invited guests\nInclude strengths, weaknesses, opportunities, threats, and actionable recommendations\nProfessional format with data visualizations, evidence-based arguments\n\nWrap-Up & Reflection (5/5 PM):\n\nStakeholder feedback to students\nClass discussion: What did we learn? How will you use these skills?\nCourse evaluations\n\n\n\n\nDue Dates: Capstone presentations (5/5)\n\nGraded by instructor and stakeholders (20% of grade)\n\n\n\nDatasets/Resources:\n\nFinal student SWOT reports and dashboards",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15"
+    ]
+  },
+  {
+    "objectID": "weeks/week-3.html",
+    "href": "weeks/week-3.html",
+    "title": "WEEK 3: Milk Production & Herd Performance Metrics",
+    "section": "",
+    "text": "Details/Subtopics\n\nMilk yield metrics: daily, 305-day, lactation curves\nMilk components: fat, protein, somatic cell count (SCC)\nVisualizing production data\n\n\n\nActivities/Tasks:\n\nLecture (2/3): Understanding milk production data and key performance indicators\nLecture (2/5): How to monitor milk production\nLab (2/5):\n\nAnalyze CURC milk production records\n\nCalculate herd averages, identify high/low performers\nCreate visualizations (histograms, time series plots)\nBrainstorm: What questions can these data answer?\nAnalyse difference between tie stall and free stall barn\n\n\n\n\nDue Dates:\n\nNone (focusing on skill building)\n\n\n\nDatasets/Resources\n\nCURC DHI (Dairy Herd Improvement) records &gt; available at files in CANVAS",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html",
+    "href": "weeks/week-13.html",
+    "title": "WEEK 13: Data Integration & SWOT Analysis Preparation",
+    "section": "",
+    "text": "Details/Subtopics:\n\nBuilding a holistic view of herd performance\nIntroduction to SWOT analysis (Strengths, Weaknesses, Opportunities, Threats)\nPreparing data visualizations and summary reports\n\n\n\nActivities/Tasks\n\nLecture (4/21): Integrating data for strategic decision-making\nLecture (4/23): SWOT analysis framework and capstone expectations\nLab (4/23):\n\nTeams begin synthesizing semester data (milk, reproduction, health, nutrition, economics)\nDevelop draft SWOT analysis for CURC\nCreate visual dashboards/summaries (Tableau, or PowerPoint)\n\n\n\nDue Dates:\n\nDraft SWOT outline (due start of Week 14)\n\n\n\nDatasets/Resources:\n\nAll CURC datasets from semester; Tableau/visualization software",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13"
+    ]
+  },
+  {
+    "objectID": "weeks/week-4.html",
+    "href": "weeks/week-4.html",
+    "title": "WEEK 4: Student Presentations – Milk Production Insights",
+    "section": "",
+    "text": "Details/Subtopics\n\nInterpreting milk production trends\nDiscussing implications for herd management\nPeer evaluation and feedback\n\n\n\nActivities/Tasks\n\nLecture (2/10): Effective data visualization and communication strategies\nLecture (2/12): Student team presentations on milk production analysis\nLab (2/12):\n\nPeer evaluation of presentations\nDiscussion: What did we learn? What management decisions could be informed?\n\n\n\n\nDue Dates:\n\nTeam presentations (2/12) – peer evaluation forms due\n\n\n\nDatasets/Resources:\n\nStudent-generated analyses and visualizations",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "WEEK 11: Student Presentations – Health & Nutrition Insights",
+    "section": "",
+    "text": "Details/Subtopics\n\nPresenting findings on health and nutrition management\nDiscussion of multi-system interactions (e.g., nutrition impacts on health)\n\n\n\nActivities/Tasks:\n\nLecture (4/7): Systems thinking: connecting health, nutrition, and production\nLecture (4/9): Student team presentations on health/nutrition analysis\nLab (4/9):\n\nPeer evaluation\nGroup discussion: Connecting data across management areas\n\n\n\n\nDue Dates: Team presentations (4/9)\n\nPeer evaluation due\n\n\n\nDatasets/Resources:\n\nStudent analyses",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11"
+    ]
+  },
+  {
+    "objectID": "weeks/week-1.html",
+    "href": "weeks/week-1.html",
+    "title": "WEEK 1: Course Introduction & Farm Orientation",
+    "section": "",
+    "text": "Details/Subtopics:\n\nCourse structure, learning outcomes, and assessment methods\nIntroduction to dairy data ecosystems: what data exist on a dairy farm?\nOverview of CURC operations and data systems\nIntroduction to data literacy in agriculture\n\n\n\nActivities/Tasks\n\nLecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz\nLecture (1/22):, Syllabus review and Expectations\nLab (1/22):\n\nCURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)\nGuest lecture from CURC farm manager – “A Day in the Life of Dairy Data Manager”.\nIntroduction to CURC herd management software\nForm project teams\n\n\n\n\nDue Dates:\n\nTeam formation by end of lab\nPlease take a moment to complete the MCQs for the pre-course knowledge assessment so we can better tailor the course to your needs: Pre-course MCQS\nPlease take a moment to fill in this forms so we can tailor the course to your needs: Pre-course questionnaire # Datasets/Resources\nCURC overview materials\nHerd management software demo\n\n\nBack to course schedule ⏎",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "weeks/week-6.html",
+    "href": "weeks/week-6.html",
+    "title": "WEEK 6: Analyzing Reproductive Performance",
+    "section": "",
+    "text": "Details/Subtopics\n\nCalculating reproductive efficiency metrics\nIdentifying reproductive problems from data patterns\nComparison across lactation groups or seasons\n\n\n\nActivities/Tasks:\n\nLecture (2/24): Methods for analyzing reproductive performance\nLecture (2/26): Case study: Using reproductive data to troubleshoot herd issues\nLab (2/26):\n\nCalculate key reproductive metrics from CURC data\nCompare primiparous vs. multiparous cows\nCreate summary visualizations\n\n\n\n\nDue Dates:\n\nLab report on reproductive metrics (due start of Week 7)\n\n\n\nDatasets/Resources:\n\nCURC breeding and pregnancy records",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6"
+    ]
+  },
+  {
+    "objectID": "weeks/week-5.html",
+    "href": "weeks/week-5.html",
+    "title": "WEEK 5 (Shortened): Reproductive Management & Data",
+    "section": "",
+    "text": "Details/Subtopics:\n\nReproductive metrics: conception rate, days to first service, pregnancy rate\nHeat detection data and estrus synchronization records\nIntroduction to event-based data analysis\n\n\n\nActivities/Tasks\n\nLecture (2/19): Reproductive biology basics and key data-driven metrics\nLab (2/19):\n\nCURC Visit #2: Observe reproductive management practices (AI, pregnancy checks)\nCollect/discuss available reproductive data from CURC records\nBrainstorm questions: How can reproductive data improve management?\n\n\n\n\nDue Dates:\n\nReflection assignment on CURC visit (due start of Week 6)\n\n\n\nDatasets/Resources:\n\nCURC reproductive records (breeding dates, pregnancy outcomes)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Coming soon",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#things-to-take-into-account-looking-at-data",
+    "href": "slides/lecture_6_milk_production.html#things-to-take-into-account-looking-at-data",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Things to take into account looking at data",
+    "text": "Things to take into account looking at data\n\nTest day average vs rolling averages"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#bias",
+    "href": "slides/lecture_6_milk_production.html#bias",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Bias",
+    "text": "Bias"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#pastpresentfuture",
+    "href": "slides/lecture_6_milk_production.html#pastpresentfuture",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Past/Present/Future",
+    "text": "Past/Present/Future\nPast: Rolling average Present: Test day average Future: Production &lt; 100 DIM Far Future: Heifer production"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#genetics",
+    "href": "slides/lecture_6_milk_production.html#genetics",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Genetics",
+    "text": "Genetics\n**Net merit dollar value*\nThe expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.\n“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#what-is-in-it",
+    "href": "slides/lecture_6_milk_production.html#what-is-in-it",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "What is in it?",
+    "text": "What is in it?"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#different-indexes",
+    "href": "slides/lecture_6_milk_production.html#different-indexes",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Different indexes",
+    "text": "Different indexes"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#shift-to-prezi",
+    "href": "slides/lecture_6_milk_production.html#shift-to-prezi",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Shift to prezi",
+    "text": "Shift to prezi\npresentation"
   },
   {
     "objectID": "slides/lec-1.html#meet-the-teacher",
@@ -1901,7 +1950,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-04\"\n\nnow()\n\n[1] \"2026-02-04 16:32:03 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-04\"\n\nnow()\n\n[1] \"2026-02-04 19:29:11 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
