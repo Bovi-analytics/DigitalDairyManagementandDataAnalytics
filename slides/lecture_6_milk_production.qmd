@@ -102,12 +102,11 @@ $$
 - **X, Z** = link observations to effects
 
 
-**What do we get from this?**
+## What do we get from this?
 
 - Each animal receives an estimate of genetic merit  
 - Called **Predicted Transmitting Ability (PTA)**  
 - PTA = breeding value ÷ 2
-
 
 **Note:**  
 Real U.S. animal models are more complex and include:
@@ -123,13 +122,15 @@ Real U.S. animal models are more complex and include:
 - DNA markers = **SNP** (positions in the genome with two variants)
 
 
+
 **Why use genomics?**
 - DNA is **not influenced by environment**
 - Improvs accuracy of breeding value estimation
 - Allows evaluation of **young animals without records**
 
 
-**How are genomic PTA calculated?**
+## How are genomic PTA calculated?
+
 - Estimate SNP effects using a **predictor population** with reliable PTA
 - Combine:
   - Genomic predictions from SNP
@@ -137,7 +138,7 @@ Real U.S. animal models are more complex and include:
   - Traditional pedigree + phenotype evaluations
 
 
-##Net merit dollar value
+## Net merit dollar value
 
 The expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.
 
