@@ -19,9 +19,17 @@ execute:
 library(countdown)
 ```
 
+## monitoring milk yield 
+
+- What is the goal of the farm  
+- What is the size of the farm 
+- What management system do they use > seasonal, grazing, free stall etc. 
+
+
 ## Things to take into account looking at data 
 
 - Test day average vs rolling averages 
+- What are you trying to optimize? 
 
 ## Bias 
 ::::: columns
@@ -53,9 +61,83 @@ Far Future: Heifer production
 :::::
 
 
+## What dictates milk production
+
+
+phenotype = genotype + environment 
+
+
 ## Genetics 
 
-**Net merit dollar value** 
+$$
+\Delta G_{year} =
+\frac{
+\sqrt{\text{reliability}} \times \text{selection intensity} \times \sqrt{\text{genetic variance}}
+}{
+\text{generation interval}
+}
+$$
+
+## Effect of selection differs
+
+- Traits associated with **physical shape and size**  
+  - High heritability (≥ 40%)
+
+- Traits related to **milk and solids yield**  
+  - Moderate heritability (15–30%)
+
+- Traits associated with **health and fertility**  
+  - Low heritability (≤ 10%)
+
+## Calculation of Breeding Values
+
+$$
+y = Xb + Zu + e
+$$
+
+- **y** = observed phenotypes  
+- **b** = fixed effects (e.g., sex, management)  
+- **u** = random genetic effects (breeding values)  
+- **e** = residual error  
+- **X, Z** = link observations to effects
+
+
+**What do we get from this?**
+
+- Each animal receives an estimate of genetic merit  
+- Called **Predicted Transmitting Ability (PTA)**  
+- PTA = breeding value ÷ 2
+
+
+**Note:**  
+Real U.S. animal models are more complex and include:
+- Contemporary groups  
+- Herd-by-sire effects  
+- Permanent environmental effects
+
+
+## Genomic prediction
+
+**What is genomic prediction?**
+- Uses **DNA information + phenotypes + pedigree** to estimate genetic merit
+- DNA markers = **SNP** (positions in the genome with two variants)
+
+
+**Why use genomics?**
+- DNA is **not influenced by environment**
+- Improvs accuracy of breeding value estimation
+- Allows evaluation of **young animals without records**
+
+
+**How are genomic PTA calculated?**
+- Estimate SNP effects using a **predictor population** with reliable PTA
+- Combine:
+  - Genomic predictions from SNP
+  - Parent averages (PA)
+  - Traditional pedigree + phenotype evaluations
+
+
+##Net merit dollar value
 
 The expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.
 
@@ -91,6 +173,9 @@ The expected difference in lifetime profit (in USD) of a cow (or bull’s daught
 ::: {.column width="80%"}
 :::
 :::::
+
+
+
 
 ## Shift to prezi 
 [presentation](https://prezi.com/p/k31siqxpdgv6/?present=1)
