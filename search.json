@@ -1761,14 +1761,35 @@
     "href": "slides/lecture_6_milk_production.html#calculation-of-breeding-values",
     "title": "Lecture 6 - Milk production data (II)",
     "section": "Calculation of Breeding Values",
-    "text": "Calculation of Breeding Values\n\\[\ny = Xb + Zu + e\n\\]\n\ny = observed phenotypes\n\nb = fixed effects (e.g., sex, management)\n\nu = random genetic effects (breeding values)\n\ne = residual error\n\nX, Z = link observations to effects\n\nWhat do we get from this?\n\nEach animal receives an estimate of genetic merit\n\nCalled Predicted Transmitting Ability (PTA)\n\nPTA = breeding value ÷ 2\n\nNote:\nReal U.S. animal models are more complex and include: - Contemporary groups\n- Herd-by-sire effects\n- Permanent environmental effects"
+    "text": "Calculation of Breeding Values\n\\[\ny = Xb + Zu + e\n\\]\n\ny = observed phenotypes\n\nb = fixed effects (e.g., sex, management)\n\nu = random genetic effects (breeding values)\n\ne = residual error\n\nX, Z = link observations to effects"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#what-do-we-get-from-this",
+    "href": "slides/lecture_6_milk_production.html#what-do-we-get-from-this",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "What do we get from this?",
+    "text": "What do we get from this?\n\nEach animal receives an estimate of genetic merit\n\nCalled Predicted Transmitting Ability (PTA)\n\nPTA = breeding value ÷ 2\n\nNote:\nReal U.S. animal models are more complex and include: - Contemporary groups\n- Herd-by-sire effects\n- Permanent environmental effects"
   },
   {
     "objectID": "slides/lecture_6_milk_production.html#genomic-prediction",
     "href": "slides/lecture_6_milk_production.html#genomic-prediction",
     "title": "Lecture 6 - Milk production data (II)",
     "section": "Genomic prediction",
-    "text": "Genomic prediction\nWhat is genomic prediction? - Uses DNA information + phenotypes + pedigree to estimate genetic merit - DNA markers = SNP (positions in the genome with two variants)\nWhy use genomics? - DNA is not influenced by environment - Improvs accuracy of breeding value estimation - Allows evaluation of young animals without records\nHow are genomic PTA calculated? - Estimate SNP effects using a predictor population with reliable PTA - Combine: - Genomic predictions from SNP - Parent averages (PA) - Traditional pedigree + phenotype evaluations\n##Net merit dollar value\nThe expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.\n“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”"
+    "text": "Genomic prediction\nWhat is genomic prediction? - Uses DNA information + phenotypes + pedigree to estimate genetic merit - DNA markers = SNP (positions in the genome with two variants)\nWhy use genomics? - DNA is not influenced by environment - Improvs accuracy of breeding value estimation - Allows evaluation of young animals without records"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#how-are-genomic-pta-calculated",
+    "href": "slides/lecture_6_milk_production.html#how-are-genomic-pta-calculated",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "How are genomic PTA calculated?",
+    "text": "How are genomic PTA calculated?\n\nEstimate SNP effects using a predictor population with reliable PTA\nCombine:\n\nGenomic predictions from SNP\nParent averages (PA)\nTraditional pedigree + phenotype evaluations"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#net-merit-dollar-value",
+    "href": "slides/lecture_6_milk_production.html#net-merit-dollar-value",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Net merit dollar value",
+    "text": "Net merit dollar value\nThe expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.\n“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”"
   },
   {
     "objectID": "slides/lecture_6_milk_production.html#what-is-in-it",
@@ -1985,7 +2006,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-05\"\n\nnow()\n\n[1] \"2026-02-05 14:52:11 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-05\"\n\nnow()\n\n[1] \"2026-02-05 15:08:59 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
