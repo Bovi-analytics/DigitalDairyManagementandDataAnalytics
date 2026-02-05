@@ -147,10 +147,20 @@ Meike van Leerdam
 </div>
 
 </section>
+<section id="monitoring-milk-yield" class="slide level2">
+<h2>monitoring milk yield</h2>
+<ul>
+<li>What is the goal of the farm<br>
+</li>
+<li>What is the size of the farm</li>
+<li>What management system do they use &gt; seasonal, grazing, free stall etc.</li>
+</ul>
+</section>
 <section id="things-to-take-into-account-looking-at-data" class="slide level2">
 <h2>Things to take into account looking at data</h2>
 <ul>
 <li>Test day average vs rolling averages</li>
+<li>What are you trying to optimize?</li>
 </ul>
 </section>
 <section id="bias" class="slide level2">
@@ -183,9 +193,73 @@ Meike van Leerdam
 
 </div></div>
 </section>
+<section id="what-dictates-milk-production" class="slide level2">
+<h2>What dictates milk production</h2>
+<p>phenotype = genotype + environment</p>
+</section>
 <section id="genetics" class="slide level2">
 <h2>Genetics</h2>
-<p><strong>Net merit dollar value</strong></p>
+<p><span class="math display">\[
+\Delta G_{year} =
+\frac{
+\sqrt{\text{reliability}} \times \text{selection intensity} \times \sqrt{\text{genetic variance}}
+}{
+\text{generation interval}
+}
+\]</span></p>
+</section>
+<section id="effect-of-selection-differs" class="slide level2">
+<h2>Effect of selection differs</h2>
+<ul>
+<li>Traits associated with <strong>physical shape and size</strong>
+<ul>
+<li>High heritability (≥ 40%)</li>
+</ul></li>
+<li>Traits related to <strong>milk and solids yield</strong>
+<ul>
+<li>Moderate heritability (15–30%)</li>
+</ul></li>
+<li>Traits associated with <strong>health and fertility</strong>
+<ul>
+<li>Low heritability (≤ 10%)</li>
+</ul></li>
+</ul>
+</section>
+<section id="calculation-of-breeding-values" class="slide level2">
+<h2>Calculation of Breeding Values</h2>
+<p><span class="math display">\[
+y = Xb + Zu + e
+\]</span></p>
+<ul>
+<li><strong>y</strong> = observed phenotypes<br>
+</li>
+<li><strong>b</strong> = fixed effects (e.g., sex, management)<br>
+</li>
+<li><strong>u</strong> = random genetic effects (breeding values)<br>
+</li>
+<li><strong>e</strong> = residual error<br>
+</li>
+<li><strong>X, Z</strong> = link observations to effects</li>
+</ul>
+<p><strong>What do we get from this?</strong></p>
+<ul>
+<li>Each animal receives an estimate of genetic merit<br>
+</li>
+<li>Called <strong>Predicted Transmitting Ability (PTA)</strong><br>
+</li>
+<li>PTA = breeding value ÷ 2</li>
+</ul>
+<p><strong>Note:</strong><br>
+Real U.S. animal models are more complex and include: - Contemporary groups<br>
+- Herd-by-sire effects<br>
+- Permanent environmental effects</p>
+</section>
+<section id="genomic-prediction" class="slide level2">
+<h2>Genomic prediction</h2>
+<p><strong>What is genomic prediction?</strong> - Uses <strong>DNA information + phenotypes + pedigree</strong> to estimate genetic merit - DNA markers = <strong>SNP</strong> (positions in the genome with two variants)</p>
+<p><strong>Why use genomics?</strong> - DNA is <strong>not influenced by environment</strong> - Improvs accuracy of breeding value estimation - Allows evaluation of <strong>young animals without records</strong></p>
+<p><strong>How are genomic PTA calculated?</strong> - Estimate SNP effects using a <strong>predictor population</strong> with reliable PTA - Combine: - Genomic predictions from SNP - Parent averages (PA) - Traditional pedigree + phenotype evaluations</p>
+<p>##Net merit dollar value</p>
 <p>The expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.</p>
 <p><em>“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”</em></p>
 </section>

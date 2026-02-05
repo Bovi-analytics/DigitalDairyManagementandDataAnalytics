@@ -1708,11 +1708,18 @@
     ]
   },
   {
+    "objectID": "slides/lecture_6_milk_production.html#monitoring-milk-yield",
+    "href": "slides/lecture_6_milk_production.html#monitoring-milk-yield",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "monitoring milk yield",
+    "text": "monitoring milk yield\n\nWhat is the goal of the farm\n\nWhat is the size of the farm\nWhat management system do they use &gt; seasonal, grazing, free stall etc."
+  },
+  {
     "objectID": "slides/lecture_6_milk_production.html#things-to-take-into-account-looking-at-data",
     "href": "slides/lecture_6_milk_production.html#things-to-take-into-account-looking-at-data",
     "title": "Lecture 6 - Milk production data (II)",
     "section": "Things to take into account looking at data",
-    "text": "Things to take into account looking at data\n\nTest day average vs rolling averages"
+    "text": "Things to take into account looking at data\n\nTest day average vs rolling averages\nWhat are you trying to optimize?"
   },
   {
     "objectID": "slides/lecture_6_milk_production.html#bias",
@@ -1729,11 +1736,39 @@
     "text": "Past/Present/Future\nPast: Rolling average\nPresent: Test day average\nFuture: Production &lt; 100 DIM\nFar Future: Heifer production"
   },
   {
+    "objectID": "slides/lecture_6_milk_production.html#what-dictates-milk-production",
+    "href": "slides/lecture_6_milk_production.html#what-dictates-milk-production",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "What dictates milk production",
+    "text": "What dictates milk production\nphenotype = genotype + environment"
+  },
+  {
     "objectID": "slides/lecture_6_milk_production.html#genetics",
     "href": "slides/lecture_6_milk_production.html#genetics",
     "title": "Lecture 6 - Milk production data (II)",
     "section": "Genetics",
-    "text": "Genetics\nNet merit dollar value\nThe expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.\n“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”"
+    "text": "Genetics\n\\[\n\\Delta G_{year} =\n\\frac{\n\\sqrt{\\text{reliability}} \\times \\text{selection intensity} \\times \\sqrt{\\text{genetic variance}}\n}{\n\\text{generation interval}\n}\n\\]"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#effect-of-selection-differs",
+    "href": "slides/lecture_6_milk_production.html#effect-of-selection-differs",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Effect of selection differs",
+    "text": "Effect of selection differs\n\nTraits associated with physical shape and size\n\nHigh heritability (≥ 40%)\n\nTraits related to milk and solids yield\n\nModerate heritability (15–30%)\n\nTraits associated with health and fertility\n\nLow heritability (≤ 10%)"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#calculation-of-breeding-values",
+    "href": "slides/lecture_6_milk_production.html#calculation-of-breeding-values",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Calculation of Breeding Values",
+    "text": "Calculation of Breeding Values\n\\[\ny = Xb + Zu + e\n\\]\n\ny = observed phenotypes\n\nb = fixed effects (e.g., sex, management)\n\nu = random genetic effects (breeding values)\n\ne = residual error\n\nX, Z = link observations to effects\n\nWhat do we get from this?\n\nEach animal receives an estimate of genetic merit\n\nCalled Predicted Transmitting Ability (PTA)\n\nPTA = breeding value ÷ 2\n\nNote:\nReal U.S. animal models are more complex and include: - Contemporary groups\n- Herd-by-sire effects\n- Permanent environmental effects"
+  },
+  {
+    "objectID": "slides/lecture_6_milk_production.html#genomic-prediction",
+    "href": "slides/lecture_6_milk_production.html#genomic-prediction",
+    "title": "Lecture 6 - Milk production data (II)",
+    "section": "Genomic prediction",
+    "text": "Genomic prediction\nWhat is genomic prediction? - Uses DNA information + phenotypes + pedigree to estimate genetic merit - DNA markers = SNP (positions in the genome with two variants)\nWhy use genomics? - DNA is not influenced by environment - Improvs accuracy of breeding value estimation - Allows evaluation of young animals without records\nHow are genomic PTA calculated? - Estimate SNP effects using a predictor population with reliable PTA - Combine: - Genomic predictions from SNP - Parent averages (PA) - Traditional pedigree + phenotype evaluations\n##Net merit dollar value\nThe expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.\n“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”"
   },
   {
     "objectID": "slides/lecture_6_milk_production.html#what-is-in-it",
@@ -1950,7 +1985,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-04\"\n\nnow()\n\n[1] \"2026-02-04 20:41:48 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-05\"\n\nnow()\n\n[1] \"2026-02-05 14:52:11 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -2055,14 +2090,14 @@
     "href": "slides/lec-11.html#sec-duration-1",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 15989 days"
+    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 15990 days"
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-2",
     "href": "slides/lec-11.html#sec-duration-2",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1381449600s (~43.78 years)\""
+    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1381536000s (~43.78 years)\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-3",
@@ -2090,7 +2125,7 @@
     "href": "slides/lec-11.html#sec-duration-6",
     "title": "Data transformations",
     "section": "Add and substract durations",
-    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-02-05\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-02-03 18:00:00 UTC\""
+    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-02-06\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-02-04 18:00:00 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-7",
