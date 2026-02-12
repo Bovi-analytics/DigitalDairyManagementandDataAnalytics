@@ -9,8 +9,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="dcterms.date" content="2025-02-10">
-  <title>ANSC4940 – Linear regression with a single predictor</title>
+  <meta name="author" content="Miel Hostens">
+  <title>ANSC4940 – Using Relationships and Joins Between Tables</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,74 +28,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -187,11 +121,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Linear regression with a single predictor – ANSC4940">
-<meta property="og:description" content="Lecture 4">
+<meta property="og:title" content="Using Relationships and Joins Between Tables – ANSC4940">
+<meta property="og:description" content="Lecture week 4">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Linear regression with a single predictor – ANSC4940">
-<meta name="twitter:description" content="Lecture 4">
+<meta name="twitter:title" content="Using Relationships and Joins Between Tables – ANSC4940">
+<meta name="twitter:description" content="Lecture week 4">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,271 +135,453 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Linear regression with a single predictor</h1>
-  <p class="subtitle">Lecture 4</p>
+  <h1 class="title">Using Relationships and Joins Between Tables</h1>
+  <p class="subtitle">Lecture week 4</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Miel Hostens 
+</div>
+</div>
 </div>
 
-  <p class="date">2025-02-10</p>
+  <p class="date">Invalid Date</p>
 </section>
-<section>
-<section id="warm-up" class="title-slide slide level1 center">
-<h1>Warm up</h1>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives</h2>
+<p>By the end of this lecture, students will be able to:</p>
+<ul>
+<li class="fragment">Explain what tables, keys, and relationships are using dairy data</li>
+<li class="fragment">Distinguish between different types of joins</li>
+<li class="fragment">Decide <em>which</em> join to use for cow and milk production data</li>
+<li class="fragment">Implement joins and relationships in <strong>Excel</strong> and <strong>Tableau</strong></li>
+<li class="fragment">Diagnose common join-related data problems in animal records</li>
+</ul>
+<aside class="notes">
+<p>~3 minutes. Set expectations and connect to previous data topics in dairy science.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-this-matters-in-dairy-data" class="slide level2">
+<h2>Why this matters in dairy data</h2>
+<p>Dairy data is <strong>rarely stored in one table</strong>:</p>
+<ul>
+<li class="fragment">Cow information</li>
+<li class="fragment">Daily milk production records</li>
+<li class="fragment">Health or reproduction events</li>
+</ul>
+<p>To answer questions, we must <strong>combine tables correctly</strong>.</p>
+<aside class="notes">
+<p>Use examples like average milk yield per cow or missing production days.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-flat-files-to-relational-thinking" class="slide level2">
+<h2>From flat files to relational thinking</h2>
+<ul>
+<li class="fragment">One big spreadsheet with everything seems easy… at first</li>
+<li class="fragment">Repeating cow information every day causes:
+<ul>
+<li class="fragment">Errors</li>
+<li class="fragment">Inconsistencies</li>
+<li class="fragment">Very large files</li>
+</ul></li>
+</ul>
+<p><strong>Relational data</strong> solves this by splitting data into tables.</p>
+</section>
+<section id="what-is-a-table" class="slide level2">
+<h2>What is a table?</h2>
+<p>A table is:</p>
+<ul>
+<li class="fragment">Rows = observations (records)</li>
+<li class="fragment">Columns = variables (fields)</li>
+</ul>
+<p>In our example:</p>
+<ul>
+<li class="fragment"><code>Cows</code></li>
+<li class="fragment"><code>MilkProduction</code></li>
+</ul>
+<p>Each table describes <strong>one thing</strong>.</p>
+</section>
+<section id="the-idea-of-a-key" class="slide level2">
+<h2>The idea of a key</h2>
+<p>A <strong>key</strong> is a column that identifies rows.</p>
+<ul>
+<li class="fragment"><strong>Primary key</strong>: uniquely identifies a row
+<ul>
+<li class="fragment"><code>CowID</code></li>
+</ul></li>
+<li class="fragment"><strong>Foreign key</strong>: refers to a key in another table
+<ul>
+<li class="fragment"><code>CowID</code> inside <code>MilkProduction</code></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Emphasize that CowID must be unique and stable over time.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="example-cow-data" class="slide level2">
+<h2>Example: Cow data</h2>
+<p><strong>Cows</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">CowID</th>
+<th>Breed</th>
+<th>YearOfBirth</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">101</td>
+<td>Holstein</td>
+<td>2019</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">102</td>
+<td>Holstein</td>
+<td>2020</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">103</td>
+<td>Jersey</td>
+<td>2018</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-daily-milk-production" class="slide level2">
+<h2>Example: Daily milk production</h2>
+<p><strong>MilkProduction</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">CowID</th>
+<th>Date</th>
+<th style="text-align: right;">MilkYield (kg/cow)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">101</td>
+<td>2025-01-01</td>
+<td style="text-align: right;">32.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">101</td>
+<td>2025-01-02</td>
+<td style="text-align: right;">33.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">102</td>
+<td>2025-01-01</td>
+<td style="text-align: right;">28.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">104</td>
+<td>2025-01-01</td>
+<td style="text-align: right;">30.0</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Note CowID 104 exists here but not in the cow table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="relationships-vs-joins-important" class="slide level2">
+<h2>Relationships vs joins (important!)</h2>
+<p>Two ways to combine cow and production tables:</p>
+<ul>
+<li class="fragment"><strong>Relationships</strong> (logical connection)</li>
+<li class="fragment"><strong>Joins</strong> (physical merge)</li>
+</ul>
+<p>Tableau makes this distinction explicit. Excel mostly works with <strong>joins</strong>.</p>
+</section>
+<section id="relationships-conceptual" class="slide level2">
+<h2>Relationships (conceptual)</h2>
+<p>A relationship says:</p>
+<blockquote>
+<p>“These tables are related by CowID.”</p>
+</blockquote>
+<ul>
+<li class="fragment">Tables stay separate</li>
+<li class="fragment">Combination happens <em>when needed</em></li>
+<li class="fragment">Less risk of duplicating cow information</li>
+</ul>
+<aside class="notes">
+<p>This is Tableau’s default approach.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="joins-physical" class="slide level2">
+<h2>Joins (physical)</h2>
+<p>A join:</p>
+<ul>
+<li class="fragment">Combines rows into a <strong>new table</strong></li>
+<li class="fragment">Based on matching CowID values</li>
+<li class="fragment">Choice of join affects which records remain</li>
+</ul>
+<p>This is where many data mistakes occur.</p>
+</section>
+<section id="visual-intuition-for-joins" class="slide level2">
+<h2>Visual intuition for joins</h2>
+<p>Think in terms of <strong>sets of cows</strong>:</p>
+<ul>
+<li class="fragment">Cows table</li>
+<li class="fragment">Milk production table</li>
+<li class="fragment">Overlap based on CowID</li>
+</ul>
+<p>We now look at the four main joins.</p>
+</section>
+<section id="type-of-joins" class="slide level2">
+<h2>Type of joins</h2>
+
+<img data-src="images/clipboard-583807419.png" class="r-stretch"></section>
+<section id="inner-join" class="slide level2">
+<h2>Inner join</h2>
+<p><strong>Keeps only matching cows</strong></p>
+<ul>
+<li class="fragment">CowID must exist in <em>both</em> tables</li>
+<li class="fragment">Drops production records without cow info</li>
+</ul>
+<p>Use when: - You only want valid cows with production data</p>
+</section>
+<section id="inner-join-example" class="slide level2">
+<h2>Inner join example</h2>
+<p>Cows ⨝ MilkProduction</p>
+<ul>
+<li class="fragment">Cow 101 → kept</li>
+<li class="fragment">Cow 102 → kept</li>
+<li class="fragment">Cow 103 → dropped (no production)</li>
+<li class="fragment">Cow 104 → dropped (no cow record)</li>
+</ul>
+<p>Result: only cows with valid production records.</p>
+</section>
+<section id="left-join" class="slide level2">
+<h2>Left join</h2>
+<p><strong>Keeps all cows</strong></p>
+<ul>
+<li class="fragment">Production data added when available</li>
+<li class="fragment">Missing production becomes <code>NULL</code></li>
+</ul>
+<p>Use when: - The cow list is your main population</p>
+</section>
+<section id="left-join-example" class="slide level2">
+<h2>Left join example</h2>
+<p>Cows ← MilkProduction</p>
+<ul>
+<li class="fragment">All cows kept (101–103)</li>
+<li class="fragment">Cow 103 → Milk_kg = NULL</li>
+</ul>
+<p>Very common for herd summaries.</p>
+</section>
+<section id="right-join" class="slide level2">
+<h2>Right join</h2>
+<p><strong>Keeps all production records</strong></p>
+<ul>
+<li class="fragment">Even if CowID is missing in cow table</li>
+</ul>
+<p>Rarely ideal, but useful for: - Detecting data quality issues</p>
+</section>
+<section id="full-outer-join" class="slide level2">
+<h2>Full outer join</h2>
+<p><strong>Keeps all cows and all production records</strong></p>
+<ul>
+<li class="fragment">Highlights mismatches clearly</li>
+<li class="fragment">Unmatched rows filled with NULLs</li>
+</ul>
+<p>Use when: - Auditing or cleaning data</p>
+</section>
+<section id="common-join-pitfalls-in-dairy-data" class="slide level2">
+<h2>Common join pitfalls in dairy data</h2>
+<ul>
+<li class="fragment">Duplicate CowID values</li>
+<li class="fragment">Missing cows or production days</li>
+<li class="fragment">Text vs numeric CowID</li>
+<li class="fragment">Reused IDs across farms</li>
+</ul>
+<p>Always <strong>check row counts</strong> after joining.</p>
+</section>
+<section id="practical-part-1-excel" class="slide level2">
+<h2>Practical part 1: Excel</h2>
+<p>Goal:</p>
+<ul>
+<li class="fragment">Combine cow and milk tables using CowID</li>
+<li class="fragment">Understand what Excel is doing</li>
+</ul>
+</section>
+<section id="excel-tools-for-joins" class="slide level2">
+<h2>Excel tools for joins</h2>
+<p>Main options:</p>
+<ul>
+<li class="fragment"><strong>XLOOKUP</strong> (simple lookups)</li>
+<li class="fragment"><strong>Power Query</strong> (proper joins)</li>
+</ul>
+<p>We focus on <strong>Power Query</strong>.</p>
+</section>
+<section id="excel-power-query-workflow" class="slide level2">
+<h2>Excel: Power Query workflow</h2>
+<ol type="1">
+<li class="fragment">Load <code>Cows</code> and <code>MilkProduction</code></li>
+<li class="fragment">Open Power Query Editor</li>
+<li class="fragment">Merge queries on CowID</li>
+<li class="fragment">Choose join type</li>
+<li class="fragment">Expand milk variables</li>
+</ol>
+</section>
+<section id="excel-demo-in-class" class="slide level2">
+<h2>Excel demo (in class)</h2>
+<p>Instructor demonstration:</p>
+<ul>
+<li class="fragment">Left join cows with milk records</li>
+<li class="fragment">Inspect NULL milk values</li>
+<li class="fragment">Discuss interpretation</li>
+</ul>
+<aside class="notes">
+<p>~10 minutes live demo.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practical-part-2-tableau" class="slide level2">
+<h2>Practical part 2: Tableau</h2>
+<p>Same data, different philosophy.</p>
+<p>Tableau encourages <strong>relationships first</strong>.</p>
+</section>
+<section id="tableau-creating-a-relationship" class="slide level2">
+<h2>Tableau: creating a relationship</h2>
+<p>Steps:</p>
+<ol type="1">
+<li class="fragment">Connect <code>Cows</code></li>
+<li class="fragment">Add <code>MilkProduction</code></li>
+<li class="fragment">Relate on CowID</li>
+<li class="fragment">Leave tables separate</li>
+</ol>
+<p>No join type selected.</p>
+</section>
+<section id="why-tableau-relationships-work-well-here" class="slide level2">
+<h2>Why Tableau relationships work well here</h2>
+<ul>
+<li class="fragment">One-to-many (cow → many days)</li>
+<li class="fragment">Correct aggregation of milk yield</li>
+<li class="fragment">Avoids duplicated cow attributes</li>
+</ul>
+</section>
+<section id="comparing-excel-and-tableau" class="slide level2">
+<h2>Comparing Excel and Tableau</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Excel</th>
+<th>Tableau</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Key</td>
+<td>CowID</td>
+<td>CowID</td>
+</tr>
+<tr class="even">
+<td>Relationships</td>
+<td>Limited</td>
+<td>Native</td>
+</tr>
+<tr class="odd">
+<td>Joins</td>
+<td>Power Query</td>
+<td>Physical layer</td>
+</tr>
+<tr class="even">
+<td>Validation</td>
+<td>Manual</td>
+<td>Visual</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
+<p>Today we learned:</p>
+<ul>
+<li class="fragment">CowID links cow and milk tables</li>
+<li class="fragment">Joins determine which records survive</li>
+<li class="fragment">Same logic applies across tools</li>
+<li class="fragment">Wrong joins = wrong conclusions</li>
+</ul>
+</section>
+<section id="final-message" class="slide level2">
+<h2>Final message</h2>
+<blockquote>
+<p><em>Good dairy analysis starts with correct data structure.</em></p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+
 
 </section>
-<section id="goals" class="slide level2">
-<h2>Goals</h2>
-<ul>
-<li>Modeling with a single predictor</li>
-<li>Model parameters, estimates, and error terms</li>
-<li>Interpreting slopes and intercepts</li>
-</ul>
-</section>
-<section id="setup" class="slide level2">
-<h2>Setup</h2>
-</section></section>
-<section>
-<section id="correlation-vs.-causation" class="title-slide slide level1 center">
-<h1>Correlation vs.&nbsp;causation</h1>
-
-</section>
-<section id="spurious-correlations" class="slide level2">
-<h2>Spurious correlations</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/mozarella-ce-phd.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>Source: <a href="https://www.tylervigen.com/spurious-correlations">tylervigen.com/spurious-correlations</a></p>
-</div></aside></section>
-<section id="spurious-correlations-1" class="slide level2">
-<h2>Spurious correlations</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pool-nick-cage.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>Source: <a href="https://www.tylervigen.com/spurious-correlations">tylervigen.com/spurious-correlations</a></p>
-</div></aside></section></section>
-<section>
-<section id="linear-regression-with-a-single-predictor" class="title-slide slide level1 center">
-<h1>Linear regression with a single predictor</h1>
-
-</section>
-<section id="read-the-data" class="slide level2">
-<h2>Read the data</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>df_raw_cattle_numbers <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'https://raw.githubusercontent.com/Bovi-analytics/minor-digital-agriculture/refs/heads/main/data/fao-cattle-numbers.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="data-prep" class="slide level2">
-<h2>Data prep</h2>
-<ul>
-<li>Select columns needed : <code>Year</code> and <code>Value</code></li>
-<li>Apply correct FAIR naming convention</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>df_cattle_numbers <span class="ot">&lt;-</span> df_raw_cattle_numbers <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Year, Value) <span class="sc">%&gt;%</span></span>
-<span id="cb2-3"><a></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(</span>
-<span id="cb2-4"><a></a>    <span class="at">NumberOfCows =</span> Value</span>
-<span id="cb2-5"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="data-grouping" class="slide level2">
-<h2>Data grouping</h2>
-<ul>
-<li>Create a groupby <code>Year</code></li>
-<li>Create sum for entire world</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>df_total_cattle_numbers <span class="ot">&lt;-</span> df_cattle_numbers <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(</span>
-<span id="cb3-4"><a></a>    <span class="at">TotalNumberOfCows =</span> <span class="fu">sum</span>(NumberOfCows)<span class="sc">/</span><span class="dv">1000000000</span></span>
-<span id="cb3-5"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="writing-the-data" class="slide level2">
-<h2>Writing the data</h2>
-<ul>
-<li>Write the data to csv</li>
-<li>Import in Tableau</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">write_csv</span>(df_total_cattle_numbers, <span class="at">file =</span> <span class="st">"df_total_cattle_numbers.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="data-overview" class="slide level2">
-<h2>Data overview</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df_total_cattle_numbers <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">select</span>(Year, TotalNumberOfCows)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 62 × 2
-    Year TotalNumberOfCows
-   &lt;int&gt;             &lt;dbl&gt;
- 1  1961             0.992
- 2  1962             1.00 
- 3  1963             1.02 
- 4  1964             1.04 
- 5  1965             1.06 
- 6  1966             1.08 
- 7  1967             1.11 
- 8  1968             1.12 
- 9  1969             1.13 
-10  1970             1.14 
-# ℹ 52 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="data-visualization" class="slide level2">
-<h2>Data visualization</h2>
-
-<img data-src="lec-4_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="regression-model-1" class="slide level2">
-<h2>Regression model</h2>
-<p>A <strong>regression model</strong> is a function that describes the relationship between the outcome, <span class="math inline">\(Y\)</span>, and the predictor, <span class="math inline">\(X\)</span>.</p>
-<p><span class="math display">\[\begin{aligned} Y &amp;= \color{black}{\textbf{Model}} + \text{Error} \\[8pt]
-&amp;= \color{black}{\mathbf{f(X)}} + \epsilon \\[8pt]
-&amp;= \color{black}{\boldsymbol{\mu_{Y|X}}} + \epsilon \end{aligned}\]</span></p>
-</section>
-<section id="regression-model" class="slide level2">
-<h2>Regression model</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><span class="math display">\[
-\begin{aligned} Y &amp;= \color{#325b74}{\textbf{Model}} + \text{Error} \\[8pt]
-&amp;= \color{#325b74}{\mathbf{f(X)}} + \epsilon \\[8pt]
-&amp;= \color{#325b74}{\boldsymbol{\mu_{Y|X}}} + \epsilon
-\end{aligned}
-\]</span></p>
-</div><div class="column" style="width:70%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lec-4_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="simple-linear-regression" class="slide level2 smaller">
-<h2>Simple linear regression</h2>
-<p>Use <strong>simple linear regression</strong> to model the relationship between a quantitative outcome (<span class="math inline">\(Y\)</span>) and a single quantitative predictor (<span class="math inline">\(X\)</span>): <span class="math display">\[\Large{Y = \beta_0 + \beta_1 X + \epsilon}\]</span></p>
-<ul>
-<li class="fragment"><span class="math inline">\(\beta_1\)</span>: True slope of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
-<li class="fragment"><span class="math inline">\(\beta_0\)</span>: True intercept of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
-<li class="fragment"><span class="math inline">\(\epsilon\)</span>: Error (residual)</li>
-</ul>
-</section>
-<section id="simple-linear-regression-1" class="slide level2">
-<h2>Simple linear regression</h2>
-<p><span class="math display">\[\Large{\hat{Y} = b_0 + b_1 X}\]</span></p>
-<ul>
-<li><span class="math inline">\(b_1\)</span>: Estimated slope of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
-<li><span class="math inline">\(b_0\)</span>: Estimated intercept of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
-<li>No error term!</li>
-</ul>
-</section>
-<section id="choosing-values-for-b_1-and-b_0" class="slide level2">
-<h2>Choosing values for <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_0\)</span></h2>
-
-<img data-src="lec-4_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="residuals" class="slide level2">
-<h2>Residuals</h2>
-
-<img data-src="lec-4_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p><span class="math display">\[\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}\]</span></p>
-</section>
-<section id="least-squares-line" class="slide level2 smaller">
-<h2>Least squares line</h2>
-<ul>
-<li>The residual for the <span class="math inline">\(i^{th}\)</span> observation is</li>
-</ul>
-<p><span class="math display">\[e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i\]</span></p>
-<ul>
-<li>The <strong>sum of squared</strong> residuals is</li>
-</ul>
-<p><span class="math display">\[e^2_1 + e^2_2 + \dots + e^2_n\]</span></p>
-<ul>
-<li>The <strong>least squares line</strong> is the one that <strong>minimizes the sum of squared residuals</strong></li>
-</ul>
-</section>
-<section id="least-squares-line-1" class="slide level2">
-<h2>Least squares line</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term         estimate std.error statistic  p.value
-  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept) -16.1      0.510        -31.7 3.85e-39
-2 Year          0.00879  0.000256      34.3 4.03e-41</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="slope-and-intercept" class="title-slide slide level1 center">
-<h1>Slope and intercept</h1>
-
-</section>
-<section id="properties-of-least-squares-regression" class="slide level2">
-<h2>Properties of least squares regression</h2>
-<ul>
-<li class="fragment"><p>The regression line goes through the center of mass point (the coordinates corresponding to average <span class="math inline">\(X\)</span> and average <span class="math inline">\(Y\)</span>): <span class="math inline">\(b_0 = \bar{Y} - b_1~\bar{X}\)</span></p></li>
-<li class="fragment"><p>Slope has the same sign as the correlation coefficient: <span class="math inline">\(b_1 = r \frac{s_Y}{s_X}\)</span></p></li>
-<li class="fragment"><p>Sum of the residuals is zero: <span class="math inline">\(\sum_{i = 1}^n \epsilon_i = 0\)</span></p></li>
-<li class="fragment"><p>Residuals and <span class="math inline">\(X\)</span> values are uncorrelated</p></li>
-</ul>
-</section>
-<section id="interpreting-the-slope" class="slide level2 smaller">
-<h2>Interpreting the slope</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Question</a></li><li><a href="#tabset-1-2">Submit</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="poll">
-<p>The slope of the model for predicting number of cows is 0.008785434.</p>
-</div>
-<p>How to interpret</p>
-</div>
-<div id="tabset-1-2">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section>
-<section id="interpreting-slope-intercept" class="slide level2">
-<h2>Interpreting slope &amp; intercept</h2>
-<p><span class="math display">\[\widehat{\text{Total number of cows}} = -16.1 + 0.008785434    \times \text{Year}\]</span></p>
-<ul>
-<li class="fragment"><strong>Slope:</strong> For every one point increase in <code>Year</code>, we expect the total number of cows to be higher by 0.008785434 points, on average.</li>
-<li class="fragment"><strong>Intercept:</strong> In <code>Year</code> is 0, we expect the total number of cows to be -16.1.</li>
-</ul>
-</section>
-<section id="is-the-intercept-meaningful" class="slide level2">
-<h2>Is the intercept meaningful?</h2>
-<p>✅ The intercept is meaningful in context of the data if</p>
-<ul>
-<li>the predictor can feasibly take values equal to or near zero or</li>
-<li>the predictor has values near zero in the observed data</li>
-</ul>
-<div class="fragment">
-<p>🛑 Otherwise, it might not be meaningful!</p>
-
-
-</div>
-</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p><a href="https://bovi-analytics.github.io/BeastsAndBytes/">https://bovi-analytics.github.io/BeastsAndBytes/</a></p>
+<p><a href="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/">https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/</a></p>
 </div>
 </div></div>
 
@@ -518,7 +634,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -623,7 +739,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -677,44 +793,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
