@@ -18,8 +18,8 @@ This page contains an outline of the topics, content, and assignments for the co
 | 3 | 2/5 | Understanding Milk Production Data (2) | Meike van Leerdam | 📖 | [🖥️](slides/lecture_6_milk_production.html) |
 | 3 | 2/5 | (LAB) Analyze CURC Milk Production Records | Meike van Leerdam | 📖 | 🖥️ |
 | 4 | 2/10 | Cancelled |  | \- | \- |
-| 4 | 2/12 | Using Relationships and Joins Between Datasets | Dr. Hostens | [📖](slides/lec-4.html) | 🖥️ |
-| 4 | 2/12 | (LAB) Peer Evaluation & Discussion |  | \- | \- |
+| 4 | 2/12 | Using Relationships and Joins Between Datasets | Dr. Hostens | [📖](slides/lec-4.html) | [🖥️](https://youtu.be/EpKTHgbu5vQ) |
+| 4 | 2/12 | (LAB) Analyze CURC Milk Production Records |  | \- | \- |
 | 5 | 2/17 | February break (no class) |  |  |  |
 | 5 | 2/19 | Reproductive Biology Basics and Key Metrics | Dr. Hostens | 📖 | 🖥️ |
 | 5 | 2/19 | (LAB) CURC Visit - Reproductive Management | Dr. Hostens | 📖 | 🖥️ |
