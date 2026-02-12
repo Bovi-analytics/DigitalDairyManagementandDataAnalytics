@@ -11,17 +11,18 @@ editor: visual
 
 # Activities/Tasks: 
 -   Lecture (2/3): Understanding milk production data and key performance indicators 
--   Lecture (2/5): Introduction to R/Python for data analysis (or advanced Excel) [decide which software to prioritize - maybe poll students?] 
+-   Lecture (2/5): How to monitor milk production
 -   Lab (2/5):  
 -   Analyze CURC milk production records 
     -   Calculate herd averages, identify high/low performers 
     -   Create visualizations (histograms, time series plots) 
     -   Brainstorm: What questions can these data answer? 
+    -   Analyse difference between tie stall and free stall barn 
 
 # Due Dates: 
 -   None (focusing on skill building) 
 
 # Datasets/Resources 
--   CURC DHI (Dairy Herd Improvement) records 
--   R/Python tutorial materials 
+-   CURC DHI (Dairy Herd Improvement) records > available at files in CANVAS 
+
 

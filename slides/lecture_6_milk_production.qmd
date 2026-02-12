@@ -1,0 +1,190 @@
+---
+title: "Lecture 6 - Milk production data (II)"
+subtitle: "ANSCI 4940 - Spring 2026"
+author: "Meike van Leerdam"
+footer: "https://bovi-analytics.github.io/BeastsAndBytes/"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
+  revealjs:
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+```{r}
+#| include: false
+library(countdown)
+```
+
+## monitoring milk yield 
+
+- What is the goal of the farm  
+- What is the size of the farm 
+- What management system do they use > seasonal, grazing, free stall etc. 
+
+
+## Things to take into account looking at data 
+
+- Test day average vs rolling averages 
+- What are you trying to optimize? 
+
+## Bias 
+::::: columns
+::: {.column width="100%"}
+![](../images/average_bias.png){fig-alt="average bias" fig-align="center" width="100%"}
+:::
+
+::: {.column width="100%"}
+:::
+:::::
+
+## Past/Present/Future
+
+Past: Rolling average 
+
+Present: Test day average
+
+Future: Production < 100 DIM
+
+Far Future: Heifer production 
+
+::::: columns
+::: {.column width="80%"}
+![](../images/lc_over_time.png){fig-alt="average bias" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+
+## What dictates milk production
+
+
+phenotype = genotype + environment 
+
+
+## Genetics 
+
+$$
+\Delta G_{year} =
+\frac{
+\sqrt{\text{reliability}} \times \text{selection intensity} \times \sqrt{\text{genetic variance}}
+}{
+\text{generation interval}
+}
+$$
+
+## Effect of selection differs
+
+- Traits associated with **physical shape and size**  
+  - High heritability (≥ 40%)
+
+- Traits related to **milk and solids yield**  
+  - Moderate heritability (15–30%)
+
+- Traits associated with **health and fertility**  
+  - Low heritability (≤ 10%)
+
+## Calculation of Breeding Values
+
+$$
+y = Xb + Zu + e
+$$
+
+- **y** = observed phenotypes  
+- **b** = fixed effects (e.g., sex, management)  
+- **u** = random genetic effects (breeding values)  
+- **e** = residual error  
+- **X, Z** = link observations to effects
+
+
+## What do we get from this?
+
+- Each animal receives an estimate of genetic merit  
+- Called **Predicted Transmitting Ability (PTA)**  
+- PTA = breeding value ÷ 2
+
+**Note:**  
+Real U.S. animal models are more complex and include:
+- Contemporary groups  
+- Herd-by-sire effects  
+- Permanent environmental effects
+
+
+## Genomic prediction
+
+**What is genomic prediction?**
+- Uses **DNA information + phenotypes + pedigree** to estimate genetic merit
+- DNA markers = **SNP** (positions in the genome with two variants)
+
+
+
+**Why use genomics?**
+- DNA is **not influenced by environment**
+- Improvs accuracy of breeding value estimation
+- Allows evaluation of **young animals without records**
+
+
+## How are genomic PTA calculated?
+
+- Estimate SNP effects using a **predictor population** with reliable PTA
+- Combine:
+  - Genomic predictions from SNP
+  - Parent averages (PA)
+  - Traditional pedigree + phenotype evaluations
+
+
+## Net merit dollar value
+
+The expected difference in lifetime profit (in USD) of a cow (or bull’s daughters) compared to a reference animal, due solely to genetics, assuming typical U.S. management and prices.
+
+
+*“If I replace one genetically average cow with this one, how much more (or less) money will I make over her lifetime?”*
+
+## What is in it?
+::::: columns
+::: {.column width="80%"}
+![](../images/net_merrit.png){fig-alt="net_merit" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+## Different indexes
+::::: columns
+::: {.column width="100%"}
+![](../images/different_merrits.png){fig-alt="different_merit" fig-align="center" width="100%"}
+:::
+
+::: {.column width="100%"}
+:::
+:::::
+
+## 
+::::: columns
+::: {.column width="80%"}
+![](../images/grazing_merit.png){fig-alt="different_merit" fig-align="center" width="100%"}
+:::
+
+::: {.column width="80%"}
+:::
+:::::
+
+
+
+
+## Shift to prezi 
+[presentation](https://prezi.com/p/k31siqxpdgv6/?present=1)
+
+
+
+
+
+
+
+
