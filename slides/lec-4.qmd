@@ -1,294 +1,352 @@
 ---
-title: "Linear regression with a single predictor"
-subtitle: "Lecture 4"
-date: "February 10, 2025"
-format: 
+title: "Using Relationships and Joins Between Tables"
+subtitle: "Lecture week 4"
+author: "Miel Hostens"
+date: "February 12th, 2026"
+format:
   revealjs:
-    footer: "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+    theme: simple
+    slide-number: true
+    incremental: true
+    toc: false
+    transition: slide
+    footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
 ---
 
-# Warm up
+## Learning objectives
 
-```{r}
-#| echo: false
-#| message: false
+By the end of this lecture, students will be able to:
 
-library(countdown)
-library(tidyverse)
-ggplot2::theme_set(theme_gray(base_size = 16))
-```
+-   Explain what tables, keys, and relationships are using dairy data
+-   Distinguish between different types of joins
+-   Decide *which* join to use for cow and milk production data
+-   Implement joins and relationships in **Excel** and **Tableau**
+-   Diagnose common join-related data problems in animal records
 
-## Goals
-
--   Modeling with a single predictor
--   Model parameters, estimates, and error terms
--   Interpreting slopes and intercepts
-
-## Setup
-
-```{r}
-#| label: load-pkg
-#| message: false
-
-library(dplyr)
-library(tidyverse)
-library(tidymodels)
-```
-
-# Correlation vs. causation
-
-## Spurious correlations
-
-![](images/mozarella-ce-phd.png){fig-align="center"}
-
-::: aside
-Source: [tylervigen.com/spurious-correlations](https://www.tylervigen.com/spurious-correlations)
+::: notes
+\~3 minutes. Set expectations and connect to previous data topics in dairy science.
 :::
 
-## Spurious correlations
+------------------------------------------------------------------------
 
-![](images/pool-nick-cage.png){fig-align="center"}
+## Why this matters in dairy data
 
-::: aside
-Source: [tylervigen.com/spurious-correlations](https://www.tylervigen.com/spurious-correlations)
+Dairy data is **rarely stored in one table**:
+
+-   Cow information
+-   Daily milk production records
+-   Health or reproduction events
+
+To answer questions, we must **combine tables correctly**.
+
+::: notes
+Use examples like average milk yield per cow or missing production days.
 :::
 
-# Linear regression with a single predictor
+------------------------------------------------------------------------
 
-## Read the data
+## From flat files to relational thinking
 
-```{r data-read}
-#| echo: true
+-   One big spreadsheet with everything seems easy… at first
+-   Repeating cow information every day causes:
+    -   Errors
+    -   Inconsistencies
+    -   Very large files
 
-df_raw_cattle_numbers <- read.csv('https://raw.githubusercontent.com/Bovi-analytics/minor-digital-agriculture/refs/heads/main/data/fao-cattle-numbers.csv')
-```
+**Relational data** solves this by splitting data into tables.
 
-## Data prep
+------------------------------------------------------------------------
 
--   Select columns needed : `Year` and `Value`
--   Apply correct FAIR naming convention
+## What is a table?
 
-```{r data-prep-1}
-#| echo: true
+A table is:
 
-df_cattle_numbers <- df_raw_cattle_numbers %>%
-  dplyr::select(Year, Value) %>%
-  dplyr::rename(
-    NumberOfCows = Value
-  )
-```
+-   Rows = observations (records)
+-   Columns = variables (fields)
 
-## Data grouping
+In our example:
 
--   Create a groupby `Year`
--   Create sum for entire world
+-   `Cows`
+-   `MilkProduction`
 
-```{r data-prep-2}
-#| echo: true
+Each table describes **one thing**.
 
-df_total_cattle_numbers <- df_cattle_numbers %>%
-  dplyr::group_by(Year) %>%
-  dplyr::summarise(
-    TotalNumberOfCows = sum(NumberOfCows)/1000000000
-  )
-```
+------------------------------------------------------------------------
 
-## Writing the data
+## The idea of a key
 
--   Write the data to csv
--   Import in Tableau
+A **key** is a column that identifies rows.
 
-```{r data-write}
-#| echo: true
+-   **Primary key**: uniquely identifies a row
+    -   `CowID`
+-   **Foreign key**: refers to a key in another table
+    -   `CowID` inside `MilkProduction`
 
-write_csv(df_total_cattle_numbers, file = "df_total_cattle_numbers.csv")
-```
-
-## Data overview
-
-```{r data-overview}
-#| echo: true
-
-df_total_cattle_numbers %>%
-  select(Year, TotalNumberOfCows)
-```
-
-## Data visualization
-
-```{r}
-#| echo: false
-
-ggplot(df_total_cattle_numbers, 
-       aes(x = Year, y = TotalNumberOfCows)) +
-  geom_point(alpha = 0.5) + 
-  labs(
-    x = "Year" , 
-    y = "Total Number of Cows"
-  )
-```
-
-## Regression model {#regression-model-1}
-
-A **regression model** is a function that describes the relationship between the outcome, $Y$, and the predictor, $X$.
-
-$$\begin{aligned} Y &= \color{black}{\textbf{Model}} + \text{Error} \\[8pt]
-&= \color{black}{\mathbf{f(X)}} + \epsilon \\[8pt]
-&= \color{black}{\boldsymbol{\mu_{Y|X}}} + \epsilon \end{aligned}$$
-
-## Regression model
-
-::::: columns
-::: {.column width="30%"}
-$$
-\begin{aligned} Y &= \color{#325b74}{\textbf{Model}} + \text{Error} \\[8pt]
-&= \color{#325b74}{\mathbf{f(X)}} + \epsilon \\[8pt]
-&= \color{#325b74}{\boldsymbol{\mu_{Y|X}}} + \epsilon 
-\end{aligned}
-$$
+::: notes
+Emphasize that CowID must be unique and stable over time.
 :::
 
-::: {.column width="70%"}
-```{r}
-#| echo: false
-#| message: false
+------------------------------------------------------------------------
 
-m <- lm(TotalNumberOfCows ~ Year, data = df_total_cattle_numbers)
-ggplot(data = df_total_cattle_numbers, 
-       mapping = aes(x = Year, y = TotalNumberOfCows)) +
-  geom_point(alpha = 0.5) + 
-  geom_smooth(method = "lm", color = "#325b74", se = FALSE, linewidth = 1.5) +
-  labs(x = "X", y = "Y") +
-  theme_minimal() +
-  theme(
-    axis.text = element_blank(),
-    axis.ticks.x = element_blank(), 
-    axis.ticks.y = element_blank()
-    )
-```
-:::
-:::::
+## Example: Cow data
 
-## Simple linear regression {.smaller}
+**Cows**
 
-Use **simple linear regression** to model the relationship between a quantitative outcome ($Y$) and a single quantitative predictor ($X$): $$\Large{Y = \beta_0 + \beta_1 X + \epsilon}$$
+| CowID | Breed    | YearOfBirth |
+|------:|----------|-------------|
+|   101 | Holstein | 2019        |
+|   102 | Holstein | 2020        |
+|   103 | Jersey   | 2018        |
 
-::: incremental
--   $\beta_1$: True slope of the relationship between $X$ and $Y$
--   $\beta_0$: True intercept of the relationship between $X$ and $Y$
--   $\epsilon$: Error (residual)
+------------------------------------------------------------------------
+
+## Example: Daily milk production
+
+**MilkProduction**
+
+| CowID | Date       | MilkYield (kg/cow) |
+|------:|------------|-------------------:|
+|   101 | 2025-01-01 |               32.5 |
+|   101 | 2025-01-02 |               33.1 |
+|   102 | 2025-01-01 |               28.4 |
+|   104 | 2025-01-01 |               30.0 |
+
+::: notes
+Note CowID 104 exists here but not in the cow table.
 :::
 
-## Simple linear regression
+------------------------------------------------------------------------
 
-$$\Large{\hat{Y} = b_0 + b_1 X}$$
+## Relationships vs joins (important!)
 
--   $b_1$: Estimated slope of the relationship between $X$ and $Y$
--   $b_0$: Estimated intercept of the relationship between $X$ and $Y$
--   No error term!
+Two ways to combine cow and production tables:
 
-## Choosing values for $b_1$ and $b_0$
+-   **Relationships** (logical connection)
+-   **Joins** (physical merge)
 
-```{r}
-#| echo: false
-#| message: false
+Tableau makes this distinction explicit. Excel mostly works with **joins**.
 
-ggplot(data = df_total_cattle_numbers, 
-       mapping = aes(x = Year, y = TotalNumberOfCows)) +
-  geom_point(alpha = 0.4) + 
-  geom_abline(intercept = -1.615e+01, slope = 8.785e-03, color = "#325b74", linewidth = 1.5) +
-  geom_abline(intercept = -1.615e+01, slope = 9.785e-04, color = "gray") +
-  geom_abline(intercept = -1.615e+01, slope = 8.785e-03, color = "gray") +
-  geom_abline(intercept = -1.615e+01, slope = 8.785e-03, color = "gray") +
-  labs(x = "Year", y = "Total number of cows")
-```
+------------------------------------------------------------------------
 
-## Residuals
+## Relationships (conceptual)
 
-```{r}
-#| message: false
-#| echo: false
-#| fig-align: center
+A relationship says:
 
-ggplot(data = df_total_cattle_numbers, 
-       mapping = aes(x = Year, y = TotalNumberOfCows)) +
-  geom_point(alpha = 0.5) +
-  geom_smooth(method = "lm", color = "#325b74", se = FALSE, linewidth = 1.5) +
-  geom_segment(aes(x = Year, xend = Year, y = TotalNumberOfCows, yend = predict(m)), color = "steel blue") +
-  labs(x = "Critics Score", y = "Audience Score") +
-  theme(legend.position = "none")
-```
+> “These tables are related by CowID.”
 
-$$\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}$$
+-   Tables stay separate
+-   Combination happens *when needed*
+-   Less risk of duplicating cow information
 
-## Least squares line {.smaller}
-
--   The residual for the $i^{th}$ observation is
-
-$$e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i$$
-
--   The **sum of squared** residuals is
-
-$$e^2_1 + e^2_2 + \dots + e^2_n$$
-
--   The **least squares line** is the one that **minimizes the sum of squared residuals**
-
-## Least squares line
-
-```{r}
-cows_fit <- linear_reg() |>
-  fit(TotalNumberOfCows ~ Year, data = df_total_cattle_numbers)
-
-tidy(cows_fit)
-```
-
-# Slope and intercept
-
-## Properties of least squares regression
-
-::: incremental
--   The regression line goes through the center of mass point (the coordinates corresponding to average $X$ and average $Y$): $b_0 = \bar{Y} - b_1~\bar{X}$
-
--   Slope has the same sign as the correlation coefficient: $b_1 = r \frac{s_Y}{s_X}$
-
--   Sum of the residuals is zero: $\sum_{i = 1}^n \epsilon_i = 0$
-
--   Residuals and $X$ values are uncorrelated
+::: notes
+This is Tableau's default approach.
 :::
 
-## Interpreting the slope {.smaller}
+------------------------------------------------------------------------
 
-:::: panel-tabset
-## Question
+## Joins (physical)
 
-::: poll
-The slope of the model for predicting number of cows is 0.008785434.
+A join:
+
+-   Combines rows into a **new table**
+-   Based on matching CowID values
+-   Choice of join affects which records remain
+
+This is where many data mistakes occur.
+
+------------------------------------------------------------------------
+
+## Visual intuition for joins
+
+Think in terms of **sets of cows**:
+
+-   Cows table
+-   Milk production table
+-   Overlap based on CowID
+
+We now look at the four main joins.
+
+------------------------------------------------------------------------
+
+## Type of joins
+
+![](images/clipboard-583807419.png)
+
+## Inner join
+
+**Keeps only matching cows**
+
+-   CowID must exist in *both* tables
+-   Drops production records without cow info
+
+Use when: - You only want valid cows with production data
+
+------------------------------------------------------------------------
+
+## Inner join example
+
+Cows ⨝ MilkProduction
+
+-   Cow 101 → kept
+-   Cow 102 → kept
+-   Cow 103 → dropped (no production)
+-   Cow 104 → dropped (no cow record)
+
+Result: only cows with valid production records.
+
+------------------------------------------------------------------------
+
+## Left join
+
+**Keeps all cows**
+
+-   Production data added when available
+-   Missing production becomes `NULL`
+
+Use when: - The cow list is your main population
+
+------------------------------------------------------------------------
+
+## Left join example
+
+Cows ← MilkProduction
+
+-   All cows kept (101–103)
+-   Cow 103 → Milk_kg = NULL
+
+Very common for herd summaries.
+
+------------------------------------------------------------------------
+
+## Right join
+
+**Keeps all production records**
+
+-   Even if CowID is missing in cow table
+
+Rarely ideal, but useful for: - Detecting data quality issues
+
+------------------------------------------------------------------------
+
+## Full outer join
+
+**Keeps all cows and all production records**
+
+-   Highlights mismatches clearly
+-   Unmatched rows filled with NULLs
+
+Use when: - Auditing or cleaning data
+
+------------------------------------------------------------------------
+
+## Common join pitfalls in dairy data
+
+-   Duplicate CowID values
+-   Missing cows or production days
+-   Text vs numeric CowID
+-   Reused IDs across farms
+
+Always **check row counts** after joining.
+
+------------------------------------------------------------------------
+
+## Practical part 1: Excel
+
+Goal:
+
+-   Combine cow and milk tables using CowID
+-   Understand what Excel is doing
+
+------------------------------------------------------------------------
+
+## Excel tools for joins
+
+Main options:
+
+-   **XLOOKUP** (simple lookups)
+-   **Power Query** (proper joins)
+
+We focus on **Power Query**.
+
+------------------------------------------------------------------------
+
+## Excel: Power Query workflow
+
+1.  Load `Cows` and `MilkProduction`
+2.  Open Power Query Editor
+3.  Merge queries on CowID
+4.  Choose join type
+5.  Expand milk variables
+
+------------------------------------------------------------------------
+
+## Excel demo (in class)
+
+Instructor demonstration:
+
+-   Left join cows with milk records
+-   Inspect NULL milk values
+-   Discuss interpretation
+
+::: notes
+\~10 minutes live demo.
 :::
 
-How to interpret
+------------------------------------------------------------------------
 
-## Submit
+## Practical part 2: Tableau
 
-```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
-```
-::::
+Same data, different philosophy.
 
-## Interpreting slope & intercept
+Tableau encourages **relationships first**.
 
-$$\widehat{\text{Total number of cows}} = -16.1 + 0.008785434    \times \text{Year}$$
+------------------------------------------------------------------------
 
-::: incremental
--   **Slope:** For every one point increase in `Year`, we expect the total number of cows to be higher by 0.008785434 points, on average.
--   **Intercept:** In `Year` is 0, we expect the total number of cows to be -16.1.
-:::
+## Tableau: creating a relationship
 
-## Is the intercept meaningful?
+Steps:
 
-✅ The intercept is meaningful in context of the data if
+1.  Connect `Cows`
+2.  Add `MilkProduction`
+3.  Relate on CowID
+4.  Leave tables separate
 
--   the predictor can feasibly take values equal to or near zero or
--   the predictor has values near zero in the observed data
+No join type selected.
 
-. . .
+------------------------------------------------------------------------
 
-🛑 Otherwise, it might not be meaningful!
+## Why Tableau relationships work well here
+
+-   One-to-many (cow → many days)
+-   Correct aggregation of milk yield
+-   Avoids duplicated cow attributes
+
+------------------------------------------------------------------------
+
+## Comparing Excel and Tableau
+
+| Concept       | Excel       | Tableau        |
+|---------------|-------------|----------------|
+| Key           | CowID       | CowID          |
+| Relationships | Limited     | Native         |
+| Joins         | Power Query | Physical layer |
+| Validation    | Manual      | Visual         |
+
+------------------------------------------------------------------------
+
+## Recap
+
+Today we learned:
+
+-   CowID links cow and milk tables
+-   Joins determine which records survive
+-   Same logic applies across tools
+-   Wrong joins = wrong conclusions
+
+------------------------------------------------------------------------
+
+## Final message
+
+> *Good dairy analysis starts with correct data structure.*
+
+------------------------------------------------------------------------

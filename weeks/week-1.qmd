@@ -4,28 +4,30 @@ subtitle: Course Overview and Introduction to Digital Dairy Management
 editor: visual
 ---
 
-# Details/Subtopics: 
--   Course structure, learning outcomes, and assessment methods 
--   Introduction to dairy data ecosystems: what data exist on a dairy farm? 
--   Overview of CURC operations and data systems 
--   Introduction to data literacy in agriculture 
+# Details/Subtopics:
 
-# Activities/Tasks 
+-   Course structure, learning outcomes, and assessment methods
+-   Introduction to dairy data ecosystems: what data exist on a dairy farm?
+-   Overview of CURC operations and data systems
+-   Introduction to data literacy in agriculture
+
+# Activities/Tasks
+
 -   Lecture (1/20): Pre-course Knowledge Assessment and Pre-inventory Management Quiz
 -   Lecture (1/22):, Syllabus review and Expectations
--   Lab (1/22):   
-    -   CURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records) 
+-   Lab (1/22):
+    -   CURC Visit #1: Farm tour, brainstorm data sources (pens, milking parlor, feed systems, health records)
     -   Guest lecture from CURC farm manager – "A Day in the Life of Dairy Data Manager".
-    -   Introduction to CURC herd management software 
-    -   Form project teams 
+    -   Introduction to CURC herd management software
+    -   Form project teams
 
-# Due Dates: 
+# Due Dates:
+
 -   Team formation by end of lab
-- Please take a moment to complete the MCQs for the pre-course knowledge assessment so we can better tailor the course to your needs: [Pre-course MCQS](https://forms.office.com/r/z5R3PVDvvG)
-- Please take a moment to fill in this forms so we can tailor the course to your needs: [Pre-course questionnaire](https://forms.office.com/r/L4yqeFjh6V) 
-# Datasets/Resources 
--   CURC overview materials 
--   Herd management software demo 
+-   Please take a moment to complete the MCQs for the pre-course knowledge assessment so we can better tailor the course to your needs: [Pre-course MCQS](https://forms.office.com/r/z5R3PVDvvG)
+-   Please take a moment to fill in this forms so we can tailor the course to your needs: [Pre-course questionnaire](https://forms.office.com/r/L4yqeFjh6V) \# Datasets/Resources
+-   CURC overview materials
+-   Herd management software demo
 
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/ "Course schedule") ⏎

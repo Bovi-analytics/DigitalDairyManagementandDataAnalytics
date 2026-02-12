@@ -4,23 +4,26 @@ subtitle: "Data Collection, Cleaning, and Organization "
 editor: visual
 ---
 
-# Details/Subtopics: 
--   Types of dairy data: continuous vs. categorical, time-series, event-based 
--   Data quality: accuracy, completeness, consistency 
--   Introduction to Excel/spreadsheet organization 
--   Basic data cleaning techniques 
+# Details/Subtopics:
 
-# Activities/Tasks 
--   Lecture (1/27): Principles of data collection, Visualization 
--   Lecture (1/29): Data cleaning workflows and common issues in farm data 
--   Lab (1/29):  
-    -   Hands-on: Clean a "messy" CURC dataset (provided with intentional errors) 
-    -   Practice Excel functions for data organization 
-    -   Identify data quality issues and document cleaning steps 
+-   Types of dairy data: continuous vs. categorical, time-series, event-based
+-   Data quality: accuracy, completeness, consistency
+-   Introduction to Excel/spreadsheet organization
+-   Basic data cleaning techniques
 
-# Due Dates: 
--   Lab worksheet on data cleaning (due start of Week 3) 
+# Activities/Tasks
 
-# Datasets/Resources: 
--   Sample CURC dataset with quality issues, Excel templates 
+-   Lecture (1/27): Principles of data collection, Visualization
+-   Lecture (1/29): Data cleaning workflows and common issues in farm data
+-   Lab (1/29):
+    -   Hands-on: Clean a "messy" CURC dataset (provided with intentional errors)
+    -   Practice Excel functions for data organization
+    -   Identify data quality issues and document cleaning steps
 
+# Due Dates:
+
+-   Lab worksheet on data cleaning (due start of Week 3)
+
+# Datasets/Resources:
+
+-   Sample CURC dataset with quality issues, Excel templates

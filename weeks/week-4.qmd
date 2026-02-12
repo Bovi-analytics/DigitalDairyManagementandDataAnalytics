@@ -4,21 +4,24 @@ subtitle: "Communicating Data Insights (Milk Production) "
 editor: visual
 ---
 
-# Details/Subtopics 
--   Interpreting milk production trends 
--   Discussing implications for herd management 
--   Peer evaluation and feedback 
+# Details/Subtopics
 
-# Activities/Tasks 
--   Lecture (2/10): Effective data visualization and communication strategies 
--   Lecture (2/12): Student team presentations on milk production analysis 
--   Lab (2/12):  
-    -   Peer evaluation of presentations 
-    -   Discussion: What did we learn? What management decisions could be informed? 
+-   Interpreting milk production trends
+-   Discussing implications for herd management
+-   Peer evaluation and feedback
 
-# Due Dates: 
--   Team presentations (2/12) – peer evaluation forms due 
+# Activities/Tasks
 
-# Datasets/Resources: 
+-   Lecture (2/10): Effective data visualization and communication strategies
+-   Lecture (2/12): Student team presentations on milk production analysis
+-   Lab (2/12):
+    -   Peer evaluation of presentations
+    -   Discussion: What did we learn? What management decisions could be informed?
+
+# Due Dates:
+
+-   Team presentations (2/12) – peer evaluation forms due
+
+# Datasets/Resources:
+
 -   Student-generated analyses and visualizations
-

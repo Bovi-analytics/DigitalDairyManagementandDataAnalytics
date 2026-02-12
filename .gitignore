@@ -22,3 +22,5 @@ _site/**
 /.quarto/
 Course Proposal Template.docx
 Credit-Hours- Beasts&Bytes.xlsx
+
+**/*.quarto_ipynb
