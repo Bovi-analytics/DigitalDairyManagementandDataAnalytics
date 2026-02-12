@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-87fb683e42416cd7aecb8e577b091905.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -122,10 +122,10 @@
     }
   </style>
 <meta property="og:title" content="Using Relationships and Joins Between Tables – ANSC4940">
-<meta property="og:description" content="Lecture week 4">
+<meta property="og:description" content="ANSCI 4940 - Spring 2026">
 <meta property="og:site_name" content="ANSC4940">
 <meta name="twitter:title" content="Using Relationships and Joins Between Tables – ANSC4940">
-<meta name="twitter:description" content="Lecture week 4">
+<meta name="twitter:description" content="ANSCI 4940 - Spring 2026">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -136,7 +136,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Using Relationships and Joins Between Tables</h1>
-  <p class="subtitle">Lecture week 4</p>
+  <p class="subtitle">ANSCI 4940 - Spring 2026</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -146,17 +146,16 @@ Miel Hostens
 </div>
 </div>
 
-  <p class="date">Invalid Date</p>
 </section>
 <section id="learning-objectives" class="slide level2">
 <h2>Learning objectives</h2>
 <p>By the end of this lecture, students will be able to:</p>
 <ul>
-<li class="fragment">Explain what tables, keys, and relationships are using dairy data</li>
-<li class="fragment">Distinguish between different types of joins</li>
-<li class="fragment">Decide <em>which</em> join to use for cow and milk production data</li>
-<li class="fragment">Implement joins and relationships in <strong>Excel</strong> and <strong>Tableau</strong></li>
-<li class="fragment">Diagnose common join-related data problems in animal records</li>
+<li>Explain what tables, keys, and relationships are using dairy data</li>
+<li>Distinguish between different types of joins</li>
+<li>Decide <em>which</em> join to use for cow and milk production data</li>
+<li>Implement joins and relationships in <strong>Excel</strong> and <strong>Tableau</strong></li>
+<li>Diagnose common join-related data problems in animal records</li>
 </ul>
 <aside class="notes">
 <p>~3 minutes. Set expectations and connect to previous data topics in dairy science.</p>
@@ -176,9 +175,9 @@ Miel Hostens
 <h2>Why this matters in dairy data</h2>
 <p>Dairy data is <strong>rarely stored in one table</strong>:</p>
 <ul>
-<li class="fragment">Cow information</li>
-<li class="fragment">Daily milk production records</li>
-<li class="fragment">Health or reproduction events</li>
+<li>Cow information</li>
+<li>Daily milk production records</li>
+<li>Health or reproduction events</li>
 </ul>
 <p>To answer questions, we must <strong>combine tables correctly</strong>.</p>
 <aside class="notes">
@@ -198,12 +197,12 @@ Miel Hostens
 <section id="from-flat-files-to-relational-thinking" class="slide level2">
 <h2>From flat files to relational thinking</h2>
 <ul>
-<li class="fragment">One big spreadsheet with everything seems easy… at first</li>
-<li class="fragment">Repeating cow information every day causes:
+<li>One big spreadsheet with everything seems easy… at first</li>
+<li>Repeating cow information every day causes:
 <ul>
-<li class="fragment">Errors</li>
-<li class="fragment">Inconsistencies</li>
-<li class="fragment">Very large files</li>
+<li>Errors</li>
+<li>Inconsistencies</li>
+<li>Very large files</li>
 </ul></li>
 </ul>
 <p><strong>Relational data</strong> solves this by splitting data into tables.</p>
@@ -212,13 +211,13 @@ Miel Hostens
 <h2>What is a table?</h2>
 <p>A table is:</p>
 <ul>
-<li class="fragment">Rows = observations (records)</li>
-<li class="fragment">Columns = variables (fields)</li>
+<li>Rows = observations (records)</li>
+<li>Columns = variables (fields)</li>
 </ul>
 <p>In our example:</p>
 <ul>
-<li class="fragment"><code>Cows</code></li>
-<li class="fragment"><code>MilkProduction</code></li>
+<li><code>Cows</code></li>
+<li><code>MilkProduction</code></li>
 </ul>
 <p>Each table describes <strong>one thing</strong>.</p>
 </section>
@@ -226,13 +225,13 @@ Miel Hostens
 <h2>The idea of a key</h2>
 <p>A <strong>key</strong> is a column that identifies rows.</p>
 <ul>
-<li class="fragment"><strong>Primary key</strong>: uniquely identifies a row
+<li><strong>Primary key</strong>: uniquely identifies a row
 <ul>
-<li class="fragment"><code>CowID</code></li>
+<li><code>CowID</code></li>
 </ul></li>
-<li class="fragment"><strong>Foreign key</strong>: refers to a key in another table
+<li><strong>Foreign key</strong>: refers to a key in another table
 <ul>
-<li class="fragment"><code>CowID</code> inside <code>MilkProduction</code></li>
+<li><code>CowID</code> inside <code>MilkProduction</code></li>
 </ul></li>
 </ul>
 <aside class="notes">
@@ -331,8 +330,8 @@ Miel Hostens
 <h2>Relationships vs joins (important!)</h2>
 <p>Two ways to combine cow and production tables:</p>
 <ul>
-<li class="fragment"><strong>Relationships</strong> (logical connection)</li>
-<li class="fragment"><strong>Joins</strong> (physical merge)</li>
+<li><strong>Relationships</strong> (logical connection)</li>
+<li><strong>Joins</strong> (physical merge)</li>
 </ul>
 <p>Tableau makes this distinction explicit. Excel mostly works with <strong>joins</strong>.</p>
 </section>
@@ -343,9 +342,9 @@ Miel Hostens
 <p>“These tables are related by CowID.”</p>
 </blockquote>
 <ul>
-<li class="fragment">Tables stay separate</li>
-<li class="fragment">Combination happens <em>when needed</em></li>
-<li class="fragment">Less risk of duplicating cow information</li>
+<li>Tables stay separate</li>
+<li>Combination happens <em>when needed</em></li>
+<li>Less risk of duplicating cow information</li>
 </ul>
 <aside class="notes">
 <p>This is Tableau’s default approach.</p>
@@ -365,9 +364,9 @@ Miel Hostens
 <h2>Joins (physical)</h2>
 <p>A join:</p>
 <ul>
-<li class="fragment">Combines rows into a <strong>new table</strong></li>
-<li class="fragment">Based on matching CowID values</li>
-<li class="fragment">Choice of join affects which records remain</li>
+<li>Combines rows into a <strong>new table</strong></li>
+<li>Based on matching CowID values</li>
+<li>Choice of join affects which records remain</li>
 </ul>
 <p>This is where many data mistakes occur.</p>
 </section>
@@ -375,9 +374,9 @@ Miel Hostens
 <h2>Visual intuition for joins</h2>
 <p>Think in terms of <strong>sets of cows</strong>:</p>
 <ul>
-<li class="fragment">Cows table</li>
-<li class="fragment">Milk production table</li>
-<li class="fragment">Overlap based on CowID</li>
+<li>Cows table</li>
+<li>Milk production table</li>
+<li>Overlap based on CowID</li>
 </ul>
 <p>We now look at the four main joins.</p>
 </section>
@@ -389,8 +388,8 @@ Miel Hostens
 <h2>Inner join</h2>
 <p><strong>Keeps only matching cows</strong></p>
 <ul>
-<li class="fragment">CowID must exist in <em>both</em> tables</li>
-<li class="fragment">Drops production records without cow info</li>
+<li>CowID must exist in <em>both</em> tables</li>
+<li>Drops production records without cow info</li>
 </ul>
 <p>Use when: - You only want valid cows with production data</p>
 </section>
@@ -398,10 +397,10 @@ Miel Hostens
 <h2>Inner join example</h2>
 <p>Cows ⨝ MilkProduction</p>
 <ul>
-<li class="fragment">Cow 101 → kept</li>
-<li class="fragment">Cow 102 → kept</li>
-<li class="fragment">Cow 103 → dropped (no production)</li>
-<li class="fragment">Cow 104 → dropped (no cow record)</li>
+<li>Cow 101 → kept</li>
+<li>Cow 102 → kept</li>
+<li>Cow 103 → dropped (no production)</li>
+<li>Cow 104 → dropped (no cow record)</li>
 </ul>
 <p>Result: only cows with valid production records.</p>
 </section>
@@ -409,8 +408,8 @@ Miel Hostens
 <h2>Left join</h2>
 <p><strong>Keeps all cows</strong></p>
 <ul>
-<li class="fragment">Production data added when available</li>
-<li class="fragment">Missing production becomes <code>NULL</code></li>
+<li>Production data added when available</li>
+<li>Missing production becomes <code>NULL</code></li>
 </ul>
 <p>Use when: - The cow list is your main population</p>
 </section>
@@ -418,8 +417,8 @@ Miel Hostens
 <h2>Left join example</h2>
 <p>Cows ← MilkProduction</p>
 <ul>
-<li class="fragment">All cows kept (101–103)</li>
-<li class="fragment">Cow 103 → Milk_kg = NULL</li>
+<li>All cows kept (101–103)</li>
+<li>Cow 103 → Milk_kg = NULL</li>
 </ul>
 <p>Very common for herd summaries.</p>
 </section>
@@ -427,7 +426,7 @@ Miel Hostens
 <h2>Right join</h2>
 <p><strong>Keeps all production records</strong></p>
 <ul>
-<li class="fragment">Even if CowID is missing in cow table</li>
+<li>Even if CowID is missing in cow table</li>
 </ul>
 <p>Rarely ideal, but useful for: - Detecting data quality issues</p>
 </section>
@@ -435,18 +434,18 @@ Miel Hostens
 <h2>Full outer join</h2>
 <p><strong>Keeps all cows and all production records</strong></p>
 <ul>
-<li class="fragment">Highlights mismatches clearly</li>
-<li class="fragment">Unmatched rows filled with NULLs</li>
+<li>Highlights mismatches clearly</li>
+<li>Unmatched rows filled with NULLs</li>
 </ul>
 <p>Use when: - Auditing or cleaning data</p>
 </section>
 <section id="common-join-pitfalls-in-dairy-data" class="slide level2">
 <h2>Common join pitfalls in dairy data</h2>
 <ul>
-<li class="fragment">Duplicate CowID values</li>
-<li class="fragment">Missing cows or production days</li>
-<li class="fragment">Text vs numeric CowID</li>
-<li class="fragment">Reused IDs across farms</li>
+<li>Duplicate CowID values</li>
+<li>Missing cows or production days</li>
+<li>Text vs numeric CowID</li>
+<li>Reused IDs across farms</li>
 </ul>
 <p>Always <strong>check row counts</strong> after joining.</p>
 </section>
@@ -454,36 +453,36 @@ Miel Hostens
 <h2>Practical part 1: Excel</h2>
 <p>Goal:</p>
 <ul>
-<li class="fragment">Combine cow and milk tables using CowID</li>
-<li class="fragment">Understand what Excel is doing</li>
+<li>Combine cow and milk tables using CowID</li>
+<li>Understand what Excel is doing</li>
 </ul>
 </section>
 <section id="excel-tools-for-joins" class="slide level2">
 <h2>Excel tools for joins</h2>
 <p>Main options:</p>
 <ul>
-<li class="fragment"><strong>XLOOKUP</strong> (simple lookups)</li>
-<li class="fragment"><strong>Power Query</strong> (proper joins)</li>
+<li><strong>XLOOKUP</strong> (simple lookups)</li>
+<li><strong>Power Query</strong> (proper joins)</li>
 </ul>
 <p>We focus on <strong>Power Query</strong>.</p>
 </section>
 <section id="excel-power-query-workflow" class="slide level2">
 <h2>Excel: Power Query workflow</h2>
 <ol type="1">
-<li class="fragment">Load <code>Cows</code> and <code>MilkProduction</code></li>
-<li class="fragment">Open Power Query Editor</li>
-<li class="fragment">Merge queries on CowID</li>
-<li class="fragment">Choose join type</li>
-<li class="fragment">Expand milk variables</li>
+<li>Load <code>Cows</code> and <code>MilkProduction</code></li>
+<li>Open Power Query Editor</li>
+<li>Merge queries on CowID</li>
+<li>Choose join type</li>
+<li>Expand milk variables</li>
 </ol>
 </section>
 <section id="excel-demo-in-class" class="slide level2">
 <h2>Excel demo (in class)</h2>
 <p>Instructor demonstration:</p>
 <ul>
-<li class="fragment">Left join cows with milk records</li>
-<li class="fragment">Inspect NULL milk values</li>
-<li class="fragment">Discuss interpretation</li>
+<li>Left join cows with milk records</li>
+<li>Inspect NULL milk values</li>
+<li>Discuss interpretation</li>
 </ul>
 <aside class="notes">
 <p>~10 minutes live demo.</p>
@@ -508,19 +507,19 @@ Miel Hostens
 <h2>Tableau: creating a relationship</h2>
 <p>Steps:</p>
 <ol type="1">
-<li class="fragment">Connect <code>Cows</code></li>
-<li class="fragment">Add <code>MilkProduction</code></li>
-<li class="fragment">Relate on CowID</li>
-<li class="fragment">Leave tables separate</li>
+<li>Connect <code>Cows</code></li>
+<li>Add <code>MilkProduction</code></li>
+<li>Relate on CowID</li>
+<li>Leave tables separate</li>
 </ol>
 <p>No join type selected.</p>
 </section>
 <section id="why-tableau-relationships-work-well-here" class="slide level2">
 <h2>Why Tableau relationships work well here</h2>
 <ul>
-<li class="fragment">One-to-many (cow → many days)</li>
-<li class="fragment">Correct aggregation of milk yield</li>
-<li class="fragment">Avoids duplicated cow attributes</li>
+<li>One-to-many (cow → many days)</li>
+<li>Correct aggregation of milk yield</li>
+<li>Avoids duplicated cow attributes</li>
 </ul>
 </section>
 <section id="comparing-excel-and-tableau" class="slide level2">
@@ -561,10 +560,10 @@ Miel Hostens
 <h2>Recap</h2>
 <p>Today we learned:</p>
 <ul>
-<li class="fragment">CowID links cow and milk tables</li>
-<li class="fragment">Joins determine which records survive</li>
-<li class="fragment">Same logic applies across tools</li>
-<li class="fragment">Wrong joins = wrong conclusions</li>
+<li>CowID links cow and milk tables</li>
+<li>Joins determine which records survive</li>
+<li>Same logic applies across tools</li>
+<li>Wrong joins = wrong conclusions</li>
 </ul>
 </section>
 <section id="final-message" class="slide level2">
@@ -580,6 +579,7 @@ Miel Hostens
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/Bovi-Analytics-SmallLogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/">https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/</a></p>
 </div>
@@ -739,7 +739,7 @@ Miel Hostens
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
