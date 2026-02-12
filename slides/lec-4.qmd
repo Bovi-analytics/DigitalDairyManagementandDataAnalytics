@@ -1,15 +1,13 @@
 ---
 title: "Using Relationships and Joins Between Tables"
-subtitle: "Lecture week 4"
+subtitle: "ANSCI 4940 - Spring 2026"
 author: "Miel Hostens"
-date: "February 12th, 2026"
+logo: "images/Bovi-Analytics-SmallLogo.png"
 format:
   revealjs:
-    theme: simple
+    theme: slides.scss
+    transition: fade
     slide-number: true
-    incremental: true
-    toc: false
-    transition: slide
     footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
 ---
 
