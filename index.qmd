@@ -7,7 +7,7 @@ This page contains an outline of the topics, content, and assignments for the co
 
 ::: column-screen-inset-right
 | Week | Date | Topic | Teachers | Prepare | Lecture |
-|:----------:|:-----------|------------|------------|:----------:|:----------:|
+|:--:|:---|----|----|:--:|:--:|
 | 1 | 1/20 | Introductory Multiple Choice Questions and Inventory Management | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
 | 1 | 1/22 | Syllabus Review and Introduction | Dr. Hostens | 📖 | 🖥️ |
 | 1 | 1/22 | (LAB) CURC Farm Tour & Presentation from CURC Manager | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |

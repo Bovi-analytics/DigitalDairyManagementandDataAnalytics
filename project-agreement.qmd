@@ -1,0 +1,61 @@
+---
+title: "A+ Project grading"
+---
+
+## A+ Grading Eligibility Checklist
+
+The following goals were agreed upon on **February 19** as required elements for earning an **A+** in the final project for the *Digital Dairy Management and Data Analytics* course (Instructor: M. Hostens).
+
+At the end of the course—after the final presentation with the farm manager —these checkboxes can be validated.
+
+| Requirement | Completed? | By when |
+|-----------------------------------|:---------------------------------:|--|
+| Data agreement in place and signed by all parties | ☐ | February 19th 2026 |
+| Data quality (including inventory check) | ☐ | February 19th 2026 |
+| Dataset organized | ☐ | March 1st 2026 |
+| Questions\* defined | ☐ | March 15th 2026 |
+| Presentation | ☐ |  |
+| Action plan in place | ☐ |  |
+| Peer feedback the day after the presentation | ☐ |  |
+| When the farm manager questions\* are all answered | ☐ |  |
+
+------------------------------------------------------------------------
+
+### \*Questions from the farm manager
+
+-   Milk production (defined on ...)
+
+    -   Long term milk yield analysis, including components, and analysis for a seasonal effect
+
+    -   Do changes in components compensate
+
+    -   Heifer production trend
+
+    -   Lactation curve per parity
+
+    -   Tie stall vs free stalls
+
+    -   Difference from herd mates
+
+-   Inventory clarifications:
+
+    -   Calves
+
+    -   Milk cows
+
+    -   Replacement rate
+
+    -   Is the herd actually shrinking
+
+    -   Death loss
+
+        -   What’s going on?
+
+-   Reproduction
+
+    -   TBD
+
+### Notes
+
+-   This table should be reviewed jointly by the team, the farmer(s), and Professor Hostens following the final presentation.
+-   The checklist is meant to support transparency, self‑reflection, and assessment alignment.
