@@ -8,16 +8,41 @@ The following goals were agreed upon on **February 19** as required elements for
 
 At the end of the course—after the final presentation with the farm manager —these checkboxes can be validated.
 
-| Requirement | Completed? | By when |
-|-----------------------------------|:---------------------------------:|--|
-| Data agreement in place and signed by all parties | ☐ | February 19th 2026 |
-| Data quality (including inventory check) | ☐ | February 19th 2026 |
-| Dataset organized | ☐ | March 1st 2026 |
-| Questions\* defined | ☐ | March 15th 2026 |
-| Presentation | ☐ |  |
-| Action plan in place | ☐ |  |
-| Peer feedback the day after the presentation | ☐ |  |
-| When the farm manager questions\* are all answered | ☐ |  |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| Requirement                                                                                    | Completed?           | By when              |
++================================================================================================+:====================:+======================+
+| **Data agreement** in place and signed by all parties                                          | ☐                    | February 19th 2026   |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| Data quality (including inventory check)                                                       | ☐                    | February 19th 2026   |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| Dataset organized                                                                              | ☐                    | March 1st 2026       |
+|                                                                                                |                      |                      |
+| -   Safe place organized                                                                       |                      |                      |
+|                                                                                                |                      |                      |
+| -   Definition of what data needed are clear                                                   |                      |                      |
+|                                                                                                |                      |                      |
+| -   FAIR principles are used                                                                   |                      |                      |
+|                                                                                                |                      |                      |
+| -   Naming conventions are in place and used                                                   |                      |                      |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| **Questions**\* defined                                                                        | ☐                    | March 15th 2026      |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| Presentation                                                                                   | ☐                    |                      |
+|                                                                                                |                      |                      |
+| -   Covered **90% of questions addressed** by March 15^th^                                     |                      |                      |
+|                                                                                                |                      |                      |
+| -   Every student has **equal contribution** in the presentation                               |                      |                      |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| Peer feedback the day after the presentation                                                   | ☐                    |                      |
+|                                                                                                |                      |                      |
+| -   Roundtable discussion good/bad                                                             |                      |                      |
+|                                                                                                |                      |                      |
+| -   Dr. Hostens will give final feedback/mark                                                  |                      |                      |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| Ask the farmer if each member of the team showed **professional attitude** in all interactions | ☐                    |                      |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| DiSC profiling implemented for each team member                                                | ☐                    |                      |
++------------------------------------------------------------------------------------------------+----------------------+----------------------+
 
 ------------------------------------------------------------------------
 
@@ -25,25 +50,21 @@ At the end of the course—after the final presentation with the farm manager �
 
 -   Milk production (defined on ...)
 
-    -   Long term milk yield analysis, including components, and analysis for a seasonal effect
+    -   Provide long term milk yield analysis, including ECM and components, and analysis for a seasonal effect
 
     -   Do changes in components compensate
 
-    -   Heifer production trend
+    -   What is the evolution of the relative production of heifers versus cows
 
-    -   Lactation curve per parity
+    -   Visualize lactation curves per parity
 
-    -   Tie stall vs free stalls
-
-    -   Difference from herd mates
+    -   Are cows in the tie stall vs free stalls producing differently
 
 -   Inventory clarifications:
 
-    -   Calves
+    -   Are DC305 inventory correct for stall numbers/cow numbers
 
-    -   Milk cows
-
-    -   Replacement rate
+    -   DHI herd summary said that 88 death cows in last year, correct?
 
     -   Is the herd actually shrinking
 
