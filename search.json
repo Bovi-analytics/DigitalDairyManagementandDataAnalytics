@@ -846,7 +846,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-19\"\n\nnow()\n\n[1] \"2026-02-19 18:13:14 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-23\"\n\nnow()\n\n[1] \"2026-02-23 02:13:30 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
@@ -951,14 +951,14 @@
     "href": "slides/lec-11.html#sec-duration-1",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 16004 days"
+    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 16008 days"
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-2",
     "href": "slides/lec-11.html#sec-duration-2",
     "title": "Data transformations",
     "section": "Durations",
-    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1382745600s (~43.82 years)\""
+    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1383091200s (~43.83 years)\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-3",
@@ -986,7 +986,7 @@
     "href": "slides/lec-11.html#sec-duration-6",
     "title": "Data transformations",
     "section": "Add and substract durations",
-    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-02-20\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-02-18 18:00:00 UTC\""
+    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-02-24\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-02-22 18:00:00 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-duration-7",
@@ -2928,7 +2928,7 @@
     "href": "project-agreement.html",
     "title": "A+ Project grading",
     "section": "",
-    "text": "The following goals were agreed upon on February 19 as required elements for earning an A+ in the final project for the Digital Dairy Management and Data Analytics course (Instructor: M. Hostens).\nAt the end of the course—after the final presentation with the farm manager —these checkboxes can be validated.\n\n\n\n\n\n\n\n\nRequirement\nCompleted?\nBy when\n\n\n\n\nData agreement in place and signed by all parties\n☐\nFebruary 19th 2026\n\n\nData quality (including inventory check)\n☐\nFebruary 19th 2026\n\n\nDataset organized\n☐\nMarch 1st 2026\n\n\nQuestions* defined\n☐\nMarch 15th 2026\n\n\nPresentation\n☐\n\n\n\nAction plan in place\n☐\n\n\n\nPeer feedback the day after the presentation\n☐\n\n\n\nWhen the farm manager questions* are all answered\n☐\n\n\n\n\n\n\n\n\nMilk production (defined on …)\n\nLong term milk yield analysis, including components, and analysis for a seasonal effect\nDo changes in components compensate\nHeifer production trend\nLactation curve per parity\nTie stall vs free stalls\nDifference from herd mates\n\nInventory clarifications:\n\nCalves\nMilk cows\nReplacement rate\nIs the herd actually shrinking\nDeath loss\n\nWhat’s going on?\n\n\nReproduction\n\nTBD\n\n\n\n\n\n\nThis table should be reviewed jointly by the team, the farmer(s), and Professor Hostens following the final presentation.\nThe checklist is meant to support transparency, self‑reflection, and assessment alignment.",
+    "text": "The following goals were agreed upon on February 19 as required elements for earning an A+ in the final project for the Digital Dairy Management and Data Analytics course (Instructor: M. Hostens).\nAt the end of the course—after the final presentation with the farm manager —these checkboxes can be validated.\n\n\n\n\n\n\n\n\nRequirement\nCompleted?\nBy when\n\n\n\n\nData agreement in place and signed by all parties\n☐\nFebruary 19th 2026\n\n\nData quality (including inventory check)\n☐\nFebruary 19th 2026\n\n\nDataset organized\n\nSafe place organized\nDefinition of what data needed are clear\nFAIR principles are used\nNaming conventions are in place and used\n\n☐\nMarch 1st 2026\n\n\nQuestions* defined\n☐\nMarch 15th 2026\n\n\nPresentation\n\nCovered 90% of questions addressed by March 15th\nEvery student has equal contribution in the presentation\n\n☐\n\n\n\nPeer feedback the day after the presentation\n\nRoundtable discussion good/bad\nDr. Hostens will give final feedback/mark\n\n☐\n\n\n\nAsk the farmer if each member of the team showed professional attitude in all interactions\n☐\n\n\n\nDiSC profiling implemented for each team member\n☐\n\n\n\n\n\n\n\n\nMilk production (defined on …)\n\nProvide long term milk yield analysis, including ECM and components, and analysis for a seasonal effect\nDo changes in components compensate\nWhat is the evolution of the relative production of heifers versus cows\nVisualize lactation curves per parity\nAre cows in the tie stall vs free stalls producing differently\n\nInventory clarifications:\n\nAre DC305 inventory correct for stall numbers/cow numbers\nDHI herd summary said that 88 death cows in last year, correct?\nIs the herd actually shrinking\nDeath loss\n\nWhat’s going on?\n\n\nReproduction\n\nTBD\n\n\n\n\n\n\nThis table should be reviewed jointly by the team, the farmer(s), and Professor Hostens following the final presentation.\nThe checklist is meant to support transparency, self‑reflection, and assessment alignment.",
     "crumbs": [
       "Project",
       "Project agreement"
@@ -2939,7 +2939,7 @@
     "href": "project-agreement.html#a-grading-eligibility-checklist",
     "title": "A+ Project grading",
     "section": "",
-    "text": "The following goals were agreed upon on February 19 as required elements for earning an A+ in the final project for the Digital Dairy Management and Data Analytics course (Instructor: M. Hostens).\nAt the end of the course—after the final presentation with the farm manager —these checkboxes can be validated.\n\n\n\n\n\n\n\n\nRequirement\nCompleted?\nBy when\n\n\n\n\nData agreement in place and signed by all parties\n☐\nFebruary 19th 2026\n\n\nData quality (including inventory check)\n☐\nFebruary 19th 2026\n\n\nDataset organized\n☐\nMarch 1st 2026\n\n\nQuestions* defined\n☐\nMarch 15th 2026\n\n\nPresentation\n☐\n\n\n\nAction plan in place\n☐\n\n\n\nPeer feedback the day after the presentation\n☐\n\n\n\nWhen the farm manager questions* are all answered\n☐\n\n\n\n\n\n\n\n\nMilk production (defined on …)\n\nLong term milk yield analysis, including components, and analysis for a seasonal effect\nDo changes in components compensate\nHeifer production trend\nLactation curve per parity\nTie stall vs free stalls\nDifference from herd mates\n\nInventory clarifications:\n\nCalves\nMilk cows\nReplacement rate\nIs the herd actually shrinking\nDeath loss\n\nWhat’s going on?\n\n\nReproduction\n\nTBD\n\n\n\n\n\n\nThis table should be reviewed jointly by the team, the farmer(s), and Professor Hostens following the final presentation.\nThe checklist is meant to support transparency, self‑reflection, and assessment alignment.",
+    "text": "The following goals were agreed upon on February 19 as required elements for earning an A+ in the final project for the Digital Dairy Management and Data Analytics course (Instructor: M. Hostens).\nAt the end of the course—after the final presentation with the farm manager —these checkboxes can be validated.\n\n\n\n\n\n\n\n\nRequirement\nCompleted?\nBy when\n\n\n\n\nData agreement in place and signed by all parties\n☐\nFebruary 19th 2026\n\n\nData quality (including inventory check)\n☐\nFebruary 19th 2026\n\n\nDataset organized\n\nSafe place organized\nDefinition of what data needed are clear\nFAIR principles are used\nNaming conventions are in place and used\n\n☐\nMarch 1st 2026\n\n\nQuestions* defined\n☐\nMarch 15th 2026\n\n\nPresentation\n\nCovered 90% of questions addressed by March 15th\nEvery student has equal contribution in the presentation\n\n☐\n\n\n\nPeer feedback the day after the presentation\n\nRoundtable discussion good/bad\nDr. Hostens will give final feedback/mark\n\n☐\n\n\n\nAsk the farmer if each member of the team showed professional attitude in all interactions\n☐\n\n\n\nDiSC profiling implemented for each team member\n☐\n\n\n\n\n\n\n\n\nMilk production (defined on …)\n\nProvide long term milk yield analysis, including ECM and components, and analysis for a seasonal effect\nDo changes in components compensate\nWhat is the evolution of the relative production of heifers versus cows\nVisualize lactation curves per parity\nAre cows in the tie stall vs free stalls producing differently\n\nInventory clarifications:\n\nAre DC305 inventory correct for stall numbers/cow numbers\nDHI herd summary said that 88 death cows in last year, correct?\nIs the herd actually shrinking\nDeath loss\n\nWhat’s going on?\n\n\nReproduction\n\nTBD\n\n\n\n\n\n\nThis table should be reviewed jointly by the team, the farmer(s), and Professor Hostens following the final presentation.\nThe checklist is meant to support transparency, self‑reflection, and assessment alignment.",
     "crumbs": [
       "Project",
       "Project agreement"
