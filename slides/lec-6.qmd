@@ -1,234 +1,213 @@
 ---
-title: "Logistic regression"
-subtitle: "Lecture 5"
-date: "February 10, 2025"
-format: 
+title: "Lecture 6"
+subtitle: "ANSCI 4940 - Spring 2026"
+author: "Miel Hostens"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
   revealjs:
-    footer: "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
 ---
 
-# Warm up
+# Reproducible & FAIR data science
 
-```{r}
-#| echo: false
-#| message: false
+## What are the FAIR principles
 
-library(countdown)
-library(dplyr)
-library(tidyverse)
-ggplot2::theme_set(theme_gray(base_size = 16))
-```
+**FAIR data** is [data](https://en.wikipedia.org/wiki/Data "Data") which meets the **FAIR principles** of [findability](https://en.wikipedia.org/wiki/Findability "Findability"), accessibility, [interoperability](https://en.wikipedia.org/wiki/Interoperability "Interoperability"), and [reusability](https://en.wikipedia.org/wiki/Reusability "Reusability") (FAIR).^[\[1\]](https://en.wikipedia.org/wiki/FAIR_data#cite_note-FAIR_principles_2016-1)[\[2\]](https://en.wikipedia.org/wiki/FAIR_data#cite_note-2)^ The acronym and principles were defined in a March 2016 paper in the journal [*Scientific Data*](https://en.wikipedia.org/wiki/Scientific_Data_(journal) "Scientific Data (journal)") by a consortium of scientists and organizations.^[\[1\]](https://en.wikipedia.org/wiki/FAIR_data#cite_note-FAIR_principles_2016-1)^
 
-## Goals
+## Get to know the principles (1)
 
--   Recap simple linear regression
--   Recap linear regression with multiple predictors
--   Logistic regression
+-   Get familiar with FAIR by looking at [this video](https://www.youtube.com/watch?v=K40utIzUzOk).
 
-# Linear regression
+-   Read the intial [publication](https://www.nature.com/articles/sdata201618) on *The FAIR Guiding Principles for scientific data management and stewardschip.*
 
-## Simple linear regression {.smaller}
+-   Explore the [vision of Cornell University on FAIR principles](https://data.research.cornell.edu/data-management/sharing/fair/) and their cheatsheets.
 
-Use **simple linear regression** to model the relationship between a quantitative outcome ($Y$) and a single quantitative predictor ($X$): $$\Large{Y = \beta_0 + \beta_1 X + \epsilon}$$
+## Get to know the principles (2)
 
-::: incremental
--   $\beta_1$: True slope of the relationship between $X$ and $Y$
--   $\beta_0$: True intercept of the relationship between $X$ and $Y$
--   $\epsilon$: Error (residual)
-:::
+-   Check for reproducible advise in the [tutorials](https://bovi-analytics.com/tutorials/) at the bovi-analytics website.
 
-## Multiple linear regression {.smaller}
+-   Discuss with the entire team and Dr. Miel Hostens (contact him on his desk) on how this will reflect on your team project.
 
-Use **multiple linear regression** to model the relationship between a quantitative outcome ($Y$) and a multiple quantitative predictors and factors ($X$): $$\Large{Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon}$$
+## Findable
 
-::: incremental
--   $\beta_1$: True slope of the relationship between $X_1$ and $Y$
--   $\beta_2$: True slope of the relationship between $X_2$ and $Y$
--   $\beta_0$: True intercept of the relationship between $X$ and $Y$
--   $\epsilon$: Error (residual)
-:::
+The first step in (re)using data is to find them. [Metadata](https://en.wikipedia.org/wiki/Metadata "Metadata") and data should be easy to find for both humans and computers. [Machine-readable](https://en.wikipedia.org/wiki/Machine-readable_data "Machine-readable data") metadata are essential for automatic [discovery](https://en.wikipedia.org/wiki/Data_discovery "Data discovery") of datasets and services, so this is an essential component of the FAIRification process.
 
-# Logistic regression
+## Findable
 
-## What is logistic regression?
+-   F1. (Meta)data are assigned a globally unique and persistent identifier
 
-::::: columns
-::: {.column width="50%"}
--   Similar to linear regression.... but
+-   F2. Data are described with rich metadata (defined by R1 below)
 
--   Modeling tool when our response is categorical
-:::
+-   F3. Metadata clearly and explicitly include the identifier of the data they describe
 
-::: {.column width="50%"}
-![](images/logistic.png){fig-align="center"}
-:::
-:::::
+-   F4. (Meta)data are registered or indexed in a searchable resource
 
-## Modelling binary outcomes
+## Accessible
 
--   Variables with binary outcomes follow the **Bernouilli distribution**:
+Once the user finds the required data, they need to know how they can be accessed, possibly including [authentication](https://en.wikipedia.org/wiki/Authentication "Authentication") and [authorisation](https://en.wikipedia.org/wiki/Authorization "Authorization").
 
-    -   $y_i \sim Bern(p)$
+## Accessible
 
-    -   $p$: Probability of success
+-   A1. (Meta)data are retrievable by their identifier using a standardised communications protocol
 
-    -   $1-p$: Probability of failure
+-   A1.1 The protocol is open, free, and universally implementable
 
--   We can't model $y$ directly, so instead we model $p$
+-   A1.2 The protocol allows for an authentication and authorisation procedure, where necessary
 
-## Linear model
+-   A2. Metadata are accessible, even when the data are no longer available
 
-$$
-p_i = \beta_o + \beta_1 \times X_1 + \cdots + \epsilon
-$$
+## Interoperable
 
--   But remember that $p$ must be between 0 and 1
+The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for [analysis](https://en.wikipedia.org/wiki/Data_analysis "Data analysis"), [storage](https://en.wikipedia.org/wiki/Data_storage "Data storage"), and [processing](https://en.wikipedia.org/wiki/Data_processing "Data processing").
 
--   We need a **link function** that transforms the linear model to have an appropriate range
+## Interoperable
 
-## Logit link function
+-   I1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.
 
-The **logit** function take values between 0 and 1 (probabilities) and maps them to values in the range negative infinity to positive infinity:
+-   I2. (Meta)data use [vocabularies](https://en.wikipedia.org/wiki/Controlled_vocabulary "Controlled vocabulary") that follow FAIR principles
 
-$$
-logit(p) = log \bigg( \frac{p}{1 - p} \bigg)
-$$
+-   I3. (Meta)data include qualified references to other (meta)data
 
-```{r}
-#| include: false
+## Reusable
 
-library(tidyverse)
+The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.
 
-tibble(
-  x = seq(0.001, 0.999, 0.001),
-  y = log(x / (1-x))
-) |>
-  ggplot(aes(x = x, y = y)) +
-  geom_smooth() +
-  scale_x_continuous(limits = c(0,1), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
-  labs(x = "p", y = "logit(p)", title = "logit(p) vs. p")
-```
+## Reusable
 
-## This isn't exactly what we need though.....
+-   R1. (Meta)data are richly described with a plurality of accurate and relevant attributes
 
--   Recall, the goal is to take values between -$\infty$ and $\infty$ and map them to probabilities.
+-   R1.1. (Meta)data are released with a clear and accessible data usage license
 
--   We need the opposite of the link function... or the *inverse*
+-   R1.2. (Meta)data are associated with detailed provenance
 
--   Taking the inverse of the logit function will map arbitrary real values back to the range \[0, 1\]
+-   R1.3. (Meta)data meet domain-relevant community standards
 
-## Generalized linear model
+# Naming convention
 
--   We model the logit (log-odds) of $p$ :
+## Why do we need this
 
-$$
-logit(p) = log \bigg( \frac{p}{1 - p} \bigg) = \beta_o + \beta_1 \times X1_i + \cdots + \epsilon 
-$$
+- Dairy data science is **multimodal**, **longitudinal**, and **collaborative**
+- Naming is not cosmetic — it is **infrastructure**
+- Most downstream issues are caused by:
+  - Ambiguity
+  - Inconsistency
+  - Silent semantic drift
 
--   Then take the inverse to obtain the predicted $p$:
+---
 
-$$
-p_i = \frac{e^{\beta_o + \beta_1 \times X1_i + \cdots + \epsilon}}{1 + e^{\beta_o + \beta_1 \times X1_i + \cdots + \epsilon}}
-$$
+## 40 Minutes, 4 Takeaways
 
-## A logistic model visualized
+1. Naming conventions are **scientific decisions**
+2. Bad names silently break analyis and models
+3. Conventions must scale across projects & people
+4. Governance matters more than documentation
 
-```{r}
-#| echo: false
+---
 
-sigmoid = function(x) 1 / (1 + exp(-x + 10))
-plot.function(sigmoid, from = 0, to = 20, n = 101, 
-              ylab="P(Y = 1)", 
-              xlab = "X (predictor)", 
-              main = "Predicted probability Y = 1", 
-              lwd = 3)
-```
+## The Dairy Data Reality
 
-## Takeaways
+- Multiple farms
+- Multiple vendors
+- Multiple countries
+- Multiple disciplines:
+  - Nutrition
+  - Health
+  - Behavior
+  - Production
 
--   Generalized linear models allow us to fit models to predict non-continuous outcomes
+**→ Names are the only shared language**
 
--   Predicting binary outcomes requires modeling the log-odds of success, where p = probability of success
+---
 
-# Example
+## What Is a Naming Convention?
 
-## Read the data
+> A set of agreed‑upon rules for creating **unique, informative, and stable names**
+> for data objects.
 
-```{r data-read}
-#| echo: true
+Applies to:
+- Variables
+- Tables
+- Files
+- Visuals
+- Ontology terms
 
-df_raw_inseminations <- read.csv('df_inseminations.csv')
-```
+---
 
-## Data prep
+## Naming ≠ Style Preference
 
--   Drop any columns with missing values using the `drop_na()` function
--   Convert FALSE/NEGATIVE to 0/1
--   Relevel to make Parity 1 the default
+Bad naming causes:
+- Feature leakage
+- Wrong joins
+- Broken pipelines
+- Invalid within/between farm comparisons
 
-```{r data-prep-1}
-#| echo: true
+These errors **do not throw exceptions**.
 
-df_inseminations <- df_raw_inseminations %>% 
-  dplyr::mutate(
-    Pregnant = factor(case_when(
-      ResultedInPregnancy == TRUE ~ 1, 
-      ResultedInPregnancy == FALSE ~ 0
-      )),
-    Parity=factor(Parity),
-    Parity=fct_relevel(Parity,c("1","2",">2"))
-    ) %>% 
-  drop_na() %>%
-  dplyr::arrange(Parity)
-```
+---
 
-## Data overview
+## Common Dairy Data Failures
 
-```{r data-overview}
-#| echo: true
+- `DIM`, `days_in_milk`, `DaysInMilk`
+- `milk_yield`, `MilkYieldKg`, `MY`
+- `other`, `Other`, `OTHER`
+- `lactation_stage` vs `lactation_stages`
 
-df_inseminations %>%
-  select(InseminationNumber , Parity, Pregnant)
-```
+Each creates a **new semantic entity**
 
-## Data visualization
+---
 
-```{r}
-#| echo: false
+## Names Encode Meaning
 
-ggplot(
-  df_inseminations,
-  aes(
-    x = factor(Parity,  level = c('1', '2', '>2')),
-    fill = ResultedInPregnancy)
-  ) + 
-  geom_bar(position = "fill")+ 
-  labs(
-    x = "Parity" , 
-    y = "Proportion pregnant"
-  )
-```
+A good name answers:
+- What?
+- For whom?
+- In what unit?
+- At what level?
+- Over what time window?
 
-## Logistic regression model
+---
 
-How to interpret
+## Core Design Principles
 
-```{r}
-#| echo: true
-cows_fit <- glm(Pregnant ~ Parity, data = df_inseminations, family = "binomial")
-summary(cows_fit)
-```
+1. **Consistency over cleverness**
+2. **Explicit over implicit**
+3. **Stable over convenient**
+4. **Readable by humans and machines**
 
-## Logistic regression interpretation 1
+---
 
-```{r}
-#| echo: true
-exp(coef(cows_fit))
-```
+## Scope of a Naming Convention
 
-## Logistic regression interpretation 2
+You must define rules for:
 
-```{r}
-#| echo: true
-exp(confint(cows_fit))
-```
+- ✅ Variables
+- ✅ Tables
+- ✅ Files
+- ✅ Features
+- ✅ Categories
+- ✅ Ontology terms
+
+Partial conventions always fail.
+
+---
+
+## Case Sensitivity Matters
+
+Choose **one** and enforce it.
+
+Recommended:
+- **CamelCase** for data schemas
+- **lower_snake_case** for code variables
+
+Never mix within the same layer.
+
+---
+
+## Variable Naming Pattern
+
+**Recommended template:**
+
+``

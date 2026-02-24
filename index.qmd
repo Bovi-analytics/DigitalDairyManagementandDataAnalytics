@@ -7,23 +7,23 @@ This page contains an outline of the topics, content, and assignments for the co
 
 ::: column-screen-inset-right
 | Week | Date | Topic | Teachers | Prepare | Lecture |
-|:--:|:---|----|----|:--:|:--:|
+|:----------:|:-----------|------------|------------|:----------:|:----------:|
 | 1 | 1/20 | Introductory Multiple Choice Questions and Inventory Management | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
 | 1 | 1/22 | Syllabus Review and Introduction | Dr. Hostens | 📖 | 🖥️ |
 | 1 | 1/22 | (LAB) CURC Farm Tour & Presentation from CURC Manager | Dr. Hostens and Sumit Sharma | 📖 | 🖥️ |
 | 2 | 1/27 | Principles of Data Collection | Dr. Hostens | 📖 | 🖥️ |
 | 2 | 1/29 | Principles of Data Visualization | Dr. Hostens | [📖](https://www.tableau.com/academic/students) | [🖥️](https://prezi.com/view/8Pgr5LLExlIaYtktADox/) |
 | 2 | 1/29 | (LAB) Effective visualization using Tableau | Dr. Hostens | [📖](https://github.com/Bovi-analytics/DigitalDairyManagementandDataAnalytics/tree/main/data) | 🖥️ |
-| 3 | 2/3 | Understanding Milk Production Data (1) | Meike van Leerdam | 📖 | [🖥️](slides/lecture_5_milk_production.html) |
-| 3 | 2/5 | Understanding Milk Production Data (2) | Meike van Leerdam | 📖 | [🖥️](slides/lecture_6_milk_production.html) |
+| 3 | 2/3 | Understanding Milk Production Data (1) | Meike van Leerdam | 📖 | [🖥️](slides/lec-3.html) |
+| 3 | 2/5 | Understanding Milk Production Data (2) | Meike van Leerdam | 📖 | [🖥️](slides/lec-3-2.html) |
 | 3 | 2/5 | (LAB) Analyze CURC Milk Production Records | Meike van Leerdam | 📖 | 🖥️ |
 | 4 | 2/10 | Cancelled |  | \- | \- |
 | 4 | 2/12 | Using Relationships and Joins Between Datasets | Dr. Hostens | [📖](slides/lec-4.html) | [🖥️](https://youtu.be/EpKTHgbu5vQ) |
 | 4 | 2/12 | (LAB) Analyze CURC Milk Production Records |  | \- | \- |
 | 5 | 2/17 | February break (no class) |  |  |  |
-| 5 | 2/19 | Reproductive Biology Basics and Key Metrics | Dr. Hostens | 📖 | 🖥️ |
-| 5 | 2/19 | (LAB) CURC Visit - Reproductive Management | Dr. Hostens | 📖 | 🖥️ |
-| 6 | 2/24 | Methods for Analyzing Reproductive Performance | Dr. Hostens | 📖 | 🖥️ |
+| 5 | 2/19 | CURC Project status discussion | Dr. Hostens |  |  |
+| 5 | 2/19 | (LAB) Analyze CURC Milk Production Records | Dr. Hostens |  |  |
+| 6 | 2/24 | FAIR data principles for animal science | Dr. Hostens | 📖 | [🖥️](slides/lec-6.html) |
 | 6 | 2/26 | Case Study: Using Reproductive Data to Troubleshoot | Dr. Hostens | 📖 | 🖥️ |
 | 6 | 2/26 | (LAB) Calculate Reproductive Metrics | Dr. Hostens | 📖 | 🖥️ |
 | 7 | 3/3 | Integrating Reproductive Management with Farm Systems | Dr. Hostens | 📖 | 🖥️ |

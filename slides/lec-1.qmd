@@ -1,17 +1,14 @@
 ---
 title: "Lecture 1 - Meet + greet"
-subtitle: "ANSCI 4940 - Spring 2025"
-author: "Ass. Prof. Dr. Miel Hostens"
-footer:  "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+subtitle: "ANSCI 4940 - Spring 2026"
+author: "Miel Hostens"
 logo: "images/Bovi-Analytics-SmallLogo.png"
-format: 
-  revealjs: 
+format:
+  revealjs:
     theme: slides.scss
     transition: fade
     slide-number: true
-editor: visual
-execute:
-  freeze: auto
+    footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
 ---
 
 ```{r}
@@ -50,13 +47,9 @@ library(countdown)
 
 -   What do you really hope to learn?
 
--   Do you have any coding experience?
-
 ## Meet the other [experts](/course-team.html)
 
--   Enhong Liu (Post-Doc)
-
--   Sonam Yang (TA) - Graduate student & PhD candidate
+-   Sumit Sharma (TA) - Graduate student & PhD candidate
 
 -   Meike van Leerdam (TA) - Graduate student & PhD candidate
 
@@ -72,19 +65,19 @@ library(countdown)
 
 ## Course learning objectives (part 1)
 
-1.  Explain the fundamentals of data science and digital agriculture including their interdisciplinary challenges.
+1.  Collect, organize, and clean dairy farm datasets from herd management.
 
-2.  Implement the various data science technologies, precision farming techniques and digital tools used in modern agriculture.
+2.  Apply statistical and computational methods (e.g., Excel, R, Python, or similar tools) to analyze dairy performance data.
 
-3.  Conduct data collection, visualization, analysis, and interpretation within the context of digital agriculture.
+3.  Identify strengths, weaknesses, and limitations of different data types used in dairy management.
 
 ## Course learning objectives (part 2)
 
-1.  Acquire practical skills through hands-on programming activities.
+1.  Interpret and critique dairy datasets in relation to biological, economic, and management contexts.
 
-2.  Explore the applications of machine learning and artificial intelligence in agriculture.
+2.  Create visualizations, written reports or presentations to communicate data-driven insights with consideration for ethical use of data.
 
-3.  Recognize the significance of, and apply data privacy and security techniques in digital agriculture.
+3.  Synthesize herd-level data into a decision support framework and contribute to a SWOT analysis in collaboration with herd managers.
 
 ## Topics that will be covered
 
