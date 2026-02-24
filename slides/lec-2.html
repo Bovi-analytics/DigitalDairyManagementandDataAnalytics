@@ -9,8 +9,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="author" content="Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens">
-  <title>ANSC4940 – Lecture 2 - Reproducible &amp; FAIR data science</title>
+  <meta name="author" content="Miel Hostens">
+  <title>ANSC4940 – Lecture 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -121,11 +121,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Lecture 2 - Reproducible &amp; FAIR data science – ANSC4940">
-<meta property="og:description" content="ANSCI 4940 - Spring 2025">
+<meta property="og:title" content="Lecture 2 – ANSC4940">
+<meta property="og:description" content="ANSCI 4940 - Spring 2026">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Lecture 2 - Reproducible &amp; FAIR data science – ANSC4940">
-<meta name="twitter:description" content="ANSCI 4940 - Spring 2025">
+<meta name="twitter:title" content="Lecture 2 – ANSC4940">
+<meta name="twitter:description" content="ANSCI 4940 - Spring 2026">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -135,100 +135,29 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 2 - Reproducible &amp; FAIR data science</h1>
-  <p class="subtitle">ANSCI 4940 - Spring 2025</p>
+  <h1 class="title">Lecture 2</h1>
+  <p class="subtitle">ANSCI 4940 - Spring 2026</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens 
+Miel Hostens 
 </div>
 </div>
 </div>
 
 </section>
-<section>
-<section id="reproducible-fair-data-science" class="title-slide slide level1 center">
-<h1>Reproducible &amp; FAIR data science</h1>
+<section class="slide level2">
 
-</section>
-<section id="what-are-the-fair-principles" class="slide level2">
-<h2>What are the FAIR principles</h2>
-<p><strong>FAIR data</strong>&nbsp;is&nbsp;<a href="https://en.wikipedia.org/wiki/Data" title="Data">data</a>&nbsp;which meets the&nbsp;<strong>FAIR principles</strong>&nbsp;of&nbsp;<a href="https://en.wikipedia.org/wiki/Findability" title="Findability">findability</a>, accessibility,&nbsp;<a href="https://en.wikipedia.org/wiki/Interoperability" title="Interoperability">interoperability</a>, and&nbsp;<a href="https://en.wikipedia.org/wiki/Reusability" title="Reusability">reusability</a>&nbsp;(FAIR).<sup><a href="https://en.wikipedia.org/wiki/FAIR_data#cite_note-FAIR_principles_2016-1">[1]</a><a href="https://en.wikipedia.org/wiki/FAIR_data#cite_note-2">[2]</a></sup>&nbsp;The acronym and principles were defined in a March 2016 paper in the journal&nbsp;<a href="https://en.wikipedia.org/wiki/Scientific_Data_(journal)" title="Scientific Data (journal)"><em>Scientific Data</em></a>&nbsp;by a consortium of scientists and organizations.<sup><a href="https://en.wikipedia.org/wiki/FAIR_data#cite_note-FAIR_principles_2016-1">[1]</a></sup></p>
-</section>
-<section id="get-to-know-the-principles-1" class="slide level2">
-<h2>Get to know the principles (1)</h2>
-<ul>
-<li><p>Get familiar with FAIR by looking at <a href="https://www.youtube.com/watch?v=K40utIzUzOk">this video</a>.</p></li>
-<li><p>Read the intial <a href="https://www.nature.com/articles/sdata201618">publication</a> on <em>The FAIR Guiding Principles for scientific data management and stewardschip.</em></p></li>
-<li><p>Explore the <a href="https://data.research.cornell.edu/data-management/sharing/fair/">vision of Cornell University on FAIR principles</a> and their cheatsheets.</p></li>
-</ul>
-</section>
-<section id="get-to-know-the-principles-2" class="slide level2">
-<h2>Get to know the principles (2)</h2>
-<ul>
-<li><p>Check for reproducible advise in the <a href="https://bovi-analytics.com/tutorials/">tutorials</a> at the bovi-analytics website.</p></li>
-<li><p>Discuss with the entire team and Dr.&nbsp;Miel Hostens (contact him on his desk) on how this will reflect on your team project.</p></li>
-</ul>
-</section>
-<section id="findable" class="slide level2">
-<h2>Findable</h2>
-<p>The first step in (re)using data is to find them. <a href="https://en.wikipedia.org/wiki/Metadata" title="Metadata">Metadata</a> and data should be easy to find for both humans and computers. <a href="https://en.wikipedia.org/wiki/Machine-readable_data" title="Machine-readable data">Machine-readable</a> metadata are essential for automatic <a href="https://en.wikipedia.org/wiki/Data_discovery" title="Data discovery">discovery</a> of datasets and services, so this is an essential component of the FAIRification process.</p>
-</section>
-<section id="findable-1" class="slide level2">
-<h2>Findable</h2>
-<ul>
-<li><p>F1. (Meta)data are assigned a globally unique and persistent identifier</p></li>
-<li><p>F2. Data are described with rich metadata (defined by R1 below)</p></li>
-<li><p>F3. Metadata clearly and explicitly include the identifier of the data they describe</p></li>
-<li><p>F4. (Meta)data are registered or indexed in a searchable resource</p></li>
-</ul>
-</section>
-<section id="accessible" class="slide level2">
-<h2>Accessible</h2>
-<p>Once the user finds the required data, they need to know how they can be accessed, possibly including <a href="https://en.wikipedia.org/wiki/Authentication" title="Authentication">authentication</a> and <a href="https://en.wikipedia.org/wiki/Authorization" title="Authorization">authorisation</a>.</p>
-</section>
-<section id="accessible-1" class="slide level2">
-<h2>Accessible</h2>
-<ul>
-<li><p>A1. (Meta)data are retrievable by their identifier using a standardised communications protocol</p></li>
-<li><p>A1.1 The protocol is open, free, and universally implementable</p></li>
-<li><p>A1.2 The protocol allows for an authentication and authorisation procedure, where necessary</p></li>
-<li><p>A2. Metadata are accessible, even when the data are no longer available</p></li>
-</ul>
-</section>
-<section id="interoperable" class="slide level2">
-<h2>Interoperable</h2>
-<p>The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for <a href="https://en.wikipedia.org/wiki/Data_analysis" title="Data analysis">analysis</a>, <a href="https://en.wikipedia.org/wiki/Data_storage" title="Data storage">storage</a>, and <a href="https://en.wikipedia.org/wiki/Data_processing" title="Data processing">processing</a>.</p>
-</section>
-<section id="interoperable-1" class="slide level2">
-<h2>Interoperable</h2>
-<ul>
-<li><p>I1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</p></li>
-<li><p>I2. (Meta)data use <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary" title="Controlled vocabulary">vocabularies</a> that follow FAIR principles</p></li>
-<li><p>I3. (Meta)data include qualified references to other (meta)data</p></li>
-</ul>
-</section>
-<section id="reusable" class="slide level2">
-<h2>Reusable</h2>
-<p>The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.</p>
-</section>
-<section id="reusable-1" class="slide level2">
-<h2>Reusable</h2>
-<ul>
-<li><p>R1. (Meta)data are richly described with a plurality of accurate and relevant attributes</p></li>
-<li><p>R1.1. (Meta)data are released with a clear and accessible data usage license</p></li>
-<li><p>R1.2. (Meta)data are associated with detailed provenance</p></li>
-<li><p>R1.3. (Meta)data meet domain-relevant community standards</p></li>
-</ul>
+<p>TBD</p>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/Bovi-Analytics-SmallLogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://bovi-analytics.github.io/BeastsAndBytes/">https://bovi-analytics.github.io/BeastsAndBytes/</a></p>
+<p><a href="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/">https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/</a></p>
 </div>
 </div></div>
 
@@ -440,44 +369,6 @@ Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
