@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Miel Hostens">
-  <title>ANSC4940 – Lecture 6</title>
+  <title>ANSC4940 – Inventory Management in Dairy Systems</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-87fb683e42416cd7aecb8e577b091905.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -121,11 +187,14 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Lecture 6 – ANSC4940">
-<meta property="og:description" content="ANSCI 4940 - Spring 2026">
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<meta property="og:title" content="Inventory Management in Dairy Systems – ANSC4940">
+<meta property="og:description" content="Week 6 - ANSCI 4940 - Spring 2026">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Lecture 6 – ANSC4940">
-<meta name="twitter:description" content="ANSCI 4940 - Spring 2026">
+<meta name="twitter:title" content="Inventory Management in Dairy Systems – ANSC4940">
+<meta name="twitter:description" content="Week 6 - ANSCI 4940 - Spring 2026">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -135,8 +204,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 6</h1>
-  <p class="subtitle">ANSCI 4940 - Spring 2026</p>
+  <h1 class="title">Inventory Management in Dairy Systems</h1>
+  <p class="subtitle">Week 6 - ANSCI 4940 - Spring 2026</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -148,181 +217,486 @@ Miel Hostens
 
 </section>
 <section>
-<section id="reproducible-fair-data-science" class="title-slide slide level1 center">
-<h1>Reproducible &amp; FAIR data science</h1>
+<section id="inventory-management-in-dairy-systems" class="title-slide slide level1 center">
+<h1>Inventory Management in Dairy Systems</h1>
 
 </section>
-<section id="what-are-the-fair-principles" class="slide level2">
-<h2>What are the FAIR principles</h2>
-<p><strong>FAIR data</strong>&nbsp;is&nbsp;<a href="https://en.wikipedia.org/wiki/Data" title="Data">data</a>&nbsp;which meets the&nbsp;<strong>FAIR principles</strong>&nbsp;of&nbsp;<a href="https://en.wikipedia.org/wiki/Findability" title="Findability">findability</a>, accessibility,&nbsp;<a href="https://en.wikipedia.org/wiki/Interoperability" title="Interoperability">interoperability</a>, and&nbsp;<a href="https://en.wikipedia.org/wiki/Reusability" title="Reusability">reusability</a>&nbsp;(FAIR).<sup><a href="https://en.wikipedia.org/wiki/FAIR_data#cite_note-FAIR_principles_2016-1">[1]</a><a href="https://en.wikipedia.org/wiki/FAIR_data#cite_note-2">[2]</a></sup>&nbsp;The acronym and principles were defined in a March 2016 paper in the journal&nbsp;<a href="https://en.wikipedia.org/wiki/Scientific_Data_(journal)" title="Scientific Data (journal)"><em>Scientific Data</em></a>&nbsp;by a consortium of scientists and organizations.<sup><a href="https://en.wikipedia.org/wiki/FAIR_data#cite_note-FAIR_principles_2016-1">[1]</a></sup></p>
-</section>
-<section id="get-to-know-the-principles-1" class="slide level2">
-<h2>Get to know the principles (1)</h2>
+<section id="why-inventory-calculations-matter" class="slide level2">
+<h2>Why Inventory Calculations Matter</h2>
 <ul>
-<li><p>Get familiar with FAIR by looking at <a href="https://www.youtube.com/watch?v=K40utIzUzOk">this video</a>.</p></li>
-<li><p>Read the intial <a href="https://www.nature.com/articles/sdata201618">publication</a> on <em>The FAIR Guiding Principles for scientific data management and stewardschip.</em></p></li>
-<li><p>Explore the <a href="https://data.research.cornell.edu/data-management/sharing/fair/">vision of Cornell University on FAIR principles</a> and their cheatsheets.</p></li>
+<li>Inventory is the <strong>constraint layer</strong> under everything else.</li>
+<li>If a herd inventory snapshot is wrong → future decisions will all be wrong.</li>
+<li>Today:
+<ul>
+<li>Build the mental model</li>
+<li>Understand the math</li>
+<li>Lab on CDREC flow</li>
+</ul></li>
 </ul>
 </section>
-<section id="get-to-know-the-principles-2" class="slide level2">
-<h2>Get to know the principles (2)</h2>
+<section id="learning-outcomes" class="slide level2">
+<h2>Learning Outcomes</h2>
+<p>By the end you can:</p>
 <ul>
-<li><p>Check for reproducible advise in the <a href="https://bovi-analytics.com/tutorials/">tutorials</a> at the bovi-analytics website.</p></li>
-<li><p>Discuss with the entire team and Dr.&nbsp;Miel Hostens (contact him on his desk) on how this will reflect on your team project.</p></li>
+<li>Distinguish state vs flow</li>
+<li>Define risk vs rate</li>
+<li>Compute and interpret key herd dynamics metrics</li>
+<li>Avoid synonym traps</li>
+<li>Use DC305 to extract numerators/denominators for CDREC strategy</li>
 </ul>
 </section>
-<section id="findable" class="slide level2">
-<h2>Findable</h2>
-<p>The first step in (re)using data is to find them. <a href="https://en.wikipedia.org/wiki/Metadata" title="Metadata">Metadata</a> and data should be easy to find for both humans and computers. <a href="https://en.wikipedia.org/wiki/Machine-readable_data" title="Machine-readable data">Machine-readable</a> metadata are essential for automatic <a href="https://en.wikipedia.org/wiki/Data_discovery" title="Data discovery">discovery</a> of datasets and services, so this is an essential component of the FAIRification process.</p>
-</section>
-<section id="findable-1" class="slide level2">
-<h2>Findable</h2>
+<section id="two-herds-same-cow-count-different-future" class="slide level2">
+<h2>Two herds, same cow count, different future</h2>
 <ul>
-<li><p>F1. (Meta)data are assigned a globally unique and persistent identifier</p></li>
-<li><p>F2. Data are described with rich metadata (defined by R1 below)</p></li>
-<li><p>F3. Metadata clearly and explicitly include the identifier of the data they describe</p></li>
-<li><p>F4. (Meta)data are registered or indexed in a searchable resource</p></li>
+<li>Herd A and Herd B both have 1,000 cows today</li>
+<li>One shrinks, one grows</li>
+<li>The difference is <strong>flows</strong></li>
+</ul>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+Births --&gt; Heifers --&gt; Cows
+Cows --&gt;|Cull/Sell| Exit
+Cows --&gt;|Death| Exit
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="vocabulary" class="slide level2">
+<h2>Vocabulary</h2>
+<ul>
+<li><strong>Statics:</strong> snapshot at a moment
+<ul>
+<li>“what exists”</li>
+</ul></li>
+<li><strong>Dynamics:</strong> movement over time
+<ul>
+<li>“where it is going”</li>
+</ul></li>
 </ul>
 </section>
-<section id="accessible" class="slide level2">
-<h2>Accessible</h2>
-<p>Once the user finds the required data, they need to know how they can be accessed, possibly including <a href="https://en.wikipedia.org/wiki/Authentication" title="Authentication">authentication</a> and <a href="https://en.wikipedia.org/wiki/Authorization" title="Authorization">authorisation</a>.</p>
+<section id="dc305" class="slide level2">
+<h2>DC305</h2>
+<p>Choose the “as‑of” date intentionally</p>
+<p>Set date in cowfile to “today”</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>SETDAY\*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Set date to last event entry date</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>SETDAY\E</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Set date to most recent test date</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>SETDAY\T</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Set date to selected date</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>SETDAY\mm/dd/yy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="accessible-1" class="slide level2">
-<h2>Accessible</h2>
+<section id="why-date-matters" class="slide level2">
+<h2>Why date matters</h2>
 <ul>
-<li><p>A1. (Meta)data are retrievable by their identifier using a standardised communications protocol</p></li>
-<li><p>A1.1 The protocol is open, free, and universally implementable</p></li>
-<li><p>A1.2 The protocol allows for an authentication and authorisation procedure, where necessary</p></li>
-<li><p>A2. Metadata are accessible, even when the data are no longer available</p></li>
-</ul>
-</section>
-<section id="interoperable" class="slide level2">
-<h2>Interoperable</h2>
-<p>The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for <a href="https://en.wikipedia.org/wiki/Data_analysis" title="Data analysis">analysis</a>, <a href="https://en.wikipedia.org/wiki/Data_storage" title="Data storage">storage</a>, and <a href="https://en.wikipedia.org/wiki/Data_processing" title="Data processing">processing</a>.</p>
-</section>
-<section id="interoperable-1" class="slide level2">
-<h2>Interoperable</h2>
-<ul>
-<li><p>I1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</p></li>
-<li><p>I2. (Meta)data use <a href="https://en.wikipedia.org/wiki/Controlled_vocabulary" title="Controlled vocabulary">vocabularies</a> that follow FAIR principles</p></li>
-<li><p>I3. (Meta)data include qualified references to other (meta)data</p></li>
-</ul>
-</section>
-<section id="reusable" class="slide level2">
-<h2>Reusable</h2>
-<p>The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.</p>
-</section>
-<section id="reusable-1" class="slide level2">
-<h2>Reusable</h2>
-<ul>
-<li><p>R1. (Meta)data are richly described with a plurality of accurate and relevant attributes</p></li>
-<li><p>R1.1. (Meta)data are released with a clear and accessible data usage license</p></li>
-<li><p>R1.2. (Meta)data are associated with detailed provenance</p></li>
-<li><p>R1.3. (Meta)data meet domain-relevant community standards</p></li>
+<li>“Last 365 days” depends on file date</li>
+<li>If the backup date is wrong → your rates are wrong</li>
 </ul>
 </section></section>
 <section>
-<section id="naming-convention" class="title-slide slide level1 center">
-<h1>Naming convention</h1>
+<section id="definitions" class="title-slide slide level1 center">
+<h1>Definitions</h1>
 
 </section>
-<section id="why-do-we-need-this" class="slide level2">
-<h2>Why do we need this</h2>
+<section id="risk-vs-rate-the-core-confusion" class="slide level2">
+<h2>Risk vs Rate (the core confusion)</h2>
+<p>Most bad inventory math comes from mixing:</p>
 <ul>
-<li>Dairy data science is <strong>multimodal</strong>, <strong>longitudinal</strong>, and <strong>collaborative</strong></li>
-<li>Naming is not cosmetic — it is <strong>infrastructure</strong></li>
-<li>Most downstream issues are caused by:
-<ul>
-<li>Ambiguity</li>
-<li>Inconsistency</li>
-<li>Silent semantic drift</li>
-</ul></li>
+<li>Probabilities and</li>
+<li>Time‑based rates</li>
 </ul>
 </section>
-<section id="minutes-4-takeaways" class="slide level2">
-<h2>40 Minutes, 4 Takeaways</h2>
-<ol type="1">
-<li>Naming conventions are <strong>scientific decisions</strong></li>
-<li>Bad names silently break analyis and models</li>
-<li>Conventions must scale across projects &amp; people</li>
-<li>Governance matters more than documentation</li>
-</ol>
-</section>
-<section id="the-dairy-data-reality" class="slide level2">
-<h2>The Dairy Data Reality</h2>
+<section id="risk-probability" class="slide level2">
+<h2>Risk (probability)</h2>
 <ul>
-<li>Multiple farms</li>
-<li>Multiple vendors</li>
-<li>Multiple countries</li>
-<li>Multiple disciplines:
-<ul>
-<li>Nutrition</li>
-<li>Health</li>
-<li>Behavior</li>
-<li>Production</li>
-</ul></li>
+<li>Fraction experiencing event over specified period</li>
+<li>Unitless</li>
+<li>Must specify time window</li>
 </ul>
-<p><strong>→ Names are the only shared language</strong></p>
 </section>
-<section id="what-is-a-naming-convention" class="slide level2">
-<h2>What Is a Naming Convention?</h2>
+<section id="example---culling-risk" class="slide level2">
+<h2>Example - Culling Risk</h2>
+<p><strong>Definition</strong></p>
+<p>Probability that a cow is culled during a specified time period.</p>
+<p><span class="math display">\[
+Risk = \frac{\text{Number of cows culled during period}}{\text{Number of cows at risk at start}}
+\]</span></p>
+<ul>
+<li>Unit: none (0–1)</li>
+<li>Time period must be defined</li>
+<li>Bounded by 1</li>
+</ul>
+</section>
+<section id="better-example---annual-culling-risk" class="slide level2">
+<h2>Better example - Annual Culling Risk</h2>
+<p>Suppose:</p>
+<ul>
+<li>100 cows at start of year</li>
+<li>20 cows culled during the year</li>
+</ul>
+<p><span class="math display">\[
+Risk = 20/100 = 0.20
+\]</span></p>
+<p>👉 20% probability of being culled during that year</p>
+<p>This is a <strong>probability over one year</strong>.</p>
+</section>
+<section id="rate" class="slide level2">
+<h2>Rate</h2>
+<ul>
+<li>Events per unit time (per cow‑time)</li>
+<li>Units: 1/time</li>
+<li>Supports unequal follow‑up</li>
+</ul>
+</section>
+<section id="incidence-rate" class="slide level2">
+<h2>Incidence Rate</h2>
+<p><strong>Definition</strong></p>
+<p>Speed at which culling events occur.</p>
+<p><span class="math display">\[
+Rate = \frac{\text{Number of cullings}}{\text{Total cow-time at risk}}
+\]</span></p>
+<ul>
+<li>Unit: 1 / time (e.g., per cow-year)</li>
+<li>Uses animal-time</li>
+<li>No upper bound</li>
+</ul>
+</section>
+<section id="cow-year-definition" class="slide level2">
+<h2>Cow-year — definition</h2>
+<p>A <strong>cow-year</strong> is <strong>animal-time at risk</strong>:</p>
+<ul>
+<li><strong>1 cow-year = one cow present and at risk for 1 year</strong></li>
+<li>More generally: sum the time each cow is “in the population at risk,” expressed in years.</li>
+</ul>
+<p>This is the recommended denominator logic for herd turnover: <strong>exits / animal time at risk</strong>.</p>
+</section>
+<section id="cow-year-formula" class="slide level2">
+<h2>Cow-year — formula</h2>
+<p><span class="math display">\[
+\text{Cow-years} = \sum_{i=1}^{n} \frac{\text{days cow } i \text{ is at risk during period}}{365}
+\]</span></p>
+<p>Key idea: <strong>time</strong> belongs in the denominator when you report a <em>rate</em>.</p>
+</section>
+<section id="example-counting-cow-years" class="slide level2">
+<h2>Example: counting cow-years</h2>
+<ul>
+<li>Cow A present all year: (365/365 = 1.00) cow-year</li>
+<li>Cow B present 180 days: (180/365 = 0.49) cow-year</li>
+<li>Cow C present 90 days: (90/365 = 0.25) cow-year</li>
+</ul>
+<p>Total exposure = (1.00 + 0.49 + 0.25 = 1.74) cow-years</p>
+</section>
+<section id="herd-level-approximation" class="slide level2">
+<h2>Herd-level approximation</h2>
+<p>For a 12-month window, if herd size is fairly stable:</p>
+<p><span class="math display">\[
+\text{Cow-years} \approx \text{Average number of cows present during the year} \times \text{1 year}
+\]</span></p>
+<p>This is why many “annual” turnover metrics use <strong>average milking + dry cows</strong> as the denominator.</p>
+</section>
+<section id="example-annual-culling-rate" class="slide level2">
+<h2>Example: Annual Culling Rate</h2>
+<p>Suppose:</p>
+<ul>
+<li>20 cows culled</li>
+<li>Total time at risk = 90 cow-years<br>
+(because cows leave during the year)</li>
+</ul>
+<p><span class="math display">\[
+Rate = 20 / 90 = 0.222 \text{ per cow-year}
+\]</span></p>
+<p>👉 0.222 cullings per cow-year</p>
+<p>This is a <strong>speed</strong>, not a probability.</p>
+</section>
+<section id="why-they-are-not-the-same" class="slide level2">
+<h2>Why They Are Not the Same</h2>
+<p>Risk asks:</p>
 <blockquote>
-<p>A set of agreed‑upon rules for creating <strong>unique, informative, and stable names</strong> for data objects.</p>
+<p>What fraction of cows are culled during the year?</p>
 </blockquote>
-<p>Applies to: - Variables - Tables - Files - Visuals - Ontology terms</p>
-</section>
-<section id="naming-style-preference" class="slide level2">
-<h2>Naming ≠ Style Preference</h2>
-<p>Bad naming causes: - Feature leakage - Wrong joins - Broken pipelines - Invalid within/between farm comparisons</p>
-<p>These errors <strong>do not throw exceptions</strong>.</p>
-</section>
-<section id="common-dairy-data-failures" class="slide level2">
-<h2>Common Dairy Data Failures</h2>
+<p>Rate asks:</p>
+<blockquote>
+<p>How fast are cows being culled?</p>
+</blockquote>
+<p>Different denominators:</p>
 <ul>
-<li><code>DIM</code>, <code>days_in_milk</code>, <code>DaysInMilk</code></li>
-<li><code>milk_yield</code>, <code>MilkYieldKg</code>, <code>MY</code></li>
-<li><code>other</code>, <code>Other</code>, <code>OTHER</code></li>
-<li><code>lactation_stage</code> vs <code>lactation_stages</code></li>
+<li><p>Risk → cows</p></li>
+<li><p>Rate → cow-time</p></li>
 </ul>
-<p>Each creates a <strong>new semantic entity</strong></p>
 </section>
-<section id="names-encode-meaning" class="slide level2">
-<h2>Names Encode Meaning</h2>
-<p>A good name answers: - What? - For whom? - In what unit? - At what level? - Over what time window?</p>
-</section>
-<section id="core-design-principles" class="slide level2">
-<h2>Core Design Principles</h2>
-<ol type="1">
-<li><strong>Consistency over cleverness</strong></li>
-<li><strong>Explicit over implicit</strong></li>
-<li><strong>Stable over convenient</strong></li>
-<li><strong>Readable by humans and machines</strong></li>
-</ol>
-</section>
-<section id="scope-of-a-naming-convention" class="slide level2">
-<h2>Scope of a Naming Convention</h2>
-<p>You must define rules for:</p>
+<section id="why-words-break-math" class="slide level2">
+<h2>Why words break math</h2>
 <ul>
-<li>✅ Variables</li>
-<li>✅ Tables</li>
-<li>✅ Files</li>
-<li>✅ Features</li>
-<li>✅ Categories</li>
-<li>✅ Ontology terms</li>
+<li><p>“30% cull risk” - Over a month? year? lactation?</p></li>
+<li><p>“0.35 removals per cow‑year” - interpretable</p></li>
 </ul>
-<p>Partial conventions always fail.</p>
+<p>Rule</p>
+<ul>
+<li>If you can’t attach a time window, you don’t have a rate.</li>
+</ul>
 </section>
-<section id="case-sensitivity-matters" class="slide level2">
-<h2>Case Sensitivity Matters</h2>
-<p>Choose <strong>one</strong> and enforce it.</p>
-<p>Recommended: - <strong>CamelCase</strong> for data schemas - <strong>lower_snake_case</strong> for code variables</p>
-<p>Never mix within the same layer.</p>
+<section id="definitions-that-wont-betray-you" class="slide level2">
+<h2>Definitions that won’t betray you</h2>
+<p>Each metric has a:</p>
+<ul>
+<li><p>numerator</p></li>
+<li><p>denominator</p></li>
+<li><p>time window</p></li>
+<li><p>population scope</p></li>
+</ul>
+</section></section>
+<section>
+<section id="metrics" class="title-slide slide level1 center">
+<h1>Metrics</h1>
+
 </section>
-<section id="variable-naming-pattern" class="slide level2">
-<h2>Variable Naming Pattern</h2>
-<p><strong>Recommended template:</strong></p>
-<p>``</p>
+<section id="removal-culling-rate-definition" class="slide level2">
+<h2>Removal / Culling rate — definition</h2>
+<ul>
+<li><strong>Exits / cow‑year</strong></li>
+<li>Confusion
+<ul>
+<li>Exits may include sold (alive) + culled + deaths (be explicit)</li>
+<li>Sometimes used as synonyms</li>
+<li>In rigorous use: removal includes all exits; cull may exclude deaths/live culls</li>
+</ul></li>
+<li>Your job: define numerator explicitly</li>
+</ul>
+</section>
+<section id="mortality-death-rate-definition" class="slide level2">
+<h2>Mortality / Death rate — definition</h2>
+<ul>
+<li><strong>Deaths / cow‑year</strong></li>
+<li>Always specify population:
+<ul>
+<li>cows</li>
+<li>calves</li>
+<li>heifers</li>
+</ul></li>
+</ul>
+</section>
+<section id="replacement-rate-definition" class="slide level2">
+<h2>Replacement rate — definition</h2>
+<ul>
+<li><strong>First‑lactation entries / cow‑year</strong></li>
+<li>In a steady state (no growth) :
+<ul>
+<li>replacement rate ≈ exit rate</li>
+</ul></li>
+</ul>
+</section>
+<section id="calving-freshening-rate-definition" class="slide level2">
+<h2>Calving / Freshening rate — definition</h2>
+<ul>
+<li><strong>Calvings / cow‑year</strong></li>
+<li>Sometimes operationalized as fresh cows per month (be explicit)</li>
+</ul>
+</section>
+<section id="herd-turnover-rate-definition" class="slide level2">
+<h2>Herd turnover rate — definition</h2>
+<ul>
+<li>Proportion replaced over time</li>
+<li>Think “stall slots” being refilled</li>
+</ul>
+</section>
+<section id="involuntary-vs-voluntary-removals" class="slide level2">
+<h2>Involuntary vs voluntary removals</h2>
+<ul>
+<li><strong>Voluntary culling</strong> → economically driven decision
+<ul>
+<li>Low milk yield</li>
+<li>Reproductive decisions</li>
+<li>Strategic replacement</li>
+</ul></li>
+<li><strong>Involuntary culling</strong> → biological constraint
+<ul>
+<li>Mastitis</li>
+<li>Lameness</li>
+<li>Mortality</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="inventory-math" class="title-slide slide level1 center">
+<h1>Inventory math</h1>
+
+</section>
+<section id="build-it-from-components" class="slide level2">
+<h2>Build it from components</h2>
+<p>Inventory is not one number.</p>
+<p>It is:</p>
+<ul>
+<li><p>entries</p></li>
+<li><p>exits</p></li>
+<li><p>time</p></li>
+</ul>
+</section>
+<section id="the-simplest-dynamic-identity" class="slide level2">
+<h2>The simplest dynamic identity</h2>
+<p><span class="math display">\[
+N_{t+1} = N_t + \text{Entries} - \text{Exits}
+\]</span></p>
+<p>Stable size implies:</p>
+<p><span class="math display">\[
+\text{Entry rate} \approx \text{Exit rate}
+\]</span></p>
+</section>
+<section id="what-changes-herd-size" class="slide level2">
+<h2>What changes herd size?</h2>
+<p>If you want growth:</p>
+<ul>
+<li>increase entries</li>
+<li>decrease exits</li>
+<li>or both</li>
+</ul>
+<p>…but constraints intervene.</p>
+</section>
+<section id="herd-constraints-farm-growth-realism" class="slide level2">
+<h2>Herd constraints (farm growth realism)</h2>
+<ul>
+<li>housing / stalls</li>
+<li>heifer capacity</li>
+<li>repro performance</li>
+<li>calf survival</li>
+<li>transition cow health</li>
+</ul>
+</section>
+<section id="visual" class="slide level2">
+<h2>Visual</h2>
+<p>Constraints as a funnel</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+A[Pregnancy performance] --&gt; B[Calvings]
+B --&gt; C[Heifer survival]
+C --&gt; D[Heifers to breed]
+D --&gt; E[Heifers calving‑in]
+E --&gt; F[Milk cow slots]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="fertility-the-pipeline-driver" class="slide level2">
+<h2>Fertility: the pipeline driver</h2>
+<p>Pregnancy performance changes:</p>
+<ul>
+<li><p>timing of calvings</p></li>
+<li><p>replacement flow</p></li>
+<li><p>age structure</p></li>
+</ul>
+</section>
+<section id="sexed-semen" class="slide level2">
+<h2>Sexed semen</h2>
+<p>Inventory consequences</p>
+<ul>
+<li>increases female calf supply</li>
+<li>may reduce conception</li>
+<li>adds lag &amp; variability</li>
+</ul>
+</section>
+<section id="where-sexed-semen-fits-in-the-pipeline" class="slide level2">
+<h2>Where sexed semen fits in the pipeline</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+A[Semen choice] --&gt; B[Preg outcomes]
+B --&gt; C[Calves born]
+C --&gt; D[Heifer survival]
+D --&gt; E[Replacements]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="beef-semen" class="slide level2">
+<h2>Beef semen</h2>
+<p>Inventory consequences</p>
+<ul>
+<li>shifts calves away from replacements</li>
+<li>increases calf value</li>
+<li>requires replacement confidence</li>
+</ul>
+<p>Use beef semen only when:</p>
+<ul>
+<li><p>replacement pipeline is secure</p></li>
+<li><p>growth targets are compatible with heifer supply</p></li>
+</ul>
+</section></section>
+<section id="synonym-trap" class="title-slide slide level1 center">
+<h1>Synonym trap</h1>
+<p>Often treated as synonyms:</p>
+<ul>
+<li><p>death rate ≈ mortality rate (if same denominator/time)</p></li>
+<li><p>cull rate ≈ removal rate (IF deaths included)</p></li>
+</ul>
+<p>Not guaranteed synonyms:</p>
+<ul>
+<li><p>replacement rate vs turnover rate (context‑dependent)</p></li>
+<li><p>calving rate vs pregnancy rate (related but not same)</p></li>
+</ul>
+</section>
+
+<section>
+<section id="lab-skill" class="title-slide slide level1 center">
+<h1>Lab skill</h1>
+
+</section>
+<section id="create-defensible-snapshot" class="slide level2">
+<h2>Create defensible snapshot</h2>
+<p>A snapshot is defensible if it:</p>
+<ul>
+<li><p>is date‑anchored</p></li>
+<li><p>reconciles across reports</p></li>
+<li><p>defines denominators</p></li>
+<li><p>documents inclusion/exclusion</p></li>
+</ul>
+</section>
+<section id="grow-cdrec-curc-responsibly" class="slide level2">
+<h2>Grow CDREC (CURC) responsibly</h2>
+<p>Levers:</p>
+<ul>
+<li><p>reduce involuntary exits</p></li>
+<li><p>improve pregnancy performance</p></li>
+<li><p>tune semen strategy (sexed vs beef)</p></li>
+<li><p>manage heifer inventory</p></li>
+</ul>
+</section>
+<section id="lab-deliverable" class="slide level2">
+<h2>Lab deliverable</h2>
+<p>Students submit:</p>
+<ul>
+<li><p>Snapshot (counts)</p></li>
+<li><p>Dynamics sheet (rates)</p></li>
+<li><p>Strategy presentation for growth</p></li>
+</ul>
+</section>
+<section id="usefull-commands" class="slide level2">
+<h2>Usefull commands</h2>
+<p>Use of sexed and beef semen</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>BREDSUM\XB*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Reproductive performance</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>BREDSUM\E</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Culling rate (sold and died) Mortality rate (died)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>EVENTS\5SI FOR LACT&gt;0</span>
+<span id="cb7-2"><a></a>ECON\ID</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section></section>
@@ -516,7 +890,7 @@ Miel Hostens
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

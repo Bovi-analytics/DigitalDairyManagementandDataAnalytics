@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Miel Hostens">
 
-<title>WEEK 6: Analyzing Reproductive Performance – ANSC4940</title>
+<title>Week Overview: Herd Inventory Calculations (Lecture 50 min + Lab) – ANSC4940</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-93c24b18a4e2c4901e4c5a1205a972ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-10cb5d13bda20044d798bfa7515f162b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-93c24b18a4e2c4901e4c5a1205a972ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-55693cb9cc4395a45ffeb1d5ae76cebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e9c3d3b19e0a298ef91fe6755868117c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-55693cb9cc4395a45ffeb1d5ae76cebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="WEEK 6: Analyzing Reproductive Performance – ANSC4940">
-<meta property="og:description" content="Reproductive Data Analysis">
+<meta property="og:title" content="Week Overview: Herd Inventory Calculations (Lecture 50 min + Lab) – ANSC4940">
+<meta property="og:description" content="Homepage for Digital Dairy Management and Data Analytics">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="WEEK 6: Analyzing Reproductive Performance – ANSC4940">
-<meta name="twitter:description" content="Reproductive Data Analysis">
+<meta name="twitter:title" content="Week Overview: Herd Inventory Calculations (Lecture 50 min + Lab) – ANSC4940">
+<meta name="twitter:description" content="Homepage for Digital Dairy Management and Data Analytics">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/weeks/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -514,10 +515,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#detailssubtopics" id="toc-detailssubtopics" class="nav-link active" data-scroll-target="#detailssubtopics">Details/Subtopics</a></li>
-  <li><a href="#activitiestasks" id="toc-activitiestasks" class="nav-link" data-scroll-target="#activitiestasks">Activities/Tasks:</a></li>
-  <li><a href="#due-dates" id="toc-due-dates" class="nav-link" data-scroll-target="#due-dates">Due Dates:</a></li>
-  <li><a href="#datasetsresources" id="toc-datasetsresources" class="nav-link" data-scroll-target="#datasetsresources">Datasets/Resources:</a></li>
+  <li><a href="#why-this-week-exists-the-so-what" id="toc-why-this-week-exists-the-so-what" class="nav-link active" data-scroll-target="#why-this-week-exists-the-so-what">Why this week exists (the “so what”)</a></li>
+  <li><a href="#learning-objectives-students-should-be-able-to" id="toc-learning-objectives-students-should-be-able-to" class="nav-link" data-scroll-target="#learning-objectives-students-should-be-able-to">Learning objectives (students should be able to…)</a></li>
+  <li><a href="#references-for-students" id="toc-references-for-students" class="nav-link" data-scroll-target="#references-for-students">References (for students)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Bovi-analytics/DigitalDairyManagementandDataAnalytics/edit/main/weeks/week-6.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Bovi-analytics/DigitalDairyManagementandDataAnalytics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -527,14 +527,19 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-1.html">Weekly materials</a></li><li class="breadcrumb-item"><a href="../weeks/week-6.html">Week 6</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">WEEK 6: Analyzing Reproductive Performance</h1>
-<p class="subtitle lead">Reproductive Data Analysis</p>
+<h1 class="title">Week Overview: Herd Inventory Calculations (Lecture 50 min + Lab)</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Miel Hostens </p>
+          </div>
+  </div>
     
   
     
@@ -545,37 +550,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="detailssubtopics" class="level1">
-<h1>Details/Subtopics</h1>
-<ul>
-<li>Calculating reproductive efficiency metrics</li>
-<li>Identifying reproductive problems from data patterns</li>
-<li>Comparison across lactation groups or seasons</li>
-</ul>
+<section id="why-this-week-exists-the-so-what" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-week-exists-the-so-what">Why this week exists (the “so what”)</h2>
+<p><strong>Inventory calculations are the bridge between biology and decisions.</strong> If your snapshot is wrong, your reproduction strategy, semen strategy (sexed vs beef), housing plan, and growth plan will all be wrong—<em>even if your math is perfect</em>.</p>
+<p>This week trains students to: 1) produce a <strong>defensible snapshot</strong> of the current herd and 2) compute <strong>flows (dynamics)</strong> with correct denominators and time windows, then 3) translate those numbers into a <strong>growth strategy for CDREC (CURC)</strong>.</p>
 </section>
-<section id="activitiestasks" class="level1">
-<h1>Activities/Tasks:</h1>
+<section id="learning-objectives-students-should-be-able-to" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives-students-should-be-able-to">Learning objectives (students should be able to…)</h2>
+<p>By the end of lecture + lab, students can:</p>
 <ul>
-<li>Lecture (2/24): Methods for analyzing reproductive performance</li>
-<li>Lecture (2/26): Case study: Using reproductive data to troubleshoot herd issues</li>
-<li>Lab (2/26):
+<li>Explain <strong>herd statics</strong> (state) vs <strong>herd dynamics</strong> (flows).</li>
+<li>Define <strong>risk vs rate</strong> and why mixing them breaks inventory math.</li>
+<li>Compute and interpret:
 <ul>
-<li>Calculate key reproductive metrics from CURC data</li>
-<li>Compare primiparous vs.&nbsp;multiparous cows</li>
-<li>Create summary visualizations</li>
+<li>culling/removal rate</li>
+<li>mortality/death rate (<strong>cows vs calves</strong>)</li>
+<li>replacement/entry rate</li>
+<li>calving/freshening rate</li>
+<li>herd turnover rate</li>
 </ul></li>
+<li>Identify which metrics are true <strong>synonyms</strong> vs <strong>near‑synonyms</strong>.</li>
+<li>Run DC305 commands to build a farm snapshot and extract needed numerators/denominators.</li>
 </ul>
 </section>
-<section id="due-dates" class="level1">
-<h1>Due Dates:</h1>
+<section id="references-for-students" class="level2">
+<h2 class="anchored" data-anchor-id="references-for-students">References (for students)</h2>
 <ul>
-<li>Lab report on reproductive metrics (due start of Week 7)</li>
-</ul>
-</section>
-<section id="datasetsresources" class="level1">
-<h1>Datasets/Resources:</h1>
-<ul>
-<li>CURC breeding and pregnancy records</li>
+<li>De Vries (2016) JDS: <a href="https://www.sciencedirect.com/science/article/pii/S0022030216307287" class="uri">https://www.sciencedirect.com/science/article/pii/S0022030216307287</a></li>
+<li>Esslemont &amp; Kossaibati (2006) JDS: <a href="https://www.sciencedirect.com/science/article/pii/S0022030206722573" class="uri">https://www.sciencedirect.com/science/article/pii/S0022030206722573</a></li>
 </ul>
 
 
