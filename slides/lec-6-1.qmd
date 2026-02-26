@@ -1,6 +1,6 @@
 ---
-title: "Lecture 6"
-subtitle: "ANSCI 4940 - Spring 2026"
+title: "Reproducible and FAIR data science"
+subtitle: "Week 6 - ANSCI 4940 - Spring 2026"
 author: "Miel Hostens"
 logo: "images/Bovi-Analytics-SmallLogo.png"
 format:
@@ -89,125 +89,132 @@ The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, met
 
 ## Why do we need this
 
-- Dairy data science is **multimodal**, **longitudinal**, and **collaborative**
-- Naming is not cosmetic — it is **infrastructure**
-- Most downstream issues are caused by:
-  - Ambiguity
-  - Inconsistency
-  - Silent semantic drift
+-   Dairy data science is **multimodal**, **longitudinal**, and **collaborative**
+-   Naming is not cosmetic — it is **infrastructure**
+-   Most downstream issues are caused by:
+    -   Ambiguity
+    -   Inconsistency
+    -   Silent semantic drift
 
----
+------------------------------------------------------------------------
 
 ## 40 Minutes, 4 Takeaways
 
-1. Naming conventions are **scientific decisions**
-2. Bad names silently break analyis and models
-3. Conventions must scale across projects & people
-4. Governance matters more than documentation
+1.  Naming conventions are **scientific decisions**
+2.  Bad names silently break analyis and models
+3.  Conventions must scale across projects & people
+4.  Governance matters more than documentation
 
----
+------------------------------------------------------------------------
 
 ## The Dairy Data Reality
 
-- Multiple farms
-- Multiple vendors
-- Multiple countries
-- Multiple disciplines:
-  - Nutrition
-  - Health
-  - Behavior
-  - Production
+-   Multiple farms
+-   Multiple vendors
+-   Multiple countries
+-   Multiple disciplines:
+    -   Nutrition
+    -   Health
+    -   Behavior
+    -   Production
 
 **→ Names are the only shared language**
 
----
+------------------------------------------------------------------------
 
 ## What Is a Naming Convention?
 
-> A set of agreed‑upon rules for creating **unique, informative, and stable names**
-> for data objects.
+> A set of agreed‑upon rules for creating **unique, informative, and stable names** for data objects.
 
 Applies to:
-- Variables
-- Tables
-- Files
-- Visuals
-- Ontology terms
 
----
+-   Variables
+
+-   Tables
+
+-   Files
+
+-   Visuals
+
+-   Ontology terms
+
+------------------------------------------------------------------------
 
 ## Naming ≠ Style Preference
 
 Bad naming causes:
-- Feature leakage
-- Wrong joins
-- Broken pipelines
-- Invalid within/between farm comparisons
+
+-   Wrong joins
+
+-   Broken pipelines
+
+-   Invalid within/between farm comparisons
 
 These errors **do not throw exceptions**.
 
----
+------------------------------------------------------------------------
 
 ## Common Dairy Data Failures
 
-- `DIM`, `days_in_milk`, `DaysInMilk`
-- `milk_yield`, `MilkYieldKg`, `MY`
-- `other`, `Other`, `OTHER`
-- `lactation_stage` vs `lactation_stages`
+-   `DIM`, `days_in_milk`, `DaysInMilk`
+-   `milk_yield`, `MilkYieldKg`, `MY`
+-   `other`, `Other`, `OTHER`
+-   `lactation_stage` vs `lactation_stages`
 
 Each creates a **new semantic entity**
 
----
+------------------------------------------------------------------------
 
 ## Names Encode Meaning
 
 A good name answers:
-- What?
-- For whom?
-- In what unit?
-- At what level?
-- Over what time window?
 
----
+-   What?
+
+-   For whom?
+
+-   In what unit?
+
+-   At what level?
+
+-   Over what time window?
+
+------------------------------------------------------------------------
 
 ## Core Design Principles
 
-1. **Consistency over cleverness**
-2. **Explicit over implicit**
-3. **Stable over convenient**
-4. **Readable by humans and machines**
+1.  **Consistency over cleverness**
+2.  **Explicit over implicit**
+3.  **Stable over convenient**
+4.  **Readable by humans and machines**
 
----
+------------------------------------------------------------------------
 
 ## Scope of a Naming Convention
 
 You must define rules for:
 
-- ✅ Variables
-- ✅ Tables
-- ✅ Files
-- ✅ Features
-- ✅ Categories
-- ✅ Ontology terms
+-   ✅ Variables
+-   ✅ Tables
+-   ✅ Files
+-   ✅ Features
+-   ✅ Categories
+-   ✅ Ontology terms
 
 Partial conventions always fail.
 
----
+------------------------------------------------------------------------
 
 ## Case Sensitivity Matters
 
 Choose **one** and enforce it.
 
-Recommended:
-- **CamelCase** for data schemas
-- **lower_snake_case** for code variables
+Recommended: - **CamelCase** for data schemas - **lower_snake_case** for code variables
 
 Never mix within the same layer.
 
----
+------------------------------------------------------------------------
 
 ## Variable Naming Pattern
 
-**Recommended template:**
-
-``
+**It's now the perfect time to decide on a convention used for the project**

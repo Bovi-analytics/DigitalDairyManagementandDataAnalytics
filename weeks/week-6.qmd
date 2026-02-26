@@ -1,25 +1,41 @@
 ---
-title: "WEEK 6: Analyzing Reproductive Performance "
-subtitle: "Reproductive Data Analysis "
-editor: visual
+title: "Week Overview: Herd Inventory Calculations (Lecture 50 min + Lab)"
+author: "Miel Hostens"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+execute:
+  echo: true
 ---
 
-# Details/Subtopics 
--   Calculating reproductive efficiency metrics 
--   Identifying reproductive problems from data patterns 
--   Comparison across lactation groups or seasons 
+## Why this week exists (the “so what”)
 
-# Activities/Tasks: 
--   Lecture (2/24): Methods for analyzing reproductive performance 
--   Lecture (2/26): Case study: Using reproductive data to troubleshoot herd issues 
--   Lab (2/26):  
-    -   Calculate key reproductive metrics from CURC data 
-    -   Compare primiparous vs. multiparous cows 
-    -   Create summary visualizations 
+**Inventory calculations are the bridge between biology and decisions.**
+If your snapshot is wrong, your reproduction strategy, semen strategy (sexed vs beef), housing plan, and growth plan will all be wrong—*even if your math is perfect*.
 
-# Due Dates: 
--   Lab report on reproductive metrics (due start of Week 7) 
+This week trains students to:
+1) produce a **defensible snapshot** of the current herd and
+2) compute **flows (dynamics)** with correct denominators and time windows, then
+3) translate those numbers into a **growth strategy for CDREC (CURC)**.
 
-# Datasets/Resources: 
--   CURC breeding and pregnancy records 
+## Learning objectives (students should be able to…)
+
+By the end of lecture + lab, students can:
+
+- Explain **herd statics** (state) vs **herd dynamics** (flows).
+- Define **risk vs rate** and why mixing them breaks inventory math.
+- Compute and interpret:
+  - culling/removal rate
+  - mortality/death rate (**cows vs calves**)
+  - replacement/entry rate
+  - calving/freshening rate
+  - herd turnover rate
+- Identify which metrics are true **synonyms** vs **near‑synonyms**.
+- Run DC305 commands to build a farm snapshot and extract needed numerators/denominators.
+
+## References (for students)
+
+- De Vries (2016) JDS: <https://www.sciencedirect.com/science/article/pii/S0022030216307287>
+- Esslemont & Kossaibati (2006) JDS: <https://www.sciencedirect.com/science/article/pii/S0022030206722573>
 

@@ -1,0 +1,456 @@
+---
+title: "Inventory Management in Dairy Systems"
+subtitle: "Week 6 - ANSCI 4940 - Spring 2026"
+author: "Miel Hostens"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
+  revealjs:
+    theme: slides.scss
+    html-math-method: mathjax
+    transition: fade
+    slide-number: true
+    footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
+---
+
+# Inventory Management in Dairy Systems
+
+## Why Inventory Calculations Matter
+
+-   Inventory is the **constraint layer** under everything else.
+-   If a herd inventory snapshot is wrong → future decisions will all be wrong.
+-   Today:
+    -   Build the mental model
+    -   Understand the math
+    -   Lab on CDREC flow
+
+## Learning Outcomes
+
+By the end you can:
+
+-   Distinguish state vs flow
+-   Define risk vs rate
+-   Compute and interpret key herd dynamics metrics
+-   Avoid synonym traps
+-   Use DC305 to extract numerators/denominators for CDREC strategy
+
+## Two herds, same cow count, different future
+
+-   Herd A and Herd B both have 1,000 cows today
+-   One shrinks, one grows
+-   The difference is **flows**
+
+```{mermaid}
+flowchart LR
+Births --> Heifers --> Cows
+Cows -->|Cull/Sell| Exit
+Cows -->|Death| Exit
+```
+
+## Vocabulary
+
+-   **Statics:** snapshot at a moment
+    -   “what exists”
+-   **Dynamics:** movement over time
+    -   “where it is going”
+
+## DC305
+
+Choose the “as‑of” date intentionally
+
+Set date in cowfile to “today”
+
+``` text
+SETDAY\*
+```
+
+Set date to last event entry date
+
+``` text
+SETDAY\E
+```
+
+Set date to most recent test date
+
+``` text
+SETDAY\T
+```
+
+Set date to selected date
+
+``` text
+SETDAY\mm/dd/yy
+```
+
+## Why date matters
+
+-   “Last 365 days” depends on file date
+-   If the backup date is wrong → your rates are wrong
+
+# Definitions
+
+## Risk vs Rate (the core confusion)
+
+Most bad inventory math comes from mixing:
+
+-   Probabilities and
+-   Time‑based rates
+
+## Risk (probability)
+
+-   Fraction experiencing event over specified period
+-   Unitless
+-   Must specify time window
+
+## Example - Culling Risk
+
+**Definition**
+
+Probability that a cow is culled during a specified time period.
+
+$$
+Risk = \frac{\text{Number of cows culled during period}}{\text{Number of cows at risk at start}} 
+$$
+
+-   Unit: none (0–1)
+-   Time period must be defined
+-   Bounded by 1
+
+## Better example - Annual Culling Risk
+
+Suppose:
+
+-   100 cows at start of year
+-   20 cows culled during the year
+
+$$
+Risk = 20/100 = 0.20 
+$$
+
+👉 20% probability of being culled during that year
+
+This is a **probability over one year**.
+
+## Rate
+
+-   Events per unit time (per cow‑time)
+-   Units: 1/time
+-   Supports unequal follow‑up
+
+## Incidence Rate
+
+**Definition**
+
+Speed at which culling events occur.
+
+$$
+Rate = \frac{\text{Number of cullings}}{\text{Total cow-time at risk}} 
+$$
+
+-   Unit: 1 / time (e.g., per cow-year)
+-   Uses animal-time
+-   No upper bound
+
+## Cow-year — definition
+
+A **cow-year** is **animal-time at risk**:
+
+- **1 cow-year = one cow present and at risk for 1 year**
+- More generally: sum the time each cow is “in the population at risk,” expressed in years.
+
+This is the recommended denominator logic for herd turnover: **exits / animal time at risk**. 
+
+---
+
+## Cow-year — formula
+
+$$
+\text{Cow-years} = \sum_{i=1}^{n} \frac{\text{days cow } i \text{ is at risk during period}}{365}
+$$
+
+Key idea: **time** belongs in the denominator when you report a *rate*.
+
+## Example: counting cow-years
+
+- Cow A present all year: \(365/365 = 1.00\) cow-year
+- Cow B present 180 days: \(180/365 = 0.49\) cow-year
+- Cow C present 90 days: \(90/365 = 0.25\) cow-year
+
+Total exposure = \(1.00 + 0.49 + 0.25 = 1.74\) cow-years
+
+
+## Herd-level approximation
+
+For a 12-month window, if herd size is fairly stable:
+
+$$
+\text{Cow-years} \approx \text{Average number of cows present during the year} \times \text{1 year}
+$$
+
+This is why many “annual” turnover metrics use **average milking + dry cows** as the denominator.
+
+## Example: Annual Culling Rate
+
+Suppose:
+
+-   20 cows culled
+-   Total time at risk = 90 cow-years\
+    (because cows leave during the year)
+
+$$ 
+Rate = 20 / 90 = 0.222 \text{ per cow-year} 
+$$
+
+👉 0.222 cullings per cow-year
+
+This is a **speed**, not a probability.
+
+## Why They Are Not the Same
+
+Risk asks:
+
+> What fraction of cows are culled during the year?
+
+Rate asks:
+
+> How fast are cows being culled?
+
+Different denominators:
+
+-   Risk → cows
+
+-   Rate → cow-time
+
+## Why words break math
+
+-   “30% cull risk” - Over a month? year? lactation?
+
+-   “0.35 removals per cow‑year” - interpretable
+
+Rule
+
+-   If you can’t attach a time window, you don’t have a rate.
+
+## Definitions that won’t betray you
+
+Each metric has a:
+
+-   numerator
+
+-   denominator
+
+-   time window
+
+-   population scope
+
+# Metrics
+
+## Removal / Culling rate — definition
+
+-   **Exits / cow‑year**
+-   Confusion
+    -   Exits may include sold (alive) + culled + deaths (be explicit)
+    -   Sometimes used as synonyms
+    -   In rigorous use: removal includes all exits; cull may exclude deaths/live culls
+-   Your job: define numerator explicitly
+
+## Mortality / Death rate — definition
+
+-   **Deaths / cow‑year**
+-   Always specify population:
+    -   cows
+    -   calves
+    -   heifers
+
+## Replacement rate — definition
+
+-   **First‑lactation entries / cow‑year**
+-   In a steady state (no growth) :
+    -   replacement rate ≈ exit rate
+
+## Calving / Freshening rate — definition
+
+-   **Calvings / cow‑year**
+-   Sometimes operationalized as fresh cows per month (be explicit)
+
+## Herd turnover rate — definition
+
+-   Proportion replaced over time
+-   Think “stall slots” being refilled
+
+## Involuntary vs voluntary removals
+
+-   **Voluntary culling** → economically driven decision
+    -   Low milk yield
+    -   Reproductive decisions
+    -   Strategic replacement
+-   **Involuntary culling** → biological constraint
+    -   Mastitis
+    -   Lameness
+    -   Mortality
+
+# Inventory math
+
+## Build it from components
+
+Inventory is not one number.
+
+It is:
+
+-   entries
+
+-   exits
+
+-   time
+
+## The simplest dynamic identity
+
+$$
+N_{t+1} = N_t + \text{Entries} - \text{Exits} 
+$$
+
+Stable size implies:
+
+$$
+\text{Entry rate} \approx \text{Exit rate} 
+$$
+
+## What changes herd size?
+
+If you want growth:
+
+-   increase entries
+-   decrease exits
+-   or both
+
+…but constraints intervene.
+
+## Herd constraints (farm growth realism)
+
+-   housing / stalls
+-   heifer capacity
+-   repro performance
+-   calf survival
+-   transition cow health
+
+## Visual
+
+Constraints as a funnel
+
+```{mermaid}
+flowchart LR
+A[Pregnancy performance] --> B[Calvings]
+B --> C[Heifer survival]
+C --> D[Heifers to breed]
+D --> E[Heifers calving‑in]
+E --> F[Milk cow slots]
+```
+
+## Fertility: the pipeline driver
+
+Pregnancy performance changes:
+
+-   timing of calvings
+
+-   replacement flow
+
+-   age structure
+
+## Sexed semen
+
+Inventory consequences
+
+-   increases female calf supply
+-   may reduce conception
+-   adds lag & variability
+
+## Where sexed semen fits in the pipeline
+
+```{mermaid}
+flowchart LR
+A[Semen choice] --> B[Preg outcomes]
+B --> C[Calves born]
+C --> D[Heifer survival]
+D --> E[Replacements]
+```
+
+## Beef semen
+
+Inventory consequences
+
+-   shifts calves away from replacements
+-   increases calf value
+-   requires replacement confidence
+
+Use beef semen only when:
+
+-   replacement pipeline is secure
+
+-   growth targets are compatible with heifer supply
+
+# Synonym trap
+
+Often treated as synonyms:
+
+-   death rate ≈ mortality rate (if same denominator/time)
+
+-   cull rate ≈ removal rate (IF deaths included)
+
+Not guaranteed synonyms:
+
+-   replacement rate vs turnover rate (context‑dependent)
+
+-   calving rate vs pregnancy rate (related but not same)
+
+# Lab skill
+
+## Create defensible snapshot
+
+A snapshot is defensible if it:
+
+-   is date‑anchored
+
+-   reconciles across reports
+
+-   defines denominators
+
+-   documents inclusion/exclusion
+
+## Grow CDREC (CURC) responsibly
+
+Levers:
+
+-   reduce involuntary exits
+
+-   improve pregnancy performance
+
+-   tune semen strategy (sexed vs beef)
+
+-   manage heifer inventory
+
+## Lab deliverable
+
+Students submit:
+
+-   Snapshot (counts)
+
+-   Dynamics sheet (rates)
+
+-   Strategy presentation for growth
+
+## Usefull commands
+
+Use of sexed and beef semen
+``` text
+BREDSUM\XB*
+```
+Reproductive performance
+``` text
+BREDSUM\E
+```
+Culling rate (sold and died)
+Mortality rate (died)
+``` text
+EVENTS\5SI FOR LACT>0
+ECON\ID
+```
+
