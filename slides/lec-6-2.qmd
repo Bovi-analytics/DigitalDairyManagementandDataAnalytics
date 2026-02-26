@@ -456,3 +456,9 @@ Culling rate (sold and died) Mortality rate (died)
 EVENTS\5SI FOR LACT>0
 ECON\ID
 ```
+
+## DC 305 cheet sheets
+
+[DC305 cheet sheet.pdf](files/DairyCompCommandReferenceGuide.pdf)
+
+[DC305 Farm evaluation](files/DairyCompCommandReferenceGuideFarm.pdf)
