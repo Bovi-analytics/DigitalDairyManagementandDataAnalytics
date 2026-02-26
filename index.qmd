@@ -27,13 +27,13 @@ This page contains an outline of the topics, content, and assignments for the co
 | 6 | 2/26 | Inventory Management in Dairy Systems | Dr. Hostens | 📖 | [🖥️](slides/lec-6-2.html) |
 | 6 | 2/26 | (LAB) Inventory Calculations | Dr. Hostens |  |  |
 | 7 | 3/3 | Integrating Reproductive Management with Farm Systems | Dr. Hostens | 📖 | 🖥️ |
-| 7 | 3/5 | Student Team Presentations on Reproductive Analysis | Dr. Hostens | 📖 | 🖥️ |
-| 7 | 3/5 | (LAB) Peer Evaluation & CURC Discussion | Dr. Hostens | 📖 | 🖥️ |
+| 7 | 3/5 | No class |  |  |  |
+| 7 | 3/5 | No lab |  |  |  |
 | 8 | 3/10 | Review Session for Midterm Exam | Dr. Hostens | 📖 | 🖥️ |
 | 8 | 3/12 | Midterm Exam | Dr. Hostens | 📖 | 🖥️ |
-| 8 | 3/12 | (LAB) Introduction to CURC Health Records | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/12 | (LAB) Midterm Exam Presentation | Dr. Hostens | 📖 | 🖥️ |
 | 9 | 3/17 | Animal Health Monitoring and Data-Driven Interventions | Dr. Hostens | 📖 | 🖥️ |
-| 9 | 3/19 | SCC Interpretation and Mastitis Economics | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/19 | No class |  |  |  |
 | 9 | 3/19 | (LAB) Analyze CURC SCC Trends | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/24 | Nutrition Basics and Data-Driven Feeding Strategies | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/26 | Interpreting Feed Analysis Reports and Intake Data | Dr. Hostens | 📖 | 🖥️ |
@@ -43,7 +43,7 @@ This page contains an outline of the topics, content, and assignments for the co
 | 11 | 4/7 | Systems Thinking: Connecting Health, Nutrition, and Production | Dr. Hostens | 📖 | 🖥️ |
 | 11 | 4/9 | Student Team Presentations on Health/Nutrition | Dr. Hostens | 📖 | 🖥️ |
 | 11 | 4/9 | (LAB) Peer Evaluation & Group Discussion | Dr. Hostens | 📖 | 🖥️ |
-| 12 | 4/14 | Economics of Dairy Production: Key Metrics and Data Needs | Dr. Hostens | 📖 | 🖥️ |
+| 12 | 4/14 | No class |  |  |  |
 | 12 | 4/16 | Case Study: Using Data to Evaluate Management Changes | Dr. Hostens | 📖 | 🖥️ |
 | 12 | 4/16 | (LAB) Calculate IOFC & Economic Modeling | Dr. Hostens | 📖 | 🖥️ |
 | 13 | 4/21 | Integrating Data for Strategic Decision-Making | Dr. Hostens | 📖 | 🖥️ |
