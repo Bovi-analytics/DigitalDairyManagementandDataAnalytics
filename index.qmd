@@ -23,9 +23,9 @@ This page contains an outline of the topics, content, and assignments for the co
 | 5 | 2/17 | February break (no class) |  |  |  |
 | 5 | 2/19 | CURC Project status discussion | Dr. Hostens |  |  |
 | 5 | 2/19 | (LAB) Analyze CURC Milk Production Records | Dr. Hostens |  |  |
-| 6 | 2/24 | FAIR data principles for animal science | Dr. Hostens | 📖 | [🖥️](slides/lec-6.html) |
-| 6 | 2/26 | Case Study: Using Reproductive Data to Troubleshoot | Dr. Hostens | 📖 | 🖥️ |
-| 6 | 2/26 | (LAB) Calculate Reproductive Metrics | Dr. Hostens | 📖 | 🖥️ |
+| 6 | 2/24 | FAIR data principles for animal science | Dr. Hostens | 📖 | [🖥️](slides/lec-6-1.html) |
+| 6 | 2/26 | Inventory Management in Dairy Systems | Dr. Hostens | 📖 | [🖥️](slides/lec-6-2.html) |
+| 6 | 2/26 | (LAB) Inventory Calculations | Dr. Hostens |  |  |
 | 7 | 3/3 | Integrating Reproductive Management with Farm Systems | Dr. Hostens | 📖 | 🖥️ |
 | 7 | 3/5 | Student Team Presentations on Reproductive Analysis | Dr. Hostens | 📖 | 🖥️ |
 | 7 | 3/5 | (LAB) Peer Evaluation & CURC Discussion | Dr. Hostens | 📖 | 🖥️ |

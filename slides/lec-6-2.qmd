@@ -154,12 +154,12 @@ $$
 
 A **cow-year** is **animal-time at risk**:
 
-- **1 cow-year = one cow present and at risk for 1 year**
-- More generally: sum the time each cow is “in the population at risk,” expressed in years.
+-   **1 cow-year = one cow present and at risk for 1 year**
+-   More generally: sum the time each cow is “in the population at risk,” expressed in years.
 
-This is the recommended denominator logic for herd turnover: **exits / animal time at risk**. 
+This is the recommended denominator logic for herd turnover: **exits / animal time at risk**.
 
----
+------------------------------------------------------------------------
 
 ## Cow-year — formula
 
@@ -171,12 +171,11 @@ Key idea: **time** belongs in the denominator when you report a *rate*.
 
 ## Example: counting cow-years
 
-- Cow A present all year: \(365/365 = 1.00\) cow-year
-- Cow B present 180 days: \(180/365 = 0.49\) cow-year
-- Cow C present 90 days: \(90/365 = 0.25\) cow-year
+-   Cow A present all year: (365/365 = 1.00) cow-year
+-   Cow B present 180 days: (180/365 = 0.49) cow-year
+-   Cow C present 90 days: (90/365 = 0.25) cow-year
 
-Total exposure = \(1.00 + 0.49 + 0.25 = 1.74\) cow-years
-
+Total exposure = (1.00 + 0.49 + 0.25 = 1.74) cow-years
 
 ## Herd-level approximation
 
@@ -440,17 +439,20 @@ Students submit:
 ## Usefull commands
 
 Use of sexed and beef semen
+
 ``` text
 BREDSUM\XB*
 ```
+
 Reproductive performance
+
 ``` text
 BREDSUM\E
 ```
-Culling rate (sold and died)
-Mortality rate (died)
+
+Culling rate (sold and died) Mortality rate (died)
+
 ``` text
 EVENTS\5SI FOR LACT>0
 ECON\ID
 ```
-
