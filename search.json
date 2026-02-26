@@ -555,6 +555,13 @@
     "text": "Usefull commands\nUse of sexed and beef semen\nBREDSUM\\XB*\nReproductive performance\nBREDSUM\\E\nCulling rate (sold and died) Mortality rate (died)\nEVENTS\\5SI FOR LACT&gt;0\nECON\\ID"
   },
   {
+    "objectID": "slides/lec-6-2.html#dc-305-cheet-sheets",
+    "href": "slides/lec-6-2.html#dc-305-cheet-sheets",
+    "title": "Inventory Management in Dairy Systems",
+    "section": "DC 305 cheet sheets",
+    "text": "DC 305 cheet sheets\nDC305 cheet sheet.pdf\nDC305 Farm evaluation"
+  },
+  {
     "objectID": "slides/lec-7.html#goals",
     "href": "slides/lec-7.html#goals",
     "title": "Joining datasets",
@@ -2337,7 +2344,7 @@
     "href": "slides/lec-11.html#sec-current",
     "title": "Data transformations",
     "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-26\"\n\nnow()\n\n[1] \"2026-02-26 03:32:10 UTC\""
+    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-02-26\"\n\nnow()\n\n[1] \"2026-02-26 14:08:20 UTC\""
   },
   {
     "objectID": "slides/lec-11.html#sec-dt-import-1",
