@@ -29,8 +29,8 @@ This page contains an outline of the topics, content, and assignments for the co
 | 7 | 3/3 | Integrating Reproductive Management with Farm Systems | Dr. Hostens | 📖 | 🖥️ |
 | 7 | 3/5 | No class |  |  |  |
 | 7 | 3/5 | No lab |  |  |  |
-| 8 | 3/10 | Review Session for Midterm Exam | Dr. Hostens | 📖 | 🖥️ |
-| 8 | 3/12 | Midterm Exam | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/10 | DISC Assessment & Team Dynamics | Dr. Hostens | [📖](weeks/week-8.html) | [🖥️](slides/lec-8.html) |
+| 8 | 3/12 | Midterm preperation | Dr. Hostens | 📖 | 🖥️ |
 | 8 | 3/12 | (LAB) Midterm Exam Presentation | Dr. Hostens | 📖 | 🖥️ |
 | 9 | 3/17 | Animal Health Monitoring and Data-Driven Interventions | Dr. Hostens | 📖 | 🖥️ |
 | 9 | 3/19 | No class |  |  |  |

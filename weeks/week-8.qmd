@@ -1,23 +1,114 @@
 ---
-title: "WEEK 8: Midterm Exam & Health Data Introduction "
-subtitle: "Midterm Assessment / Introduction to Health Data "
-editor: visual
+title: "DISC Assessment & Team Dynamics"
+author: "ANSCI 4040 – Miel Hostens"
+date: "`r Sys.Date()`"
+format:
+  html:
+    toc: true
+    toc-depth: 2
 ---
 
-# Details/Subtopics 
--   Review of course concepts to date 
--   Introduction to animal health records: disease events, treatments, SCC trends 
+# Introduction
 
-# Activities/Tasks: 
--   Lecture (3/10): Review session for midterm exam 
--   Exam (3/12 AM): Multiple-choice midterm exam (concepts, data literacy, statistics) 
--   Lab (3/12 PM):  
-    -   Introduction to CURC health records 
-    -   Brainstorm: What health data are available? What questions can they answer? 
+-   Overview of DISC as a behavioral framework for teamwork
 
-# Due Dates: 
--   Midterm exam (3/12) 
+-   Role of communication and work-style differences in student project teams
 
-# Datasets/Resources: 
--   CURC health/treatment records, SCC data 
+-   Motivation for using behavioral awareness to improve collaboration and reduce conflict
 
+# Learning Objectives
+
+By the end of this lecture, students should be able to:
+
+-   Describe the DISC behavioral assessment framework
+
+-   Identify the four DISC styles using **letters and colors**
+
+-   Explain how behavioral preferences influence teamwork
+
+-   Interpret common team conflicts through a DISC perspective
+
+-   Apply DISC insights to improve collaboration in project teams
+
+# Background: Behavior and Teamwork
+
+## Behavioral Frameworks in Team Settings
+
+-   Widely used in education, leadership, and organizational contexts
+
+-   Focus on **how people work**, not how capable they are
+
+-   Emphasis on observable behavior rather than personality labels
+
+## What DISC Is (and Is Not)
+
+-   Describes **behavioral preferences**
+
+-   Does not measure intelligence, skills, or values
+
+-   No good or bad styles
+
+-   Most people show a **combination** of styles
+
+# Overview of the DISC Framework
+
+## DISC Letters
+
+-   **D** – Dominance
+
+-   **I** – Influence
+
+-   **S** – Steadiness
+
+-   **C** – Conscientiousness
+
+## DISC Colors (“Surrounded by Idiots”)
+
+-   **Red (D)** – Dominant
+
+-   **Yellow (I)** – Influential
+
+-   **Green (S)** – Steady
+
+-   **Blue (C)** – Conscientious
+
+# Key Takeaways
+
+-   Differences in teams are normal
+
+-   DISC provides a shared language for behavior
+
+-   Awareness reduces friction and conflict
+
+-   Effective teams adapt to style differences
+
+# Advised Reading
+
+Students are encouraged to explore:
+
+-   Erikson, T. *Surrounded by Idiots*
+
+-   Introductory DISC resources (education and leadership contexts)
+
+# Supplementary Materials
+
+The following resources support this lecture:
+
+-   Free DISC assessment tool\
+    \<https://professionalleadershipinstitute.com/disc-assessment/\>
+
+# In-Class Activities
+
+-   Completion of DISC self-assessment (before next class)
+
+-   Short written reflection on personal style and team impact
+
+# In-Class Discussion Topics
+
+-   How different DISC styles interpret the same team situation
+
+-   Misinterpretation of intent versus behavior
+
+-   Strengths and risks of homogeneous teams
+
+-   Using DISC to improve collaboration in student projects

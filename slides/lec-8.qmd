@@ -1,605 +1,440 @@
 ---
-title: "Data transformations"
-subtitle: "Lecture 8"
-date: "March 17, 2025"
-format: 
+title: "Lecture – DISC Assessment & Team Dynamics"
+subtitle: "ANSCI 4040 – Team Projects & Collaboration"
+author: "Ass. Prof. Dr. Miel Hostens"
+footer: "https://bovi-analytics.github.io/BeastsAndBytes/"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
   revealjs:
-    footer: "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+editor: visual
+execute:
+  freeze: auto
 ---
 
-# Warm up
+```{r setup}
+#| include: false
+# List of packages for session
+.packages = c("countdown")
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+# Load packages into session
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 
-## Goals {#sec-goals-1}
-
-It’s rare that all data is available in a dataframe to work with it. Typically you will have to manipulate data to get the data you want to analyse.
-
-::: incremental
--   Learn about the **most important types of variables** that you’ll encounter inside a data frame
--   Learn the **tools you can use to work** with them.
--   For more information see the Transform chapter in the R4DS book <https://r4ds.hadley.nz/transform.html>
-:::
-
-## Goals {#sec-goals-2}
-
-![](images/clipboard-3870586787.png)
-
-## Setup {#sec-setup}
-
-```{r}
-#| label: load-pkg
-#| message: true
-
-library(tidyverse)
-library(nycflights13)
-ggplot2::theme_set(theme_gray(base_size = 16))
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.asp = 0.618,
+  fig.align = "center",
+  out.width = "90%"
+)
 ```
 
-# Logical vectors {#sec-logicals}
+# Why talk about personality in team projects?
 
-## Introduction {#intro-part-1}
+## Context
 
--   In this chapter, you'll learn tools for working with logical vectors.
+-   You are working **in teams** on a semester‑long project
+-   Technical skills matter — but **how you work together** often matters more
+-   Many team conflicts are **not about competence**, but about **differences in style**
 
--   Logical vectors are the simplest type of vector because each element can only be one of three possible values: `TRUE`, `FALSE`, and `NA`.
+## Typical team friction (you’ve probably seen this)
 
--   It's relatively rare to find logical vectors in your raw data, but you'll create and manipulate them in the course of almost every analysis.
+-   “They never speak up” vs “They talk too much”
+-   “Too slow and careful” vs “Too impulsive”
+-   “Too emotional” vs “Too cold and distant”
 
-## Introduction {#intro-part-2}
+> DISC gives us a **neutral language** to talk about these differences
 
--   We'll begin by discussing the most common way of creating logical vectors: with numeric comparisons.
+# 2‑minute warm‑up
 
--   Then you'll learn about how you can use Boolean algebra to combine different logical vectors, as well as some useful summaries.
+## Pair‑share
 
--   We'll finish off with `if_else()` and `case_when()`, two useful functions for making conditional changes powered by logical vectors.
+In your project group:
 
-## Comparisons {#comparison-part-1}
+-   What is one behavior that **annoys you** in team work?
 
-A very common way to create a logical vector is via a numeric comparison with `<`, `<=`, `>`, `>=`, `!=`, and `==`. So far, we've mostly created logical variables transiently within `filter()` --- they are computed, used, and then thrown away. For example, the following filter finds all daytime departures that arrive roughly on time:
+-   What is one behavior you **need from others** to do your best work?
 
-```{r}
-#| echo: true
-#| results: false
-flights |> 
-  filter(dep_time > 600 & dep_time < 2000 & abs(arr_delay) < 20)
-```
-
-## Comparisons {#comparison-part-2}
-
-It's useful to know that this is a shortcut and you can explicitly create the underlying logical variables with `mutate()`:
-
-```{r}
-#| echo: true
-#| results: false
-flights |> 
-  mutate(
-    daytime = dep_time > 600 & dep_time < 2000,
-    approx_ontime = abs(arr_delay) < 20,
-    .keep = "used"
-  )
-```
-
-## Comparisons {#comparison-part-3}
-
-This is particularly useful for more complicated logic because naming the intermediate steps makes it easier to both read your code and check that each step has been computed correctly.
-
-All up, the initial filter is equivalent to:
-
-```{r}
-#| echo: true
-
-flights |> 
-  mutate(
-    daytime = dep_time > 600 & dep_time < 2000,
-    approx_ontime = abs(arr_delay) < 20,
-  ) |> 
-  filter(daytime & approx_ontime)
-```
-
-## Floating point comparison {#fp-comparison-1}
-
-Beware of using `==` with numbers. For example, it looks like this vector contains the numbers 1 and 2:
-
-```{r}
-#| echo: true
-#| message: true
-#| warning: false
-x <- c(1 / 49 * 49, sqrt(2) ^ 2)
-x
-```
-
-## Floating point comparison {#fp-comparison-2}
-
-But if you test them for equality, you get `FALSE`:
-
-```{r}
-#| echo: true
-x == c(1, 2)
-```
-
-## What's going on? {#fp-comparison-3}
-
-Computers store numbers with a fixed number of decimal places so there's no way to exactly represent 1/49 or `sqrt(2)` and subsequent computations will be very slightly off. We can see the exact values by calling `print()` with the `digits` argument:
-
-```{r}
-#| echo: true
-
-print(x, digits = 16)
-```
-
-## What's going on? {#fp-comparison-4}
-
-```{r}
-#| echo: true
-
-print(x, digits = 16)
-```
-
-You can see why R defaults to rounding these numbers; they really are very close to what you expect.
-
-Now that you've seen why `==` is failing, what can you do about it?
-
-## Solution {#fp-comparison-5}
-
-One option is to use `dplyr::near()` which ignores small differences:
-
-```{r}
-#| echo: true
-near(x, c(1, 2))
-```
-
-## Missing values {#sec-missing-values-1}
-
-Missing values represent the unknown so they are "contagious": almost any operation involving an unknown value will also be unknown:
-
-```{r}
-#| echo: true
-NA > 5
-10 == NA
-```
-
-The most confusing result is this one:
-
-```{r}
-#| echo: true
-NA == NA
-```
-
-## Missing values {#sec-missing-values-2}
-
-It's easiest to understand why this is true if we artificially supply a little more context:
-
-```{r}
-#| echo: true
-# We don't know how old Mary is
-age_mary <- NA
-
-# We don't know how old John is
-age_john <- NA
-
-# Are Mary and John the same age?
-age_mary == age_john
-# We don't know!
-```
-
-## Missing values {#sec-missing-values-3}
-
-So if you want to find all flights where `dep_time` is missing, the following code doesn't work because `dep_time == NA` will yield `NA` for every single row, and `filter()` automatically drops missing values:
-
-```{r}
-#| echo: true
-
-flights |> 
-  filter(dep_time == NA)
-```
-
-## Missing values {#sec-missing-values-4}
-
-Instead we'll need a new tool: `is.na()`.
-
-`is.na(x)` works with any type of vector and returns `TRUE` for missing values and `FALSE` for everything else:
-
-```{r}
-#| echo: true
-is.na(c(TRUE, NA, FALSE))
-is.na(c(1, NA, 3))
-is.na(c("a", NA, "b"))
-```
-
-## Missing values {#sec-missing-values-5}
-
-We can use `is.na()` to find all the rows with a missing `dep_time`:
-
-```{r}
-#| echo: true
-flights |> 
-  filter(is.na(dep_time))
-```
-
-## Missing values {#sec-missing-values-6}
-
-`is.na()` can also be useful in `arrange()`. `arrange()` usually puts all the missing values at the end but you can override this default by first sorting by `is.na()`:
-
-```{r}
-#| echo: true
-flights |> 
-  filter(month == 1, day == 1) |> 
-  arrange(dep_time)
-```
-
-## Missing values {#sec-missing-values-7}
-
-`is.na()` can also be useful in `arrange()`. `arrange()` usually puts all the missing values at the end but you can override this default by first sorting by `is.na()`:
-
-```{r}
-#| echo: true
-
-flights |>    
-  filter(month == 1, day == 1) |>    
-  arrange(desc(is.na(dep_time)), dep_time)
-```
-
-## Missing values {#sec-missing-values-8}
-
-The rules for missing values in Boolean algebra are a little tricky to explain because they seem inconsistent at first glance:
-
-```{r}
-#| echo: true
-df <- tibble(x = c(TRUE, FALSE, NA))
-df |> 
-  mutate(
-    and = x & NA,
-    or = x | NA
-  )
-```
-
-## Missing values {#sec-missing-values-9}
-
-To understand what's going on, think about `NA | TRUE` (`NA` or `TRUE`).
-
-A missing value in a logical vector means that the value could either be `TRUE` or `FALSE`.
-
--   `TRUE | TRUE` and `FALSE | TRUE` are both `TRUE` because at least one of them is `TRUE`.
-
--   `NA | TRUE` must also be `TRUE` because `NA` can either be `TRUE` or `FALSE`.
-
--   However, `NA | FALSE` is `NA` because we don't know if `NA` is `TRUE` or `FALSE`.
-
--   Similar reasoning applies with `NA & FALSE`.
-
-## Order of operations {#sec-order-operations-1}
-
-Note that the order of operations doesn't work like English. Take the following code that finds all flights that departed in November or December:
-
-```{r}
-#| eval: false
-#| echo: true
-#| 
-flights |> 
-   filter(month == 11 | month == 12)
-```
-
-## Order of operations {#sec-order-operations-2}
-
-You might be tempted to write it like you'd say in English: "Find all flights that departed in November or December.":
-
-```{r}
-#| echo: true
-flights |> 
-   filter(month == 11 | 12)
-```
-
-## Order of operations {#sec-order-operations-3}
-
-This code doesn't error but it also doesn't seem to have worked.
-
--   What's going on?
-
--   Here, R first evaluates `month == 11` creating a logical vector, which we call `nov`.
-
-## Order of operations {#sec-order-operations-4}
-
-It computes `nov | 12`. When you use a number with a logical operator it converts everything apart from 0 to `TRUE`, so this is equivalent to `nov | TRUE` which will always be `TRUE`, so every row will be selected:
-
-```{r}
-#| echo: true
-flights |> 
-  mutate(
-    nov = month == 11,
-    final = nov | 12,
-    .keep = "used"
-  )
-```
-
-## `%in%` {#in-part-1}
-
-An easy way to avoid the problem of getting your `==`s and `|`s in the right order is to use `%in%`. `x %in% y` returns a logical vector the same length as `x` that is `TRUE` whenever a value in `x` is anywhere in `y` .
-
-```{r}
-#| echo: true
-1:12 %in% c(1, 5, 11)
-letters[1:10] %in% c("a", "e", "i", "o", "u")
-```
-
-## `%in%` {#in-part-2}
-
-So to find all flights in November and December we could write:
-
-```{r}
-#| echo: true
-#| eval: false
-
-flights |> 
-  filter(month %in% c(11, 12))
-```
-
-## `%in%` {#in-part-3}
-
-Note that `%in%` obeys different rules for `NA` to `==`, as `NA %in% NA` is `TRUE`.
+> The goal is not to judge people — it’s to notice *patterns*.
 
 ```{r}
 #| echo: false
-#| error: false
-# c(1, 2, NA) == NA
-# c(1, 2, NA) %in% NA
+countdown::countdown(2, top=TRUE)
 ```
 
-## `%in%` {#in-part-4}
+# What is DISC?
 
-This can make for a useful shortcut:
+## The big idea
 
-```{r}
-#| echo: true
-flights |> 
-  filter(dep_time %in% c(NA, 0800))
-```
+DISC is a **behavioral framework**, not a test of intelligence, values, or ability.
 
-# Summaries {#sec-summaries}
+It describes patterns in:
 
-The following sections describe some useful techniques for summarizing logical vectors. As well as functions that only work specifically with logical vectors, you can also use functions that work with numeric vectors.
+-   How people **communicate**
 
-## Logical summaries {#sec-logical-summaries-1}
+-   How they **approach tasks**
 
-There are two main logical summaries:
+-   How they **respond to challenges and others**
 
--   `any(x)` is the equivalent of `|`; it'll return `TRUE` if there are any `TRUE`'s in `x`.
+## Important disclaimers
 
--   `all(x)` is equivalent of `&`; it'll return `TRUE` only if all values of `x` are `TRUE`'s.
+-   DISC is **not** a diagnosis
+-   There is **no good or bad type**
+-   Most people are a **blend**, not a pure type
+-   Styles describe **preferences**, not limits
 
-Like all summary functions, they'll return `NA` if there are any missing values present
+# Two popular ways you’ll see DISC explained
 
-You can make the missing values go away with `na.rm = TRUE`.
+## 1. Letters (classic DISC)
 
-## Logical summaries {#sec-logical-summaries-2}
+-   **D** – Dominance
+-   **I** – Influence
+-   **S** – Steadiness
+-   **C** – Conscientiousness
 
-For example, we could use `all()` and `any()` to find out if every flight was delayed on departure by at most an hour or if any flights were delayed on arrival by five hours or more. And using `group_by()` allows us to do that by day:
+## 2. Colors ("Surrounded by Idiots")
 
-```{r}
-#| echo: true
-flights |> 
-  group_by(year, month, day) |> 
-  summarize(
-    all_delayed = all(dep_delay <= 60, na.rm = TRUE),
-    any_long_delay = any(arr_delay >= 300, na.rm = TRUE),
-    .groups = "drop"
-  )
-```
+Based on the book by Thomas Erikson:
 
-## Logical summaries {#sec-logical-summaries-3}
+![](images/clipboard-1798606863.png){width="105"}
 
-In most cases, however, `any()` and `all()` are a little too crude, and it would be nice to be able to get a little more detail about how many values are `TRUE` or `FALSE`.
+## 2. Colors ("Surrounded by Idiots")
 
-That leads us to the numeric summaries.
+-   **Red (D)** – Dominant
 
-## Numeric summaries of logical vectors {#sec-numeric-summaries-of-logicals-1}
+-   **Yellow (I)** – Influential
 
-When you use a logical vector in a numeric context, `TRUE` becomes 1 and `FALSE` becomes 0.
+-   **Green (S)** – Steady
 
-This makes `sum()` and `mean()` very useful
+-   **Blue (C)** – Conscientious
 
--   `sum(x)` gives the number of `TRUE`s
+> Same underlying ideas — different language
 
--   `mean(x)` gives the proportion of `TRUE`s (because `mean()` is just `sum()` divided by `length()`).
+# The “map” of DISC
 
-## Numeric summaries of logical vectors {#sec-numeric-summaries-of-logicals-2}
+## A simple way to visualize
 
-That, for example, allows us to see the proportion of flights that were delayed on departure by at most an hour and the number of flights that were delayed on arrival by five hours or more:
+DISC is often described using two rough axes:
 
-```{r}
-#| echo: true
-flights |> 
-  group_by(year, month, day) |> 
-  summarize(
-    proportion_delayed = mean(dep_delay <= 60, na.rm = TRUE),
-    count_long_delay = sum(arr_delay >= 300, na.rm = TRUE),
-    .groups = "drop"
-  )
-```
+-   **Pace:** Fast‑paced vs More measured
+-   **Focus:** Task/results vs People/relationships
 
-## Logical subsetting {#sec-logical-subsetting-1}
+|                   | **Task / Results focus** | **People / Relationship focus** |
+|------------------|------------------------|------------------------------|
+| **Fast‑paced**    | **Red (D)**              | **Yellow (I)**                  |
+| **More measured** | **Blue (C)**             | **Green (S)**                   |
 
-You can use a logical vector to filter a single variable to a subset of interest.
+> Not perfect science — but a helpful mental model.
 
-This makes use of the base `[]` (pronounced subset) operator
+# The DISC dimensions (letters + colors)
 
-## Logical subsetting example {#sec-logical-subsetting-2}
+## Red (D) – Dominance
 
-Imagine we wanted to look at the average delay just for flights that were actually delayed. One way to do so would be to first filter the flights and then calculate the average delay:
+**Focus:** Results, action, winning
 
-```{r}
-#| echo: true
-flights |> 
-  filter(arr_delay > 0) |> 
-  group_by(year, month, day) |> 
-  summarize(
-    behind = mean(arr_delay),
-    n = n(),
-    .groups = "drop"
-  )
-```
+**Typical behaviors**
 
-## Logical subsetting example {#sec-logical-subsetting-3}
+-   Direct, fast‑paced, decisive
 
-This works, but what if we wanted to also compute the average delay for flights that arrived early?
+-   Comfortable with disagreement
 
--   We'd need to perform a separate filter step,
+-   Likes to take charge
 
--   Next, join the two data frames together.
+**Strengths** - Gets things moving - Clear decisions - Handles pressure well
 
-Instead you could use `[` to perform an inline filtering: `arr_delay[arr_delay > 0]` will yield only the positive arrival delays.
+## Red (D) – Dominance
 
-## Logical subsetting example {#sec-logical-subsetting-4}
+**Potential blind spots**
 
-This leads to:
+-   Can seem impatient or blunt
 
-```{r}
-#| echo: true
-flights |> 
-  group_by(year, month, day) |> 
-  summarize(
-    behind = mean(arr_delay[arr_delay > 0], na.rm = TRUE),
-    ahead = mean(arr_delay[arr_delay < 0], na.rm = TRUE),
-    n = n(),
-    .groups = "drop"
-  )
-```
+-   May skip details or others’ input
 
-Also note the difference in the group size: in the first chunk `n()` gives the number of delayed flights per day; in the second, `n()` gives the total number of flights.
+**Often‑cited examples** *(illustrative, not diagnoses)*
 
-# Conditional transformations {#sec-conditional-transformations}
+-   Elon Musk (entrepreneurial drive, speed)
 
-One of the most powerful features of logical vectors are their use for conditional transformations, i.e. doing one thing for condition x, and something different for condition y. There are two important tools for this: `if_else()` and `case_when()`.
+-   Gordon Ramsay (direct, high standards)
 
-## `if_else()` {#sec-if_else-1}
+## Yellow (I) – Influence
 
-If you want to use one value when a condition is `TRUE` and another value when it's `FALSE`, you can use `dplyr::if_else()`.
+**Focus:** People, ideas, energy
 
-You'll always use the first three argument of `if_else()`.
+**Typical behaviors**
 
--   The first argument, `condition`, is a logical vector,
+-   Expressive, enthusiastic
 
--   The second, `true`, gives the output when the condition is true,
+-   Thinks out loud
 
--   The third, `false`, gives the output if the condition is false.
+-   Enjoys collaboration and recognition
 
-## `if_else()` {#sec-if_else-2}
+**Strengths** - Generates ideas - Motivates others - Creates momentum
 
-Let's begin with a simple example of labeling a numeric vector as either "+ve" (positive) or "-ve" (negative):
+## Yellow (I) – Influence
 
-```{r}
-#| echo: true
-x <- c(-3:3, NA)
-if_else(x > 0, "+ve", "-ve")
-```
+**Potential blind spots**
 
-## `if_else()` {#sec-if_else-3}
+-   Can lose focus
 
-There's an optional fourth argument, `missing` which will be used if the input is `NA`:
+-   May over‑promise / under‑deliver
 
-```{r}
-#| echo: true
-if_else(x > 0, "+ve", "-ve", "???")
-```
+**Often‑cited examples**
 
-## `if_else()` {#sec-if_else-4}
+-   Oprah Winfrey (connection, influence)
 
-You can also use vectors for the `true` and `false` arguments. For example, this allows us to create a minimal implementation of `abs()`:
+-   Richard Branson (vision, enthusiasm)
 
-```{r}
-#| echo: true
-if_else(x < 0, -x, x)
-```
+## Green (S) – Steadiness
 
-## `case_when()` {#sec-case_when-1}
+**Focus:** Harmony, stability, trust
 
-Syntax to recreate our nested `if_else()` as follows:
+**Typical behaviors**
 
-```{r}
-#| echo: true
-case_when(
-  x < 0 ~ "-ve",
-  x > 0 ~ "+ve"
-)
-```
+-   Patient, calm, supportive
 
-## `case_when()` {#sec-case_when-2}
+-   Good listener
 
-Use `.default` if you want to create a "default"/catch all value:
+-   Prefers predictable workflows
 
-```{r}
-#| echo: true
-case_when(
-  x < 0 ~ "-ve",
-  x > 0 ~ "+ve",
-  .default = "???"
-)
-```
+**Strengths** - Team glue - Reliability - Conflict de‑escalation
 
-## `case_when()` {#sec-case_when-3}
+## Green (S) – Steadiness
 
-Use `.default` if you want to create a "default"/catch all value:
+**Potential blind spots**
 
-```{r}
-#| echo: true
-case_when(
-  x < 0 ~ "-ve",
-  x > 0 ~ "+ve",
-  TRUE ~ "???"
-)
-```
+-   Avoids conflict
 
-## `case_when()` {#sec-case_when-4}
+-   Resists rapid change
 
-And note that if multiple conditions match, only the first will be used:
+**Often‑cited examples**
 
-```{r}
-#| echo: true
-case_when(
-  x > 0 ~ "+ve",
-  x > 2 ~ "big"
-)
-```
+-   Keanu Reeves (calm, respectful presence)
 
-## `case_when() example` {#sec-case_when-5}
+-   Fred Rogers (empathy, consistency)
 
-```{r}
-#| echo: true
-flights |> 
-  mutate(
-    status = case_when(
-      is.na(arr_delay)      ~ "cancelled",
-      arr_delay < -30       ~ "very early",
-      arr_delay < -15       ~ "early",
-      abs(arr_delay) <= 15  ~ "on time",
-      arr_delay < 60        ~ "late",
-      arr_delay < Inf       ~ "very late",
-    ),
-    .keep = "used"
-  )
-```
+## Blue (C) – Conscientiousness
 
-Be wary when writing this sort of complex `case_when()` statement; my first two attempts used a mix of `<` and `>` and I kept accidentally creating overlapping conditions.
+**Focus:** Accuracy, quality, logic
 
-## Compatible types {#sec-compatibility-types-1}
+**Typical behaviors**
 
-Note that both `if_else()` and `case_when()` require **compatible** types in the output. If they're not compatible, you'll see errors like this:
+-   Analytical, structured
 
-```{r}
-#| echo: true
-#| error: true
+-   Data‑driven
 
-if_else(TRUE, "a", 1)
+-   Asks critical questions
 
-case_when(
-  x < -1 ~ TRUE,  
-  x > 0  ~ now()
-)
-```
+**Strengths** - High‑quality output - Risk reduction - Clear documentation
 
-## Compatible types {#sec-compatibility-types-2}
+## Blue (C) – Conscientiousness
 
-Overall, relatively few types are compatible, because automatically converting one type of vector to another is a common source of errors. Here are the most important cases that are compatible:
+**Potential blind spots**
 
--   Numeric and logical vectors are compatible.
--   Strings and factors are compatible, because you can think of a factor as a string with a restricted set of values.
--   Dates and date-times are compatible because you can think of a date as a special case of date-time.
--   `NA`, which is technically a logical vector, is compatible with everything because every vector has some way of representing a missing value.
+-   Overthinking
+
+-   Perfectionism
+
+**Often‑cited examples**
+
+-   Bill Gates (systems thinking)
+
+-   Marie Curie (rigor, precision)
+
+# DISC is about preferences, not skills
+
+## Key distinction
+
+-   DISC = **how** you prefer to act
+-   Skills = **what** you are capable of doing
+
+Examples:
+
+-   A Green (S) can still lead
+
+-   A Red (D) can still listen
+
+-   A Yellow (I) can still analyze
+
+-   A Blue (C) can still inspire
+
+> Awareness creates **choice**
+
+# DISC in student teams
+
+## Common team patterns
+
+-   Reds (D) push decisions and deadlines
+-   Yellows (I) generate ideas and energy
+-   Greens (S) keep the team aligned
+-   Blues (C) ensure rigor and quality
+
+Teams struggle when:
+
+-   One style dominates
+
+-   Differences are interpreted as personal flaws
+
+## Example misunderstanding
+
+-   Blue (C): “This needs more checking.”
+-   Red (D) hears: “You’re slowing us down.”
+-   Red (D): “Let’s just decide.”
+-   Blue (C) hears: “You don’t care about quality.”
+
+DISC helps translate **intent vs impact**.
+
+# Mini‑activity: “Translate the message”
+
+## Scenario
+
+Your teammate writes:
+
+> “Can you send me your part by tonight? We’re behind.”
+
+### Task
+
+Rewrite that same message in a way that would land best for each style:
+
+-   Red (D)
+
+-   Yellow (I)
+
+-   Green (S)
+
+-   Blue (C)
+
+# Using DISC constructively
+
+## Practical rules
+
+-   Don’t label people — **describe behavior**
+-   Adjust communication, not personality
+-   Balance speed, people, and quality
+
+## Simple adaptations
+
+-   Talking to a Red (D) → be concise, outcome‑focused
+-   Talking to a Yellow (I) → show enthusiasm, brainstorm
+-   Talking to a Green (S) → be patient, inclusive
+-   Talking to a Blue (C) → bring structure and data
+
+# One‑slide matrix: strengths each style brings
+
+## If you have all four styles in a team…
+
+-   **Red (D):** momentum and decisions
+-   **Yellow (I):** creativity and energy
+-   **Green (S):** trust and follow‑through
+-   **Blue (C):** rigor and quality
+
+> Strong teams don’t all think alike — they **coordinate differences**.
+
+# DISC under stress
+
+## Stress amplifies defaults
+
+When pressure rises, people often **overdo** their preferred style.
+
+-   **Red (D)** under stress: gets more controlling / impatient
+    -   Helpful response: give options + timelines, stay concise
+-   **Yellow (I)** under stress: talks more, becomes scattered
+    -   Helpful response: summarize decisions, assign next steps
+
+## Stress amplifies defaults
+
+-   **Green (S)** under stress: withdraws, avoids conflict
+    -   Helpful response: ask directly, create psychological safety
+-   **Blue (C)** under stress: over‑checks, delays decisions
+    -   Helpful response: define “good enough,” set a decision point
+
+> “Under stress” is not a flaw — it’s a signal.
+
+# Team reflection worksheet
+
+## Individual reflection
+
+Write short answers (1–2 sentences each):
+
+1.  My likely style(s): \_\_\_\_\_\_ (e.g., Green (S) + Blue (C))
+
+2.  I’m at my best in a team when: \_\_\_\_\_\_
+
+3.  Under pressure, I tend to overdo: \_\_\_\_\_\_
+
+4.  A teammate behavior that triggers me is: \_\_\_\_\_\_
+
+5.  One thing I can do this week to adapt better is: \_\_\_\_\_\_
+
+# Connecting DISC to project roles
+
+## Typical fit (not a rule)
+
+-   **Project manager / decision driver:** often Red (D) or Yellow (I)
+-   **Stakeholder liaison / interviewer / presenter:** often Yellow (I)
+-   **Operations / scheduling / keeping everyone aligned:** often Green (S)
+-   **Data lead / QA / methods & documentation:** often Blue (C)
+
+## The key message
+
+You can do *any* role — but knowing your default style helps you:
+
+-   Choose strategies that work for you
+
+-   Ask for the support you need
+
+-   Avoid predictable failure modes
+
+# Self‑awareness before team awareness
+
+## Why start with yourself?
+
+-   You are always part of the system
+-   Stress amplifies your default style
+
+Reflection questions:
+
+-   What do I overdo under pressure?
+
+-   Which style frustrates me most — and why?
+
+-   What does my team need more of?
+
+# Your assignment (before next class)
+
+## DISC self‑assessment
+
+1.  Complete the **free DISC assessment**: [Follow this link](https://professionalleadershipinstitute.com/disc-assessment/)
+2.  Download your **results PDF**
+3.  Share the PDF with me, if you feel comfortable
+
+I will:
+
+-   Combine results across the class
+
+## Privacy / professionalism
+
+-   This is for **learning and reflection**, not labeling
+-   If you prefer, you may **remove your name** from the PDF before sharing
+
+# What we’ll do next class
+
+## In‑class follow‑up
+
+-   Look at class‑level DISC distributions
+-   Discuss strengths and gaps across teams
+-   Connect DISC insights to your ongoing project work
+
+> The goal is not to change who you are — but to work **better together**.
+
+# Final takeaway
+
+## Remember
+
+-   Differences are normal
+-   Awareness reduces friction
+-   Adaptation improves teams
+
+DISC gives us a **shared language** — what you do with it is up to you.
