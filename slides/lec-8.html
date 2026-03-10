@@ -9,8 +9,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="dcterms.date" content="2025-03-17">
-  <title>ANSC4940 – Data transformations</title>
+  <meta name="author" content="Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens">
+  <title>ANSC4940 – Lecture – DISC Assessment &amp; Team Dynamics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,74 +28,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-87fb683e42416cd7aecb8e577b091905.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -187,11 +121,13 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Data transformations – ANSC4940">
-<meta property="og:description" content="Lecture 8">
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
+<meta property="og:title" content="Lecture – DISC Assessment &amp; Team Dynamics – ANSC4940">
+<meta property="og:description" content="ANSCI 4040 – Team Projects &amp; Collaboration">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Data transformations – ANSC4940">
-<meta name="twitter:description" content="Lecture 8">
+<meta name="twitter:title" content="Lecture – DISC Assessment &amp; Team Dynamics – ANSC4940">
+<meta name="twitter:description" content="ANSCI 4040 – Team Projects &amp; Collaboration">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,818 +137,527 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data transformations</h1>
-  <p class="subtitle">Lecture 8</p>
+  <h1 class="title">Lecture – DISC Assessment &amp; Team Dynamics</h1>
+  <p class="subtitle">ANSCI 4040 – Team Projects &amp; Collaboration</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens 
+</div>
+</div>
 </div>
 
-  <p class="date">2025-03-17</p>
 </section>
 <section>
-<section id="warm-up" class="title-slide slide level1 center">
-<h1>Warm up</h1>
+<section id="why-talk-about-personality-in-team-projects" class="title-slide slide level1 center">
+<h1>Why talk about personality in team projects?</h1>
 
 </section>
-<section id="sec-goals-1" class="slide level2">
-<h2>Goals</h2>
-<p>It’s rare that all data is available in a dataframe to work with it. Typically you will have to manipulate data to get the data you want to analyse.</p>
+<section id="context" class="slide level2">
+<h2>Context</h2>
 <ul>
-<li class="fragment">Learn about the <strong>most important types of variables</strong> that you’ll encounter inside a data frame</li>
-<li class="fragment">Learn the <strong>tools you can use to work</strong> with them.</li>
-<li class="fragment">For more information see the Transform chapter in the R4DS book <a href="https://r4ds.hadley.nz/transform.html" class="uri">https://r4ds.hadley.nz/transform.html</a></li>
+<li>You are working <strong>in teams</strong> on a semester‑long project</li>
+<li>Technical skills matter — but <strong>how you work together</strong> often matters more</li>
+<li>Many team conflicts are <strong>not about competence</strong>, but about <strong>differences in style</strong></li>
 </ul>
 </section>
-<section id="sec-goals-2" class="slide level2">
-<h2>Goals</h2>
+<section id="typical-team-friction-youve-probably-seen-this" class="slide level2">
+<h2>Typical team friction (you’ve probably seen this)</h2>
+<ul>
+<li>“They never speak up” vs “They talk too much”</li>
+<li>“Too slow and careful” vs “Too impulsive”</li>
+<li>“Too emotional” vs “Too cold and distant”</li>
+</ul>
+<blockquote>
+<p>DISC gives us a <strong>neutral language</strong> to talk about these differences</p>
+</blockquote>
+</section></section>
+<section>
+<section id="minute-warmup" class="title-slide slide level1 center">
+<h1>2‑minute warm‑up</h1>
 
-<img data-src="images/clipboard-3870586787.png" class="r-stretch"></section>
-<section id="sec-setup" class="slide level2">
-<h2>Setup</h2>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.0.4     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</section>
+<section id="pairshare" class="slide level2">
+<h2>Pair‑share</h2>
+<p>In your project group:</p>
+<ul>
+<li><p>What is one behavior that <strong>annoys you</strong> in team work?</p></li>
+<li><p>What is one behavior you <strong>need from others</strong> to do your best work?</p></li>
+</ul>
+<blockquote>
+<p>The goal is not to judge people — it’s to notice <em>patterns</em>.</p>
+</blockquote>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="countdown" id="timer_783c8fc1" data-update-every="1" tabindex="0" style="top:TRUE;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 </div>
 </div>
 </section></section>
 <section>
-<section id="sec-logicals" class="title-slide slide level1 center">
-<h1>Logical vectors</h1>
+<section id="what-is-disc" class="title-slide slide level1 center">
+<h1>What is DISC?</h1>
 
 </section>
-<section id="intro-part-1" class="slide level2">
-<h2>Introduction</h2>
+<section id="the-big-idea" class="slide level2">
+<h2>The big idea</h2>
+<p>DISC is a <strong>behavioral framework</strong>, not a test of intelligence, values, or ability.</p>
+<p>It describes patterns in:</p>
 <ul>
-<li><p>In this chapter, you’ll learn tools for working with logical vectors.</p></li>
-<li><p>Logical vectors are the simplest type of vector because each element can only be one of three possible values: <code>TRUE</code>, <code>FALSE</code>, and <code>NA</code>.</p></li>
-<li><p>It’s relatively rare to find logical vectors in your raw data, but you’ll create and manipulate them in the course of almost every analysis.</p></li>
+<li><p>How people <strong>communicate</strong></p></li>
+<li><p>How they <strong>approach tasks</strong></p></li>
+<li><p>How they <strong>respond to challenges and others</strong></p></li>
 </ul>
 </section>
-<section id="intro-part-2" class="slide level2">
-<h2>Introduction</h2>
+<section id="important-disclaimers" class="slide level2">
+<h2>Important disclaimers</h2>
 <ul>
-<li><p>We’ll begin by discussing the most common way of creating logical vectors: with numeric comparisons.</p></li>
-<li><p>Then you’ll learn about how you can use Boolean algebra to combine different logical vectors, as well as some useful summaries.</p></li>
-<li><p>We’ll finish off with <code>if_else()</code> and <code>case_when()</code>, two useful functions for making conditional changes powered by logical vectors.</p></li>
+<li>DISC is <strong>not</strong> a diagnosis</li>
+<li>There is <strong>no good or bad type</strong></li>
+<li>Most people are a <strong>blend</strong>, not a pure type</li>
+<li>Styles describe <strong>preferences</strong>, not limits</li>
 </ul>
-</section>
-<section id="comparison-part-1" class="slide level2">
-<h2>Comparisons</h2>
-<p>A very common way to create a logical vector is via a numeric comparison with <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>!=</code>, and <code>==</code>. So far, we’ve mostly created logical variables transiently within <code>filter()</code> — they are computed, used, and then thrown away. For example, the following filter finds all daytime departures that arrive roughly on time:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a></a>  <span class="fu">filter</span>(dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="comparison-part-2" class="slide level2">
-<h2>Comparisons</h2>
-<p>It’s useful to know that this is a shortcut and you can explicitly create the underlying logical variables with <code>mutate()</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-3"><a></a>    <span class="at">daytime =</span> dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span>,</span>
-<span id="cb3-4"><a></a>    <span class="at">approx_ontime =</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>,</span>
-<span id="cb3-5"><a></a>    <span class="at">.keep =</span> <span class="st">"used"</span></span>
-<span id="cb3-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="comparison-part-3" class="slide level2">
-<h2>Comparisons</h2>
-<p>This is particularly useful for more complicated logic because naming the intermediate steps makes it easier to both read your code and check that each step has been computed correctly.</p>
-<p>All up, the initial filter is equivalent to:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a></a>    <span class="at">daytime =</span> dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span>,</span>
-<span id="cb4-4"><a></a>    <span class="at">approx_ontime =</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>,</span>
-<span id="cb4-5"><a></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb4-6"><a></a>  <span class="fu">filter</span>(daytime <span class="sc">&amp;</span> approx_ontime)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 172,286 × 21
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     1      601            600         1      844            850
- 2  2013     1     1      602            610        -8      812            820
- 3  2013     1     1      602            605        -3      821            805
- 4  2013     1     1      606            610        -4      858            910
- 5  2013     1     1      606            610        -4      837            845
- 6  2013     1     1      607            607         0      858            915
- 7  2013     1     1      611            600        11      945            931
- 8  2013     1     1      613            610         3      925            921
- 9  2013     1     1      615            615         0      833            842
-10  2013     1     1      622            630        -8     1017           1014
-# ℹ 172,276 more rows
-# ℹ 13 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, daytime &lt;lgl&gt;,
-#   approx_ontime &lt;lgl&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="fp-comparison-1" class="slide level2">
-<h2>Floating point comparison</h2>
-<p>Beware of using <code>==</code> with numbers. For example, it looks like this vector contains the numbers 1 and 2:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">49</span> <span class="sc">*</span> <span class="dv">49</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">^</span> <span class="dv">2</span>)</span>
-<span id="cb6-2"><a></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 2</code></pre>
-</div>
-</div>
-</section>
-<section id="fp-comparison-2" class="slide level2">
-<h2>Floating point comparison</h2>
-<p>But if you test them for equality, you get <code>FALSE</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>x <span class="sc">==</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE FALSE</code></pre>
-</div>
-</div>
-</section>
-<section id="fp-comparison-3" class="slide level2">
-<h2>What’s going on?</h2>
-<p>Computers store numbers with a fixed number of decimal places so there’s no way to exactly represent 1/49 or <code>sqrt(2)</code> and subsequent computations will be very slightly off. We can see the exact values by calling <code>print()</code> with the <code>digits</code> argument:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">print</span>(x, <span class="at">digits =</span> <span class="dv">16</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9999999999999999 2.0000000000000004</code></pre>
-</div>
-</div>
-</section>
-<section id="fp-comparison-4" class="slide level2">
-<h2>What’s going on?</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">print</span>(x, <span class="at">digits =</span> <span class="dv">16</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9999999999999999 2.0000000000000004</code></pre>
-</div>
-</div>
-<p>You can see why R defaults to rounding these numbers; they really are very close to what you expect.</p>
-<p>Now that you’ve seen why <code>==</code> is failing, what can you do about it?</p>
-</section>
-<section id="fp-comparison-5" class="slide level2">
-<h2>Solution</h2>
-<p>One option is to use <code>dplyr::near()</code> which ignores small differences:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">near</span>(x, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE TRUE</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-1" class="slide level2">
-<h2>Missing values</h2>
-<p>Missing values represent the unknown so they are “contagious”: almost any operation involving an unknown value will also be unknown:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="cn">NA</span> <span class="sc">&gt;</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NA</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="dv">10</span> <span class="sc">==</span> <span class="cn">NA</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NA</code></pre>
-</div>
-</div>
-<p>The most confusing result is this one:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="cn">NA</span> <span class="sc">==</span> <span class="cn">NA</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NA</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-2" class="slide level2">
-<h2>Missing values</h2>
-<p>It’s easiest to understand why this is true if we artificially supply a little more context:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># We don't know how old Mary is</span></span>
-<span id="cb22-2"><a></a>age_mary <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb22-3"><a></a></span>
-<span id="cb22-4"><a></a><span class="co"># We don't know how old John is</span></span>
-<span id="cb22-5"><a></a>age_john <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb22-6"><a></a></span>
-<span id="cb22-7"><a></a><span class="co"># Are Mary and John the same age?</span></span>
-<span id="cb22-8"><a></a>age_mary <span class="sc">==</span> age_john</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NA</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="co"># We don't know!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="sec-missing-values-3" class="slide level2">
-<h2>Missing values</h2>
-<p>So if you want to find all flights where <code>dep_time</code> is missing, the following code doesn’t work because <code>dep_time == NA</code> will yield <code>NA</code> for every single row, and <code>filter()</code> automatically drops missing values:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb25-2"><a></a>  <span class="fu">filter</span>(dep_time <span class="sc">==</span> <span class="cn">NA</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 0 × 19
-# ℹ 19 variables: year &lt;int&gt;, month &lt;int&gt;, day &lt;int&gt;, dep_time &lt;int&gt;,
-#   sched_dep_time &lt;int&gt;, dep_delay &lt;dbl&gt;, arr_time &lt;int&gt;,
-#   sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-4" class="slide level2">
-<h2>Missing values</h2>
-<p>Instead we’ll need a new tool: <code>is.na()</code>.</p>
-<p><code>is.na(x)</code> works with any type of vector and returns <code>TRUE</code> for missing values and <code>FALSE</code> for everything else:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">NA</span>, <span class="cn">FALSE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE  TRUE FALSE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="cn">NA</span>, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE  TRUE FALSE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">is.na</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="cn">NA</span>, <span class="st">"b"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE  TRUE FALSE</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-5" class="slide level2">
-<h2>Missing values</h2>
-<p>We can use <code>is.na()</code> to find all the rows with a missing <code>dep_time</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb33-2"><a></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(dep_time))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8,255 × 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     1       NA           1630        NA       NA           1815
- 2  2013     1     1       NA           1935        NA       NA           2240
- 3  2013     1     1       NA           1500        NA       NA           1825
- 4  2013     1     1       NA            600        NA       NA            901
- 5  2013     1     2       NA           1540        NA       NA           1747
- 6  2013     1     2       NA           1620        NA       NA           1746
- 7  2013     1     2       NA           1355        NA       NA           1459
- 8  2013     1     2       NA           1420        NA       NA           1644
- 9  2013     1     2       NA           1321        NA       NA           1536
-10  2013     1     2       NA           1545        NA       NA           1910
-# ℹ 8,245 more rows
-# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-6" class="slide level2">
-<h2>Missing values</h2>
-<p><code>is.na()</code> can also be useful in <code>arrange()</code>. <code>arrange()</code> usually puts all the missing values at the end but you can override this default by first sorting by <code>is.na()</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb35-2"><a></a>  <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">1</span>, day <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb35-3"><a></a>  <span class="fu">arrange</span>(dep_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 842 × 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     1      517            515         2      830            819
- 2  2013     1     1      533            529         4      850            830
- 3  2013     1     1      542            540         2      923            850
- 4  2013     1     1      544            545        -1     1004           1022
- 5  2013     1     1      554            600        -6      812            837
- 6  2013     1     1      554            558        -4      740            728
- 7  2013     1     1      555            600        -5      913            854
- 8  2013     1     1      557            600        -3      709            723
- 9  2013     1     1      557            600        -3      838            846
-10  2013     1     1      558            600        -2      753            745
-# ℹ 832 more rows
-# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-7" class="slide level2">
-<h2>Missing values</h2>
-<p><code>is.na()</code> can also be useful in <code>arrange()</code>. <code>arrange()</code> usually puts all the missing values at the end but you can override this default by first sorting by <code>is.na()</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>flights <span class="sc">|&gt;</span>    </span>
-<span id="cb37-2"><a></a>  <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">1</span>, day <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|&gt;</span>    </span>
-<span id="cb37-3"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(<span class="fu">is.na</span>(dep_time)), dep_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 842 × 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     1       NA           1630        NA       NA           1815
- 2  2013     1     1       NA           1935        NA       NA           2240
- 3  2013     1     1       NA           1500        NA       NA           1825
- 4  2013     1     1       NA            600        NA       NA            901
- 5  2013     1     1      517            515         2      830            819
- 6  2013     1     1      533            529         4      850            830
- 7  2013     1     1      542            540         2      923            850
- 8  2013     1     1      544            545        -1     1004           1022
- 9  2013     1     1      554            600        -6      812            837
-10  2013     1     1      554            558        -4      740            728
-# ℹ 832 more rows
-# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-8" class="slide level2">
-<h2>Missing values</h2>
-<p>The rules for missing values in Boolean algebra are a little tricky to explain because they seem inconsistent at first glance:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">NA</span>))</span>
-<span id="cb39-2"><a></a>df <span class="sc">|&gt;</span> </span>
-<span id="cb39-3"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb39-4"><a></a>    <span class="at">and =</span> x <span class="sc">&amp;</span> <span class="cn">NA</span>,</span>
-<span id="cb39-5"><a></a>    <span class="at">or =</span> x <span class="sc">|</span> <span class="cn">NA</span></span>
-<span id="cb39-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-  x     and   or   
-  &lt;lgl&gt; &lt;lgl&gt; &lt;lgl&gt;
-1 TRUE  NA    TRUE 
-2 FALSE FALSE NA   
-3 NA    NA    NA   </code></pre>
-</div>
-</div>
-</section>
-<section id="sec-missing-values-9" class="slide level2">
-<h2>Missing values</h2>
-<p>To understand what’s going on, think about <code>NA | TRUE</code> (<code>NA</code> or <code>TRUE</code>).</p>
-<p>A missing value in a logical vector means that the value could either be <code>TRUE</code> or <code>FALSE</code>.</p>
-<ul>
-<li><p><code>TRUE | TRUE</code> and <code>FALSE | TRUE</code> are both <code>TRUE</code> because at least one of them is <code>TRUE</code>.</p></li>
-<li><p><code>NA | TRUE</code> must also be <code>TRUE</code> because <code>NA</code> can either be <code>TRUE</code> or <code>FALSE</code>.</p></li>
-<li><p>However, <code>NA | FALSE</code> is <code>NA</code> because we don’t know if <code>NA</code> is <code>TRUE</code> or <code>FALSE</code>.</p></li>
-<li><p>Similar reasoning applies with <code>NA &amp; FALSE</code>.</p></li>
-</ul>
-</section>
-<section id="sec-order-operations-1" class="slide level2">
-<h2>Order of operations</h2>
-<p>Note that the order of operations doesn’t work like English. Take the following code that finds all flights that departed in November or December:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb41-2"><a></a>   <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">11</span> <span class="sc">|</span> month <span class="sc">==</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="sec-order-operations-2" class="slide level2">
-<h2>Order of operations</h2>
-<p>You might be tempted to write it like you’d say in English: “Find all flights that departed in November or December.”:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb42-2"><a></a>   <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">11</span> <span class="sc">|</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 336,776 × 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     1      517            515         2      830            819
- 2  2013     1     1      533            529         4      850            830
- 3  2013     1     1      542            540         2      923            850
- 4  2013     1     1      544            545        -1     1004           1022
- 5  2013     1     1      554            600        -6      812            837
- 6  2013     1     1      554            558        -4      740            728
- 7  2013     1     1      555            600        -5      913            854
- 8  2013     1     1      557            600        -3      709            723
- 9  2013     1     1      557            600        -3      838            846
-10  2013     1     1      558            600        -2      753            745
-# ℹ 336,766 more rows
-# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-order-operations-3" class="slide level2">
-<h2>Order of operations</h2>
-<p>This code doesn’t error but it also doesn’t seem to have worked.</p>
-<ul>
-<li><p>What’s going on?</p></li>
-<li><p>Here, R first evaluates <code>month == 11</code> creating a logical vector, which we call <code>nov</code>.</p></li>
-</ul>
-</section>
-<section id="sec-order-operations-4" class="slide level2">
-<h2>Order of operations</h2>
-<p>It computes <code>nov | 12</code>. When you use a number with a logical operator it converts everything apart from 0 to <code>TRUE</code>, so this is equivalent to <code>nov | TRUE</code> which will always be <code>TRUE</code>, so every row will be selected:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb44-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb44-3"><a></a>    <span class="at">nov =</span> month <span class="sc">==</span> <span class="dv">11</span>,</span>
-<span id="cb44-4"><a></a>    <span class="at">final =</span> nov <span class="sc">|</span> <span class="dv">12</span>,</span>
-<span id="cb44-5"><a></a>    <span class="at">.keep =</span> <span class="st">"used"</span></span>
-<span id="cb44-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 336,776 × 3
-   month nov   final
-   &lt;int&gt; &lt;lgl&gt; &lt;lgl&gt;
- 1     1 FALSE TRUE 
- 2     1 FALSE TRUE 
- 3     1 FALSE TRUE 
- 4     1 FALSE TRUE 
- 5     1 FALSE TRUE 
- 6     1 FALSE TRUE 
- 7     1 FALSE TRUE 
- 8     1 FALSE TRUE 
- 9     1 FALSE TRUE 
-10     1 FALSE TRUE 
-# ℹ 336,766 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="in-part-1" class="slide level2">
-<h2><code>%in%</code></h2>
-<p>An easy way to avoid the problem of getting your <code>==</code>s and <code>|</code>s in the right order is to use <code>%in%</code>. <code>x %in% y</code> returns a logical vector the same length as <code>x</code> that is <code>TRUE</code> whenever a value in <code>x</code> is anywhere in <code>y</code> .</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="dv">1</span><span class="sc">:</span><span class="dv">12</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">11</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a>letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>] <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>, <span class="st">"o"</span>, <span class="st">"u"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE</code></pre>
-</div>
-</div>
-</section>
-<section id="in-part-2" class="slide level2">
-<h2><code>%in%</code></h2>
-<p>So to find all flights in November and December we could write:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb50-2"><a></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">11</span>, <span class="dv">12</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="in-part-3" class="slide level2">
-<h2><code>%in%</code></h2>
-<p>Note that <code>%in%</code> obeys different rules for <code>NA</code> to <code>==</code>, as <code>NA %in% NA</code> is <code>TRUE</code>.</p>
-</section>
-<section id="in-part-4" class="slide level2">
-<h2><code>%in%</code></h2>
-<p>This can make for a useful shortcut:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb51-2"><a></a>  <span class="fu">filter</span>(dep_time <span class="sc">%in%</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">0800</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8,803 × 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     1      800            800         0     1022           1014
- 2  2013     1     1      800            810       -10      949            955
- 3  2013     1     1       NA           1630        NA       NA           1815
- 4  2013     1     1       NA           1935        NA       NA           2240
- 5  2013     1     1       NA           1500        NA       NA           1825
- 6  2013     1     1       NA            600        NA       NA            901
- 7  2013     1     2      800            810       -10     1102           1116
- 8  2013     1     2       NA           1540        NA       NA           1747
- 9  2013     1     2       NA           1620        NA       NA           1746
-10  2013     1     2       NA           1355        NA       NA           1459
-# ℹ 8,793 more rows
-# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
-</div>
-</div>
 </section></section>
 <section>
-<section id="sec-summaries" class="title-slide slide level1 center">
-<h1>Summaries</h1>
-<p>The following sections describe some useful techniques for summarizing logical vectors. As well as functions that only work specifically with logical vectors, you can also use functions that work with numeric vectors.</p>
+<section id="two-popular-ways-youll-see-disc-explained" class="title-slide slide level1 center">
+<h1>Two popular ways you’ll see DISC explained</h1>
+
 </section>
-<section id="sec-logical-summaries-1" class="slide level2">
-<h2>Logical summaries</h2>
-<p>There are two main logical summaries:</p>
+<section id="letters-classic-disc" class="slide level2">
+<h2>1. Letters (classic DISC)</h2>
 <ul>
-<li><p><code>any(x)</code> is the equivalent of <code>|</code>; it’ll return <code>TRUE</code> if there are any <code>TRUE</code>’s in <code>x</code>.</p></li>
-<li><p><code>all(x)</code> is equivalent of <code>&amp;</code>; it’ll return <code>TRUE</code> only if all values of <code>x</code> are <code>TRUE</code>’s.</p></li>
-</ul>
-<p>Like all summary functions, they’ll return <code>NA</code> if there are any missing values present</p>
-<p>You can make the missing values go away with <code>na.rm = TRUE</code>.</p>
-</section>
-<section id="sec-logical-summaries-2" class="slide level2">
-<h2>Logical summaries</h2>
-<p>For example, we could use <code>all()</code> and <code>any()</code> to find out if every flight was delayed on departure by at most an hour or if any flights were delayed on arrival by five hours or more. And using <code>group_by()</code> allows us to do that by day:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb53-2"><a></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
-<span id="cb53-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb53-4"><a></a>    <span class="at">all_delayed =</span> <span class="fu">all</span>(dep_delay <span class="sc">&lt;=</span> <span class="dv">60</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb53-5"><a></a>    <span class="at">any_long_delay =</span> <span class="fu">any</span>(arr_delay <span class="sc">&gt;=</span> <span class="dv">300</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb53-6"><a></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb53-7"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 365 × 5
-    year month   day all_delayed any_long_delay
-   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;lgl&gt;       &lt;lgl&gt;         
- 1  2013     1     1 FALSE       TRUE          
- 2  2013     1     2 FALSE       TRUE          
- 3  2013     1     3 FALSE       FALSE         
- 4  2013     1     4 FALSE       FALSE         
- 5  2013     1     5 FALSE       TRUE          
- 6  2013     1     6 FALSE       FALSE         
- 7  2013     1     7 FALSE       TRUE          
- 8  2013     1     8 FALSE       FALSE         
- 9  2013     1     9 FALSE       TRUE          
-10  2013     1    10 FALSE       TRUE          
-# ℹ 355 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-logical-summaries-3" class="slide level2">
-<h2>Logical summaries</h2>
-<p>In most cases, however, <code>any()</code> and <code>all()</code> are a little too crude, and it would be nice to be able to get a little more detail about how many values are <code>TRUE</code> or <code>FALSE</code>.</p>
-<p>That leads us to the numeric summaries.</p>
-</section>
-<section id="sec-numeric-summaries-of-logicals-1" class="slide level2">
-<h2>Numeric summaries of logical vectors</h2>
-<p>When you use a logical vector in a numeric context, <code>TRUE</code> becomes 1 and <code>FALSE</code> becomes 0.</p>
-<p>This makes <code>sum()</code> and <code>mean()</code> very useful</p>
-<ul>
-<li><p><code>sum(x)</code> gives the number of <code>TRUE</code>s</p></li>
-<li><p><code>mean(x)</code> gives the proportion of <code>TRUE</code>s (because <code>mean()</code> is just <code>sum()</code> divided by <code>length()</code>).</p></li>
+<li><strong>D</strong> – Dominance</li>
+<li><strong>I</strong> – Influence</li>
+<li><strong>S</strong> – Steadiness</li>
+<li><strong>C</strong> – Conscientiousness</li>
 </ul>
 </section>
-<section id="sec-numeric-summaries-of-logicals-2" class="slide level2">
-<h2>Numeric summaries of logical vectors</h2>
-<p>That, for example, allows us to see the proportion of flights that were delayed on departure by at most an hour and the number of flights that were delayed on arrival by five hours or more:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb55-2"><a></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
-<span id="cb55-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb55-4"><a></a>    <span class="at">proportion_delayed =</span> <span class="fu">mean</span>(dep_delay <span class="sc">&lt;=</span> <span class="dv">60</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb55-5"><a></a>    <span class="at">count_long_delay =</span> <span class="fu">sum</span>(arr_delay <span class="sc">&gt;=</span> <span class="dv">300</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb55-6"><a></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb55-7"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 365 × 5
-    year month   day proportion_delayed count_long_delay
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;              &lt;dbl&gt;            &lt;int&gt;
- 1  2013     1     1              0.939                3
- 2  2013     1     2              0.914                3
- 3  2013     1     3              0.941                0
- 4  2013     1     4              0.953                0
- 5  2013     1     5              0.964                1
- 6  2013     1     6              0.959                0
- 7  2013     1     7              0.956                1
- 8  2013     1     8              0.975                0
- 9  2013     1     9              0.986                1
-10  2013     1    10              0.977                2
-# ℹ 355 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-logical-subsetting-1" class="slide level2">
-<h2>Logical subsetting</h2>
-<p>You can use a logical vector to filter a single variable to a subset of interest.</p>
-<p>This makes use of the base <code>[]</code> (pronounced subset) operator</p>
-</section>
-<section id="sec-logical-subsetting-2" class="slide level2">
-<h2>Logical subsetting example</h2>
-<p>Imagine we wanted to look at the average delay just for flights that were actually delayed. One way to do so would be to first filter the flights and then calculate the average delay:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb57-2"><a></a>  <span class="fu">filter</span>(arr_delay <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb57-3"><a></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
-<span id="cb57-4"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb57-5"><a></a>    <span class="at">behind =</span> <span class="fu">mean</span>(arr_delay),</span>
-<span id="cb57-6"><a></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb57-7"><a></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb57-8"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 365 × 5
-    year month   day behind     n
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;int&gt;
- 1  2013     1     1   32.5   461
- 2  2013     1     2   32.0   535
- 3  2013     1     3   27.7   460
- 4  2013     1     4   28.3   297
- 5  2013     1     5   22.6   238
- 6  2013     1     6   24.4   381
- 7  2013     1     7   27.8   243
- 8  2013     1     8   20.8   275
- 9  2013     1     9   25.6   287
-10  2013     1    10   27.3   220
-# ℹ 355 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-logical-subsetting-3" class="slide level2">
-<h2>Logical subsetting example</h2>
-<p>This works, but what if we wanted to also compute the average delay for flights that arrived early?</p>
+<section id="colors-surrounded-by-idiots" class="slide level2">
+<h2>2. Colors (“Surrounded by Idiots”)</h2>
+<p>Based on the book by Thomas Erikson:</p>
+
+<img data-src="images/clipboard-1798606863.png" width="105" class="r-stretch"></section>
+<section id="colors-surrounded-by-idiots-1" class="slide level2">
+<h2>2. Colors (“Surrounded by Idiots”)</h2>
 <ul>
-<li><p>We’d need to perform a separate filter step,</p></li>
-<li><p>Next, join the two data frames together.</p></li>
+<li><p><strong>Red (D)</strong> – Dominant</p></li>
+<li><p><strong>Yellow (I)</strong> – Influential</p></li>
+<li><p><strong>Green (S)</strong> – Steady</p></li>
+<li><p><strong>Blue (C)</strong> – Conscientious</p></li>
 </ul>
-<p>Instead you could use <code>[</code> to perform an inline filtering: <code>arr_delay[arr_delay &gt; 0]</code> will yield only the positive arrival delays.</p>
-</section>
-<section id="sec-logical-subsetting-4" class="slide level2">
-<h2>Logical subsetting example</h2>
-<p>This leads to:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb59-2"><a></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
-<span id="cb59-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb59-4"><a></a>    <span class="at">behind =</span> <span class="fu">mean</span>(arr_delay[arr_delay <span class="sc">&gt;</span> <span class="dv">0</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb59-5"><a></a>    <span class="at">ahead =</span> <span class="fu">mean</span>(arr_delay[arr_delay <span class="sc">&lt;</span> <span class="dv">0</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb59-6"><a></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb59-7"><a></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb59-8"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 365 × 6
-    year month   day behind ahead     n
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;
- 1  2013     1     1   32.5 -12.5   842
- 2  2013     1     2   32.0 -14.3   943
- 3  2013     1     3   27.7 -18.2   914
- 4  2013     1     4   28.3 -17.0   915
- 5  2013     1     5   22.6 -14.0   720
- 6  2013     1     6   24.4 -13.6   832
- 7  2013     1     7   27.8 -17.0   933
- 8  2013     1     8   20.8 -14.3   899
- 9  2013     1     9   25.6 -13.0   902
-10  2013     1    10   27.3 -16.4   932
-# ℹ 355 more rows</code></pre>
-</div>
-</div>
-<p>Also note the difference in the group size: in the first chunk <code>n()</code> gives the number of delayed flights per day; in the second, <code>n()</code> gives the total number of flights.</p>
+<blockquote>
+<p>Same underlying ideas — different language</p>
+</blockquote>
 </section></section>
 <section>
-<section id="sec-conditional-transformations" class="title-slide slide level1 center">
-<h1>Conditional transformations</h1>
-<p>One of the most powerful features of logical vectors are their use for conditional transformations, i.e.&nbsp;doing one thing for condition x, and something different for condition y. There are two important tools for this: <code>if_else()</code> and <code>case_when()</code>.</p>
+<section id="the-map-of-disc" class="title-slide slide level1 center">
+<h1>The “map” of DISC</h1>
+
 </section>
-<section id="sec-if_else-1" class="slide level2">
-<h2><code>if_else()</code></h2>
-<p>If you want to use one value when a condition is <code>TRUE</code> and another value when it’s <code>FALSE</code>, you can use <code>dplyr::if_else()</code>.</p>
-<p>You’ll always use the first three argument of <code>if_else()</code>.</p>
+<section id="a-simple-way-to-visualize" class="slide level2">
+<h2>A simple way to visualize</h2>
+<p>DISC is often described using two rough axes:</p>
 <ul>
-<li><p>The first argument, <code>condition</code>, is a logical vector,</p></li>
-<li><p>The second, <code>true</code>, gives the output when the condition is true,</p></li>
-<li><p>The third, <code>false</code>, gives the output if the condition is false.</p></li>
+<li><strong>Pace:</strong> Fast‑paced vs More measured</li>
+<li><strong>Focus:</strong> Task/results vs People/relationships</li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Task / Results focus</strong></th>
+<th><strong>People / Relationship focus</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Fast‑paced</strong></td>
+<td><strong>Red (D)</strong></td>
+<td><strong>Yellow (I)</strong></td>
+</tr>
+<tr class="even">
+<td><strong>More measured</strong></td>
+<td><strong>Blue (C)</strong></td>
+<td><strong>Green (S)</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Not perfect science — but a helpful mental model.</p>
+</blockquote>
+</section></section>
+<section>
+<section id="the-disc-dimensions-letters-colors" class="title-slide slide level1 center">
+<h1>The DISC dimensions (letters + colors)</h1>
+
+</section>
+<section id="red-d-dominance" class="slide level2">
+<h2>Red (D) – Dominance</h2>
+<p><strong>Focus:</strong> Results, action, winning</p>
+<p><strong>Typical behaviors</strong></p>
+<ul>
+<li><p>Direct, fast‑paced, decisive</p></li>
+<li><p>Comfortable with disagreement</p></li>
+<li><p>Likes to take charge</p></li>
+</ul>
+<p><strong>Strengths</strong> - Gets things moving - Clear decisions - Handles pressure well</p>
+</section>
+<section id="red-d-dominance-1" class="slide level2">
+<h2>Red (D) – Dominance</h2>
+<p><strong>Potential blind spots</strong></p>
+<ul>
+<li><p>Can seem impatient or blunt</p></li>
+<li><p>May skip details or others’ input</p></li>
+</ul>
+<p><strong>Often‑cited examples</strong> <em>(illustrative, not diagnoses)</em></p>
+<ul>
+<li><p>Elon Musk (entrepreneurial drive, speed)</p></li>
+<li><p>Gordon Ramsay (direct, high standards)</p></li>
 </ul>
 </section>
-<section id="sec-if_else-2" class="slide level2">
-<h2><code>if_else()</code></h2>
-<p>Let’s begin with a simple example of labeling a numeric vector as either “+ve” (positive) or “-ve” (negative):</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">:</span><span class="dv">3</span>, <span class="cn">NA</span>)</span>
-<span id="cb61-2"><a></a><span class="fu">if_else</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="st">"+ve"</span>, <span class="st">"-ve"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "-ve" "-ve" "-ve" "-ve" "+ve" "+ve" "+ve" NA   </code></pre>
-</div>
-</div>
-</section>
-<section id="sec-if_else-3" class="slide level2">
-<h2><code>if_else()</code></h2>
-<p>There’s an optional fourth argument, <code>missing</code> which will be used if the input is <code>NA</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a><span class="fu">if_else</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="st">"+ve"</span>, <span class="st">"-ve"</span>, <span class="st">"???"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "-ve" "-ve" "-ve" "-ve" "+ve" "+ve" "+ve" "???"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-if_else-4" class="slide level2">
-<h2><code>if_else()</code></h2>
-<p>You can also use vectors for the <code>true</code> and <code>false</code> arguments. For example, this allows us to create a minimal implementation of <code>abs()</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a><span class="fu">if_else</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="sc">-</span>x, x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  3  2  1  0  1  2  3 NA</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-case_when-1" class="slide level2">
-<h2><code>case_when()</code></h2>
-<p>Syntax to recreate our nested <code>if_else()</code> as follows:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a><span class="fu">case_when</span>(</span>
-<span id="cb67-2"><a></a>  x <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"-ve"</span>,</span>
-<span id="cb67-3"><a></a>  x <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"+ve"</span></span>
-<span id="cb67-4"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "-ve" "-ve" "-ve" NA    "+ve" "+ve" "+ve" NA   </code></pre>
-</div>
-</div>
-</section>
-<section id="sec-case_when-2" class="slide level2">
-<h2><code>case_when()</code></h2>
-<p>Use <code>.default</code> if you want to create a “default”/catch all value:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a></a><span class="fu">case_when</span>(</span>
-<span id="cb69-2"><a></a>  x <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"-ve"</span>,</span>
-<span id="cb69-3"><a></a>  x <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"+ve"</span>,</span>
-<span id="cb69-4"><a></a>  <span class="at">.default =</span> <span class="st">"???"</span></span>
-<span id="cb69-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "-ve" "-ve" "-ve" "???" "+ve" "+ve" "+ve" "???"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-case_when-3" class="slide level2">
-<h2><code>case_when()</code></h2>
-<p>Use <code>.default</code> if you want to create a “default”/catch all value:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="fu">case_when</span>(</span>
-<span id="cb71-2"><a></a>  x <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"-ve"</span>,</span>
-<span id="cb71-3"><a></a>  x <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"+ve"</span>,</span>
-<span id="cb71-4"><a></a>  <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"???"</span></span>
-<span id="cb71-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "-ve" "-ve" "-ve" "???" "+ve" "+ve" "+ve" "???"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-case_when-4" class="slide level2">
-<h2><code>case_when()</code></h2>
-<p>And note that if multiple conditions match, only the first will be used:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="fu">case_when</span>(</span>
-<span id="cb73-2"><a></a>  x <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"+ve"</span>,</span>
-<span id="cb73-3"><a></a>  x <span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"big"</span></span>
-<span id="cb73-4"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NA    NA    NA    NA    "+ve" "+ve" "+ve" NA   </code></pre>
-</div>
-</div>
-</section>
-<section id="sec-case_when-5" class="slide level2">
-<h2><code>case_when() example</code></h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb75-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb75-3"><a></a>    <span class="at">status =</span> <span class="fu">case_when</span>(</span>
-<span id="cb75-4"><a></a>      <span class="fu">is.na</span>(arr_delay)      <span class="sc">~</span> <span class="st">"cancelled"</span>,</span>
-<span id="cb75-5"><a></a>      arr_delay <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">30</span>       <span class="sc">~</span> <span class="st">"very early"</span>,</span>
-<span id="cb75-6"><a></a>      arr_delay <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">15</span>       <span class="sc">~</span> <span class="st">"early"</span>,</span>
-<span id="cb75-7"><a></a>      <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;=</span> <span class="dv">15</span>  <span class="sc">~</span> <span class="st">"on time"</span>,</span>
-<span id="cb75-8"><a></a>      arr_delay <span class="sc">&lt;</span> <span class="dv">60</span>        <span class="sc">~</span> <span class="st">"late"</span>,</span>
-<span id="cb75-9"><a></a>      arr_delay <span class="sc">&lt;</span> <span class="cn">Inf</span>       <span class="sc">~</span> <span class="st">"very late"</span>,</span>
-<span id="cb75-10"><a></a>    ),</span>
-<span id="cb75-11"><a></a>    <span class="at">.keep =</span> <span class="st">"used"</span></span>
-<span id="cb75-12"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 336,776 × 2
-   arr_delay status 
-       &lt;dbl&gt; &lt;chr&gt;  
- 1        11 on time
- 2        20 late   
- 3        33 late   
- 4       -18 early  
- 5       -25 early  
- 6        12 on time
- 7        19 late   
- 8       -14 on time
- 9        -8 on time
-10         8 on time
-# ℹ 336,766 more rows</code></pre>
-</div>
-</div>
-<p>Be wary when writing this sort of complex <code>case_when()</code> statement; my first two attempts used a mix of <code>&lt;</code> and <code>&gt;</code> and I kept accidentally creating overlapping conditions.</p>
-</section>
-<section id="sec-compatibility-types-1" class="slide level2">
-<h2>Compatible types</h2>
-<p>Note that both <code>if_else()</code> and <code>case_when()</code> require <strong>compatible</strong> types in the output. If they’re not compatible, you’ll see errors like this:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a></a><span class="fu">if_else</span>(<span class="cn">TRUE</span>, <span class="st">"a"</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `if_else()`:
-! Can't combine `true` &lt;character&gt; and `false` &lt;double&gt;.</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a></a><span class="fu">case_when</span>(</span>
-<span id="cb79-2"><a></a>  x <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">~</span> <span class="cn">TRUE</span>,  </span>
-<span id="cb79-3"><a></a>  x <span class="sc">&gt;</span> <span class="dv">0</span>  <span class="sc">~</span> <span class="fu">now</span>()</span>
-<span id="cb79-4"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `case_when()`:
-! Can't combine `..1 (right)` &lt;logical&gt; and `..2 (right)` &lt;datetime&lt;local&gt;&gt;.</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-compatibility-types-2" class="slide level2">
-<h2>Compatible types</h2>
-<p>Overall, relatively few types are compatible, because automatically converting one type of vector to another is a common source of errors. Here are the most important cases that are compatible:</p>
+<section id="yellow-i-influence" class="slide level2">
+<h2>Yellow (I) – Influence</h2>
+<p><strong>Focus:</strong> People, ideas, energy</p>
+<p><strong>Typical behaviors</strong></p>
 <ul>
-<li>Numeric and logical vectors are compatible.</li>
-<li>Strings and factors are compatible, because you can think of a factor as a string with a restricted set of values.</li>
-<li>Dates and date-times are compatible because you can think of a date as a special case of date-time.</li>
-<li><code>NA</code>, which is technically a logical vector, is compatible with everything because every vector has some way of representing a missing value.</li>
+<li><p>Expressive, enthusiastic</p></li>
+<li><p>Thinks out loud</p></li>
+<li><p>Enjoys collaboration and recognition</p></li>
 </ul>
+<p><strong>Strengths</strong> - Generates ideas - Motivates others - Creates momentum</p>
+</section>
+<section id="yellow-i-influence-1" class="slide level2">
+<h2>Yellow (I) – Influence</h2>
+<p><strong>Potential blind spots</strong></p>
+<ul>
+<li><p>Can lose focus</p></li>
+<li><p>May over‑promise / under‑deliver</p></li>
+</ul>
+<p><strong>Often‑cited examples</strong></p>
+<ul>
+<li><p>Oprah Winfrey (connection, influence)</p></li>
+<li><p>Richard Branson (vision, enthusiasm)</p></li>
+</ul>
+</section>
+<section id="green-s-steadiness" class="slide level2">
+<h2>Green (S) – Steadiness</h2>
+<p><strong>Focus:</strong> Harmony, stability, trust</p>
+<p><strong>Typical behaviors</strong></p>
+<ul>
+<li><p>Patient, calm, supportive</p></li>
+<li><p>Good listener</p></li>
+<li><p>Prefers predictable workflows</p></li>
+</ul>
+<p><strong>Strengths</strong> - Team glue - Reliability - Conflict de‑escalation</p>
+</section>
+<section id="green-s-steadiness-1" class="slide level2">
+<h2>Green (S) – Steadiness</h2>
+<p><strong>Potential blind spots</strong></p>
+<ul>
+<li><p>Avoids conflict</p></li>
+<li><p>Resists rapid change</p></li>
+</ul>
+<p><strong>Often‑cited examples</strong></p>
+<ul>
+<li><p>Keanu Reeves (calm, respectful presence)</p></li>
+<li><p>Fred Rogers (empathy, consistency)</p></li>
+</ul>
+</section>
+<section id="blue-c-conscientiousness" class="slide level2">
+<h2>Blue (C) – Conscientiousness</h2>
+<p><strong>Focus:</strong> Accuracy, quality, logic</p>
+<p><strong>Typical behaviors</strong></p>
+<ul>
+<li><p>Analytical, structured</p></li>
+<li><p>Data‑driven</p></li>
+<li><p>Asks critical questions</p></li>
+</ul>
+<p><strong>Strengths</strong> - High‑quality output - Risk reduction - Clear documentation</p>
+</section>
+<section id="blue-c-conscientiousness-1" class="slide level2">
+<h2>Blue (C) – Conscientiousness</h2>
+<p><strong>Potential blind spots</strong></p>
+<ul>
+<li><p>Overthinking</p></li>
+<li><p>Perfectionism</p></li>
+</ul>
+<p><strong>Often‑cited examples</strong></p>
+<ul>
+<li><p>Bill Gates (systems thinking)</p></li>
+<li><p>Marie Curie (rigor, precision)</p></li>
+</ul>
+</section></section>
+<section>
+<section id="disc-is-about-preferences-not-skills" class="title-slide slide level1 center">
+<h1>DISC is about preferences, not skills</h1>
+
+</section>
+<section id="key-distinction" class="slide level2">
+<h2>Key distinction</h2>
+<ul>
+<li>DISC = <strong>how</strong> you prefer to act</li>
+<li>Skills = <strong>what</strong> you are capable of doing</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><p>A Green (S) can still lead</p></li>
+<li><p>A Red (D) can still listen</p></li>
+<li><p>A Yellow (I) can still analyze</p></li>
+<li><p>A Blue (C) can still inspire</p></li>
+</ul>
+<blockquote>
+<p>Awareness creates <strong>choice</strong></p>
+</blockquote>
+</section></section>
+<section>
+<section id="disc-in-student-teams" class="title-slide slide level1 center">
+<h1>DISC in student teams</h1>
+
+</section>
+<section id="common-team-patterns" class="slide level2">
+<h2>Common team patterns</h2>
+<ul>
+<li>Reds (D) push decisions and deadlines</li>
+<li>Yellows (I) generate ideas and energy</li>
+<li>Greens (S) keep the team aligned</li>
+<li>Blues (C) ensure rigor and quality</li>
+</ul>
+<p>Teams struggle when:</p>
+<ul>
+<li><p>One style dominates</p></li>
+<li><p>Differences are interpreted as personal flaws</p></li>
+</ul>
+</section>
+<section id="example-misunderstanding" class="slide level2">
+<h2>Example misunderstanding</h2>
+<ul>
+<li>Blue (C): “This needs more checking.”</li>
+<li>Red (D) hears: “You’re slowing us down.”</li>
+<li>Red (D): “Let’s just decide.”</li>
+<li>Blue (C) hears: “You don’t care about quality.”</li>
+</ul>
+<p>DISC helps translate <strong>intent vs impact</strong>.</p>
+</section></section>
+<section>
+<section id="miniactivity-translate-the-message" class="title-slide slide level1 center">
+<h1>Mini‑activity: “Translate the message”</h1>
+
+</section>
+<section id="scenario" class="slide level2">
+<h2>Scenario</h2>
+<p>Your teammate writes:</p>
+<blockquote>
+<p>“Can you send me your part by tonight? We’re behind.”</p>
+</blockquote>
+<h3 id="task">Task</h3>
+<p>Rewrite that same message in a way that would land best for each style:</p>
+<ul>
+<li><p>Red (D)</p></li>
+<li><p>Yellow (I)</p></li>
+<li><p>Green (S)</p></li>
+<li><p>Blue (C)</p></li>
+</ul>
+</section></section>
+<section>
+<section id="using-disc-constructively" class="title-slide slide level1 center">
+<h1>Using DISC constructively</h1>
+
+</section>
+<section id="practical-rules" class="slide level2">
+<h2>Practical rules</h2>
+<ul>
+<li>Don’t label people — <strong>describe behavior</strong></li>
+<li>Adjust communication, not personality</li>
+<li>Balance speed, people, and quality</li>
+</ul>
+</section>
+<section id="simple-adaptations" class="slide level2">
+<h2>Simple adaptations</h2>
+<ul>
+<li>Talking to a Red (D) → be concise, outcome‑focused</li>
+<li>Talking to a Yellow (I) → show enthusiasm, brainstorm</li>
+<li>Talking to a Green (S) → be patient, inclusive</li>
+<li>Talking to a Blue (C) → bring structure and data</li>
+</ul>
+</section></section>
+<section>
+<section id="oneslide-matrix-strengths-each-style-brings" class="title-slide slide level1 center">
+<h1>One‑slide matrix: strengths each style brings</h1>
+
+</section>
+<section id="if-you-have-all-four-styles-in-a-team" class="slide level2">
+<h2>If you have all four styles in a team…</h2>
+<ul>
+<li><strong>Red (D):</strong> momentum and decisions</li>
+<li><strong>Yellow (I):</strong> creativity and energy</li>
+<li><strong>Green (S):</strong> trust and follow‑through</li>
+<li><strong>Blue (C):</strong> rigor and quality</li>
+</ul>
+<blockquote>
+<p>Strong teams don’t all think alike — they <strong>coordinate differences</strong>.</p>
+</blockquote>
+</section></section>
+<section>
+<section id="disc-under-stress" class="title-slide slide level1 center">
+<h1>DISC under stress</h1>
+
+</section>
+<section id="stress-amplifies-defaults" class="slide level2">
+<h2>Stress amplifies defaults</h2>
+<p>When pressure rises, people often <strong>overdo</strong> their preferred style.</p>
+<ul>
+<li><strong>Red (D)</strong> under stress: gets more controlling / impatient
+<ul>
+<li>Helpful response: give options + timelines, stay concise</li>
+</ul></li>
+<li><strong>Yellow (I)</strong> under stress: talks more, becomes scattered
+<ul>
+<li>Helpful response: summarize decisions, assign next steps</li>
+</ul></li>
+</ul>
+</section>
+<section id="stress-amplifies-defaults-1" class="slide level2">
+<h2>Stress amplifies defaults</h2>
+<ul>
+<li><strong>Green (S)</strong> under stress: withdraws, avoids conflict
+<ul>
+<li>Helpful response: ask directly, create psychological safety</li>
+</ul></li>
+<li><strong>Blue (C)</strong> under stress: over‑checks, delays decisions
+<ul>
+<li>Helpful response: define “good enough,” set a decision point</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>“Under stress” is not a flaw — it’s a signal.</p>
+</blockquote>
+</section></section>
+<section>
+<section id="team-reflection-worksheet" class="title-slide slide level1 center">
+<h1>Team reflection worksheet</h1>
+
+</section>
+<section id="individual-reflection" class="slide level2">
+<h2>Individual reflection</h2>
+<p>Write short answers (1–2 sentences each):</p>
+<ol type="1">
+<li><p>My likely style(s): ______ (e.g., Green (S) + Blue (C))</p></li>
+<li><p>I’m at my best in a team when: ______</p></li>
+<li><p>Under pressure, I tend to overdo: ______</p></li>
+<li><p>A teammate behavior that triggers me is: ______</p></li>
+<li><p>One thing I can do this week to adapt better is: ______</p></li>
+</ol>
+</section></section>
+<section>
+<section id="connecting-disc-to-project-roles" class="title-slide slide level1 center">
+<h1>Connecting DISC to project roles</h1>
+
+</section>
+<section id="typical-fit-not-a-rule" class="slide level2">
+<h2>Typical fit (not a rule)</h2>
+<ul>
+<li><strong>Project manager / decision driver:</strong> often Red (D) or Yellow (I)</li>
+<li><strong>Stakeholder liaison / interviewer / presenter:</strong> often Yellow (I)</li>
+<li><strong>Operations / scheduling / keeping everyone aligned:</strong> often Green (S)</li>
+<li><strong>Data lead / QA / methods &amp; documentation:</strong> often Blue (C)</li>
+</ul>
+</section>
+<section id="the-key-message" class="slide level2">
+<h2>The key message</h2>
+<p>You can do <em>any</em> role — but knowing your default style helps you:</p>
+<ul>
+<li><p>Choose strategies that work for you</p></li>
+<li><p>Ask for the support you need</p></li>
+<li><p>Avoid predictable failure modes</p></li>
+</ul>
+</section></section>
+<section>
+<section id="selfawareness-before-team-awareness" class="title-slide slide level1 center">
+<h1>Self‑awareness before team awareness</h1>
+
+</section>
+<section id="why-start-with-yourself" class="slide level2">
+<h2>Why start with yourself?</h2>
+<ul>
+<li>You are always part of the system</li>
+<li>Stress amplifies your default style</li>
+</ul>
+<p>Reflection questions:</p>
+<ul>
+<li><p>What do I overdo under pressure?</p></li>
+<li><p>Which style frustrates me most — and why?</p></li>
+<li><p>What does my team need more of?</p></li>
+</ul>
+</section></section>
+<section>
+<section id="your-assignment-before-next-class" class="title-slide slide level1 center">
+<h1>Your assignment (before next class)</h1>
+
+</section>
+<section id="disc-selfassessment" class="slide level2">
+<h2>DISC self‑assessment</h2>
+<ol type="1">
+<li>Complete the <strong>free DISC assessment</strong>: <a href="https://professionalleadershipinstitute.com/disc-assessment/">Follow this link</a></li>
+<li>Download your <strong>results PDF</strong></li>
+<li>Share the PDF with me, if you feel comfortable</li>
+</ol>
+<p>I will:</p>
+<ul>
+<li>Combine results across the class</li>
+</ul>
+</section>
+<section id="privacy-professionalism" class="slide level2">
+<h2>Privacy / professionalism</h2>
+<ul>
+<li>This is for <strong>learning and reflection</strong>, not labeling</li>
+<li>If you prefer, you may <strong>remove your name</strong> from the PDF before sharing</li>
+</ul>
+</section></section>
+<section>
+<section id="what-well-do-next-class" class="title-slide slide level1 center">
+<h1>What we’ll do next class</h1>
+
+</section>
+<section id="inclass-followup" class="slide level2">
+<h2>In‑class follow‑up</h2>
+<ul>
+<li>Look at class‑level DISC distributions</li>
+<li>Discuss strengths and gaps across teams</li>
+<li>Connect DISC insights to your ongoing project work</li>
+</ul>
+<blockquote>
+<p>The goal is not to change who you are — but to work <strong>better together</strong>.</p>
+</blockquote>
+</section></section>
+<section>
+<section id="final-takeaway" class="title-slide slide level1 center">
+<h1>Final takeaway</h1>
+
+</section>
+<section id="remember" class="slide level2">
+<h2>Remember</h2>
+<ul>
+<li>Differences are normal</li>
+<li>Awareness reduces friction</li>
+<li>Adaptation improves teams</li>
+</ul>
+<p>DISC gives us a <strong>shared language</strong> — what you do with it is up to you.</p>
 
 
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/Bovi-Analytics-SmallLogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://bovi-analytics.github.io/BeastsAndBytes/">https://bovi-analytics.github.io/BeastsAndBytes/</a></p>
+<p>https://bovi-analytics.github.io/BeastsAndBytes/</p>
 </div>
 </div></div>
 
@@ -1065,7 +710,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1170,7 +815,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
