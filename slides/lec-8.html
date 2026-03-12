@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens">
-  <title>ANSC4940 – Lecture – DISC Assessment &amp; Team Dynamics</title>
+  <title>ANSC4940 – Lecture – Physiology basics → what data must answer</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -121,13 +121,11 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-<meta property="og:title" content="Lecture – DISC Assessment &amp; Team Dynamics – ANSC4940">
-<meta property="og:description" content="ANSCI 4040 – Team Projects &amp; Collaboration">
+<meta property="og:title" content="Lecture – Physiology basics → what data must answer – ANSC4940">
+<meta property="og:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Lecture – DISC Assessment &amp; Team Dynamics – ANSC4940">
-<meta name="twitter:description" content="ANSCI 4040 – Team Projects &amp; Collaboration">
+<meta name="twitter:title" content="Lecture – Physiology basics → what data must answer – ANSC4940">
+<meta name="twitter:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -137,8 +135,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture – DISC Assessment &amp; Team Dynamics</h1>
-  <p class="subtitle">ANSCI 4040 – Team Projects &amp; Collaboration</p>
+  <h1 class="title">Lecture – Physiology basics → what data must answer</h1>
+  <p class="subtitle">ANSCI 4040 – Dairy Data Analysis &amp; Analytics</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -149,515 +147,183 @@ Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens
 </div>
 
 </section>
-<section>
-<section id="why-talk-about-personality-in-team-projects" class="title-slide slide level1 center">
-<h1>Why talk about personality in team projects?</h1>
-
+<section id="learning-goals" class="slide level2">
+<h2>Learning goals</h2>
+<ul>
+<li>Refresh <strong>core reproductive physiology</strong> (enough to interpret data)</li>
+<li>Translate biology into <strong>questions your database must answer</strong></li>
+<li>Identify common <strong>failure modes</strong> (estrus, ovulation, luteolysis, anovulation)</li>
+<li>Connect management levers to <strong>measurable outcomes</strong></li>
+</ul>
+<aside class="notes">
+<p>This deck is intentionally “physiology-light but analytics-heavy”. We focus on the minimum biology needed to interpret KPIs correctly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="context" class="slide level2">
-<h2>Context</h2>
+<section id="why-repro-is-a-data-problem" class="slide level2">
+<h2>Why repro is a data problem</h2>
 <ul>
-<li>You are working <strong>in teams</strong> on a semester‑long project</li>
-<li>Technical skills matter — but <strong>how you work together</strong> often matters more</li>
-<li>Many team conflicts are <strong>not about competence</strong>, but about <strong>differences in style</strong></li>
-</ul>
-</section>
-<section id="typical-team-friction-youve-probably-seen-this" class="slide level2">
-<h2>Typical team friction (you’ve probably seen this)</h2>
+<li>Reproductive efficiency drives:
 <ul>
-<li>“They never speak up” vs “They talk too much”</li>
-<li>“Too slow and careful” vs “Too impulsive”</li>
-<li>“Too emotional” vs “Too cold and distant”</li>
-</ul>
-<blockquote>
-<p>DISC gives us a <strong>neutral language</strong> to talk about these differences</p>
-</blockquote>
-</section></section>
-<section>
-<section id="minute-warmup" class="title-slide slide level1 center">
-<h1>2‑minute warm‑up</h1>
-
-</section>
-<section id="pairshare" class="slide level2">
-<h2>Pair‑share</h2>
-<p>In your project group:</p>
-<ul>
-<li><p>What is one behavior that <strong>annoys you</strong> in team work?</p></li>
-<li><p>What is one behavior you <strong>need from others</strong> to do your best work?</p></li>
-</ul>
-<blockquote>
-<p>The goal is not to judge people — it’s to notice <em>patterns</em>.</p>
-</blockquote>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="countdown" id="timer_783c8fc1" data-update-every="1" tabindex="0" style="top:TRUE;right:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="what-is-disc" class="title-slide slide level1 center">
-<h1>What is DISC?</h1>
-
-</section>
-<section id="the-big-idea" class="slide level2">
-<h2>The big idea</h2>
-<p>DISC is a <strong>behavioral framework</strong>, not a test of intelligence, values, or ability.</p>
-<p>It describes patterns in:</p>
-<ul>
-<li><p>How people <strong>communicate</strong></p></li>
-<li><p>How they <strong>approach tasks</strong></p></li>
-<li><p>How they <strong>respond to challenges and others</strong></p></li>
-</ul>
-</section>
-<section id="important-disclaimers" class="slide level2">
-<h2>Important disclaimers</h2>
-<ul>
-<li>DISC is <strong>not</strong> a diagnosis</li>
-<li>There is <strong>no good or bad type</strong></li>
-<li>Most people are a <strong>blend</strong>, not a pure type</li>
-<li>Styles describe <strong>preferences</strong>, not limits</li>
-</ul>
-</section></section>
-<section>
-<section id="two-popular-ways-youll-see-disc-explained" class="title-slide slide level1 center">
-<h1>Two popular ways you’ll see DISC explained</h1>
-
-</section>
-<section id="letters-classic-disc" class="slide level2">
-<h2>1. Letters (classic DISC)</h2>
-<ul>
-<li><strong>D</strong> – Dominance</li>
-<li><strong>I</strong> – Influence</li>
-<li><strong>S</strong> – Steadiness</li>
-<li><strong>C</strong> – Conscientiousness</li>
-</ul>
-</section>
-<section id="colors-surrounded-by-idiots" class="slide level2">
-<h2>2. Colors (“Surrounded by Idiots”)</h2>
-<p>Based on the book by Thomas Erikson:</p>
-
-<img data-src="images/clipboard-1798606863.png" width="105" class="r-stretch"></section>
-<section id="colors-surrounded-by-idiots-1" class="slide level2">
-<h2>2. Colors (“Surrounded by Idiots”)</h2>
-<ul>
-<li><p><strong>Red (D)</strong> – Dominant</p></li>
-<li><p><strong>Yellow (I)</strong> – Influential</p></li>
-<li><p><strong>Green (S)</strong> – Steady</p></li>
-<li><p><strong>Blue (C)</strong> – Conscientious</p></li>
-</ul>
-<blockquote>
-<p>Same underlying ideas — different language</p>
-</blockquote>
-</section></section>
-<section>
-<section id="the-map-of-disc" class="title-slide slide level1 center">
-<h1>The “map” of DISC</h1>
-
-</section>
-<section id="a-simple-way-to-visualize" class="slide level2">
-<h2>A simple way to visualize</h2>
-<p>DISC is often described using two rough axes:</p>
-<ul>
-<li><strong>Pace:</strong> Fast‑paced vs More measured</li>
-<li><strong>Focus:</strong> Task/results vs People/relationships</li>
-</ul>
-<table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 33%">
-<col style="width: 41%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Task / Results focus</strong></th>
-<th><strong>People / Relationship focus</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Fast‑paced</strong></td>
-<td><strong>Red (D)</strong></td>
-<td><strong>Yellow (I)</strong></td>
-</tr>
-<tr class="even">
-<td><strong>More measured</strong></td>
-<td><strong>Blue (C)</strong></td>
-<td><strong>Green (S)</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Not perfect science — but a helpful mental model.</p>
-</blockquote>
-</section></section>
-<section>
-<section id="the-disc-dimensions-letters-colors" class="title-slide slide level1 center">
-<h1>The DISC dimensions (letters + colors)</h1>
-
-</section>
-<section id="red-d-dominance" class="slide level2">
-<h2>Red (D) – Dominance</h2>
-<p><strong>Focus:</strong> Results, action, winning</p>
-<p><strong>Typical behaviors</strong></p>
-<ul>
-<li><p>Direct, fast‑paced, decisive</p></li>
-<li><p>Comfortable with disagreement</p></li>
-<li><p>Likes to take charge</p></li>
-</ul>
-<p><strong>Strengths</strong> - Gets things moving - Clear decisions - Handles pressure well</p>
-</section>
-<section id="red-d-dominance-1" class="slide level2">
-<h2>Red (D) – Dominance</h2>
-<p><strong>Potential blind spots</strong></p>
-<ul>
-<li><p>Can seem impatient or blunt</p></li>
-<li><p>May skip details or others’ input</p></li>
-</ul>
-<p><strong>Often‑cited examples</strong> <em>(illustrative, not diagnoses)</em></p>
-<ul>
-<li><p>Elon Musk (entrepreneurial drive, speed)</p></li>
-<li><p>Gordon Ramsay (direct, high standards)</p></li>
-</ul>
-</section>
-<section id="yellow-i-influence" class="slide level2">
-<h2>Yellow (I) – Influence</h2>
-<p><strong>Focus:</strong> People, ideas, energy</p>
-<p><strong>Typical behaviors</strong></p>
-<ul>
-<li><p>Expressive, enthusiastic</p></li>
-<li><p>Thinks out loud</p></li>
-<li><p>Enjoys collaboration and recognition</p></li>
-</ul>
-<p><strong>Strengths</strong> - Generates ideas - Motivates others - Creates momentum</p>
-</section>
-<section id="yellow-i-influence-1" class="slide level2">
-<h2>Yellow (I) – Influence</h2>
-<p><strong>Potential blind spots</strong></p>
-<ul>
-<li><p>Can lose focus</p></li>
-<li><p>May over‑promise / under‑deliver</p></li>
-</ul>
-<p><strong>Often‑cited examples</strong></p>
-<ul>
-<li><p>Oprah Winfrey (connection, influence)</p></li>
-<li><p>Richard Branson (vision, enthusiasm)</p></li>
-</ul>
-</section>
-<section id="green-s-steadiness" class="slide level2">
-<h2>Green (S) – Steadiness</h2>
-<p><strong>Focus:</strong> Harmony, stability, trust</p>
-<p><strong>Typical behaviors</strong></p>
-<ul>
-<li><p>Patient, calm, supportive</p></li>
-<li><p>Good listener</p></li>
-<li><p>Prefers predictable workflows</p></li>
-</ul>
-<p><strong>Strengths</strong> - Team glue - Reliability - Conflict de‑escalation</p>
-</section>
-<section id="green-s-steadiness-1" class="slide level2">
-<h2>Green (S) – Steadiness</h2>
-<p><strong>Potential blind spots</strong></p>
-<ul>
-<li><p>Avoids conflict</p></li>
-<li><p>Resists rapid change</p></li>
-</ul>
-<p><strong>Often‑cited examples</strong></p>
-<ul>
-<li><p>Keanu Reeves (calm, respectful presence)</p></li>
-<li><p>Fred Rogers (empathy, consistency)</p></li>
-</ul>
-</section>
-<section id="blue-c-conscientiousness" class="slide level2">
-<h2>Blue (C) – Conscientiousness</h2>
-<p><strong>Focus:</strong> Accuracy, quality, logic</p>
-<p><strong>Typical behaviors</strong></p>
-<ul>
-<li><p>Analytical, structured</p></li>
-<li><p>Data‑driven</p></li>
-<li><p>Asks critical questions</p></li>
-</ul>
-<p><strong>Strengths</strong> - High‑quality output - Risk reduction - Clear documentation</p>
-</section>
-<section id="blue-c-conscientiousness-1" class="slide level2">
-<h2>Blue (C) – Conscientiousness</h2>
-<p><strong>Potential blind spots</strong></p>
-<ul>
-<li><p>Overthinking</p></li>
-<li><p>Perfectionism</p></li>
-</ul>
-<p><strong>Often‑cited examples</strong></p>
-<ul>
-<li><p>Bill Gates (systems thinking)</p></li>
-<li><p>Marie Curie (rigor, precision)</p></li>
-</ul>
-</section></section>
-<section>
-<section id="disc-is-about-preferences-not-skills" class="title-slide slide level1 center">
-<h1>DISC is about preferences, not skills</h1>
-
-</section>
-<section id="key-distinction" class="slide level2">
-<h2>Key distinction</h2>
-<ul>
-<li>DISC = <strong>how</strong> you prefer to act</li>
-<li>Skills = <strong>what</strong> you are capable of doing</li>
-</ul>
-<p>Examples:</p>
-<ul>
-<li><p>A Green (S) can still lead</p></li>
-<li><p>A Red (D) can still listen</p></li>
-<li><p>A Yellow (I) can still analyze</p></li>
-<li><p>A Blue (C) can still inspire</p></li>
-</ul>
-<blockquote>
-<p>Awareness creates <strong>choice</strong></p>
-</blockquote>
-</section></section>
-<section>
-<section id="disc-in-student-teams" class="title-slide slide level1 center">
-<h1>DISC in student teams</h1>
-
-</section>
-<section id="common-team-patterns" class="slide level2">
-<h2>Common team patterns</h2>
-<ul>
-<li>Reds (D) push decisions and deadlines</li>
-<li>Yellows (I) generate ideas and energy</li>
-<li>Greens (S) keep the team aligned</li>
-<li>Blues (C) ensure rigor and quality</li>
-</ul>
-<p>Teams struggle when:</p>
-<ul>
-<li><p>One style dominates</p></li>
-<li><p>Differences are interpreted as personal flaws</p></li>
-</ul>
-</section>
-<section id="example-misunderstanding" class="slide level2">
-<h2>Example misunderstanding</h2>
-<ul>
-<li>Blue (C): “This needs more checking.”</li>
-<li>Red (D) hears: “You’re slowing us down.”</li>
-<li>Red (D): “Let’s just decide.”</li>
-<li>Blue (C) hears: “You don’t care about quality.”</li>
-</ul>
-<p>DISC helps translate <strong>intent vs impact</strong>.</p>
-</section></section>
-<section>
-<section id="miniactivity-translate-the-message" class="title-slide slide level1 center">
-<h1>Mini‑activity: “Translate the message”</h1>
-
-</section>
-<section id="scenario" class="slide level2">
-<h2>Scenario</h2>
-<p>Your teammate writes:</p>
-<blockquote>
-<p>“Can you send me your part by tonight? We’re behind.”</p>
-</blockquote>
-<h3 id="task">Task</h3>
-<p>Rewrite that same message in a way that would land best for each style:</p>
-<ul>
-<li><p>Red (D)</p></li>
-<li><p>Yellow (I)</p></li>
-<li><p>Green (S)</p></li>
-<li><p>Blue (C)</p></li>
-</ul>
-</section></section>
-<section>
-<section id="using-disc-constructively" class="title-slide slide level1 center">
-<h1>Using DISC constructively</h1>
-
-</section>
-<section id="practical-rules" class="slide level2">
-<h2>Practical rules</h2>
-<ul>
-<li>Don’t label people — <strong>describe behavior</strong></li>
-<li>Adjust communication, not personality</li>
-<li>Balance speed, people, and quality</li>
-</ul>
-</section>
-<section id="simple-adaptations" class="slide level2">
-<h2>Simple adaptations</h2>
-<ul>
-<li>Talking to a Red (D) → be concise, outcome‑focused</li>
-<li>Talking to a Yellow (I) → show enthusiasm, brainstorm</li>
-<li>Talking to a Green (S) → be patient, inclusive</li>
-<li>Talking to a Blue (C) → bring structure and data</li>
-</ul>
-</section></section>
-<section>
-<section id="oneslide-matrix-strengths-each-style-brings" class="title-slide slide level1 center">
-<h1>One‑slide matrix: strengths each style brings</h1>
-
-</section>
-<section id="if-you-have-all-four-styles-in-a-team" class="slide level2">
-<h2>If you have all four styles in a team…</h2>
-<ul>
-<li><strong>Red (D):</strong> momentum and decisions</li>
-<li><strong>Yellow (I):</strong> creativity and energy</li>
-<li><strong>Green (S):</strong> trust and follow‑through</li>
-<li><strong>Blue (C):</strong> rigor and quality</li>
-</ul>
-<blockquote>
-<p>Strong teams don’t all think alike — they <strong>coordinate differences</strong>.</p>
-</blockquote>
-</section></section>
-<section>
-<section id="disc-under-stress" class="title-slide slide level1 center">
-<h1>DISC under stress</h1>
-
-</section>
-<section id="stress-amplifies-defaults" class="slide level2">
-<h2>Stress amplifies defaults</h2>
-<p>When pressure rises, people often <strong>overdo</strong> their preferred style.</p>
-<ul>
-<li><strong>Red (D)</strong> under stress: gets more controlling / impatient
-<ul>
-<li>Helpful response: give options + timelines, stay concise</li>
+<li>Milk production dynamics (lactation length, calving pattern)</li>
+<li>Replacement rate, culling risk, heifer inventory, genetic progress</li>
+<li>Labor and treatment costs</li>
 </ul></li>
-<li><strong>Yellow (I)</strong> under stress: talks more, becomes scattered
+<li>The industry’s challenge: fertility declined then rebounded—requiring integration of physiology, management, nutrition, genetics, economics, and records.</li>
+</ul>
+</section>
+<section id="conceptual-model-open-pregnant" class="slide level2">
+<h2>Conceptual model: “open → pregnant”</h2>
+<p>How fast the program turns <strong>eligible non-pregnant</strong> cows into <strong>pregnant</strong> cows.</p>
+<p>Key workflow:</p>
 <ul>
-<li>Helpful response: summarize decisions, assign next steps</li>
+<li><p>Calve → VWP (voluntary waiting period)</p></li>
+<li><p>Detect heat <strong>or</strong> timed AI (TAI) program</p></li>
+<li><p>Inseminate (service)</p></li>
+</ul>
+</section>
+<section id="conceptual-model-open-pregnant-1" class="slide level2">
+<h2>Conceptual model: “open → pregnant”</h2>
+<ul>
+<li><p>Conceive (P/AI)</p></li>
+<li><p>Maintain pregnancy (loss matters)</p></li>
+<li><p>Diagnose (preg check)</p></li>
+<li><p>Resync or rebreed non-pregnant cows</p></li>
+</ul>
+</section>
+<section id="minimal-physiology-you-must-know" class="slide level2">
+<h2>Minimal physiology you must know</h2>
+<p>Estrous cycle in cattle:</p>
+<ul>
+<li><p>~3 weeks, but <strong>longer in lactating cows vs heifers</strong> (≈23 d vs ≈21 d).</p></li>
+<li><p>Ovarian structures:</p>
+<ul>
+<li><p>Follicles (dominant follicle → ovulation)</p></li>
+<li><p>Corpus luteum (CL → progesterone)</p></li>
+<li><p>Luteolysis timing differs (heifers vs lactating cows).</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="stress-amplifies-defaults-1" class="slide level2">
-<h2>Stress amplifies defaults</h2>
+<section id="minimal-physiology-you-must-know-1" class="slide level2">
+<h2>Minimal physiology you must know</h2>
+<p>Six key hormones and what they <em>mean</em> for data interpretation:</p>
 <ul>
-<li><strong>Green (S)</strong> under stress: withdraws, avoids conflict
+<li><p><strong>Progesterone (P4)</strong>: from CL; maintains pregnancy; blocks estrus / GnRH surge</p></li>
+<li><p><strong>Estradiol (E2)</strong>: from follicle; standing heat; triggers GnRH surge</p></li>
+<li><p><strong>GnRH</strong>: hypothalamus; triggers LH surge</p></li>
+</ul>
+</section>
+<section id="minimal-physiology-you-must-know-2" class="slide level2">
+<h2>Minimal physiology you must know</h2>
 <ul>
-<li>Helpful response: ask directly, create psychological safety</li>
-</ul></li>
-<li><strong>Blue (C)</strong> under stress: over‑checks, delays decisions
+<li><p><strong>LH</strong>: surge causes ovulation; pulses drive dominant follicle growth</p></li>
+<li><p><strong>FSH</strong>: initiates follicular wave</p></li>
+<li><p><strong>PGF2α</strong>: uterus; regresses CL (luteolysis)</p></li>
+</ul>
+</section>
+<section id="what-high-milk-production-changes-and-why-metrics-mislead" class="slide level2">
+<h2>What high milk production changes (and why metrics mislead)</h2>
+<p>High milk production is associated with:</p>
 <ul>
-<li>Helpful response: define “good enough,” set a decision point</li>
+<li><p>Larger ovulatory follicles but <strong>lower circulating E2</strong></p></li>
+<li><p>Larger luteal tissue volume but <strong>lower circulating P4</strong></p></li>
+<li><p>Shorter estrus duration at higher production</p></li>
+<li><p>Higher risk of double ovulation (twinning risk)</p></li>
+</ul>
+<p>Analytics consequence: “heat detection looks worse” partly because <strong>estrus expression is shorter</strong>, not only because labor/observation is worse.</p>
+</section>
+<section id="estrus-behavior-vs-biology" class="slide level2">
+<h2>Estrus: behavior vs biology</h2>
+<ul>
+<li>Standing heat is driven by E2 and ends when E2 drops below threshold (often <strong>before</strong> ovulation).</li>
+<li>AI timing should relate to onset of estrus (biologically tied to GnRH/LH surge), not just “was she seen?”</li>
+<li>Therefore: “no observed heat” ≠ “no ovulation”</li>
+</ul>
+</section>
+<section id="anovulation-big-hidden-driver" class="slide level2">
+<h2>Anovulation: big hidden driver</h2>
+<ul>
+<li>Anovulation commonly defined as failure to ovulate around <strong>~60–80 DIM</strong></li>
+<li>Multi-study summaries show ~<strong>20–25% anovular</strong> cows around 60–70 DIM (large between-farm variation).</li>
+<li>Two phenotypes (useful for interpreting progesterone/ultrasound data):
+<ul>
+<li>“Small-follicle” anovular (insufficient LH pulses → follicles don’t reach ovulatory size)</li>
+<li>“Large-follicle/cystic” anovular (high E2 fails to induce GnRH/LH surge) <a href="https://cornellprod.sharepoint.com/sites/Bovi-Analytics/Shared%20Documents/General/ANSC%204940%20%E2%80%93%20Bovi-Analytics/LDHM%20ebook/ADSA_LDHM_e-Book_Section_7_76797_20251223092016.pdf">1</a></li>
 </ul></li>
 </ul>
-<blockquote>
-<p>“Under stress” is not a flaw — it’s a signal.</p>
-</blockquote>
-</section></section>
-<section>
-<section id="team-reflection-worksheet" class="title-slide slide level1 center">
-<h1>Team reflection worksheet</h1>
-
 </section>
-<section id="individual-reflection" class="slide level2">
-<h2>Individual reflection</h2>
-<p>Write short answers (1–2 sentences each):</p>
+<section id="management-lever-timed-ai-programs" class="slide level2">
+<h2>Management lever: timed AI programs</h2>
+<p>Why TAI exists:</p>
+<ul>
+<li><p>Detection-of-estrus-only programs often delay first service and reduce service rate.</p></li>
+<li><p>Ovsynch (GnRH → PGF2α → GnRH → TAI) coordinates ovulation and CL regression, enabling timed insemination without estrus detection.</p></li>
+<li><p>Presynchronization (PGF2α and/or GnRH combinations) aims to start protocols at an optimal cycle stage and address anovulation.</p></li>
+</ul>
+</section>
+<section id="what-questions-must-the-data-answer" class="slide level2">
+<h2>“What questions must the data answer?”</h2>
+<p>For any herd (and each pen/group):</p>
 <ol type="1">
-<li><p>My likely style(s): ______ (e.g., Green (S) + Blue (C))</p></li>
-<li><p>I’m at my best in a team when: ______</p></li>
-<li><p>Under pressure, I tend to overdo: ______</p></li>
-<li><p>A teammate behavior that triggers me is: ______</p></li>
-<li><p>One thing I can do this week to adapt better is: ______</p></li>
+<li><strong>Eligibility / exposure</strong>
+<ul>
+<li>Who is eligible to be bred this week (DIM, VWP, health holds)?</li>
+</ul></li>
+<li><strong>Submission</strong>
+<ul>
+<li>Who was <em>submitted</em> to insemination (observed heat or protocol)?</li>
+</ul></li>
+<li><strong>Service quality</strong>
+<ul>
+<li>Was the insemination recorded correctly (date/time, technician, semen, bull)?</li>
+</ul></li>
 </ol>
-</section></section>
-<section>
-<section id="connecting-disc-to-project-roles" class="title-slide slide level1 center">
-<h1>Connecting DISC to project roles</h1>
-
 </section>
-<section id="typical-fit-not-a-rule" class="slide level2">
-<h2>Typical fit (not a rule)</h2>
-<ul>
-<li><strong>Project manager / decision driver:</strong> often Red (D) or Yellow (I)</li>
-<li><strong>Stakeholder liaison / interviewer / presenter:</strong> often Yellow (I)</li>
-<li><strong>Operations / scheduling / keeping everyone aligned:</strong> often Green (S)</li>
-<li><strong>Data lead / QA / methods &amp; documentation:</strong> often Blue (C)</li>
-</ul>
-</section>
-<section id="the-key-message" class="slide level2">
-<h2>The key message</h2>
-<p>You can do <em>any</em> role — but knowing your default style helps you:</p>
-<ul>
-<li><p>Choose strategies that work for you</p></li>
-<li><p>Ask for the support you need</p></li>
-<li><p>Avoid predictable failure modes</p></li>
-</ul>
-</section></section>
-<section>
-<section id="selfawareness-before-team-awareness" class="title-slide slide level1 center">
-<h1>Self‑awareness before team awareness</h1>
-
-</section>
-<section id="why-start-with-yourself" class="slide level2">
-<h2>Why start with yourself?</h2>
-<ul>
-<li>You are always part of the system</li>
-<li>Stress amplifies your default style</li>
-</ul>
-<p>Reflection questions:</p>
-<ul>
-<li><p>What do I overdo under pressure?</p></li>
-<li><p>Which style frustrates me most — and why?</p></li>
-<li><p>What does my team need more of?</p></li>
-</ul>
-</section></section>
-<section>
-<section id="your-assignment-before-next-class" class="title-slide slide level1 center">
-<h1>Your assignment (before next class)</h1>
-
-</section>
-<section id="disc-selfassessment" class="slide level2">
-<h2>DISC self‑assessment</h2>
+<section id="what-questions-must-the-data-answer-1" class="slide level2">
+<h2>“What questions must the data answer?”</h2>
 <ol type="1">
-<li>Complete the <strong>free DISC assessment</strong>: <a href="https://professionalleadershipinstitute.com/disc-assessment/">Follow this link</a></li>
-<li>Download your <strong>results PDF</strong></li>
-<li>Share the PDF with me, if you feel comfortable</li>
+<li><strong>Fertility outcome</strong>
+<ul>
+<li>Who conceived (preg check), who didn’t, who lost?</li>
+</ul></li>
+<li><strong>Timeliness</strong>
+<ul>
+<li>How long did it take from calving → first service → conception?</li>
+</ul></li>
+<li><strong>Bottleneck diagnosis</strong>
+<ul>
+<li>Is low pregnancy rate due to <strong>service rate</strong> or <strong>P/AI</strong>?</li>
+</ul></li>
 </ol>
-<p>I will:</p>
-<ul>
-<li>Combine results across the class</li>
-</ul>
 </section>
-<section id="privacy-professionalism" class="slide level2">
-<h2>Privacy / professionalism</h2>
+<section id="take-home-summary" class="slide level2">
+<h2>Take-home summary</h2>
 <ul>
-<li>This is for <strong>learning and reflection</strong>, not labeling</li>
-<li>If you prefer, you may <strong>remove your name</strong> from the PDF before sharing</li>
+<li>Physiology gives you <em>mechanisms</em>; metrics give you <em>signals</em></li>
+<li>High production alters hormone dynamics → affects estrus expression and twinning risk</li>
+<li>Anovulation is common around breeding start and requires protocol-aware interpretation</li>
+<li>Your monitoring framework must separate:
+<ul>
+<li><strong>Exposure (service/submission)</strong> from <strong>success (conception/pregnancy)</strong></li>
+</ul></li>
 </ul>
-</section></section>
-<section>
-<section id="what-well-do-next-class" class="title-slide slide level1 center">
-<h1>What we’ll do next class</h1>
+
 
 </section>
-<section id="inclass-followup" class="slide level2">
-<h2>In‑class follow‑up</h2>
-<ul>
-<li>Look at class‑level DISC distributions</li>
-<li>Discuss strengths and gaps across teams</li>
-<li>Connect DISC insights to your ongoing project work</li>
-</ul>
-<blockquote>
-<p>The goal is not to change who you are — but to work <strong>better together</strong>.</p>
-</blockquote>
-</section></section>
-<section>
-<section id="final-takeaway" class="title-slide slide level1 center">
-<h1>Final takeaway</h1>
-
-</section>
-<section id="remember" class="slide level2">
-<h2>Remember</h2>
-<ul>
-<li>Differences are normal</li>
-<li>Awareness reduces friction</li>
-<li>Adaptation improves teams</li>
-</ul>
-<p>DISC gives us a <strong>shared language</strong> — what you do with it is up to you.</p>
-
-
-</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/Bovi-Analytics-SmallLogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>https://bovi-analytics.github.io/BeastsAndBytes/</p>
+<p>https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/</p>
 </div>
 </div></div>
 

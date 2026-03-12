@@ -1654,123 +1654,116 @@
     "text": "Assignment\nLook at the milk production summaries of CURC and tell me what you think. What is going well, what is a potential weakness?"
   },
   {
-    "objectID": "slides/lec-10.html#sec-prerequisites",
-    "href": "slides/lec-10.html#sec-prerequisites",
-    "title": "Data transformations",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBase R provides some basic tools for creating and manipulating factors.\nWe’ll supplement these with the forcats package, which is part of the core tidyverse. It provides tools for dealing with categorical variables (and it’s an anagram of factors!) using a wide range of helpers for working with factors.\n\n\nlibrary(tidyverse)"
+    "objectID": "slides/lec-10.html#learning-goals",
+    "href": "slides/lec-10.html#learning-goals",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Learning goals",
+    "text": "Learning goals\n\nDefine each youngstock reproductive KPI precisely\nAdd common synonyms/aliases\nFor each metric: reflect on bias, momentum, variance, lag\nWhat question can each metric answer, or not\nIdentify minimum data fields needed to compute reliably"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics",
-    "href": "slides/lec-10.html#sec-factor-basics",
-    "title": "Data transformations",
-    "section": "Factor basics",
-    "text": "Factor basics\nImagine that you have a variable that records month:\n\nx1 &lt;- c(\"Dec\", \"Apr\", \"Jan\", \"Mar\")"
+    "objectID": "slides/lec-10.html#youngstock-kpis-why-theyre-different",
+    "href": "slides/lec-10.html#youngstock-kpis-why-theyre-different",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Youngstock KPIs: why they’re different",
+    "text": "Youngstock KPIs: why they’re different\n\nHeifers are not “DIM-based”; they’re age-based and growth/management dependent\nDenominators are often small and strongly affected by:\n\nenrollment criteria (eligible/not eligible)\nmissing heat detection and unrecorded services\npregnancy confirmation practices"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics-2",
-    "href": "slides/lec-10.html#sec-factor-basics-2",
-    "title": "Data transformations",
-    "section": "Factor basics",
-    "text": "Factor basics\nUsing a string to record this variable has two problems:\n\nThere are only twelve possible months, and there’s nothing saving you from typos:\n\nx2 &lt;- c(\"Dec\", \"Apr\", \"Jam\", \"Mar\")\n\nIt doesn’t sort in a useful way:\n\nsort(x1)\n\n[1] \"Apr\" \"Dec\" \"Jan\" \"Mar\""
+    "objectID": "slides/lec-10.html#data-prerequisites-heifers",
+    "href": "slides/lec-10.html#data-prerequisites-heifers",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Data prerequisites (heifers)",
+    "text": "Data prerequisites (heifers)\nMinimum fields:\n\nBirth date, ID, breed\nFirst heat date (if observed/sensor)\nFirst service date(s)\nPregnancy diagnosis date & outcome\nCalving date (first calving) or removal date"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics-3",
-    "href": "slides/lec-10.html#sec-factor-basics-3",
-    "title": "Data transformations",
-    "section": "Factor basics",
-    "text": "Factor basics\nYou can fix both of these problems with a factor.\nTo create a factor you must start by creating a list of the valid levels:\n\nmonth_levels &lt;- c(\n  \"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\",\n  \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"\n)"
+    "objectID": "slides/lec-10.html#data-prerequisites-heifers-1",
+    "href": "slides/lec-10.html#data-prerequisites-heifers-1",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Data prerequisites (heifers)",
+    "text": "Data prerequisites (heifers)\nOptional but bias-reducing:\n\nBody weight / ADG, BCS (if used), health events\nPen/group, breeding method (AI vs bull), semen ID"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics-4",
-    "href": "slides/lec-10.html#sec-factor-basics-4",
-    "title": "Data transformations",
-    "section": "Factor basics",
-    "text": "Factor basics\nNow you can create a factor:\n\ny1 &lt;- factor(x1, levels = month_levels)\ny1\n\n[1] Dec Apr Jan Mar\nLevels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec\n\nsort(y1)\n\n[1] Jan Mar Apr Dec\nLevels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+    "objectID": "slides/lec-10.html#age-at-first-heat",
+    "href": "slides/lec-10.html#age-at-first-heat",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Age at first heat",
+    "text": "Age at first heat\n\nSynonyms: age at puberty, age at first estrus\nDefinition: age (days or months) at first recorded estrus event.\nBias - Under-detection (no sensors, low observation intensity) - “First recorded” ≠ “first occurred”\nMomentum - Reflects months of rearing decisions (nutrition, health) → slow to change\nVariance - Small cohorts + seasonality in observation/sensors\nLag - Management change today shows up only when new calves reach puberty age"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics-6",
-    "href": "slides/lec-10.html#sec-factor-basics-6",
-    "title": "Data transformations",
-    "section": "Factor NA",
-    "text": "Factor NA\nAnd any values not in the level will be silently converted to NA:\n\nx2 &lt;- c(\"Dec\", \"Apr\", \"Jam\", \"Mar\")\ny2 &lt;- factor(x2, levels = month_levels)\ny2\n\n[1] Dec  Apr  &lt;NA&gt; Mar \nLevels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+    "objectID": "slides/lec-10.html#age-at-first-insemination",
+    "href": "slides/lec-10.html#age-at-first-insemination",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Age at first insemination",
+    "text": "Age at first insemination\n\nSynonyms: age at first service, age at first AI\nDefinition: age at first recorded insemination (AI or bull service if recorded).\nBias - Eligibility rules (min BW/age) differ by farm - Unrecorded natural services inflate “late” ages\nMomentum - Strongly driven by growth program (pipeline)\nVariance - Clustered by breeding season / staffing\nLag - Nutrition changes → growth → later first service effects"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics-7",
-    "href": "slides/lec-10.html#sec-factor-basics-7",
-    "title": "Data transformations",
-    "section": "Factor NA",
-    "text": "Factor NA\nThis seems risky, so you might want to use forcats::fct() instead, which will throw a error warning:\n\ny2 &lt;- fct(x2, levels = month_levels)\n\nError in `fct()`:\n! All values of `x` must appear in `levels` or `na`\nℹ Missing level: \"Jam\""
+    "objectID": "slides/lec-10.html#age-at-pregnancy",
+    "href": "slides/lec-10.html#age-at-pregnancy",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Age at pregnancy",
+    "text": "Age at pregnancy\n\nSynonyms: age at conception (often approximated), age at confirmed pregnancy\nDefinition (recommended): - age at pregnancy confirmation date - optionally infer conception date = AI date + 0 (for AI-based conception)\nBias - Delayed pregnancy diagnosis shifts ages later - Pregnancy loss misclassified if not rechecked\nMomentum - Influenced by both service timing and conception success\nVariance - Small n; strong clustering by bull/tech\nLag - Program changes impact after heifers reach breeding eligibility"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics-8",
-    "href": "slides/lec-10.html#sec-factor-basics-8",
-    "title": "Data transformations",
-    "section": "Factor sorting",
-    "text": "Factor sorting\nSorting alphabetically is slightly risky because not every computer will sort strings in the same way. So forcats::fct() orders by first appearance in the original vector:\n\nfct(x1)\n\n[1] Dec Apr Jan Mar\nLevels: Dec Apr Jan Mar"
+    "objectID": "slides/lec-10.html#expected-calving-age",
+    "href": "slides/lec-10.html#expected-calving-age",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Expected calving age",
+    "text": "Expected calving age\n\nSynonyms: predicted calving age, due-date age\nDefinition: age at expected calving date = pregnancy date + gestation length (standardized or breed-specific).\nBias - If pregnancy date is “confirmation date,” due date is biased late unless corrected - Missing or incorrect gestation length assumptions\nMomentum - Mirrors age at pregnancy with additional fixed lag\nVariance - Minimal beyond pregnancy date noise\nLag - Inherent gestation lag"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-basics-9",
-    "href": "slides/lec-10.html#sec-factor-basics-9",
-    "title": "Data transformations",
-    "section": "Factor access",
-    "text": "Factor access\nIf you ever need to see the set of valid levels directly, you can do so with levels():\n\nlevels(y2)\n\n [1] \"Jan\" \"Feb\" \"Mar\" \"Apr\" \"May\" \"Jun\" \"Jul\" \"Aug\" \"Sep\" \"Oct\" \"Nov\" \"Dec\""
+    "objectID": "slides/lec-10.html#number-of-inseminations-per-heifer",
+    "href": "slides/lec-10.html#number-of-inseminations-per-heifer",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Number of inseminations per heifer",
+    "text": "Number of inseminations per heifer\n\nSynonyms: services per heifer, service intensity\nDefinition: total services recorded for heifers in a defined cohort/time window.\nBias - Missing service records (especially natural service) - Heifers sold/culled mid-process (censoring)\nMomentum - Will improve slowly; reflects both estrus detection and fertility\nVariance - High at small n; outliers dominate (repeat breeders)\nLag - Responds after enough heifers complete breeding cycle"
   },
   {
-    "objectID": "slides/lec-10.html#sec-reading-csvs",
-    "href": "slides/lec-10.html#sec-reading-csvs",
-    "title": "Data transformations",
-    "section": "Factors in CSV files",
-    "text": "Factors in CSV files\nYou can also create a factor when reading your data with readr with col_factor():\n\ncsv &lt;- \"\nmonth,value\nJan,12\nFeb,56\nMar,12\"\n\ndf &lt;- read_csv(csv, col_types = cols(month = col_factor(month_levels)))\ndf$month\n\n[1] Jan Feb Mar\nLevels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+    "objectID": "slides/lec-10.html#number-of-heifers-pregnant",
+    "href": "slides/lec-10.html#number-of-heifers-pregnant",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Number of heifers pregnant",
+    "text": "Number of heifers pregnant\n\nSynonyms: pregnant heifer inventory\nDefinition: count of heifers with confirmed pregnancy (cross-sectional).\nBias - Depends on pregnancy check schedule and recording - Pregnancy loss not updated → overcount\nMomentum - Inventory responds slowly (pipeline)\nVariance - Lower if herd is large; higher for small operations\nLag - Built-in due to breeding + preg-check delay"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-reorder-1",
-    "href": "slides/lec-10.html#sec-factor-reorder-1",
-    "title": "Data transformations",
-    "section": "Factor reorder",
-    "text": "Factor reorder\nImagine the following plot, what would you like to ameliorate it for"
+    "objectID": "slides/lec-10.html#number-of-youngstock-not-served-16-months",
+    "href": "slides/lec-10.html#number-of-youngstock-not-served-16-months",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Number of youngstock not served > 16 months",
+    "text": "Number of youngstock not served &gt; 16 months\n\nSynonyms: overdue heifers, eligible-not-bred\nDefinition: count of heifers older than threshold (e.g., 16 mo) with no recorded service.\nBias - Missing service records; unrecorded bull exposure - “Eligibility” should ideally include weight/health, not just age\nMomentum - Sensitive to backlog (can change fast if you “catch up”)\nVariance - Strongly seasonal if breeding is seasonal\nLag - Low (operational metric)"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-reorder-2",
-    "href": "slides/lec-10.html#sec-factor-reorder-2",
-    "title": "Data transformations",
-    "section": "Factor reorder",
-    "text": "Factor reorder\nIt is hard to read this plot because there’s no overall pattern. We can improve it by reordering the levels of relig using fct_reorder(). fct_reorder() takes three arguments:\n\n.f, the factor whose levels you want to modify.\n.x, a numeric vector that you want to use to reorder the levels.\nOptionally, .fun, a function that’s used if there are mu\n\n\nggplot(relig_summary, aes(x = tvhours, y = fct_reorder(relig, tvhours))) +\n  geom_point()"
+    "objectID": "slides/lec-10.html#age-at-first-calving",
+    "href": "slides/lec-10.html#age-at-first-calving",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Age at first calving",
+    "text": "Age at first calving\n\nSynonyms: AFC (age at first calving)\nDefinition: age at first calving date.\nBias - Sold/cull heifers excluded (survivorship bias) - Induced calving / abortion not handled consistently\nMomentum - Highly “sticky”: reflects months/years of upstream decisions\nVariance - Moderate; depends on cohort size\nLag - Long (breeding + gestation)"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-reorder-3",
-    "href": "slides/lec-10.html#sec-factor-reorder-3",
-    "title": "Data transformations",
-    "section": "Factor reorder",
-    "text": "Factor reorder"
+    "objectID": "slides/lec-10.html#conception-rate-first-insemination-heifers",
+    "href": "slides/lec-10.html#conception-rate-first-insemination-heifers",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Conception rate first insemination (heifers)",
+    "text": "Conception rate first insemination (heifers)\n\nSynonyms: first-service conception rate, P/AI at 1st service\nDefinition: among heifers receiving first service, proportion confirmed pregnant from that service.\nBias - Pregnancy diagnosis timing and loss confound “conception” - If rechecks aren’t done, early loss misclassified as failure or success\nMomentum - Can change faster than AFC but still requires preg-check pipeline\nVariance - High when few first services occur\nLag - At least until pregnancy confirmation"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-relevel-1",
-    "href": "slides/lec-10.html#sec-factor-relevel-1",
-    "title": "Data transformations",
-    "section": "Factor relevel",
-    "text": "Factor relevel\nImagine the following plot, maybe you would like to have “Not applicable” not show up at the top of the graph."
+    "objectID": "slides/lec-10.html#total-number-of-pregnancies-heifers",
+    "href": "slides/lec-10.html#total-number-of-pregnancies-heifers",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Total number of pregnancies (heifers)",
+    "text": "Total number of pregnancies (heifers)\n\nSynonyms: total heifer pregnancies, preg count\nDefinition: total confirmed pregnancies in a time window (cross-sectional or cohort).\nBias - Double counting if rechecks create duplicate pregnancy events - Under-count if no confirmation recorded\nMomentum - Inventory-like\nVariance - Depends on heifer flow\nLag - Driven by pregnancy diagnosis schedule"
   },
   {
-    "objectID": "slides/lec-10.html#sec-factor-relevel-2",
-    "href": "slides/lec-10.html#sec-factor-relevel-2",
-    "title": "Data transformations",
-    "section": "Factor relevel",
-    "text": "Factor relevel\nYou can use fct_relevel(). It takes a factor, .f, and then any number of levels that you want to move to the front of the line.\n\nggplot(rincome_summary, aes(x = age, y = fct_relevel(rincome, \"Not applicable\"))) +\n  geom_point()"
+    "objectID": "slides/lec-10.html#total-number-of-inseminations-heifers",
+    "href": "slides/lec-10.html#total-number-of-inseminations-heifers",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Total number of inseminations (heifers)",
+    "text": "Total number of inseminations (heifers)\n\nDefinition: total recorded services for heifers over a period.\nBias - Missing recording, bull exposure, duplicate entries\nMomentum - Responds quickly to management changes (technique, scheduling)\nVariance - High if only a few breeding days\nLag - Minimal (event metric)"
   },
   {
-    "objectID": "slides/lec-10.html#sec-other-factor-1",
-    "href": "slides/lec-10.html#sec-other-factor-1",
-    "title": "Data transformations",
-    "section": "Other usefull refactoring functions",
-    "text": "Other usefull refactoring functions\n\nfct_reorder2(.f, .x, .y) reorders the factor .f by the .y values associated with the largest .x values.\nfct_infreq() to order levels in decreasing frequency.\nCombine it with fct_rev() if you want them in increasing frequency.\nfct_recode() allows you to recode, or change, the value of each level."
-  },
-  {
-    "objectID": "slides/lec-10.html#sec-other-factor-2",
-    "href": "slides/lec-10.html#sec-other-factor-2",
-    "title": "Data transformations",
-    "section": "Other usefull re-factoring functions",
-    "text": "Other usefull re-factoring functions\n\nfct_collapse() is a useful variant of fct_recode() using a vector of old levels.\nfct_lump_lowfreq() is a simple starting point that progressively lumps the smallest groups categories into “Other”, always keeping “Other” as the smallest category.\nfct_lump_n() specifies the exact number of groups."
+    "objectID": "slides/lec-10.html#implementation-notes-heifer-dashboard",
+    "href": "slides/lec-10.html#implementation-notes-heifer-dashboard",
+    "title": "Lecture - Youngstock metrics",
+    "section": "Implementation notes (heifer dashboard)",
+    "text": "Implementation notes (heifer dashboard)\nRecommended visuals:\n\nCohort waterfall: birth → first service → pregnant → calved\nHistogram: age at first service, age at pregnancy, AFC\n“Overdue” list: &gt;16 mo not served (action list)"
   },
   {
     "objectID": "slides/lec-12.html#sec-prerequisites",
@@ -2018,753 +2011,424 @@
     "text": "Questions?\nFeel free to reach out with any questions about decision trees or random forests!\n\n\nR version 4.4.0 (2024-04-24)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 \nLAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: UTC\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices datasets  utils     methods   base     \n\nother attached packages:\n [1] DiagrammeR_1.0.11    randomForest_4.7-1.2 caret_7.0-1         \n [4] lattice_0.22-6       rpart.plot_3.1.2     rpart_4.1.23        \n [7] lubridate_1.9.4      forcats_1.0.0        stringr_1.5.1       \n[10] dplyr_1.1.4          purrr_1.0.4          readr_2.1.5         \n[13] tidyr_1.3.1          tibble_3.2.1         ggplot2_3.5.1       \n[16] tidyverse_2.0.0     \n\nloaded via a namespace (and not attached):\n [1] tidyselect_1.2.1     timeDate_4041.110    farver_2.1.2        \n [4] fastmap_1.2.0        pROC_1.18.5          digest_0.6.36       \n [7] timechange_0.3.0     lifecycle_1.0.4      survival_3.5-8      \n[10] magrittr_2.0.3       compiler_4.4.0       rlang_1.1.6         \n[13] tools_4.4.0          yaml_2.3.9           data.table_1.17.0   \n[16] knitr_1.48           labeling_0.4.3       htmlwidgets_1.6.4   \n[19] plyr_1.8.9           RColorBrewer_1.1-3   withr_3.0.2         \n[22] nnet_7.3-19          grid_4.4.0           stats4_4.4.0        \n[25] e1071_1.7-16         colorspace_2.1-1     future_1.34.0       \n[28] globals_0.16.3       scales_1.3.0         iterators_1.0.14    \n[31] MASS_7.3-60.2        cli_3.6.4            rmarkdown_2.27      \n[34] generics_0.1.3       future.apply_1.11.3  reshape2_1.4.4      \n[37] tzdb_0.5.0           visNetwork_2.1.2     proxy_0.4-27        \n[40] splines_4.4.0        parallel_4.4.0       vctrs_0.6.5         \n[43] hardhat_1.4.1        Matrix_1.7-0         jsonlite_1.8.8      \n[46] hms_1.1.3            listenv_0.9.1        foreach_1.5.2       \n[49] gower_1.0.2          recipes_1.2.0        glue_1.7.0          \n[52] parallelly_1.43.0    codetools_0.2-20     stringi_1.8.4       \n[55] gtable_0.3.6         munsell_0.5.1        pillar_1.10.1       \n[58] htmltools_0.5.8.1    ipred_0.9-15         lava_1.8.1          \n[61] R6_2.5.1             evaluate_0.24.0      renv_1.1.4          \n[64] class_7.3-22         Rcpp_1.0.14          nlme_3.1-164        \n[67] prodlim_2024.06.25   xfun_0.45            pkgconfig_2.0.3     \n[70] ModelMetrics_1.2.2.2"
   },
   {
-    "objectID": "slides/lec-9.html#sec-setup",
-    "href": "slides/lec-9.html#sec-setup",
-    "title": "Data transformations",
-    "section": "Setup",
-    "text": "Setup\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+    "objectID": "slides/lec-9.html#learning-goals",
+    "href": "slides/lec-9.html#learning-goals",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Learning goals",
+    "text": "Learning goals\n\nDistinguish cross-sectional vs cohort reproductive analytics\nBuild a KPI “stack” (events → rates → decisions)\nUnderstand how program design (heat vs TAI) changes denominators\nPrepare to deep-dive the metric list (Parts 3–4)"
   },
   {
-    "objectID": "slides/lec-9.html#sec-prerequisites",
-    "href": "slides/lec-9.html#sec-prerequisites",
-    "title": "Data transformations",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nNumeric vectors are the backbone of data science\nBut we still need the tidyverse because we’ll use these base R functions inside of tidyverse functions like mutate() and filter().\n\n\nlibrary(tidyverse)\nlibrary(nycflights13)"
+    "objectID": "slides/lec-9.html#the-kpi-that-runs-the-farm",
+    "href": "slides/lec-9.html#the-kpi-that-runs-the-farm",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "The KPI that “runs the farm”",
+    "text": "The KPI that “runs the farm”\nOn large dairies, the common high-level metric is the 21-day pregnancy rate (often used as the primary performance metric).\nIt is determined by:\n\nAI service rate (submission of eligible cows)\nPregnancies per AI (P/AI) at a specified time post-AI"
   },
   {
-    "objectID": "slides/lec-9.html#sec-making-numbers",
-    "href": "slides/lec-9.html#sec-making-numbers",
-    "title": "Data transformations",
-    "section": "Making numbers",
-    "text": "Making numbers\nIn most cases, you’ll get numbers already recorded in one of R’s numeric types:\n\ninteger\ndouble.\n\nIn some cases, however, you’ll encounter them as strings, possibly because you’ve created them by pivoting from column headers or because something has gone wrong in your data import process."
+    "objectID": "slides/lec-9.html#a-practical-decomposition",
+    "href": "slides/lec-9.html#a-practical-decomposition",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "A practical decomposition",
+    "text": "A practical decomposition\nFor a time window (often 21 days):\n\nInsemination rate / risk (IR): among eligible, fraction inseminated\nConception rate / risk (CR): among inseminated, fraction that conceived\nPregnancy rate / risk (PR): among eligible, fraction that became pregnant\n\nRule of thumb (when windows align): &gt; PR ≈ IR × CR\nThis is why separating “submission” from “success” matters."
   },
   {
-    "objectID": "slides/lec-9.html#sec-parsing-numbers",
-    "href": "slides/lec-9.html#sec-parsing-numbers",
-    "title": "Data transformations",
-    "section": "Parsing numbers",
-    "text": "Parsing numbers\nreadr provides two useful functions for parsing strings into numbers: parse_double() and parse_number(). Use parse_double() when you have numbers that have been written as strings:\n\nx &lt;- c(\"1.2\", \"5.6\", \"1e3\")\nparse_double(x)\n\n[1]    1.2    5.6 1000.0\n\n\nUse parse_number() when the string contains non-numeric text that you want to ignore. This is particularly useful for currency data and percentages:\n\nx &lt;- c(\"$1,234\", \"USD 3,513\", \"59%\")\nparse_number(x)\n\n[1] 1234 3513   59"
+    "objectID": "slides/lec-9.html#cross-sectional-analysis---snapshot",
+    "href": "slides/lec-9.html#cross-sectional-analysis---snapshot",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Cross-sectional analysis - snapshot",
+    "text": "Cross-sectional analysis - snapshot\n\n“Where are we today?”\nUses animals currently in the herd, current status counts\nExamples:\n\nDays open\nDays in milk?\nAnimals inseminated"
   },
   {
-    "objectID": "slides/lec-9.html#sec-counts-2",
-    "href": "slides/lec-9.html#sec-counts-2",
-    "title": "Data transformations",
-    "section": "Counts",
-    "text": "Counts\nIf you want to see the most common values, add sort = TRUE:\n\nflights |&gt; count(dest, sort = TRUE)\n\n# A tibble: 105 × 2\n   dest      n\n   &lt;chr&gt; &lt;int&gt;\n 1 ORD   17283\n 2 ATL   17215\n 3 LAX   16174\n 4 BOS   15508\n 5 MCO   14082\n 6 CLT   14064\n 7 SFO   13331\n 8 FLL   12055\n 9 MIA   11728\n10 DCA    9705\n# ℹ 95 more rows\n\n\nIf you want to see all the values:\n\n|&gt; View()\n|&gt; print(n = Inf)."
+    "objectID": "slides/lec-9.html#cohort-analysis---follow-through",
+    "href": "slides/lec-9.html#cohort-analysis---follow-through",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Cohort analysis - follow-through",
+    "text": "Cohort analysis - follow-through\n\n“How did this group perform over time?”\nTracks a defined entry group (e.g., calving week/month)\nExamples:\n\nDays to first service for cows calving in January\nPregnancy by 150 DIM for calving cohort\nHeifer age at pregnancy for birth cohort"
   },
   {
-    "objectID": "slides/lec-9.html#sec-counts-3",
-    "href": "slides/lec-9.html#sec-counts-3",
-    "title": "Data transformations",
-    "section": "Counts alternative",
-    "text": "Counts alternative\nSame computation “by hand” with group_by(), summarize() and n().\n\nflights |&gt; \n  group_by(dest) |&gt; \n  summarize(\n    n = n(),\n    delay = mean(arr_delay, na.rm = TRUE)\n  )\n\n# A tibble: 105 × 3\n   dest      n delay\n   &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;\n 1 ABQ     254  4.38\n 2 ACK     265  4.85\n 3 ALB     439 14.4 \n 4 ANC       8 -2.5 \n 5 ATL   17215 11.3 \n 6 AUS    2439  6.02\n 7 AVL     275  8.00\n 8 BDL     443  7.05\n 9 BGR     375  8.03\n10 BHM     297 16.9 \n# ℹ 95 more rows"
+    "objectID": "slides/lec-9.html#why-it-matters-denominator-drift",
+    "href": "slides/lec-9.html#why-it-matters-denominator-drift",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Why it matters: denominator drift",
+    "text": "Why it matters: denominator drift\nCross-sectional denominators:\n\nCan be distorted by culling, moves, missing preg checks, delayed recording\n\nCohort denominators:\n\nRequire good follow-up (loss to follow-up is explicit)\nBetter for program evaluation (“did Presynch-Ovsynch change outcomes?”)"
   },
   {
-    "objectID": "slides/lec-9.html#sec-counts-4",
-    "href": "slides/lec-9.html#sec-counts-4",
-    "title": "Data transformations",
-    "section": "Count distinct",
-    "text": "Count distinct\nThere are a couple of variants of n() and count() that you might find useful:\n\nn_distinct(x) counts the number of distinct (unique) values of one or more variables. For example, we could figure out which destinations are served by the most carriers:\n\nflights |&gt; \n  group_by(dest) |&gt; \n  summarize(carriers = n_distinct(carrier)) |&gt; \n  arrange(desc(carriers))\n\n# A tibble: 105 × 2\n   dest  carriers\n   &lt;chr&gt;    &lt;int&gt;\n 1 ATL          7\n 2 BOS          7\n 3 CLT          7\n 4 ORD          7\n 5 TPA          7\n 6 AUS          6\n 7 DCA          6\n 8 DTW          6\n 9 IAD          6\n10 MSP          6\n# ℹ 95 more rows"
+    "objectID": "slides/lec-9.html#when-to-use-which-rule-set",
+    "href": "slides/lec-9.html#when-to-use-which-rule-set",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "When to use which (rule set)",
+    "text": "When to use which (rule set)\nUse cross-sectional when:\n\nYou want rapid monitoring and operational lists\nYou need current “actionable” counts (who is open, who is overdue)\n\nUse cohort when:\n\nYou want causal-ish evaluation of policy changes\nYou compare periods, protocols, pens, technicians\n\nBest practice: run both—cross-sectional for operations, cohort for learning."
   },
   {
-    "objectID": "slides/lec-9.html#sec-counts-5",
-    "href": "slides/lec-9.html#sec-counts-5",
-    "title": "Data transformations",
-    "section": "Weighted count",
-    "text": "Weighted count\n\nA weighted count is a sum. For example you could “count” the number of miles each plane flew:\n\nflights |&gt; \n  group_by(tailnum) |&gt; \n  summarize(miles = sum(distance))\n\n# A tibble: 4,044 × 2\n   tailnum  miles\n   &lt;chr&gt;    &lt;dbl&gt;\n 1 D942DN    3418\n 2 N0EGMQ  250866\n 3 N10156  115966\n 4 N102UW   25722\n 5 N103US   24619\n 6 N104UW   25157\n 7 N10575  150194\n 8 N105UW   23618\n 9 N107US   21677\n10 N108UW   32070\n# ℹ 4,034 more rows"
+    "objectID": "slides/lec-9.html#metric-taxonomy",
+    "href": "slides/lec-9.html#metric-taxonomy",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Metric taxonomy",
+    "text": "Metric taxonomy\n\nTiming metrics (intervals)\n\ne.g., DIM to first service, days open, age at first calving\n\nCount/intensity metrics\n\ne.g., inseminations per pregnancy, &gt;3 services\n\nRate/risk metrics\n\nservice rate, conception rate, pregnancy rate, non-return rate\n\nInventory metrics\n\npregnant heifers, # eligible not served, total pregnancies"
   },
   {
-    "objectID": "slides/lec-9.html#sec-counts-6",
-    "href": "slides/lec-9.html#sec-counts-6",
-    "title": "Data transformations",
-    "section": "Weighted count",
-    "text": "Weighted count\nWeighted counts are a common problem so count() has a wt argument that does the same thing:\n```{r}\n#| results: false\nflights |&gt; count(tailnum, wt = distance)\n```"
+    "objectID": "slides/lec-9.html#monitoring-questions",
+    "href": "slides/lec-9.html#monitoring-questions",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Monitoring questions",
+    "text": "Monitoring questions\nWhen pregnancy rate is down:\n\nIs it data? (missing heats, late preg checks)\nDid eligibility change? (health holds, VWP, pen moves)\nDid submission/service change? (IR/service rate)"
   },
   {
-    "objectID": "slides/lec-9.html#sec-counts-7",
-    "href": "slides/lec-9.html#sec-counts-7",
-    "title": "Data transformations",
-    "section": "Counts missing",
-    "text": "Counts missing\n\nYou can count missing values by combining sum() and is.na(). In the flights dataset this represents flights that are cancelled:\n\nflights |&gt; \n  group_by(dest) |&gt; \n  summarize(n_cancelled = sum(is.na(dep_time))) \n\n# A tibble: 105 × 2\n   dest  n_cancelled\n   &lt;chr&gt;       &lt;int&gt;\n 1 ABQ             0\n 2 ACK             0\n 3 ALB            20\n 4 ANC             0\n 5 ATL           317\n 6 AUS            21\n 7 AVL            12\n 8 BDL            31\n 9 BGR            15\n10 BHM            25\n# ℹ 95 more rows"
+    "objectID": "slides/lec-9.html#monitoring-questions-1",
+    "href": "slides/lec-9.html#monitoring-questions-1",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Monitoring questions",
+    "text": "Monitoring questions\n\nDid P/AI change? (CR)\nDid loss change? (preg loss, return-to-estrus patterns)\n\nThis mirrors the management questions emphasized in reproductive programs: how cows are submitted for first AI and how nonpregnant cows are identified and reinseminated."
   },
   {
-    "objectID": "slides/lec-9.html#sec-minimum-and-maximum-1",
-    "href": "slides/lec-9.html#sec-minimum-and-maximum-1",
-    "title": "Data transformations",
-    "section": "Minimum and maximum",
-    "text": "Minimum and maximum\nThe arithmetic functions work with pairs of variables (or columns). Two closely related functions are pmin() and pmax(), which when given two or more variables will return the smallest or largest value in each row:\n\ndf &lt;- tribble(\n  ~x, ~y,\n  1,  3,\n  5,  2,\n  7, NA,\n)\n\ndf |&gt; \n  mutate(\n    min = pmin(x, y, na.rm = TRUE),\n    max = pmax(x, y, na.rm = TRUE)\n  )\n\n# A tibble: 3 × 4\n      x     y   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     3     1     3\n2     5     2     2     5\n3     7    NA     7     7"
+    "objectID": "slides/lec-9.html#bias-momentum-variance-lag-definitions",
+    "href": "slides/lec-9.html#bias-momentum-variance-lag-definitions",
+    "title": "Lecture – Cross-sectional vs cohort analysis analysis",
+    "section": "Bias, momentum, variance, lag (definitions)",
+    "text": "Bias, momentum, variance, lag (definitions)\nFor every metric, we will reflect on:\n\nBias: systematic distortion (selection, missingness, censoring, misclassification)\nMomentum: inertia due to biology & pipeline (today’s changes reflect past actions)\nVariance: random noise (small n, clustering by tech/pen/week)\nLag: delay between management change and metric response"
   },
   {
-    "objectID": "slides/lec-9.html#sec-minimum-and-maximum-2",
-    "href": "slides/lec-9.html#sec-minimum-and-maximum-2",
-    "title": "Data transformations",
-    "section": "Minimum and maximum",
-    "text": "Minimum and maximum\nNote that these are different to the summary functions min() and max() which take multiple observations and return a single value. You can tell that you’ve used the wrong form when all the minimums and all the maximums have the same value:\n\ndf |&gt; \n  mutate(\n    min = min(x, y, na.rm = TRUE),\n    max = max(x, y, na.rm = TRUE)\n  )\n\n# A tibble: 3 × 4\n      x     y   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     3     1     7\n2     5     2     1     7\n3     7    NA     1     7"
+    "objectID": "slides/lec-11.html#learning-goals",
+    "href": "slides/lec-11.html#learning-goals",
+    "title": "Lecture - Cow metrics",
+    "section": "Learning goals",
+    "text": "Learning goals\n\nDefine each cow KPI + synonyms\nFor each KPI: bias, momentum, variance, lag\nCalculate standard error for a rate and interpret it\nExplain monitoring differences: small vs large herds\nBuild CUSUM/EWMA monitoring for small-n situations"
   },
   {
-    "objectID": "slides/lec-9.html#sec-modular-arithmetic-1",
-    "href": "slides/lec-9.html#sec-modular-arithmetic-1",
-    "title": "Data transformations",
-    "section": "Modular arithmetic",
-    "text": "Modular arithmetic\nModular arithmetic is the technical name for the type of math you did before you learned about decimal places, i.e. division that yields a whole number and a remainder. In R, %/% does integer division and %% computes the remainder:\n\n1:10 %/% 3\n\n [1] 0 0 1 1 1 2 2 2 3 3\n\n1:10 %% 3\n\n [1] 1 2 0 1 2 0 1 2 0 1"
+    "objectID": "slides/lec-11.html#repro-performance-core-21-d-pregnancy-rate",
+    "href": "slides/lec-11.html#repro-performance-core-21-d-pregnancy-rate",
+    "title": "Lecture - Cow metrics",
+    "section": "Repro performance “core”: 21-d pregnancy rate",
+    "text": "Repro performance “core”: 21-d pregnancy rate\nOn large farms, reproductive performance is often tracked with 21-day pregnancy rate, driven by:\n\nAI service rate (submission)\nP/AI (conception rate)\n\nYour analytics should always decompose PR into IR × CR."
   },
   {
-    "objectID": "slides/lec-9.html#sec-modular-arithmetic-2",
-    "href": "slides/lec-9.html#sec-modular-arithmetic-2",
-    "title": "Data transformations",
-    "section": "Modular arithmetic",
-    "text": "Modular arithmetic\nModular arithmetic is handy for the flights dataset, because we can use it to unpack the sched_dep_time variable into hour and minute:\n\nflights |&gt; \n  mutate(\n    hour = sched_dep_time %/% 100,\n    minute = sched_dep_time %% 100,\n    .keep = \"used\"\n  )\n\n# A tibble: 336,776 × 3\n   sched_dep_time  hour minute\n            &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;\n 1            515     5     15\n 2            529     5     29\n 3            540     5     40\n 4            545     5     45\n 5            600     6      0\n 6            558     5     58\n 7            600     6      0\n 8            600     6      0\n 9            600     6      0\n10            600     6      0\n# ℹ 336,766 more rows"
+    "objectID": "slides/lec-11.html#days-in-milk-dim-to-first-insemination",
+    "href": "slides/lec-11.html#days-in-milk-dim-to-first-insemination",
+    "title": "Lecture - Cow metrics",
+    "section": "Days in milk (DIM) to first insemination",
+    "text": "Days in milk (DIM) to first insemination\n\nSynonyms: calving-to-first-service interval\nDefinition: DIM at first service.\nBias - VWP policy differences; health holds - Missing early heats/services shifts later\nMomentum - Strong pipeline; slow changes\nVariance - Moderate; clustered by calving season/pen\nLag - Responds after new calving cohorts pass VWP"
   },
   {
-    "objectID": "slides/lec-9.html#sec-modular-arithmetic-3",
-    "href": "slides/lec-9.html#sec-modular-arithmetic-3",
-    "title": "Data transformations",
-    "section": "Modular arithmetic",
-    "text": "Modular arithmetic\nWe can combine that with the mean(is.na(x)) trick from ?@sec-logical-summaries to see how the proportion of cancelled flights varies over the course of the day. The results are shown in Figure 1.\n\nflights |&gt; \n  group_by(hour = sched_dep_time %/% 100) |&gt; \n  summarize(prop_cancelled = mean(is.na(dep_time)), n = n()) |&gt; \n  filter(hour &gt; 1) |&gt; \n  ggplot(aes(x = hour, y = prop_cancelled)) +\n  geom_line(color = \"grey50\") + \n  geom_point(aes(size = n))\n\n\n\nFigure 1: A line plot with scheduled departure hour on the x-axis, and proportion of cancelled flights on the y-axis. Cancellations seem to accumulate over the course of the day until 8pm, very late flights are much less likely to be cancelled."
+    "objectID": "slides/lec-11.html#dim-to-first-heat",
+    "href": "slides/lec-11.html#dim-to-first-heat",
+    "title": "Lecture - Cow metrics",
+    "section": "DIM to first heat",
+    "text": "DIM to first heat\n\nSynonyms: days to first observed estrus postpartum\nBias - Under-detection (short estrus duration at high production) 1 - “Observed” ≠ “occurred”\nMomentum - Affected by transition health & energy balance\nVariance - High without sensors\nLag - First weeks postpartum"
   },
   {
-    "objectID": "slides/lec-9.html#sec-three-logarithms",
-    "href": "slides/lec-9.html#sec-three-logarithms",
-    "title": "Data transformations",
-    "section": "Three logarithms",
-    "text": "Three logarithms\nIn R, you have a choice of three logarithms:\n\nlog() (the natural log, base e),\nlog2() (base 2),\nlog10() (base 10)."
+    "objectID": "slides/lec-11.html#number-of-inseminations-per-pregnancy",
+    "href": "slides/lec-11.html#number-of-inseminations-per-pregnancy",
+    "title": "Lecture - Cow metrics",
+    "section": "Number of inseminations per pregnancy",
+    "text": "Number of inseminations per pregnancy\n\nSynonyms: services per conception, S/C\nDefinition: total services leading up to conception.\nBias - Censoring: open cows not yet pregnant - Mis-linked pregnancy to service\nMomentum - Improves slowly; repeat breeders dominate\nVariance - High; long tail distribution\nLag - Requires pregnancy outcome"
   },
   {
-    "objectID": "slides/lec-9.html#sec-logarithm-recommendation",
-    "href": "slides/lec-9.html#sec-logarithm-recommendation",
-    "title": "Data transformations",
-    "section": "Logarithm recommendation",
-    "text": "Logarithm recommendation\nWe recommend using log2() or log10():\n\nlog2() is easy to interpret because a difference of 1 on the log scale corresponds to doubling on the original scale and a difference of -1 corresponds to halving;\nlog10() is easy to back-transform because (e.g.) 3 is 10^3 = 1000.\n\nThe inverse of log() is exp(); to compute the inverse of log2() or log10() you’ll need to use 2^ or 10^."
+    "objectID": "slides/lec-11.html#number-of-inseminations-per-inseminated-cow-insemination-number",
+    "href": "slides/lec-11.html#number-of-inseminations-per-inseminated-cow-insemination-number",
+    "title": "Lecture - Cow metrics",
+    "section": "Number of inseminations per inseminated cow (insemination number)",
+    "text": "Number of inseminations per inseminated cow (insemination number)\n\nSynonyms: services per bred cow\nDefinition: average number of services among cows with ≥1 service (in window).\nBias - Window truncation (late services fall outside) - Open cows inflate if tracked cross-sectionally\nMomentum - Moderate\nVariance - High at small n\nLag - Low to moderate"
   },
   {
-    "objectID": "slides/lec-9.html#sec-rounding",
-    "href": "slides/lec-9.html#sec-rounding",
-    "title": "Data transformations",
-    "section": "Rounding",
-    "text": "Rounding\nUse round(x) to round a number to the nearest integer:\n\nround(123.456)\n\n[1] 123"
+    "objectID": "slides/lec-11.html#number-of-inseminations-per-non-pregnant-cow",
+    "href": "slides/lec-11.html#number-of-inseminations-per-non-pregnant-cow",
+    "title": "Lecture - Cow metrics",
+    "section": "Number of inseminations per non-pregnant cow",
+    "text": "Number of inseminations per non-pregnant cow\n\nSynonyms: services per open cow\nDefinition: among currently open cows, average services received.\nBias - Survivorship/culling (high-service cows often leave) - Pregnancy status misclassification\nMomentum - High inertia; management often reacts late\nVariance - High; heavily skewed\nLag - Low (operational)"
   },
   {
-    "objectID": "slides/lec-9.html#sec-rounding-digits",
-    "href": "slides/lec-9.html#sec-rounding-digits",
-    "title": "Data transformations",
-    "section": "Rounding digits",
-    "text": "Rounding digits\nYou can control the precision of the rounding with the second argument, digits. round(x, digits) rounds to the nearest 10^-n so digits = 2 will round to the nearest 0.01. This definition is useful because it implies round(x, -3) will round to the nearest thousand, which indeed it does:\n\nround(123.456, 2)  # two digits\n\n[1] 123.46\n\nround(123.456, 1)  # one digit\n\n[1] 123.5\n\nround(123.456, -1) # round to nearest ten\n\n[1] 120\n\nround(123.456, -2) # round to nearest hundred\n\n[1] 100"
+    "objectID": "slides/lec-11.html#animals-3-inseminations",
+    "href": "slides/lec-11.html#animals-3-inseminations",
+    "title": "Lecture - Cow metrics",
+    "section": "Animals > 3 inseminations",
+    "text": "Animals &gt; 3 inseminations\n\nSynonyms: repeat breeders, &gt;3 services\nDefinition: proportion or count of cows with services ≥4 and not confirmed pregnant.\nBias - Depends on pregnancy diagnosis timing - Culling removes worst cases\nMomentum - Sticky (accumulates)\nVariance - Moderate\nLag - Builds over months"
   },
   {
-    "objectID": "slides/lec-9.html#sec-rounding-digits---weirdness",
-    "href": "slides/lec-9.html#sec-rounding-digits---weirdness",
-    "title": "Data transformations",
-    "section": "Rounding digits - weirdness",
-    "text": "Rounding digits - weirdness\nThere’s one weirdness with round() that seems surprising at first glance:\n\nround(c(1.5, 2.5))\n\n[1] 2 2\n\n\nround() uses what’s known as “round half to even” or Banker’s rounding: if a number is half way between two integers, it will be rounded to the even integer. This is a good strategy because it keeps the rounding unbiased: half of all 0.5s are rounded up, and half are rounded down."
+    "objectID": "slides/lec-11.html#heat-detection-rate",
+    "href": "slides/lec-11.html#heat-detection-rate",
+    "title": "Lecture - Cow metrics",
+    "section": "Heat detection rate",
+    "text": "Heat detection rate\n\nSynonyms: estrus detection rate (EDR), detection efficiency\nDefinition (common): fraction of eligible cows in heat that are detected.\nPractical proxy: “submission rate” (see service rate) when direct heat is unobservable.\nBias - True heats are unobserved; sensors change sensitivity - High milk production shortens estrus duration → apparent EDR drops 1\nMomentum - Can change quickly with labor/sensors\nVariance - High day-to-day, lower over weeks\nLag - Low"
   },
   {
-    "objectID": "slides/lec-9.html#sec-rounding-digits---floorceiling",
-    "href": "slides/lec-9.html#sec-rounding-digits---floorceiling",
-    "title": "Data transformations",
-    "section": "Rounding digits - floor/ceiling",
-    "text": "Rounding digits - floor/ceiling\nround() is paired with floor() which always rounds down and ceiling() which always rounds up:\n\nx &lt;- 123.456\n\nfloor(x)\n\n[1] 123\n\nceiling(x)\n\n[1] 124"
+    "objectID": "slides/lec-11.html#pre-service-heat-detection-efficiency",
+    "href": "slides/lec-11.html#pre-service-heat-detection-efficiency",
+    "title": "Lecture - Cow metrics",
+    "section": "Pre-Service Heat Detection Efficiency",
+    "text": "Pre-Service Heat Detection Efficiency\n\nSynonyms: pre-breeding detection efficiency\nDefinition: detection/submission performance before first service.\nBias - VWP, pen moves, health holds\nMomentum - Moderate\nVariance - Moderate\nLag - Short"
   },
   {
-    "objectID": "slides/lec-9.html#sec-cutting-numbers-into-ranges-1",
-    "href": "slides/lec-9.html#sec-cutting-numbers-into-ranges-1",
-    "title": "Data transformations",
-    "section": "Cutting numbers into ranges",
-    "text": "Cutting numbers into ranges\nUse cut()1 to break up (aka bin) a numeric vector into discrete buckets:\n\nx &lt;- c(1, 2, 5, 10, 15, 20)\nx\n\n[1]  1  2  5 10 15 20\n\ncut(x, breaks = c(0, 5, 10, 15, 20))\n\n[1] (0,5]   (0,5]   (0,5]   (5,10]  (10,15] (15,20]\nLevels: (0,5] (5,10] (10,15] (15,20]\n\n\nggplot2 provides some helpers for common cases in cut_interval(), cut_number(), and cut_width(). ggplot2 is an admittedly weird place for these functions to live, but they are useful as part of histogram computation and were written before any other parts of the tidyverse existed."
+    "objectID": "slides/lec-11.html#post-service-heat-detection-efficiency",
+    "href": "slides/lec-11.html#post-service-heat-detection-efficiency",
+    "title": "Lecture - Cow metrics",
+    "section": "Post-Service Heat Detection Efficiency",
+    "text": "Post-Service Heat Detection Efficiency\n\nSynonyms: return-to-estrus detection efficiency\nDefinition: how well returns to heat are detected after an AI.\nBias - Pregnancy loss delays return-to-estrus distribution 1\nMomentum - Improves with monitoring/sensors\nVariance - High with small n\nLag - Medium (depends on cycle length + diagnosis schedule)"
   },
   {
-    "objectID": "slides/lec-9.html#sec-cutting-numbers-into-ranges-2",
-    "href": "slides/lec-9.html#sec-cutting-numbers-into-ranges-2",
-    "title": "Data transformations",
-    "section": "Cutting numbers into ranges",
-    "text": "Cutting numbers into ranges\nThe breaks don’t need to be evenly spaced:\n\ncut(x, breaks = c(0, 5, 10, 100))\n\n[1] (0,5]    (0,5]    (0,5]    (5,10]   (10,100] (10,100]\nLevels: (0,5] (5,10] (10,100]"
+    "objectID": "slides/lec-11.html#total-number-of-pregnancies",
+    "href": "slides/lec-11.html#total-number-of-pregnancies",
+    "title": "Lecture - Cow metrics",
+    "section": "Total number of pregnancies",
+    "text": "Total number of pregnancies\n\nDefinition: count of confirmed pregnancies (cross-sectional or within time window).\nBias - Recheck duplication or missing updates after loss\nMomentum - Inventory-like\nVariance - n-dependent\nLag - Preg-check schedule driven"
   },
   {
-    "objectID": "slides/lec-9.html#sec-cutting-numbers-into-ranges-3",
-    "href": "slides/lec-9.html#sec-cutting-numbers-into-ranges-3",
-    "title": "Data transformations",
-    "section": "Cutting numbers into ranges",
-    "text": "Cutting numbers into ranges\nYou can optionally supply your own labels. Note that there should be one less labels than breaks.\n\ncut(x, \n  breaks = c(0, 5, 10, 15, 20), \n  labels = c(\"sm\", \"md\", \"lg\", \"xl\")\n)\n\n[1] sm sm sm md lg xl\nLevels: sm md lg xl"
+    "objectID": "slides/lec-11.html#total-number-of-calvings",
+    "href": "slides/lec-11.html#total-number-of-calvings",
+    "title": "Lecture - Cow metrics",
+    "section": "Total number of calvings",
+    "text": "Total number of calvings\n\nDefinition: count of calving events.\nBias - Stillbirth/abortion recording differences\nMomentum - Very slow; year-long pipeline\nVariance - Low for large herds; high for small\nLag - Very long"
   },
   {
-    "objectID": "slides/lec-9.html#sec-cutting-numbers-into-ranges-4",
-    "href": "slides/lec-9.html#sec-cutting-numbers-into-ranges-4",
-    "title": "Data transformations",
-    "section": "Cutting numbers into ranges",
-    "text": "Cutting numbers into ranges\nAny values outside of the range of the breaks will become NA:\n\ny &lt;- c(NA, -10, 5, 10, 30)\ncut(y, breaks = c(0, 5, 10, 15, 20))\n\n[1] &lt;NA&gt;   &lt;NA&gt;   (0,5]  (5,10] &lt;NA&gt;  \nLevels: (0,5] (5,10] (10,15] (15,20]\n\n\nSee the documentation for other useful arguments like right and include.lowest, which control if the intervals are [a, b) or (a, b] and if the lowest interval should be [a, b]."
+    "objectID": "slides/lec-11.html#days-open",
+    "href": "slides/lec-11.html#days-open",
+    "title": "Lecture - Cow metrics",
+    "section": "Days open",
+    "text": "Days open\n\nSynonyms: calving-to-conception interval\nDefinition: days from calving to conception (or to confirmed pregnancy date with correction).\nBias - If you use pregnancy confirmation date instead of conception date → overestimates - Censoring: cows not yet pregnant\nMomentum - High inertia\nVariance - Moderate\nLag - Medium-long"
   },
   {
-    "objectID": "slides/lec-9.html#sec-cumulative-and-rolling-aggregates",
-    "href": "slides/lec-9.html#sec-cumulative-and-rolling-aggregates",
-    "title": "Data transformations",
-    "section": "Cumulative and rolling aggregates",
-    "text": "Cumulative and rolling aggregates\nBase R provides cumsum(), cumprod(), cummin(), cummax() for running, or cumulative, sums, products, mins and maxes. dplyr provides cummean() for cumulative means. Cumulative sums tend to come up the most in practice:\n\nx &lt;- 1:10\nx\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\ncumprod(x)\n\n [1]       1       2       6      24     120     720    5040   40320  362880\n[10] 3628800\n\n\nIf you need more complex rolling or sliding aggregates, try the slider package."
+    "objectID": "slides/lec-11.html#interval-first-service-conception",
+    "href": "slides/lec-11.html#interval-first-service-conception",
+    "title": "Lecture - Cow metrics",
+    "section": "Interval First Service – Conception",
+    "text": "Interval First Service – Conception\n\nSynonyms: first-service-to-conception interval\nDefinition: days between first service and service that resulted in pregnancy.\nBias - Censoring; pregnancy loss misclassification\nMomentum - Moderate\nVariance - Skewed\nLag - Medium"
   },
   {
-    "objectID": "slides/lec-9.html#sec-ranks-1",
-    "href": "slides/lec-9.html#sec-ranks-1",
-    "title": "Data transformations",
-    "section": "Ranks",
-    "text": "Ranks\ndplyr provides a number of ranking functions inspired by SQL, but you should always start with dplyr::min_rank(). It uses the typical method for dealing with ties, e.g., 1st, 2nd, 2nd, 4th.\n\nx &lt;- c(1, 3, 2, 2, 4, 20, 15, NA)\nmin_rank(x)\n\n[1]  1  4  2  2  5  7  6 NA"
+    "objectID": "slides/lec-11.html#calving-interval-historic-expected-predicted-adjusted",
+    "href": "slides/lec-11.html#calving-interval-historic-expected-predicted-adjusted",
+    "title": "Lecture - Cow metrics",
+    "section": "Calving interval (historic, expected, predicted, adjusted)",
+    "text": "Calving interval (historic, expected, predicted, adjusted)\n\nSynonyms: inter-calving interval (ICI)\n\nHistoric: actual previous calving-to-calving\nExpected/Predicted: using current pregnancy due date\nAdjusted: corrected for censored/open cows or policy (document your method)\n\nBias - Open cows missing; induced calving; pregnancy loss\nMomentum - Very high inertia\nVariance - Low in large herds\nLag - Very long"
   },
   {
-    "objectID": "slides/lec-9.html#sec-ranks-2",
-    "href": "slides/lec-9.html#sec-ranks-2",
-    "title": "Data transformations",
-    "section": "Ranks",
-    "text": "Ranks\nNote that the smallest values get the lowest ranks; use desc(x) to give the largest values the smallest ranks:\n\nmin_rank(desc(x))\n\n[1]  7  4  5  5  3  1  2 NA"
+    "objectID": "slides/lec-11.html#percentage-pregnant-animals",
+    "href": "slides/lec-11.html#percentage-pregnant-animals",
+    "title": "Lecture - Cow metrics",
+    "section": "Percentage pregnant animals",
+    "text": "Percentage pregnant animals\n\nSynonyms: pregnancy prevalence\nDefinition: pregnant / (pregnant + eligible open) at a snapshot.\nBias - Eligibility definition; missing pregnancy loss updates\nMomentum - Inventory inertia\nVariance - Lower in large herds\nLag - Medium"
   },
   {
-    "objectID": "slides/lec-9.html#sec-ranks-alternatives",
-    "href": "slides/lec-9.html#sec-ranks-alternatives",
-    "title": "Data transformations",
-    "section": "Ranks alternatives",
-    "text": "Ranks alternatives\nIf min_rank() doesn’t do what you need, look at the variants dplyr::row_number(), dplyr::dense_rank(), dplyr::percent_rank(), and dplyr::cume_dist(). See the documentation for details.\n\ndf &lt;- tibble(x = x)\ndf |&gt; \n  mutate(\n    row_number = row_number(x),\n    dense_rank = dense_rank(x),\n    percent_rank = percent_rank(x),\n    cume_dist = cume_dist(x)\n  )\n\n# A tibble: 8 × 5\n      x row_number dense_rank percent_rank cume_dist\n  &lt;dbl&gt;      &lt;int&gt;      &lt;int&gt;        &lt;dbl&gt;     &lt;dbl&gt;\n1     1          1          1        0         0.143\n2     3          4          3        0.5       0.571\n3     2          2          2        0.167     0.429\n4     2          3          2        0.167     0.429\n5     4          5          4        0.667     0.714\n6    20          7          6        1         1    \n7    15          6          5        0.833     0.857\n8    NA         NA         NA       NA        NA"
+    "objectID": "slides/lec-11.html#pregnant-at-100-dim",
+    "href": "slides/lec-11.html#pregnant-at-100-dim",
+    "title": "Lecture - Cow metrics",
+    "section": "% pregnant at 100 DIM",
+    "text": "% pregnant at 100 DIM\n\nSynonyms: pregnancy by 100 DIM\nDefinition: among cows reaching 100 DIM, fraction pregnant by that point (cohort-friendly).\nBias - Culling before 100 DIM (survivorship bias) - Missing preg checks\nMomentum - Medium-high\nVariance - Moderate\nLag - Medium"
   },
   {
-    "objectID": "slides/lec-9.html#sec-offsets",
-    "href": "slides/lec-9.html#sec-offsets",
-    "title": "Data transformations",
-    "section": "Offsets",
-    "text": "Offsets\ndplyr::lead() and dplyr::lag() allow you to refer to the values just before or just after the “current” value. They return a vector of the same length as the input, padded with NAs at the start or end:\n\nx &lt;- c(2, 5, 11, 11, 19, 35)\nlag(x)\n\n[1] NA  2  5 11 11 19\n\nlead(x)\n\n[1]  5 11 11 19 35 NA"
+    "objectID": "slides/lec-11.html#non-pregnant-at-200-dim",
+    "href": "slides/lec-11.html#non-pregnant-at-200-dim",
+    "title": "Lecture - Cow metrics",
+    "section": "% non-pregnant at 200 DIM",
+    "text": "% non-pregnant at 200 DIM\n\nSynonyms: open rate at 200 DIM\nBias - Culling before 200 DIM inflates “good” performance\nMomentum - High\nVariance - Moderate\nLag - Long"
   },
   {
-    "objectID": "slides/lec-9.html#sec-offsets---lag",
-    "href": "slides/lec-9.html#sec-offsets---lag",
-    "title": "Data transformations",
-    "section": "Offsets - lag",
-    "text": "Offsets - lag\n\nx - lag(x) gives you the difference between the current and previous value.\n\nx - lag(x)\n\n[1] NA  3  6  0  8 16\n\n\nx == lag(x) tells you when the current value changes.\n\nx == lag(x)\n\n[1]    NA FALSE FALSE  TRUE FALSE FALSE\n\n\n\nYou can lead or lag by more than one position by using the second argument, n."
+    "objectID": "slides/lec-11.html#insemination-rate-or-risk",
+    "href": "slides/lec-11.html#insemination-rate-or-risk",
+    "title": "Lecture - Cow metrics",
+    "section": "Insemination rate or risk",
+    "text": "Insemination rate or risk\n\nSynonyms: service rate, submission rate (SR)\nDefinition: eligible cows inseminated in a time window / eligible cows.\nLDHM Book context: AI service rate is a key determinant of 21-d pregnancy rate.\nBias - Eligibility definition (VWP, health holds) - Missing services\nMomentum - Can change quickly\nVariance - High in small herds\nLag - Low"
   },
   {
-    "objectID": "slides/lec-9.html#sec-consecutive-identifiers-1",
-    "href": "slides/lec-9.html#sec-consecutive-identifiers-1",
-    "title": "Data transformations",
-    "section": "Consecutive identifiers",
-    "text": "Consecutive identifiers\nSometimes you want to start a new group every time some event occurs. For example, when you’re looking at website data, it’s common to want to break up events into sessions, where you begin a new session after a gap of more than x minutes since the last activity. For example, imagine you have the times when someone visited a website:\n\nevents &lt;- tibble(\n  time = c(0, 1, 2, 3, 5, 10, 12, 15, 17, 19, 20, 27, 28, 30)\n)"
+    "objectID": "slides/lec-11.html#conception-rate-or-risk",
+    "href": "slides/lec-11.html#conception-rate-or-risk",
+    "title": "Lecture - Cow metrics",
+    "section": "Conception rate or risk",
+    "text": "Conception rate or risk\n\nSynonyms: P/AI, pregnancies per AI\nDefinition: pregnancies from AIs / total AIs (with consistent pregnancy check timing).\nLDHM Book context: P/AI is used as fertility measure for inseminated cows.\nBias - Pregnancy loss after check - Non-independent observations (same cow multiple AIs) - Tech/bull confounding\nMomentum - Medium\nVariance - High at small n\nLag - At least until pregnancy diagnosis"
   },
   {
-    "objectID": "slides/lec-9.html#sec-consecutive-identifiers-2",
-    "href": "slides/lec-9.html#sec-consecutive-identifiers-2",
-    "title": "Data transformations",
-    "section": "Consecutive identifiers",
-    "text": "Consecutive identifiers\nAnd you’ve computed the time between each event, and figured out if there’s a gap that’s big enough to qualify:\n\nevents &lt;- events |&gt; \n  mutate(\n    diff = time - lag(time, default = first(time)),\n    has_gap = diff &gt;= 5\n  )\nevents\n\n# A tibble: 14 × 3\n    time  diff has_gap\n   &lt;dbl&gt; &lt;dbl&gt; &lt;lgl&gt;  \n 1     0     0 FALSE  \n 2     1     1 FALSE  \n 3     2     1 FALSE  \n 4     3     1 FALSE  \n 5     5     2 FALSE  \n 6    10     5 TRUE   \n 7    12     2 FALSE  \n 8    15     3 FALSE  \n 9    17     2 FALSE  \n10    19     2 FALSE  \n11    20     1 FALSE  \n12    27     7 TRUE   \n13    28     1 FALSE  \n14    30     2 FALSE"
+    "objectID": "slides/lec-11.html#pregnancy-rate-or-risk",
+    "href": "slides/lec-11.html#pregnancy-rate-or-risk",
+    "title": "Lecture - Cow metrics",
+    "section": "Pregnancy rate or risk",
+    "text": "Pregnancy rate or risk\n\nSynonyms: 21-d pregnancy rate (when windowed), PR\nDefinition: eligible cows that become pregnant in window / eligible cows.\nBook context: 21-d pregnancy rate is widely used as the primary herd metric on large farms. 1\nBias - Window definition + eligibility drift - Double-count pregnancies if not careful with event logic\nMomentum - Medium\nVariance - Can be very high in small herds\nLag - Medium"
   },
   {
-    "objectID": "slides/lec-9.html#sec-consecutive-identifiers-3",
-    "href": "slides/lec-9.html#sec-consecutive-identifiers-3",
-    "title": "Data transformations",
-    "section": "Consecutive identifiers",
-    "text": "Consecutive identifiers\nBut how do we go from that logical vector to something that we can group_by()? cumsum(), from Section 5.11, comes to the rescue as gap, i.e. has_gap is TRUE, will increment group by one (?@sec-numeric-summaries-of-logicals):\n\nevents |&gt; mutate(\n  group = cumsum(has_gap)\n)\n\n# A tibble: 14 × 4\n    time  diff has_gap group\n   &lt;dbl&gt; &lt;dbl&gt; &lt;lgl&gt;   &lt;int&gt;\n 1     0     0 FALSE       0\n 2     1     1 FALSE       0\n 3     2     1 FALSE       0\n 4     3     1 FALSE       0\n 5     5     2 FALSE       0\n 6    10     5 TRUE        1\n 7    12     2 FALSE       1\n 8    15     3 FALSE       1\n 9    17     2 FALSE       1\n10    19     2 FALSE       1\n11    20     1 FALSE       1\n12    27     7 TRUE        2\n13    28     1 FALSE       2\n14    30     2 FALSE       2"
+    "objectID": "slides/lec-11.html#non-return-56",
+    "href": "slides/lec-11.html#non-return-56",
+    "title": "Lecture - Cow metrics",
+    "section": "Non-return % 56",
+    "text": "Non-return % 56\n\nSynonyms: NR56, 56-day nonreturn rate\nDefinition: proportion of inseminated cows that do not return to estrus within 56 days (often proxy for pregnancy).\nBias - Silent heats, missed heats, long cycles, pregnancy loss - Strongly affected by heat detection quality\nMomentum - Medium\nVariance - Moderate-high\nLag - Fixed by definition (56 days)"
   },
   {
-    "objectID": "slides/lec-9.html#sec-consecutive-identifiers-4",
-    "href": "slides/lec-9.html#sec-consecutive-identifiers-4",
-    "title": "Data transformations",
-    "section": "Consecutive identifiers",
-    "text": "Consecutive identifiers\nAnother approach for creating grouping variables is consecutive_id(), which starts a new group every time one of its arguments changes. For example, inspired by this stackoverflow question, imagine you have a data frame with a bunch of repeated values:\n\ndf &lt;- tibble(\n  x = c(\"a\", \"a\", \"a\", \"b\", \"c\", \"c\", \"d\", \"e\", \"a\", \"a\", \"b\", \"b\"),\n  y = c(1, 2, 3, 2, 4, 1, 3, 9, 4, 8, 10, 199)\n)"
+    "objectID": "slides/lec-11.html#days-lost-due-to-suboptimal-heat-detection-post-insemination",
+    "href": "slides/lec-11.html#days-lost-due-to-suboptimal-heat-detection-post-insemination",
+    "title": "Lecture - Cow metrics",
+    "section": "Days lost due to suboptimal Heat Detection (post insemination)",
+    "text": "Days lost due to suboptimal Heat Detection (post insemination)\nIdea: lost time between return to estrus and next service because heat wasn’t detected promptly.\nBias - Requires accurate return-to-estrus inference (hard if heats aren’t logged) - Pregnancy loss complicates return timing 1\nMomentum - Can change quickly with detection tools\nVariance - High\nLag - Medium"
   },
   {
-    "objectID": "slides/lec-9.html#sec-consecutive-identifiers-5",
-    "href": "slides/lec-9.html#sec-consecutive-identifiers-5",
-    "title": "Data transformations",
-    "section": "Consecutive identifiers",
-    "text": "Consecutive identifiers\nIf you want to keep the first row from each repeated x, you could use group_by(), consecutive_id(), and slice_head():\n\ndf |&gt; \n  group_by(id = consecutive_id(x)) |&gt; \n  slice_head(n = 1)\n\n# A tibble: 7 × 3\n# Groups:   id [7]\n  x         y    id\n  &lt;chr&gt; &lt;dbl&gt; &lt;int&gt;\n1 a         1     1\n2 b         2     2\n3 c         4     3\n4 d         3     4\n5 e         9     5\n6 a         4     6\n7 b        10     7"
+    "objectID": "slides/lec-11.html#days-lost-due-to-suboptimal-conception-rate",
+    "href": "slides/lec-11.html#days-lost-due-to-suboptimal-conception-rate",
+    "title": "Lecture - Cow metrics",
+    "section": "Days lost due to suboptimal Conception Rate",
+    "text": "Days lost due to suboptimal Conception Rate\nIdea: extra open days caused by failed conceptions (repeat AIs) versus a target CR.\nBias - Requires a counterfactual target; sensitive to censoring\nMomentum - Medium\nVariance - Depends on n\nLag - Medium-long"
   },
   {
-    "objectID": "slides/lec-9.html#sec-center",
-    "href": "slides/lec-9.html#sec-center",
-    "title": "Data transformations",
-    "section": "Center",
-    "text": "Center\n\nFunction mean()\nFunction median()"
+    "objectID": "slides/lec-11.html#the-basic-binomial-se",
+    "href": "slides/lec-11.html#the-basic-binomial-se",
+    "title": "Lecture - Cow metrics",
+    "section": "The basic binomial SE",
+    "text": "The basic binomial SE\nFor a proportion (rate) = x/n: [ SE() = ]\nInterpretation: - The smaller n, the larger the SE (noisy rates) - For fixed n, SE is largest near p = 0.5"
   },
   {
-    "objectID": "slides/lec-9.html#sec-minimum-maximum-and-quantiles-1",
-    "href": "slides/lec-9.html#sec-minimum-maximum-and-quantiles-1",
-    "title": "Data transformations",
-    "section": "Minimum, maximum, and quantiles",
-    "text": "Minimum, maximum, and quantiles\n\nmin() and max() will give you the largest and smallest values.\nAnother powerful tool is quantile() which is a generalization of the median:\n\nquantile(x, 0.25) will find the value of x that is greater than 25% of the values,\nquantile(x, 0.5) is equivalent to the median,\nquantile(x, 0.95) will find the value that’s greater than 95% of the values."
+    "objectID": "slides/lec-11.html#how-to-decrease-se-three-levers",
+    "href": "slides/lec-11.html#how-to-decrease-se-three-levers",
+    "title": "Lecture - Cow metrics",
+    "section": "How to decrease SE (three levers)",
+    "text": "How to decrease SE (three levers)\n\nIncrease n\n\nmore cows in denominator (bigger herd)\nlonger time window (aggregate weeks)\n\nReduce clustering\n\nstratify sensibly (don’t slice too thin by pen/tech/bull)\n\nUse smoothing / sequential methods\n\nEWMA, CUSUM (next section)\n\n\nRule of thumb: - To halve SE, you need ~4× the sample size."
   },
   {
-    "objectID": "slides/lec-9.html#sec-minimum-maximum-and-quantiles-2",
-    "href": "slides/lec-9.html#sec-minimum-maximum-and-quantiles-2",
-    "title": "Data transformations",
-    "section": "Minimum, maximum, and quantiles",
-    "text": "Minimum, maximum, and quantiles\nFor the flights data, you might want to look at the 95% quantile of delays rather than the maximum, because it will ignore the 5% of most delayed flights which can be quite extreme.\n\nflights |&gt;\n  group_by(year, month, day) |&gt;\n  summarize(\n    max = max(dep_delay, na.rm = TRUE),\n    q95 = quantile(dep_delay, 0.95, na.rm = TRUE),\n    .groups = \"drop\"\n  )\n\n# A tibble: 365 × 5\n    year month   day   max   q95\n   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1  2013     1     1   853  70.1\n 2  2013     1     2   379  85  \n 3  2013     1     3   291  68  \n 4  2013     1     4   288  60  \n 5  2013     1     5   327  41  \n 6  2013     1     6   202  51  \n 7  2013     1     7   366  51.6\n 8  2013     1     8   188  35.3\n 9  2013     1     9  1301  27.2\n10  2013     1    10  1126  31  \n# ℹ 355 more rows"
+    "objectID": "slides/lec-11.html#interpreting-se-in-practice",
+    "href": "slides/lec-11.html#interpreting-se-in-practice",
+    "title": "Lecture - Cow metrics",
+    "section": "Interpreting SE in practice",
+    "text": "Interpreting SE in practice\nExample logic (no need to memorize):\n\nIf CR = 35% on n = 20 AI\nSE ≈ sqrt(0.35*0.65/20) ≈ 0.106 (~10.6 percentage points)\n\nThat means week-to-week swings are expected even if “true” CR is stable."
   },
   {
-    "objectID": "slides/lec-9.html#sec-variation",
-    "href": "slides/lec-9.html#sec-variation",
-    "title": "Data transformations",
-    "section": "Variation",
-    "text": "Variation\nTwo commonly used summaries are\n\nthe standard deviation sd(x),\nthe inter-quartile range, IQR()."
+    "objectID": "slides/lec-11.html#large-herds",
+    "href": "slides/lec-11.html#large-herds",
+    "title": "Lecture - Cow metrics",
+    "section": "Large herds",
+    "text": "Large herds\n\nWeekly (or even daily) rates can be stable enough for decisions\nYou can stratify (parity, pen, tech) without destroying n\nControl charts detect small shifts earlier"
   },
   {
-    "objectID": "slides/lec-9.html#sec-positions",
-    "href": "slides/lec-9.html#sec-positions",
-    "title": "Data transformations",
-    "section": "Positions",
-    "text": "Positions\nThere’s one final type of summary that’s useful for numeric vectors, but also works with every other type of value: extracting a value at a specific position:\n\nfirst(x),\nlast(x), and\nnth(x, n)."
+    "objectID": "slides/lec-11.html#small-herds",
+    "href": "slides/lec-11.html#small-herds",
+    "title": "Lecture - Cow metrics",
+    "section": "Small herds",
+    "text": "Small herds\n\nWeekly rates are dominated by random variation\n“Pregnancy rate dropped from 30% to 10%” may be just n=10 vs n=10\nYou must:\n\naggregate longer (e.g., 6–12 weeks)\nuse smoothing/seq methods (EWMA/CUSUM)\nfocus on counts + timelines (who is overdue) alongside rates"
   },
   {
-    "objectID": "slides/lec-9.html#sec-positions-2",
-    "href": "slides/lec-9.html#sec-positions-2",
-    "title": "Data transformations",
-    "section": "Positions",
-    "text": "Positions\nFor example, we can find the first, fifth and last departure for each day:\n\nflights |&gt; \n  group_by(year, month, day) |&gt; \n  summarize(\n    first_dep = first(dep_time, na_rm = TRUE), \n    fifth_dep = nth(dep_time, 5, na_rm = TRUE),\n    last_dep = last(dep_time, na_rm = TRUE)\n  )\n\n`summarise()` has grouped output by 'year', 'month'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 365 × 6\n# Groups:   year, month [12]\n    year month   day first_dep fifth_dep last_dep\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;     &lt;int&gt;     &lt;int&gt;    &lt;int&gt;\n 1  2013     1     1       517       554     2356\n 2  2013     1     2        42       535     2354\n 3  2013     1     3        32       520     2349\n 4  2013     1     4        25       531     2358\n 5  2013     1     5        14       534     2357\n 6  2013     1     6        16       555     2355\n 7  2013     1     7        49       536     2359\n 8  2013     1     8       454       544     2351\n 9  2013     1     9         2       524     2252\n10  2013     1    10         3       530     2320\n# ℹ 355 more rows\n\n\nNB: Because dplyr functions use _ to separate components of function and arguments names, these functions use na_rm instead of na.rm."
+    "objectID": "slides/lec-11.html#why-ircrpr-can-mislead-at-small-n",
+    "href": "slides/lec-11.html#why-ircrpr-can-mislead-at-small-n",
+    "title": "Lecture - Cow metrics",
+    "section": "Why IR/CR/PR can mislead at small n",
+    "text": "Why IR/CR/PR can mislead at small n\n\nPR = IR × CR: both are noisy → PR is very noisy\nA single pregnancy (or loss) can swing the rate dramatically\nTherefore, use:\n\nconfidence intervals / SE\nrolling windows\nsequential charts"
   },
   {
-    "objectID": "slides/lec-9.html#sec-with-mutate",
-    "href": "slides/lec-9.html#sec-with-mutate",
-    "title": "Data transformations",
-    "section": "With mutate()",
-    "text": "With mutate()\nAs the names suggest, the summary functions are typically paired with summarize(). However, because of the recycling rules we discussed in ?@sec-recycling they can also be usefully paired with mutate(), particularly when you want do some sort of group standardization. For example:\n\nx / sum(x) calculates the proportion of a total.\n(x - mean(x)) / sd(x) computes a Z-score (standardized to mean 0 and sd 1).\n(x - min(x)) / (max(x) - min(x)) standardizes to range [0, 1].\nx / first(x) computes an index based on the first observation."
+    "objectID": "slides/lec-11.html#ewma-exponentially-weighted-moving-average",
+    "href": "slides/lec-11.html#ewma-exponentially-weighted-moving-average",
+    "title": "Lecture - Cow metrics",
+    "section": "EWMA (Exponentially Weighted Moving Average)",
+    "text": "EWMA (Exponentially Weighted Moving Average)\nPurpose: smooth noisy weekly rates while staying responsive.\nUpdate: [ EWMA_t = x_t + (1-)EWMA_{t-1} ] - x_t = this week’s rate (or 0/1 outcome stream) - small (0.1–0.3) = more smoothing\nInterpretation: - EWMA shows momentum (trend) better than raw rates"
   },
   {
-    "objectID": "slides/lec-11.html#sec-prerequisites",
-    "href": "slides/lec-11.html#sec-prerequisites",
-    "title": "Data transformations",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nThis chapter will focus on the lubridate package, which makes it easier to work with dates and times in R.\nAs of the latest tidyverse release, lubridate is part of core tidyverse.\n\n\nlibrary(tidyverse)"
+    "objectID": "slides/lec-11.html#cusum-cumulative-sum",
+    "href": "slides/lec-11.html#cusum-cumulative-sum",
+    "title": "Lecture - Cow metrics",
+    "section": "CUSUM (Cumulative Sum)",
+    "text": "CUSUM (Cumulative Sum)\nPurpose: detect sustained small shifts.\nBinary-outcome version idea: - Compare observed outcomes to target p0 - Accumulate evidence: - add (x_t - p0) each time step - alarm when cum-sum crosses threshold\nInterpretation: - CUSUM is great when n is small but you monitor continuously."
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-basics-1",
-    "href": "slides/lec-11.html#sec-dt-basics-1",
-    "title": "Data transformations",
-    "section": "Date and time basics",
-    "text": "Date and time basics\nThere are three types of date/time data that refer to an instant in time:\n\nA date. Tibbles print this as &lt;date&gt;.\nA time within a day. Tibbles print this as &lt;time&gt;.\nA date-time is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as &lt;dttm&gt;."
+    "objectID": "slides/lec-11.html#practical-setup-suggestion-small-herd",
+    "href": "slides/lec-11.html#practical-setup-suggestion-small-herd",
+    "title": "Lecture - Cow metrics",
+    "section": "Practical setup suggestion (small herd)",
+    "text": "Practical setup suggestion (small herd)\n\nTrack CR with:\n\nrolling 8-week CR\nEWMA of weekly CR (= 0.2)\n\nTrack IR similarly\nKeep an operational list:\n\noverdue to first service\n3 services open\nopen &gt;200 DIM"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-basics-2",
-    "href": "slides/lec-11.html#sec-dt-basics-2",
-    "title": "Data transformations",
-    "section": "Date and time basics",
-    "text": "Date and time basics\nYou should always use the simplest possible data type that works for your needs.\nThat means if you can use a date instead of a date-time, you should.\nDate-times are substantially more complicated because of the need to handle time zones, which we’ll come back to at the end of the chapter."
+    "objectID": "slides/lec-11.html#take-home",
+    "href": "slides/lec-11.html#take-home",
+    "title": "Lecture - Cow metrics",
+    "section": "Take-home",
+    "text": "Take-home\n\nAlways decompose PR into submission (IR) and success (CR)\nRates need uncertainty (SE/CI), especially in small herds\nEWMA/CUSUM convert noisy signals into actionable monitoring"
   },
   {
-    "objectID": "slides/lec-11.html#sec-current",
-    "href": "slides/lec-11.html#sec-current",
-    "title": "Data transformations",
-    "section": "Current",
-    "text": "Current\nTo get the current date or date-time you can use today() or now():\n\ntoday()\n\n[1] \"2026-03-10\"\n\nnow()\n\n[1] \"2026-03-10 00:49:03 UTC\""
+    "objectID": "slides/lec-8.html#learning-goals",
+    "href": "slides/lec-8.html#learning-goals",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Learning goals",
+    "text": "Learning goals\n\nRefresh core reproductive physiology (enough to interpret data)\nTranslate biology into questions your database must answer\nIdentify common failure modes (estrus, ovulation, luteolysis, anovulation)\nConnect management levers to measurable outcomes\n\n\nThis deck is intentionally “physiology-light but analytics-heavy”. We focus on the minimum biology needed to interpret KPIs correctly."
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-import-1",
-    "href": "slides/lec-11.html#sec-dt-import-1",
-    "title": "Data transformations",
-    "section": "Date-time importing",
-    "text": "Date-time importing\nIf your CSV contains an ISO8601 date or date-time, you don’t need to do anything; readr will automatically recognize it:\n\ncsv &lt;- \"\n  date,datetime\n  2022-01-02,2022-01-02 05:12\n\"\nread_csv(csv)\n\nRows: 1 Columns: 2\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndttm (1): datetime\ndate (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n# A tibble: 1 × 2\n  date       datetime           \n  &lt;date&gt;     &lt;dttm&gt;             \n1 2022-01-02 2022-01-02 05:12:00"
+    "objectID": "slides/lec-8.html#why-repro-is-a-data-problem",
+    "href": "slides/lec-8.html#why-repro-is-a-data-problem",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Why repro is a data problem",
+    "text": "Why repro is a data problem\n\nReproductive efficiency drives:\n\nMilk production dynamics (lactation length, calving pattern)\nReplacement rate, culling risk, heifer inventory, genetic progress\nLabor and treatment costs\n\nThe industry’s challenge: fertility declined then rebounded—requiring integration of physiology, management, nutrition, genetics, economics, and records."
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-import-2",
-    "href": "slides/lec-11.html#sec-dt-import-2",
-    "title": "Data transformations",
-    "section": "ISO8601",
-    "text": "ISO8601\nIf you haven’t heard of ISO8601 before, it’s an international standard1 for writing dates where the components of a date are organized from biggest to smallest separated by -.\nFor example, in ISO8601 May 3 2022 is 2022-05-03. ISO8601 dates can also include times, where hour, minute, and second are separated by :, and the date and time components are separated by either a T or a space.\nFor example, you could write 4:26pm on May 3 2022 as either 2022-05-03 16:26 or 2022-05-03T16:26.\nhttps://xkcd.com/1179/"
+    "objectID": "slides/lec-8.html#conceptual-model-open-pregnant",
+    "href": "slides/lec-8.html#conceptual-model-open-pregnant",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Conceptual model: “open → pregnant”",
+    "text": "Conceptual model: “open → pregnant”\nHow fast the program turns eligible non-pregnant cows into pregnant cows.\nKey workflow:\n\nCalve → VWP (voluntary waiting period)\nDetect heat or timed AI (TAI) program\nInseminate (service)"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-import-3",
-    "href": "slides/lec-11.html#sec-dt-import-3",
-    "title": "Data transformations",
-    "section": "Other formats",
-    "text": "Other formats\nFor other date-time formats, you’ll need to use col_types plus col_date() or col_datetime() along with a date-time format. The date-time format used by readr is a standard used across many programming languages, describing a date component with a % followed by a single character. For example, %Y-%m-%d specifies a date that’s a year, -, month (as number) -, day."
+    "objectID": "slides/lec-8.html#conceptual-model-open-pregnant-1",
+    "href": "slides/lec-8.html#conceptual-model-open-pregnant-1",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Conceptual model: “open → pregnant”",
+    "text": "Conceptual model: “open → pregnant”\n\nConceive (P/AI)\nMaintain pregnancy (loss matters)\nDiagnose (preg check)\nResync or rebreed non-pregnant cows"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-import-4a",
-    "href": "slides/lec-11.html#sec-dt-import-4a",
-    "title": "Data transformations",
-    "section": "Other formats",
-    "text": "Other formats\n\n\n\nType\nCode\nMeaning\nExample\n\n\n\n\nYear\n%Y\n4 digit year\n2021\n\n\n\n%y\n2 digit year\n21\n\n\nMonth\n%m\nNumber\n2\n\n\n\n%b\nAbbreviated name\nFeb\n\n\n\n%B\nFull name\nFebruary\n\n\nDay\n%d\nOne or two digits\n2\n\n\n\n%e\nTwo digits\n02"
+    "objectID": "slides/lec-8.html#minimal-physiology-you-must-know",
+    "href": "slides/lec-8.html#minimal-physiology-you-must-know",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Minimal physiology you must know",
+    "text": "Minimal physiology you must know\nEstrous cycle in cattle:\n\n~3 weeks, but longer in lactating cows vs heifers (≈23 d vs ≈21 d).\nOvarian structures:\n\nFollicles (dominant follicle → ovulation)\nCorpus luteum (CL → progesterone)\nLuteolysis timing differs (heifers vs lactating cows)."
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-import-4b",
-    "href": "slides/lec-11.html#sec-dt-import-4b",
-    "title": "Data transformations",
-    "section": "Other formats",
-    "text": "Other formats\n\n\n\nType\nCode\nMeaning\nExample\n\n\n\n\nTime\n%H\n24-hour hour\n13\n\n\n\n%I\n12-hour hour\n1\n\n\n\n%p\nAM/PM\npm\n\n\n\n%M\nMinutes\n35\n\n\n\n%S\nSeconds\n45\n\n\n\n%OS\nSeconds with decimal component\n45.35\n\n\n\n%Z\nTime zone name\nAmerica/Chicago\n\n\n\n%z\nOffset from UTC\n+0800\n\n\nOther\n%.\nSkip one non-digit\n:\n\n\n\n%*\nSkip any number of non-digits"
+    "objectID": "slides/lec-8.html#minimal-physiology-you-must-know-1",
+    "href": "slides/lec-8.html#minimal-physiology-you-must-know-1",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Minimal physiology you must know",
+    "text": "Minimal physiology you must know\nSix key hormones and what they mean for data interpretation:\n\nProgesterone (P4): from CL; maintains pregnancy; blocks estrus / GnRH surge\nEstradiol (E2): from follicle; standing heat; triggers GnRH surge\nGnRH: hypothalamus; triggers LH surge"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-import-5",
-    "href": "slides/lec-11.html#sec-dt-import-5",
-    "title": "Data transformations",
-    "section": "Datetime exmaple",
-    "text": "Datetime exmaple\n\ncsv &lt;- \"\n  date\n  01/02/15\n\"\n\nread_csv(csv, col_types = cols(date = col_date(\"%m/%d/%y\")))\n\n# A tibble: 1 × 1\n  date      \n  &lt;date&gt;    \n1 2015-01-02\n\nread_csv(csv, col_types = cols(date = col_date(\"%d/%m/%y\")))\n\n# A tibble: 1 × 1\n  date      \n  &lt;date&gt;    \n1 2015-02-01\n\nread_csv(csv, col_types = cols(date = col_date(\"%y/%m/%d\")))\n\n# A tibble: 1 × 1\n  date      \n  &lt;date&gt;    \n1 2001-02-15"
+    "objectID": "slides/lec-8.html#minimal-physiology-you-must-know-2",
+    "href": "slides/lec-8.html#minimal-physiology-you-must-know-2",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Minimal physiology you must know",
+    "text": "Minimal physiology you must know\n\nLH: surge causes ovulation; pulses drive dominant follicle growth\nFSH: initiates follicular wave\nPGF2α: uterus; regresses CL (luteolysis)"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-components-get-1",
-    "href": "slides/lec-11.html#sec-dt-components-get-1",
-    "title": "Data transformations",
-    "section": "Getting components",
-    "text": "Getting components\nYou can pull out individual parts of the date with the accessor functions year(), month(), mday() (day of the month), yday() (day of the year), wday() (day of the week), hour(), minute(), and second(). These are effectively the opposites of make_datetime()."
+    "objectID": "slides/lec-8.html#what-high-milk-production-changes-and-why-metrics-mislead",
+    "href": "slides/lec-8.html#what-high-milk-production-changes-and-why-metrics-mislead",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "What high milk production changes (and why metrics mislead)",
+    "text": "What high milk production changes (and why metrics mislead)\nHigh milk production is associated with:\n\nLarger ovulatory follicles but lower circulating E2\nLarger luteal tissue volume but lower circulating P4\nShorter estrus duration at higher production\nHigher risk of double ovulation (twinning risk)\n\nAnalytics consequence: “heat detection looks worse” partly because estrus expression is shorter, not only because labor/observation is worse."
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-components-get-2",
-    "href": "slides/lec-11.html#sec-dt-components-get-2",
-    "title": "Data transformations",
-    "section": "Getting components",
-    "text": "Getting components\n\ndatetime &lt;- ymd_hms(\"2026-07-08 12:34:56\")\n\nyear(datetime)\n\n[1] 2026\n\nmonth(datetime)\n\n[1] 7\n\nmday(datetime)\n\n[1] 8\n\nyday(datetime)\n\n[1] 189\n\nwday(datetime)\n\n[1] 4"
+    "objectID": "slides/lec-8.html#estrus-behavior-vs-biology",
+    "href": "slides/lec-8.html#estrus-behavior-vs-biology",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Estrus: behavior vs biology",
+    "text": "Estrus: behavior vs biology\n\nStanding heat is driven by E2 and ends when E2 drops below threshold (often before ovulation).\nAI timing should relate to onset of estrus (biologically tied to GnRH/LH surge), not just “was she seen?”\nTherefore: “no observed heat” ≠ “no ovulation”"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-components-abbr",
-    "href": "slides/lec-11.html#sec-dt-components-abbr",
-    "title": "Data transformations",
-    "section": "Getting components",
-    "text": "Getting components\nFor month() and wday() you can set label = TRUE to return the abbreviated name of the month or day of the week. Set abbr = FALSE to return the full name.\n\nmonth(datetime, label = TRUE)\n\n[1] Jul\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nwday(datetime, label = TRUE, abbr = FALSE)\n\n[1] Wednesday\n7 Levels: Sunday &lt; Monday &lt; Tuesday &lt; Wednesday &lt; Thursday &lt; ... &lt; Saturday"
+    "objectID": "slides/lec-8.html#anovulation-big-hidden-driver",
+    "href": "slides/lec-8.html#anovulation-big-hidden-driver",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Anovulation: big hidden driver",
+    "text": "Anovulation: big hidden driver\n\nAnovulation commonly defined as failure to ovulate around ~60–80 DIM\nMulti-study summaries show ~20–25% anovular cows around 60–70 DIM (large between-farm variation).\nTwo phenotypes (useful for interpreting progesterone/ultrasound data):\n\n“Small-follicle” anovular (insufficient LH pulses → follicles don’t reach ovulatory size)\n“Large-follicle/cystic” anovular (high E2 fails to induce GnRH/LH surge) 1"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-rounding",
-    "href": "slides/lec-11.html#sec-dt-rounding",
-    "title": "Data transformations",
-    "section": "Datetime rounding",
-    "text": "Datetime rounding\nAn alternative approach to plotting individual components is to round the date to a nearby unit of time, with floor_date(), round_date(), and ceiling_date(). Each function takes a vector of dates to adjust and then the name of the unit to round down (floor), round up (ceiling), or round to.\n\nweek = floor_date(dep_time, \"week\")"
+    "objectID": "slides/lec-8.html#management-lever-timed-ai-programs",
+    "href": "slides/lec-8.html#management-lever-timed-ai-programs",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Management lever: timed AI programs",
+    "text": "Management lever: timed AI programs\nWhy TAI exists:\n\nDetection-of-estrus-only programs often delay first service and reduce service rate.\nOvsynch (GnRH → PGF2α → GnRH → TAI) coordinates ovulation and CL regression, enabling timed insemination without estrus detection.\nPresynchronization (PGF2α and/or GnRH combinations) aims to start protocols at an optimal cycle stage and address anovulation."
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-modifying-1",
-    "href": "slides/lec-11.html#sec-dt-modifying-1",
-    "title": "Data transformations",
-    "section": "Datetime modifying",
-    "text": "Datetime modifying\nYou can also use each accessor function to modify the components of a date/time. This doesn’t come up much in data analysis, but can be useful when cleaning data that has clearly incorrect dates.\n\n(datetime &lt;- ymd_hms(\"2026-07-08 12:34:56\"))\n\n[1] \"2026-07-08 12:34:56 UTC\"\n\nyear(datetime) &lt;- 2030\ndatetime\n\n[1] \"2030-07-08 12:34:56 UTC\"\n\nmonth(datetime) &lt;- 01\ndatetime\n\n[1] \"2030-01-08 12:34:56 UTC\"\n\nhour(datetime) &lt;- hour(datetime) + 1\ndatetime\n\n[1] \"2030-01-08 13:34:56 UTC\""
+    "objectID": "slides/lec-8.html#what-questions-must-the-data-answer",
+    "href": "slides/lec-8.html#what-questions-must-the-data-answer",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "“What questions must the data answer?”",
+    "text": "“What questions must the data answer?”\nFor any herd (and each pen/group):\n\nEligibility / exposure\n\nWho is eligible to be bred this week (DIM, VWP, health holds)?\n\nSubmission\n\nWho was submitted to insemination (observed heat or protocol)?\n\nService quality\n\nWas the insemination recorded correctly (date/time, technician, semen, bull)?"
   },
   {
-    "objectID": "slides/lec-11.html#sec-dt-modifying-2",
-    "href": "slides/lec-11.html#sec-dt-modifying-2",
-    "title": "Data transformations",
-    "section": "Datetime updating",
-    "text": "Datetime updating\nYou can also use each accessor function to modify the components of a date/time. This doesn’t come up much in data analysis, but can be useful when cleaning data that has clearly incorrect dates.\n\nupdate(datetime, year = 2030, month = 2, mday = 2, hour = 2)\n\n[1] \"2030-02-02 02:34:56 UTC\""
+    "objectID": "slides/lec-8.html#what-questions-must-the-data-answer-1",
+    "href": "slides/lec-8.html#what-questions-must-the-data-answer-1",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "“What questions must the data answer?”",
+    "text": "“What questions must the data answer?”\n\nFertility outcome\n\nWho conceived (preg check), who didn’t, who lost?\n\nTimeliness\n\nHow long did it take from calving → first service → conception?\n\nBottleneck diagnosis\n\nIs low pregnancy rate due to service rate or P/AI?"
   },
   {
-    "objectID": "slides/lec-11.html#sec-timespan-basics-1",
-    "href": "slides/lec-11.html#sec-timespan-basics-1",
-    "title": "Data transformations",
-    "section": "Time span",
-    "text": "Time span\nNext you’ll learn about how arithmetic with dates works, including subtraction, addition, and division. Along the way, you’ll learn about three important classes that represent time spans:\n\nDurations, which represent an exact number of seconds.\nPeriods, which represent human units like weeks and months.\nIntervals, which represent a starting and ending point."
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-timespan-basics-2",
-    "href": "slides/lec-11.html#sec-timespan-basics-2",
-    "title": "Data transformations",
-    "section": "Time span",
-    "text": "Time span\nHow do you pick between duration, periods, and intervals?\nAs always, pick the simplest data structure that solves your problem.\n\nIf you only care about physical time, use a duration;\nIf you need to add human times, use a period;\nIf you need to figure out how long a span is in human units, use an interval."
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-duration-1",
-    "href": "slides/lec-11.html#sec-duration-1",
-    "title": "Data transformations",
-    "section": "Durations",
-    "text": "Durations\nIn R, when you subtract two dates, you get a difftime object:\n\n# How old is Miel?\nh_age &lt;- today() - ymd(\"1982-04-27\")\nh_age\n\nTime difference of 16023 days"
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-duration-2",
-    "href": "slides/lec-11.html#sec-duration-2",
-    "title": "Data transformations",
-    "section": "Durations",
-    "text": "Durations\nA difftime class object records a time span of seconds, minutes, hours, days, or weeks.\nThis ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the duration.\n\nas.duration(h_age)\n\n[1] \"1384387200s (~43.87 years)\""
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-duration-3",
-    "href": "slides/lec-11.html#sec-duration-3",
-    "title": "Data transformations",
-    "section": "Durations",
-    "text": "Durations\nDurations come with a bunch of convenient constructors:\n\ndseconds(15)\n\n[1] \"15s\"\n\ndminutes(10)\n\n[1] \"600s (~10 minutes)\"\n\ndhours(c(12, 24))\n\n[1] \"43200s (~12 hours)\" \"86400s (~1 days)\"  \n\nddays(0:5)\n\n[1] \"0s\"                \"86400s (~1 days)\"  \"172800s (~2 days)\"\n[4] \"259200s (~3 days)\" \"345600s (~4 days)\" \"432000s (~5 days)\"\n\ndweeks(3)\n\n[1] \"1814400s (~3 weeks)\"\n\ndyears(1)\n\n[1] \"31557600s (~1 years)\""
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-duration-4",
-    "href": "slides/lec-11.html#sec-duration-4",
-    "title": "Data transformations",
-    "section": "Durations",
-    "text": "Durations\n\nDurations always record the time span in seconds.\nLarger units are created by converting minutes, hours, days, weeks, and years to seconds: 60 seconds in a minute, 60 minutes in an hour, 24 hours in a day, and 7 days in a week.\nLarger time units are more problematic.\nA year uses the “average” number of days in a year, i.e. 365.25.\nThere’s no way to convert a month to a duration, because there’s just too much variation."
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-duration-5",
-    "href": "slides/lec-11.html#sec-duration-5",
-    "title": "Data transformations",
-    "section": "Add and multiply durations",
-    "text": "Add and multiply durations\nYou can add and multiply durations:\n\n2 * dyears(1)\n\n[1] \"63115200s (~2 years)\"\n\ndyears(1) + dweeks(12) + dhours(15)\n\n[1] \"38869200s (~1.23 years)\""
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-duration-6",
-    "href": "slides/lec-11.html#sec-duration-6",
-    "title": "Data transformations",
-    "section": "Add and substract durations",
-    "text": "Add and substract durations\nYou can add and subtract durations to and from days:\n\ntomorrow &lt;- today() + ddays(1)\ntomorrow\n\n[1] \"2026-03-11\"\n\nlast_year &lt;- today() - dyears(1)\nlast_year\n\n[1] \"2025-03-09 18:00:00 UTC\""
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-duration-7",
-    "href": "slides/lec-11.html#sec-duration-7",
-    "title": "Data transformations",
-    "section": "Whatch for unexpected results",
-    "text": "Whatch for unexpected results\nHowever, because durations represent an exact number of seconds, sometimes you might get an unexpected result:\n\none_am &lt;- ymd_hms(\"2026-03-08 01:00:00\", tz = \"America/New_York\")\n\none_am\n\n[1] \"2026-03-08 01:00:00 EST\"\n\none_am + ddays(1)\n\n[1] \"2026-03-09 02:00:00 EDT\"\n\n\nWhy is one day after 1am March 8, 2am March 9? If you look carefully at the date you might also notice that the time zones have changed. March 8 only has 23 hours because it’s when DST starts, so if we add a full days worth of seconds we end up with a different time."
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-periods-1",
-    "href": "slides/lec-11.html#sec-periods-1",
-    "title": "Data transformations",
-    "section": "Periods",
-    "text": "Periods\nLubridate provides periods solve this problem.\nPeriods are time spans but don’t have a fixed length in seconds, instead they work with “human” times, like days and months.\nThat allows them to work in a more intuitive way:\n\none_am\n\n[1] \"2026-03-08 01:00:00 EST\"\n\none_am + days(1)\n\n[1] \"2026-03-09 01:00:00 EDT\""
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-periods-2",
-    "href": "slides/lec-11.html#sec-periods-2",
-    "title": "Data transformations",
-    "section": "Periods",
-    "text": "Periods\nLike durations, periods can be created with a number of friendly constructor functions.\n\nhours(c(12, 24))\n\n[1] \"12H 0M 0S\" \"24H 0M 0S\"\n\ndays(7)\n\n[1] \"7d 0H 0M 0S\"\n\nmonths(1:6)\n\n[1] \"1m 0d 0H 0M 0S\" \"2m 0d 0H 0M 0S\" \"3m 0d 0H 0M 0S\" \"4m 0d 0H 0M 0S\"\n[5] \"5m 0d 0H 0M 0S\" \"6m 0d 0H 0M 0S\""
-  },
-  {
-    "objectID": "slides/lec-11.html#periods",
-    "href": "slides/lec-11.html#periods",
-    "title": "Data transformations",
-    "section": "Periods",
-    "text": "Periods\nYou can add and multiply periods:\n\n10 * (months(6) + days(1))\n\n[1] \"60m 10d 0H 0M 0S\"\n\ndays(50) + hours(25) + minutes(2)\n\n[1] \"50d 25H 2M 0S\""
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-periods-3",
-    "href": "slides/lec-11.html#sec-periods-3",
-    "title": "Data transformations",
-    "section": "Periods",
-    "text": "Periods\nAnd of course, add them to dates. Compared to durations, periods are more likely to do what you expect:\n\n# A leap year\nymd(\"2024-01-01\") + dyears(1)\n\n[1] \"2024-12-31 06:00:00 UTC\"\n\nymd(\"2024-01-01\") + years(1)\n\n[1] \"2025-01-01\"\n\n# Daylight saving time\none_am + ddays(1)\n\n[1] \"2026-03-09 02:00:00 EDT\"\n\none_am + days(1)\n\n[1] \"2026-03-09 01:00:00 EDT\""
-  },
-  {
-    "objectID": "slides/lec-11.html#sec-tz-1",
-    "href": "slides/lec-11.html#sec-tz-1",
-    "title": "Data transformations",
-    "section": "Time zones",
-    "text": "Time zones\nTime zones are an enormously complicated topic because of their interaction with geopolitical entities. Fortunately we don’t need to dig into all the details as they’re not all important for data analysis, but there are a few challenges we’ll need to tackle head on."
-  },
-  {
-    "objectID": "slides/lec-8.html#context",
-    "href": "slides/lec-8.html#context",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Context",
-    "text": "Context\n\nYou are working in teams on a semester‑long project\nTechnical skills matter — but how you work together often matters more\nMany team conflicts are not about competence, but about differences in style"
-  },
-  {
-    "objectID": "slides/lec-8.html#typical-team-friction-youve-probably-seen-this",
-    "href": "slides/lec-8.html#typical-team-friction-youve-probably-seen-this",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Typical team friction (you’ve probably seen this)",
-    "text": "Typical team friction (you’ve probably seen this)\n\n“They never speak up” vs “They talk too much”\n“Too slow and careful” vs “Too impulsive”\n“Too emotional” vs “Too cold and distant”\n\n\nDISC gives us a neutral language to talk about these differences"
-  },
-  {
-    "objectID": "slides/lec-8.html#pairshare",
-    "href": "slides/lec-8.html#pairshare",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Pair‑share",
-    "text": "Pair‑share\nIn your project group:\n\nWhat is one behavior that annoys you in team work?\nWhat is one behavior you need from others to do your best work?\n\n\nThe goal is not to judge people — it’s to notice patterns.\n\n\n\n\n−+\n02:00"
-  },
-  {
-    "objectID": "slides/lec-8.html#the-big-idea",
-    "href": "slides/lec-8.html#the-big-idea",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "The big idea",
-    "text": "The big idea\nDISC is a behavioral framework, not a test of intelligence, values, or ability.\nIt describes patterns in:\n\nHow people communicate\nHow they approach tasks\nHow they respond to challenges and others"
-  },
-  {
-    "objectID": "slides/lec-8.html#important-disclaimers",
-    "href": "slides/lec-8.html#important-disclaimers",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Important disclaimers",
-    "text": "Important disclaimers\n\nDISC is not a diagnosis\nThere is no good or bad type\nMost people are a blend, not a pure type\nStyles describe preferences, not limits"
-  },
-  {
-    "objectID": "slides/lec-8.html#letters-classic-disc",
-    "href": "slides/lec-8.html#letters-classic-disc",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "1. Letters (classic DISC)",
-    "text": "1. Letters (classic DISC)\n\nD – Dominance\nI – Influence\nS – Steadiness\nC – Conscientiousness"
-  },
-  {
-    "objectID": "slides/lec-8.html#colors-surrounded-by-idiots",
-    "href": "slides/lec-8.html#colors-surrounded-by-idiots",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "2. Colors (“Surrounded by Idiots”)",
-    "text": "2. Colors (“Surrounded by Idiots”)\nBased on the book by Thomas Erikson:"
-  },
-  {
-    "objectID": "slides/lec-8.html#colors-surrounded-by-idiots-1",
-    "href": "slides/lec-8.html#colors-surrounded-by-idiots-1",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "2. Colors (“Surrounded by Idiots”)",
-    "text": "2. Colors (“Surrounded by Idiots”)\n\nRed (D) – Dominant\nYellow (I) – Influential\nGreen (S) – Steady\nBlue (C) – Conscientious\n\n\nSame underlying ideas — different language"
-  },
-  {
-    "objectID": "slides/lec-8.html#a-simple-way-to-visualize",
-    "href": "slides/lec-8.html#a-simple-way-to-visualize",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "A simple way to visualize",
-    "text": "A simple way to visualize\nDISC is often described using two rough axes:\n\nPace: Fast‑paced vs More measured\nFocus: Task/results vs People/relationships\n\n\n\n\n\n\n\n\n\n\nTask / Results focus\nPeople / Relationship focus\n\n\n\n\nFast‑paced\nRed (D)\nYellow (I)\n\n\nMore measured\nBlue (C)\nGreen (S)\n\n\n\n\nNot perfect science — but a helpful mental model."
-  },
-  {
-    "objectID": "slides/lec-8.html#red-d-dominance",
-    "href": "slides/lec-8.html#red-d-dominance",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Red (D) – Dominance",
-    "text": "Red (D) – Dominance\nFocus: Results, action, winning\nTypical behaviors\n\nDirect, fast‑paced, decisive\nComfortable with disagreement\nLikes to take charge\n\nStrengths - Gets things moving - Clear decisions - Handles pressure well"
-  },
-  {
-    "objectID": "slides/lec-8.html#red-d-dominance-1",
-    "href": "slides/lec-8.html#red-d-dominance-1",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Red (D) – Dominance",
-    "text": "Red (D) – Dominance\nPotential blind spots\n\nCan seem impatient or blunt\nMay skip details or others’ input\n\nOften‑cited examples (illustrative, not diagnoses)\n\nElon Musk (entrepreneurial drive, speed)\nGordon Ramsay (direct, high standards)"
-  },
-  {
-    "objectID": "slides/lec-8.html#yellow-i-influence",
-    "href": "slides/lec-8.html#yellow-i-influence",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Yellow (I) – Influence",
-    "text": "Yellow (I) – Influence\nFocus: People, ideas, energy\nTypical behaviors\n\nExpressive, enthusiastic\nThinks out loud\nEnjoys collaboration and recognition\n\nStrengths - Generates ideas - Motivates others - Creates momentum"
-  },
-  {
-    "objectID": "slides/lec-8.html#yellow-i-influence-1",
-    "href": "slides/lec-8.html#yellow-i-influence-1",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Yellow (I) – Influence",
-    "text": "Yellow (I) – Influence\nPotential blind spots\n\nCan lose focus\nMay over‑promise / under‑deliver\n\nOften‑cited examples\n\nOprah Winfrey (connection, influence)\nRichard Branson (vision, enthusiasm)"
-  },
-  {
-    "objectID": "slides/lec-8.html#green-s-steadiness",
-    "href": "slides/lec-8.html#green-s-steadiness",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Green (S) – Steadiness",
-    "text": "Green (S) – Steadiness\nFocus: Harmony, stability, trust\nTypical behaviors\n\nPatient, calm, supportive\nGood listener\nPrefers predictable workflows\n\nStrengths - Team glue - Reliability - Conflict de‑escalation"
-  },
-  {
-    "objectID": "slides/lec-8.html#green-s-steadiness-1",
-    "href": "slides/lec-8.html#green-s-steadiness-1",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Green (S) – Steadiness",
-    "text": "Green (S) – Steadiness\nPotential blind spots\n\nAvoids conflict\nResists rapid change\n\nOften‑cited examples\n\nKeanu Reeves (calm, respectful presence)\nFred Rogers (empathy, consistency)"
-  },
-  {
-    "objectID": "slides/lec-8.html#blue-c-conscientiousness",
-    "href": "slides/lec-8.html#blue-c-conscientiousness",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Blue (C) – Conscientiousness",
-    "text": "Blue (C) – Conscientiousness\nFocus: Accuracy, quality, logic\nTypical behaviors\n\nAnalytical, structured\nData‑driven\nAsks critical questions\n\nStrengths - High‑quality output - Risk reduction - Clear documentation"
-  },
-  {
-    "objectID": "slides/lec-8.html#blue-c-conscientiousness-1",
-    "href": "slides/lec-8.html#blue-c-conscientiousness-1",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Blue (C) – Conscientiousness",
-    "text": "Blue (C) – Conscientiousness\nPotential blind spots\n\nOverthinking\nPerfectionism\n\nOften‑cited examples\n\nBill Gates (systems thinking)\nMarie Curie (rigor, precision)"
-  },
-  {
-    "objectID": "slides/lec-8.html#key-distinction",
-    "href": "slides/lec-8.html#key-distinction",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Key distinction",
-    "text": "Key distinction\n\nDISC = how you prefer to act\nSkills = what you are capable of doing\n\nExamples:\n\nA Green (S) can still lead\nA Red (D) can still listen\nA Yellow (I) can still analyze\nA Blue (C) can still inspire\n\n\nAwareness creates choice"
-  },
-  {
-    "objectID": "slides/lec-8.html#common-team-patterns",
-    "href": "slides/lec-8.html#common-team-patterns",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Common team patterns",
-    "text": "Common team patterns\n\nReds (D) push decisions and deadlines\nYellows (I) generate ideas and energy\nGreens (S) keep the team aligned\nBlues (C) ensure rigor and quality\n\nTeams struggle when:\n\nOne style dominates\nDifferences are interpreted as personal flaws"
-  },
-  {
-    "objectID": "slides/lec-8.html#example-misunderstanding",
-    "href": "slides/lec-8.html#example-misunderstanding",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Example misunderstanding",
-    "text": "Example misunderstanding\n\nBlue (C): “This needs more checking.”\nRed (D) hears: “You’re slowing us down.”\nRed (D): “Let’s just decide.”\nBlue (C) hears: “You don’t care about quality.”\n\nDISC helps translate intent vs impact."
-  },
-  {
-    "objectID": "slides/lec-8.html#scenario",
-    "href": "slides/lec-8.html#scenario",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Scenario",
-    "text": "Scenario\nYour teammate writes:\n\n“Can you send me your part by tonight? We’re behind.”\n\nTask\nRewrite that same message in a way that would land best for each style:\n\nRed (D)\nYellow (I)\nGreen (S)\nBlue (C)"
-  },
-  {
-    "objectID": "slides/lec-8.html#practical-rules",
-    "href": "slides/lec-8.html#practical-rules",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Practical rules",
-    "text": "Practical rules\n\nDon’t label people — describe behavior\nAdjust communication, not personality\nBalance speed, people, and quality"
-  },
-  {
-    "objectID": "slides/lec-8.html#simple-adaptations",
-    "href": "slides/lec-8.html#simple-adaptations",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Simple adaptations",
-    "text": "Simple adaptations\n\nTalking to a Red (D) → be concise, outcome‑focused\nTalking to a Yellow (I) → show enthusiasm, brainstorm\nTalking to a Green (S) → be patient, inclusive\nTalking to a Blue (C) → bring structure and data"
-  },
-  {
-    "objectID": "slides/lec-8.html#if-you-have-all-four-styles-in-a-team",
-    "href": "slides/lec-8.html#if-you-have-all-four-styles-in-a-team",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "If you have all four styles in a team…",
-    "text": "If you have all four styles in a team…\n\nRed (D): momentum and decisions\nYellow (I): creativity and energy\nGreen (S): trust and follow‑through\nBlue (C): rigor and quality\n\n\nStrong teams don’t all think alike — they coordinate differences."
-  },
-  {
-    "objectID": "slides/lec-8.html#stress-amplifies-defaults",
-    "href": "slides/lec-8.html#stress-amplifies-defaults",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Stress amplifies defaults",
-    "text": "Stress amplifies defaults\nWhen pressure rises, people often overdo their preferred style.\n\nRed (D) under stress: gets more controlling / impatient\n\nHelpful response: give options + timelines, stay concise\n\nYellow (I) under stress: talks more, becomes scattered\n\nHelpful response: summarize decisions, assign next steps"
-  },
-  {
-    "objectID": "slides/lec-8.html#stress-amplifies-defaults-1",
-    "href": "slides/lec-8.html#stress-amplifies-defaults-1",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Stress amplifies defaults",
-    "text": "Stress amplifies defaults\n\nGreen (S) under stress: withdraws, avoids conflict\n\nHelpful response: ask directly, create psychological safety\n\nBlue (C) under stress: over‑checks, delays decisions\n\nHelpful response: define “good enough,” set a decision point\n\n\n\n“Under stress” is not a flaw — it’s a signal."
-  },
-  {
-    "objectID": "slides/lec-8.html#individual-reflection",
-    "href": "slides/lec-8.html#individual-reflection",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Individual reflection",
-    "text": "Individual reflection\nWrite short answers (1–2 sentences each):\n\nMy likely style(s): ______ (e.g., Green (S) + Blue (C))\nI’m at my best in a team when: ______\nUnder pressure, I tend to overdo: ______\nA teammate behavior that triggers me is: ______\nOne thing I can do this week to adapt better is: ______"
-  },
-  {
-    "objectID": "slides/lec-8.html#typical-fit-not-a-rule",
-    "href": "slides/lec-8.html#typical-fit-not-a-rule",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Typical fit (not a rule)",
-    "text": "Typical fit (not a rule)\n\nProject manager / decision driver: often Red (D) or Yellow (I)\nStakeholder liaison / interviewer / presenter: often Yellow (I)\nOperations / scheduling / keeping everyone aligned: often Green (S)\nData lead / QA / methods & documentation: often Blue (C)"
-  },
-  {
-    "objectID": "slides/lec-8.html#the-key-message",
-    "href": "slides/lec-8.html#the-key-message",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "The key message",
-    "text": "The key message\nYou can do any role — but knowing your default style helps you:\n\nChoose strategies that work for you\nAsk for the support you need\nAvoid predictable failure modes"
-  },
-  {
-    "objectID": "slides/lec-8.html#why-start-with-yourself",
-    "href": "slides/lec-8.html#why-start-with-yourself",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Why start with yourself?",
-    "text": "Why start with yourself?\n\nYou are always part of the system\nStress amplifies your default style\n\nReflection questions:\n\nWhat do I overdo under pressure?\nWhich style frustrates me most — and why?\nWhat does my team need more of?"
-  },
-  {
-    "objectID": "slides/lec-8.html#disc-selfassessment",
-    "href": "slides/lec-8.html#disc-selfassessment",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "DISC self‑assessment",
-    "text": "DISC self‑assessment\n\nComplete the free DISC assessment: Follow this link\nDownload your results PDF\nShare the PDF with me, if you feel comfortable\n\nI will:\n\nCombine results across the class"
-  },
-  {
-    "objectID": "slides/lec-8.html#privacy-professionalism",
-    "href": "slides/lec-8.html#privacy-professionalism",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Privacy / professionalism",
-    "text": "Privacy / professionalism\n\nThis is for learning and reflection, not labeling\nIf you prefer, you may remove your name from the PDF before sharing"
-  },
-  {
-    "objectID": "slides/lec-8.html#inclass-followup",
-    "href": "slides/lec-8.html#inclass-followup",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "In‑class follow‑up",
-    "text": "In‑class follow‑up\n\nLook at class‑level DISC distributions\nDiscuss strengths and gaps across teams\nConnect DISC insights to your ongoing project work\n\n\nThe goal is not to change who you are — but to work better together."
-  },
-  {
-    "objectID": "slides/lec-8.html#remember",
-    "href": "slides/lec-8.html#remember",
-    "title": "Lecture – DISC Assessment & Team Dynamics",
-    "section": "Remember",
-    "text": "Remember\n\nDifferences are normal\nAwareness reduces friction\nAdaptation improves teams\n\nDISC gives us a shared language — what you do with it is up to you."
+    "objectID": "slides/lec-8.html#take-home-summary",
+    "href": "slides/lec-8.html#take-home-summary",
+    "title": "Lecture – Physiology basics → what data must answer",
+    "section": "Take-home summary",
+    "text": "Take-home summary\n\nPhysiology gives you mechanisms; metrics give you signals\nHigh production alters hormone dynamics → affects estrus expression and twinning risk\nAnovulation is common around breeding start and requires protocol-aware interpretation\nYour monitoring framework must separate:\n\nExposure (service/submission) from success (conception/pregnancy)"
   },
   {
     "objectID": "slides/lec-1.html#meet-the-teacher",

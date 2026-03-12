@@ -9,8 +9,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="dcterms.date" content="2025-04-10">
-  <title>ANSC4940 – Data transformations</title>
+  <meta name="author" content="Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens">
+  <title>ANSC4940 – Lecture - Cow metrics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,74 +28,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-87fb683e42416cd7aecb8e577b091905.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -187,11 +121,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Data transformations – ANSC4940">
-<meta property="og:description" content="Lecture 11">
+<meta property="og:title" content="Lecture - Cow metrics – ANSC4940">
+<meta property="og:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Data transformations – ANSC4940">
-<meta name="twitter:description" content="Lecture 11">
+<meta name="twitter:title" content="Lecture - Cow metrics – ANSC4940">
+<meta name="twitter:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,586 +135,454 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data transformations</h1>
-  <p class="subtitle">Lecture 11</p>
+  <h1 class="title">Lecture - Cow metrics</h1>
+  <p class="subtitle">ANSCI 4040 – Dairy Data Analysis &amp; Analytics</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens 
+</div>
+</div>
 </div>
 
-  <p class="date">2025-04-10</p>
 </section>
-<section>
-<section id="sec-introduction" class="title-slide slide level1 center">
-<h1>Introduction to dates and times</h1>
-
-</section>
-<section id="sec-prerequisites" class="slide level2">
-<h2>Prerequisites</h2>
+<section id="learning-goals" class="slide level2">
+<h2>Learning goals</h2>
 <ul>
-<li>This chapter will focus on the <strong>lubridate</strong> package, which makes it easier to work with dates and times in R.</li>
-<li>As of the latest tidyverse release, lubridate is part of core tidyverse.</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section></section>
-<section>
-<section id="sec-datetime" class="title-slide slide level1 center">
-<h1>Date &amp; time</h1>
-
-</section>
-<section id="sec-dt-basics-1" class="slide level2">
-<h2>Date and time basics</h2>
-<p>There are three types of date/time data that refer to an instant in time:</p>
-<ul>
-<li><p>A <strong>date</strong>. Tibbles print this as <code>&lt;date&gt;</code>.</p></li>
-<li><p>A <strong>time</strong> within a day. Tibbles print this as <code>&lt;time&gt;</code>.</p></li>
-<li><p>A <strong>date-time</strong> is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as <code>&lt;dttm&gt;</code>.</p></li>
+<li>Define each <strong>cow KPI</strong> + synonyms</li>
+<li>For each KPI: <strong>bias, momentum, variance, lag</strong></li>
+<li>Calculate <strong>standard error for a rate</strong> and interpret it</li>
+<li>Explain monitoring differences: <strong>small vs large herds</strong></li>
+<li>Build <strong>CUSUM/EWMA</strong> monitoring for small-n situations</li>
 </ul>
 </section>
-<section id="sec-dt-basics-2" class="slide level2">
-<h2>Date and time basics</h2>
-<p>You should always use the simplest possible data type that works for your needs.</p>
-<p>That means if you can use a date instead of a date-time, you should.</p>
-<p>Date-times are substantially more complicated because of the need to handle time zones, which we’ll come back to at the end of the chapter.</p>
-</section>
-<section id="sec-current" class="slide level2">
-<h2>Current</h2>
-<p>To get the current date or date-time you can use <code>today()</code> or <code>now()</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">today</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-10"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">now</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-10 00:49:03 UTC"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-dt-import-1" class="slide level2">
-<h2>Date-time importing</h2>
-<p>If your CSV contains an ISO8601 date or date-time, you don’t need to do anything; readr will automatically recognize it:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>csv <span class="ot">&lt;-</span> <span class="st">"</span></span>
-<span id="cb6-2"><a></a><span class="st">  date,datetime</span></span>
-<span id="cb6-3"><a></a><span class="st">  2022-01-02,2022-01-02 05:12</span></span>
-<span id="cb6-4"><a></a><span class="st">"</span></span>
-<span id="cb6-5"><a></a><span class="fu">read_csv</span>(csv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1 Columns: 2
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-dttm (1): datetime
-date (1): date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  date       datetime           
-  &lt;date&gt;     &lt;dttm&gt;             
-1 2022-01-02 2022-01-02 05:12:00</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-dt-import-2" class="slide level2">
-<h2>ISO8601</h2>
-<p>If you haven’t heard of <strong>ISO8601</strong> before, it’s an international standard<sup>1</sup> for writing dates where the components of a date are organized from biggest to smallest separated by <code>-</code>.</p>
-<p>For example, in ISO8601 May 3 2022 is <code>2022-05-03</code>. ISO8601 dates can also include times, where hour, minute, and second are separated by <code>:</code>, and the date and time components are separated by either a <code>T</code> or a space.</p>
-<p>For example, you could write 4:26pm on May 3 2022 as either <code>2022-05-03 16:26</code> or <code>2022-05-03T16:26</code>.</p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://xkcd.com/1179/" class="uri">https://xkcd.com/1179/</a></p></li></ol></aside></section>
-<section id="sec-dt-import-3" class="slide level2">
-<h2>Other formats</h2>
-<p>For other date-time formats, you’ll need to use <code>col_types</code> plus <code>col_date()</code> or <code>col_datetime()</code> along with a date-time format. The date-time format used by readr is a standard used across many programming languages, describing a date component with a <code>%</code> followed by a single character. For example, <code>%Y-%m-%d</code> specifies a date that’s a year, <code>-</code>, month (as number) <code>-</code>, day.</p>
-</section>
-<section id="sec-dt-import-4a" class="slide level2">
-<h2>Other formats</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>Code</th>
-<th>Meaning</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Year</td>
-<td><code>%Y</code></td>
-<td>4 digit year</td>
-<td>2021</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><code>%y</code></td>
-<td>2 digit year</td>
-<td>21</td>
-</tr>
-<tr class="odd">
-<td>Month</td>
-<td><code>%m</code></td>
-<td>Number</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><code>%b</code></td>
-<td>Abbreviated name</td>
-<td>Feb</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><code>%B</code></td>
-<td>Full name</td>
-<td>February</td>
-</tr>
-<tr class="even">
-<td>Day</td>
-<td><code>%d</code></td>
-<td>One or two digits</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><code>%e</code></td>
-<td>Two digits</td>
-<td>02</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sec-dt-import-4b" class="slide level2">
-<h2>Other formats</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>Code</th>
-<th>Meaning</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Time</td>
-<td><code>%H</code></td>
-<td>24-hour hour</td>
-<td>13</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><code>%I</code></td>
-<td>12-hour hour</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><code>%p</code></td>
-<td>AM/PM</td>
-<td>pm</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><code>%M</code></td>
-<td>Minutes</td>
-<td>35</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><code>%S</code></td>
-<td>Seconds</td>
-<td>45</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><code>%OS</code></td>
-<td>Seconds with decimal component</td>
-<td>45.35</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><code>%Z</code></td>
-<td>Time zone name</td>
-<td>America/Chicago</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><code>%z</code></td>
-<td>Offset from UTC</td>
-<td>+0800</td>
-</tr>
-<tr class="odd">
-<td>Other</td>
-<td><code>%.</code></td>
-<td>Skip one non-digit</td>
-<td>:</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><code>%*</code></td>
-<td>Skip any number of non-digits</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sec-dt-import-5" class="slide level2">
-<h2>Datetime exmaple</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>csv <span class="ot">&lt;-</span> <span class="st">"</span></span>
-<span id="cb9-2"><a></a><span class="st">  date</span></span>
-<span id="cb9-3"><a></a><span class="st">  01/02/15</span></span>
-<span id="cb9-4"><a></a><span class="st">"</span></span>
-<span id="cb9-5"><a></a></span>
-<span id="cb9-6"><a></a><span class="fu">read_csv</span>(csv, <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">date =</span> <span class="fu">col_date</span>(<span class="st">"%m/%d/%y"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-  date      
-  &lt;date&gt;    
-1 2015-01-02</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">read_csv</span>(csv, <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">date =</span> <span class="fu">col_date</span>(<span class="st">"%d/%m/%y"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-  date      
-  &lt;date&gt;    
-1 2015-02-01</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">read_csv</span>(csv, <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">date =</span> <span class="fu">col_date</span>(<span class="st">"%y/%m/%d"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-  date      
-  &lt;date&gt;    
-1 2001-02-15</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="sec-dt-components-1" class="title-slide slide level1 center">
-<h1>Date-time components</h1>
-
-</section>
-<section id="sec-dt-components-get-1" class="slide level2">
-<h2>Getting components</h2>
-<p>You can pull out individual parts of the date with the accessor functions <code>year()</code>, <code>month()</code>, <code>mday()</code> (day of the month), <code>yday()</code> (day of the year), <code>wday()</code> (day of the week), <code>hour()</code>, <code>minute()</code>, and <code>second()</code>. These are effectively the opposites of <code>make_datetime()</code>.</p>
-</section>
-<section id="sec-dt-components-get-2" class="slide level2">
-<h2>Getting components</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>datetime <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2026-07-08 12:34:56"</span>)</span>
-<span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a><span class="fu">year</span>(datetime)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2026</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">month</span>(datetime)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 7</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">mday</span>(datetime)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 8</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">yday</span>(datetime)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 189</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">wday</span>(datetime)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-dt-components-abbr" class="slide level2">
-<h2>Getting components</h2>
-<p>For <code>month()</code> and <code>wday()</code> you can set <code>label = TRUE</code> to return the abbreviated name of the month or day of the week. Set <code>abbr = FALSE</code> to return the full name.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">month</span>(datetime, <span class="at">label =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Jul
-12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">wday</span>(datetime, <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">abbr =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Wednesday
-7 Levels: Sunday &lt; Monday &lt; Tuesday &lt; Wednesday &lt; Thursday &lt; ... &lt; Saturday</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-dt-rounding" class="slide level2">
-<h2>Datetime rounding</h2>
-<p>An alternative approach to plotting individual components is to round the date to a nearby unit of time, with <code>floor_date()</code>, <code>round_date()</code>, and <code>ceiling_date()</code>. Each function takes a vector of dates to adjust and then the name of the unit to round down (floor), round up (ceiling), or round to.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>week <span class="ot">=</span> <span class="fu">floor_date</span>(dep_time, <span class="st">"week"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="sec-dt-modifying-1" class="slide level2">
-<h2>Datetime modifying</h2>
-<p>You can also use each accessor function to modify the components of a date/time. This doesn’t come up much in data analysis, but can be useful when cleaning data that has clearly incorrect dates.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>(datetime <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2026-07-08 12:34:56"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-07-08 12:34:56 UTC"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">year</span>(datetime) <span class="ot">&lt;-</span> <span class="dv">2030</span></span>
-<span id="cb32-2"><a></a>datetime</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2030-07-08 12:34:56 UTC"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">month</span>(datetime) <span class="ot">&lt;-</span> <span class="dv">01</span></span>
-<span id="cb34-2"><a></a>datetime</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2030-01-08 12:34:56 UTC"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">hour</span>(datetime) <span class="ot">&lt;-</span> <span class="fu">hour</span>(datetime) <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb36-2"><a></a>datetime</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2030-01-08 13:34:56 UTC"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-dt-modifying-2" class="slide level2">
-<h2>Datetime updating</h2>
-<p>You can also use each accessor function to modify the components of a date/time. This doesn’t come up much in data analysis, but can be useful when cleaning data that has clearly incorrect dates.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">update</span>(datetime, <span class="at">year =</span> <span class="dv">2030</span>, <span class="at">month =</span> <span class="dv">2</span>, <span class="at">mday =</span> <span class="dv">2</span>, <span class="at">hour =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2030-02-02 02:34:56 UTC"</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="time-spans" class="title-slide slide level1 center">
-<h1>Time spans</h1>
-
-</section>
-<section id="sec-timespan-basics-1" class="slide level2">
-<h2>Time span</h2>
-<p>Next you’ll learn about how arithmetic with dates works, including subtraction, addition, and division. Along the way, you’ll learn about three important classes that represent time spans:</p>
+<section id="repro-performance-core-21-d-pregnancy-rate" class="slide level2">
+<h2>Repro performance “core”: 21-d pregnancy rate</h2>
+<p>On large farms, reproductive performance is often tracked with <strong>21-day pregnancy rate</strong>, driven by:</p>
 <ul>
-<li><strong>Durations</strong>, which represent an exact number of seconds.</li>
-<li><strong>Periods</strong>, which represent human units like weeks and months.</li>
-<li><strong>Intervals</strong>, which represent a starting and ending point.</li>
+<li><p><strong>AI service rate</strong> (submission)</p></li>
+<li><p><strong>P/AI (conception rate)</strong></p></li>
+</ul>
+<p>Your analytics should always decompose PR into IR × CR.</p>
+</section>
+<section>
+<section id="timing-metrics-cows" class="title-slide slide level1 center">
+<h1>Timing metrics (cows)</h1>
+
+</section>
+<section id="days-in-milk-dim-to-first-insemination" class="slide level2">
+<h2>Days in milk (DIM) to first insemination</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> calving-to-first-service interval</p></li>
+<li><p><strong>Definition:</strong> DIM at first service.</p></li>
+<li><p><strong>Bias</strong> - VWP policy differences; health holds - Missing early heats/services shifts later</p></li>
+<li><p><strong>Momentum</strong> - Strong pipeline; slow changes</p></li>
+<li><p><strong>Variance</strong> - Moderate; clustered by calving season/pen</p></li>
+<li><p><strong>Lag</strong> - Responds after new calving cohorts pass VWP</p></li>
 </ul>
 </section>
-<section id="sec-timespan-basics-2" class="slide level2">
-<h2>Time span</h2>
-<p>How do you pick between duration, periods, and intervals?</p>
-<p>As always, pick the simplest data structure that solves your problem.</p>
+<section id="dim-to-first-heat" class="slide level2">
+<h2>DIM to first heat</h2>
 <ul>
-<li>If you only care about physical time, use a duration;</li>
-<li>If you need to add human times, use a period;</li>
-<li>If you need to figure out how long a span is in human units, use an interval.</li>
+<li><p><strong>Synonyms:</strong> days to first observed estrus postpartum</p></li>
+<li><p><strong>Bias</strong> - Under-detection (short estrus duration at high production) <a href="https://cornellprod.sharepoint.com/sites/Bovi-Analytics/Shared%20Documents/General/ANSC%204940%20%E2%80%93%20Bovi-Analytics/LDHM%20ebook/ADSA_LDHM_e-Book_Section_7_76797_20251223092016.pdf">1</a> - “Observed” ≠ “occurred”</p></li>
+<li><p><strong>Momentum</strong> - Affected by transition health &amp; energy balance</p></li>
+<li><p><strong>Variance</strong> - High without sensors</p></li>
+<li><p><strong>Lag</strong> - First weeks postpartum</p></li>
 </ul>
 </section>
-<section id="sec-duration-1" class="slide level2">
-<h2>Durations</h2>
-<p>In R, when you subtract two dates, you get a difftime object:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="co"># How old is Miel?</span></span>
-<span id="cb40-2"><a></a>h_age <span class="ot">&lt;-</span> <span class="fu">today</span>() <span class="sc">-</span> <span class="fu">ymd</span>(<span class="st">"1982-04-27"</span>)</span>
-<span id="cb40-3"><a></a>h_age</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Time difference of 16023 days</code></pre>
-</div>
-</div>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="countintensity-metrics" class="title-slide slide level1 center">
+<h1>Count/intensity metrics</h1>
+
 </section>
-<section id="sec-duration-2" class="slide level2">
-<h2>Durations</h2>
-<p>A <code>difftime</code> class object records a time span of seconds, minutes, hours, days, or weeks.</p>
-<p>This ambiguity can make difftimes a little painful to work with, so lubridate provides an alternative which always uses seconds: the <strong>duration</strong>.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">as.duration</span>(h_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "1384387200s (~43.87 years)"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-duration-3" class="slide level2">
-<h2>Durations</h2>
-<p>Durations come with a bunch of convenient constructors:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">dseconds</span>(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "15s"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">dminutes</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "600s (~10 minutes)"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">dhours</span>(<span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">24</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "43200s (~12 hours)" "86400s (~1 days)"  </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">ddays</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "0s"                "86400s (~1 days)"  "172800s (~2 days)"
-[4] "259200s (~3 days)" "345600s (~4 days)" "432000s (~5 days)"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">dweeks</span>(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "1814400s (~3 weeks)"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">dyears</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "31557600s (~1 years)"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-duration-4" class="slide level2">
-<h2>Durations</h2>
+<section id="number-of-inseminations-per-pregnancy" class="slide level2">
+<h2>Number of inseminations per pregnancy</h2>
 <ul>
-<li><p><strong>Durations always record the time span in seconds.</strong></p></li>
-<li><p>Larger units are created by converting minutes, hours, days, weeks, and years to seconds: 60 seconds in a minute, 60 minutes in an hour, 24 hours in a day, and 7 days in a week.</p></li>
-<li><p>Larger time units are more problematic.</p></li>
-<li><p>A year uses the “average” number of days in a year, i.e.&nbsp;365.25.</p></li>
-<li><p>There’s no way to convert a month to a duration, because there’s just too much variation.</p></li>
+<li><p><strong>Synonyms:</strong> services per conception, S/C</p></li>
+<li><p><strong>Definition:</strong> total services leading up to conception.</p></li>
+<li><p><strong>Bias</strong> - Censoring: open cows not yet pregnant - Mis-linked pregnancy to service</p></li>
+<li><p><strong>Momentum</strong> - Improves slowly; repeat breeders dominate</p></li>
+<li><p><strong>Variance</strong> - High; long tail distribution</p></li>
+<li><p><strong>Lag</strong> - Requires pregnancy outcome</p></li>
 </ul>
 </section>
-<section id="sec-duration-5" class="slide level2">
-<h2>Add and multiply durations</h2>
-<p>You can add and multiply durations:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="dv">2</span> <span class="sc">*</span> <span class="fu">dyears</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "63115200s (~2 years)"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="fu">dyears</span>(<span class="dv">1</span>) <span class="sc">+</span> <span class="fu">dweeks</span>(<span class="dv">12</span>) <span class="sc">+</span> <span class="fu">dhours</span>(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "38869200s (~1.23 years)"</code></pre>
-</div>
-</div>
+<section id="number-of-inseminations-per-inseminated-cow-insemination-number" class="slide level2">
+<h2>Number of inseminations per inseminated cow (insemination number)</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> services per bred cow</p></li>
+<li><p><strong>Definition:</strong> average number of services among cows with ≥1 service (in window).</p></li>
+<li><p><strong>Bias</strong> - Window truncation (late services fall outside) - Open cows inflate if tracked cross-sectionally</p></li>
+<li><p><strong>Momentum</strong> - Moderate</p></li>
+<li><p><strong>Variance</strong> - High at small n</p></li>
+<li><p><strong>Lag</strong> - Low to moderate</p></li>
+</ul>
 </section>
-<section id="sec-duration-6" class="slide level2">
-<h2>Add and substract durations</h2>
-<p>You can add and subtract durations to and from days:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>tomorrow <span class="ot">&lt;-</span> <span class="fu">today</span>() <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span>
-<span id="cb60-2"><a></a>tomorrow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-11"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>last_year <span class="ot">&lt;-</span> <span class="fu">today</span>() <span class="sc">-</span> <span class="fu">dyears</span>(<span class="dv">1</span>)</span>
-<span id="cb62-2"><a></a>last_year</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-03-09 18:00:00 UTC"</code></pre>
-</div>
-</div>
+<section id="number-of-inseminations-per-non-pregnant-cow" class="slide level2">
+<h2>Number of inseminations per non-pregnant cow</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> services per open cow</p></li>
+<li><p><strong>Definition:</strong> among currently open cows, average services received.</p></li>
+<li><p><strong>Bias</strong> - Survivorship/culling (high-service cows often leave) - Pregnancy status misclassification</p></li>
+<li><p><strong>Momentum</strong> - High inertia; management often reacts late</p></li>
+<li><p><strong>Variance</strong> - High; heavily skewed</p></li>
+<li><p><strong>Lag</strong> - Low (operational)</p></li>
+</ul>
 </section>
-<section id="sec-duration-7" class="slide level2">
-<h2>Whatch for unexpected results</h2>
-<p>However, because durations represent an exact number of seconds, sometimes you might get an unexpected result:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>one_am <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2026-03-08 01:00:00"</span>, <span class="at">tz =</span> <span class="st">"America/New_York"</span>)</span>
-<span id="cb64-2"><a></a></span>
-<span id="cb64-3"><a></a>one_am</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-08 01:00:00 EST"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a>one_am <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-09 02:00:00 EDT"</code></pre>
-</div>
-</div>
-<p>Why is one day after 1am March 8, 2am March 9? If you look carefully at the date you might also notice that the time zones have changed. March 8 only has 23 hours because it’s when DST starts, so if we add a full days worth of seconds we end up with a different time.</p>
+<section id="animals-3-inseminations" class="slide level2">
+<h2>Animals &gt; 3 inseminations</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> repeat breeders, &gt;3 services</p></li>
+<li><p><strong>Definition:</strong> proportion or count of cows with services ≥4 and not confirmed pregnant.</p></li>
+<li><p><strong>Bias</strong> - Depends on pregnancy diagnosis timing - Culling removes worst cases</p></li>
+<li><p><strong>Momentum</strong> - Sticky (accumulates)</p></li>
+<li><p><strong>Variance</strong> - Moderate</p></li>
+<li><p><strong>Lag</strong> - Builds over months</p></li>
+</ul>
 </section></section>
 <section>
-<section id="sec-periods" class="title-slide slide level1 center">
-<h1>Periods</h1>
+<section id="detection-service-metrics" class="title-slide slide level1 center">
+<h1>Detection &amp; service metrics</h1>
 
 </section>
-<section id="sec-periods-1" class="slide level2">
-<h2>Periods</h2>
-<p>Lubridate provides <strong>periods</strong> solve this problem.</p>
-<p>Periods are time spans but don’t have a fixed length in seconds, instead they work with “human” times, like days and months.</p>
-<p>That allows them to work in a more intuitive way:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a>one_am</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-08 01:00:00 EST"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a>one_am <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-09 01:00:00 EDT"</code></pre>
-</div>
-</div>
+<section id="heat-detection-rate" class="slide level2">
+<h2>Heat detection rate</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> estrus detection rate (EDR), detection efficiency</p></li>
+<li><p><strong>Definition (common):</strong> fraction of eligible cows in heat that are detected.</p></li>
+<li><p><strong>Practical proxy:</strong> “submission rate” (see service rate) when direct heat is unobservable.</p></li>
+<li><p><strong>Bias</strong> - True heats are unobserved; sensors change sensitivity - High milk production shortens estrus duration → apparent EDR drops <a href="https://cornellprod.sharepoint.com/sites/Bovi-Analytics/Shared%20Documents/General/ANSC%204940%20%E2%80%93%20Bovi-Analytics/LDHM%20ebook/ADSA_LDHM_e-Book_Section_7_76797_20251223092016.pdf">1</a></p></li>
+<li><p><strong>Momentum</strong> - Can change quickly with labor/sensors</p></li>
+<li><p><strong>Variance</strong> - High day-to-day, lower over weeks</p></li>
+<li><p><strong>Lag</strong> - Low</p></li>
+</ul>
 </section>
-<section id="sec-periods-2" class="slide level2">
-<h2>Periods</h2>
-<p>Like durations, periods can be created with a number of friendly constructor functions.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="fu">hours</span>(<span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">24</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "12H 0M 0S" "24H 0M 0S"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">days</span>(<span class="dv">7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "7d 0H 0M 0S"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a><span class="fu">months</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "1m 0d 0H 0M 0S" "2m 0d 0H 0M 0S" "3m 0d 0H 0M 0S" "4m 0d 0H 0M 0S"
-[5] "5m 0d 0H 0M 0S" "6m 0d 0H 0M 0S"</code></pre>
-</div>
-</div>
+<section id="pre-service-heat-detection-efficiency" class="slide level2">
+<h2>Pre-Service Heat Detection Efficiency</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> pre-breeding detection efficiency</p></li>
+<li><p><strong>Definition:</strong> detection/submission performance before first service.</p></li>
+<li><p><strong>Bias</strong> - VWP, pen moves, health holds</p></li>
+<li><p><strong>Momentum</strong> - Moderate</p></li>
+<li><p><strong>Variance</strong> - Moderate</p></li>
+<li><p><strong>Lag</strong> - Short</p></li>
+</ul>
 </section>
-<section id="periods" class="slide level2">
-<h2>Periods</h2>
-<p>You can add and multiply periods:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a><span class="dv">10</span> <span class="sc">*</span> (<span class="fu">months</span>(<span class="dv">6</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "60m 10d 0H 0M 0S"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a></a><span class="fu">days</span>(<span class="dv">50</span>) <span class="sc">+</span> <span class="fu">hours</span>(<span class="dv">25</span>) <span class="sc">+</span> <span class="fu">minutes</span>(<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "50d 25H 2M 0S"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-periods-3" class="slide level2">
-<h2>Periods</h2>
-<p>And of course, add them to dates. Compared to durations, periods are more likely to do what you expect:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a><span class="co"># A leap year</span></span>
-<span id="cb82-2"><a></a><span class="fu">ymd</span>(<span class="st">"2024-01-01"</span>) <span class="sc">+</span> <span class="fu">dyears</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-12-31 06:00:00 UTC"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a></a><span class="fu">ymd</span>(<span class="st">"2024-01-01"</span>) <span class="sc">+</span> <span class="fu">years</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-01-01"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a></a><span class="co"># Daylight saving time</span></span>
-<span id="cb86-2"><a></a>one_am <span class="sc">+</span> <span class="fu">ddays</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-09 02:00:00 EDT"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a>one_am <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-03-09 01:00:00 EDT"</code></pre>
-</div>
-</div>
+<section id="post-service-heat-detection-efficiency" class="slide level2">
+<h2>Post-Service Heat Detection Efficiency</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> return-to-estrus detection efficiency</p></li>
+<li><p><strong>Definition:</strong> how well returns to heat are detected after an AI.</p></li>
+<li><p><strong>Bias</strong> - Pregnancy loss delays return-to-estrus distribution <a href="https://cornellprod.sharepoint.com/sites/Bovi-Analytics/Shared%20Documents/General/ANSC%204940%20%E2%80%93%20Bovi-Analytics/LDHM%20ebook/ADSA_LDHM_e-Book_Section_7_76797_20251223092016.pdf">1</a></p></li>
+<li><p><strong>Momentum</strong> - Improves with monitoring/sensors</p></li>
+<li><p><strong>Variance</strong> - High with small n</p></li>
+<li><p><strong>Lag</strong> - Medium (depends on cycle length + diagnosis schedule)</p>
+<hr></li>
+</ul>
 </section></section>
 <section>
-<section id="sec-tz" class="title-slide slide level1 center">
-<h1>Time zones</h1>
+<section id="outcome-metrics-pregnancy-calving" class="title-slide slide level1 center">
+<h1>Outcome metrics (pregnancy &amp; calving)</h1>
 
 </section>
-<section id="sec-tz-1" class="slide level2">
-<h2>Time zones</h2>
-<p>Time zones are an enormously complicated topic because of their interaction with geopolitical entities. Fortunately we don’t need to dig into all the details as they’re not all important for data analysis, but there are a few challenges we’ll need to tackle head on.</p>
+<section id="total-number-of-pregnancies" class="slide level2">
+<h2>Total number of pregnancies</h2>
+<ul>
+<li><p><strong>Definition:</strong> count of confirmed pregnancies (cross-sectional or within time window).</p></li>
+<li><p><strong>Bias</strong> - Recheck duplication or missing updates after loss</p></li>
+<li><p><strong>Momentum</strong> - Inventory-like</p></li>
+<li><p><strong>Variance</strong> - n-dependent</p></li>
+<li><p><strong>Lag</strong> - Preg-check schedule driven</p></li>
+</ul>
+</section>
+<section id="total-number-of-calvings" class="slide level2">
+<h2>Total number of calvings</h2>
+<ul>
+<li><p><strong>Definition:</strong> count of calving events.</p></li>
+<li><p><strong>Bias</strong> - Stillbirth/abortion recording differences</p></li>
+<li><p><strong>Momentum</strong> - Very slow; year-long pipeline</p></li>
+<li><p><strong>Variance</strong> - Low for large herds; high for small</p></li>
+<li><p><strong>Lag</strong> - Very long</p></li>
+</ul>
+</section>
+<section id="days-open" class="slide level2">
+<h2>Days open</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> calving-to-conception interval</p></li>
+<li><p><strong>Definition:</strong> days from calving to conception (or to confirmed pregnancy date with correction).</p></li>
+<li><p><strong>Bias</strong> - If you use pregnancy <em>confirmation</em> date instead of conception date → overestimates - Censoring: cows not yet pregnant</p></li>
+<li><p><strong>Momentum</strong> - High inertia</p></li>
+<li><p><strong>Variance</strong> - Moderate</p></li>
+<li><p><strong>Lag</strong> - Medium-long</p></li>
+</ul>
+</section>
+<section id="interval-first-service-conception" class="slide level2">
+<h2>Interval First Service – Conception</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> first-service-to-conception interval</p></li>
+<li><p><strong>Definition:</strong> days between first service and service that resulted in pregnancy.</p></li>
+<li><p><strong>Bias</strong> - Censoring; pregnancy loss misclassification</p></li>
+<li><p><strong>Momentum</strong> - Moderate</p></li>
+<li><p><strong>Variance</strong> - Skewed</p></li>
+<li><p><strong>Lag</strong> - Medium</p></li>
+</ul>
+</section>
+<section id="calving-interval-historic-expected-predicted-adjusted" class="slide level2">
+<h2>Calving interval (historic, expected, predicted, adjusted)</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> inter-calving interval (ICI)</p>
+<ul>
+<li><strong>Historic</strong>: actual previous calving-to-calving</li>
+<li><strong>Expected/Predicted</strong>: using current pregnancy due date</li>
+<li><strong>Adjusted</strong>: corrected for censored/open cows or policy (document your method)</li>
+</ul></li>
+<li><p><strong>Bias</strong> - Open cows missing; induced calving; pregnancy loss</p></li>
+<li><p><strong>Momentum</strong> - Very high inertia</p></li>
+<li><p><strong>Variance</strong> - Low in large herds</p></li>
+<li><p><strong>Lag</strong> - Very long</p></li>
+</ul>
+</section>
+<section id="percentage-pregnant-animals" class="slide level2">
+<h2>Percentage pregnant animals</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> pregnancy prevalence</p></li>
+<li><p><strong>Definition:</strong> pregnant / (pregnant + eligible open) at a snapshot.</p></li>
+<li><p><strong>Bias</strong> - Eligibility definition; missing pregnancy loss updates</p></li>
+<li><p><strong>Momentum</strong> - Inventory inertia</p></li>
+<li><p><strong>Variance</strong> - Lower in large herds</p></li>
+<li><p><strong>Lag</strong> - Medium</p></li>
+</ul>
+</section>
+<section id="pregnant-at-100-dim" class="slide level2">
+<h2>% pregnant at 100 DIM</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> pregnancy by 100 DIM</p></li>
+<li><p><strong>Definition:</strong> among cows reaching 100 DIM, fraction pregnant by that point (cohort-friendly).</p></li>
+<li><p><strong>Bias</strong> - Culling before 100 DIM (survivorship bias) - Missing preg checks</p></li>
+<li><p><strong>Momentum</strong> - Medium-high</p></li>
+<li><p><strong>Variance</strong> - Moderate</p></li>
+<li><p><strong>Lag</strong> - Medium</p></li>
+</ul>
+</section>
+<section id="non-pregnant-at-200-dim" class="slide level2">
+<h2>% non-pregnant at 200 DIM</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> open rate at 200 DIM</p></li>
+<li><p><strong>Bias</strong> - Culling before 200 DIM inflates “good” performance</p></li>
+<li><p><strong>Momentum</strong> - High</p></li>
+<li><p><strong>Variance</strong> - Moderate</p></li>
+<li><p><strong>Lag</strong> - Long</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="raterisk-metrics-ircrpr-nr56" class="title-slide slide level1 center">
+<h1>Rate/risk metrics (IR/CR/PR + NR56)</h1>
+
+</section>
+<section id="insemination-rate-or-risk" class="slide level2">
+<h2>Insemination rate or risk</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> service rate, submission rate (SR)</p></li>
+<li><p><strong>Definition:</strong> eligible cows inseminated in a time window / eligible cows.</p></li>
+<li><p>LDHM Book context: AI service rate is a key determinant of 21-d pregnancy rate.</p></li>
+<li><p><strong>Bias</strong> - Eligibility definition (VWP, health holds) - Missing services</p></li>
+<li><p><strong>Momentum</strong> - Can change quickly</p></li>
+<li><p><strong>Variance</strong> - High in small herds</p></li>
+<li><p><strong>Lag</strong> - Low</p></li>
+</ul>
+</section>
+<section id="conception-rate-or-risk" class="slide level2">
+<h2>Conception rate or risk</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> P/AI, pregnancies per AI</p></li>
+<li><p><strong>Definition:</strong> pregnancies from AIs / total AIs (with consistent pregnancy check timing).</p></li>
+<li><p>LDHM Book context: P/AI is used as fertility measure for inseminated cows.</p></li>
+<li><p><strong>Bias</strong> - Pregnancy loss after check - Non-independent observations (same cow multiple AIs) - Tech/bull confounding</p></li>
+<li><p><strong>Momentum</strong> - Medium</p></li>
+<li><p><strong>Variance</strong> - High at small n</p></li>
+<li><p><strong>Lag</strong> - At least until pregnancy diagnosis</p></li>
+</ul>
+</section>
+<section id="pregnancy-rate-or-risk" class="slide level2">
+<h2>Pregnancy rate or risk</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> 21-d pregnancy rate (when windowed), PR</p></li>
+<li><p><strong>Definition:</strong> eligible cows that become pregnant in window / eligible cows.</p></li>
+<li><p>Book context: 21-d pregnancy rate is widely used as the primary herd metric on large farms. <a href="https://cornellprod.sharepoint.com/sites/Bovi-Analytics/Shared%20Documents/General/ANSC%204940%20%E2%80%93%20Bovi-Analytics/LDHM%20ebook/ADSA_LDHM_e-Book_Section_7_76797_20251223092016.pdf">1</a></p></li>
+<li><p><strong>Bias</strong> - Window definition + eligibility drift - Double-count pregnancies if not careful with event logic</p></li>
+<li><p><strong>Momentum</strong> - Medium</p></li>
+<li><p><strong>Variance</strong> - Can be very high in small herds</p></li>
+<li><p><strong>Lag</strong> - Medium</p></li>
+</ul>
+</section>
+<section id="non-return-56" class="slide level2">
+<h2>Non-return % 56</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> NR56, 56-day nonreturn rate</p></li>
+<li><p><strong>Definition:</strong> proportion of inseminated cows that do not return to estrus within 56 days (often proxy for pregnancy).</p></li>
+<li><p><strong>Bias</strong> - Silent heats, missed heats, long cycles, pregnancy loss - Strongly affected by heat detection quality</p></li>
+<li><p><strong>Momentum</strong> - Medium</p></li>
+<li><p><strong>Variance</strong> - Moderate-high</p></li>
+<li><p><strong>Lag</strong> - Fixed by definition (56 days)</p></li>
+</ul>
+</section></section>
+<section>
+<section id="days-lost-decomposition" class="title-slide slide level1 center">
+<h1>Days lost decomposition</h1>
+
+</section>
+<section id="days-lost-due-to-suboptimal-heat-detection-post-insemination" class="slide level2">
+<h2>Days lost due to suboptimal Heat Detection (post insemination)</h2>
+<p><strong>Idea:</strong> lost time between return to estrus and next service because heat wasn’t detected promptly.</p>
+<p><strong>Bias</strong> - Requires accurate return-to-estrus inference (hard if heats aren’t logged) - Pregnancy loss complicates return timing <a href="https://cornellprod.sharepoint.com/sites/Bovi-Analytics/Shared%20Documents/General/ANSC%204940%20%E2%80%93%20Bovi-Analytics/LDHM%20ebook/ADSA_LDHM_e-Book_Section_7_76797_20251223092016.pdf">1</a></p>
+<p><strong>Momentum</strong> - Can change quickly with detection tools</p>
+<p><strong>Variance</strong> - High</p>
+<p><strong>Lag</strong> - Medium</p>
+</section>
+<section id="days-lost-due-to-suboptimal-conception-rate" class="slide level2">
+<h2>Days lost due to suboptimal Conception Rate</h2>
+<p><strong>Idea:</strong> extra open days caused by failed conceptions (repeat AIs) versus a target CR.</p>
+<p><strong>Bias</strong> - Requires a counterfactual target; sensitive to censoring</p>
+<p><strong>Momentum</strong> - Medium</p>
+<p><strong>Variance</strong> - Depends on n</p>
+<p><strong>Lag</strong> - Medium-long</p>
+</section></section>
+<section>
+<section id="standard-error-se-for-a-rate" class="title-slide slide level1 center">
+<h1>Standard error (SE) for a rate</h1>
+
+</section>
+<section id="the-basic-binomial-se" class="slide level2">
+<h2>The basic binomial SE</h2>
+<p>For a proportion (rate) = x/n: [ SE() = ]</p>
+<p>Interpretation: - The <strong>smaller n</strong>, the larger the SE (noisy rates) - For fixed n, SE is largest near p = 0.5</p>
+</section>
+<section id="how-to-decrease-se-three-levers" class="slide level2">
+<h2>How to decrease SE (three levers)</h2>
+<ol type="1">
+<li><strong>Increase n</strong>
+<ul>
+<li>more cows in denominator (bigger herd)</li>
+<li>longer time window (aggregate weeks)</li>
+</ul></li>
+<li><strong>Reduce clustering</strong>
+<ul>
+<li>stratify sensibly (don’t slice too thin by pen/tech/bull)</li>
+</ul></li>
+<li><strong>Use smoothing / sequential methods</strong>
+<ul>
+<li>EWMA, CUSUM (next section)</li>
+</ul></li>
+</ol>
+<p>Rule of thumb: - To halve SE, you need ~4× the sample size.</p>
+</section>
+<section id="interpreting-se-in-practice" class="slide level2">
+<h2>Interpreting SE in practice</h2>
+<p>Example logic (no need to memorize):</p>
+<ul>
+<li><p>If CR = 35% on n = 20 AI</p></li>
+<li><p>SE ≈ sqrt(0.35*0.65/20) ≈ 0.106 (~10.6 percentage points)</p></li>
+</ul>
+<p>That means week-to-week swings are expected even if “true” CR is stable.</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="small-vs-large-herd-monitoring" class="title-slide slide level1 center">
+<h1>Small vs large herd monitoring</h1>
+
+</section>
+<section id="large-herds" class="slide level2">
+<h2>Large herds</h2>
+<ul>
+<li>Weekly (or even daily) rates can be stable enough for decisions</li>
+<li>You can stratify (parity, pen, tech) without destroying n</li>
+<li>Control charts detect small shifts earlier</li>
+</ul>
+</section>
+<section id="small-herds" class="slide level2">
+<h2>Small herds</h2>
+<ul>
+<li>Weekly rates are dominated by <strong>random variation</strong></li>
+<li>“Pregnancy rate dropped from 30% to 10%” may be just <strong>n=10 vs n=10</strong></li>
+<li>You must:
+<ul>
+<li>aggregate longer (e.g., 6–12 weeks)</li>
+<li>use smoothing/seq methods (EWMA/CUSUM)</li>
+<li>focus on <em>counts + timelines</em> (who is overdue) alongside rates</li>
+</ul></li>
+</ul>
+</section>
+<section id="why-ircrpr-can-mislead-at-small-n" class="slide level2">
+<h2>Why IR/CR/PR can mislead at small n</h2>
+<ul>
+<li>PR = IR × CR: both are noisy → PR is <em>very</em> noisy</li>
+<li>A single pregnancy (or loss) can swing the rate dramatically</li>
+<li>Therefore, use:
+<ul>
+<li>confidence intervals / SE</li>
+<li>rolling windows</li>
+<li>sequential charts</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="ewma-and-cusum-for-small-herds" class="title-slide slide level1 center">
+<h1>EWMA and CUSUM for small herds</h1>
+
+</section>
+<section id="ewma-exponentially-weighted-moving-average" class="slide level2">
+<h2>EWMA (Exponentially Weighted Moving Average)</h2>
+<p>Purpose: smooth noisy weekly rates while staying responsive.</p>
+<p>Update: [ EWMA_t = x_t + (1-)EWMA_{t-1} ] - x_t = this week’s rate (or 0/1 outcome stream) - small (0.1–0.3) = more smoothing</p>
+<p>Interpretation: - EWMA shows <strong>momentum</strong> (trend) better than raw rates</p>
+</section>
+<section id="cusum-cumulative-sum" class="slide level2">
+<h2>CUSUM (Cumulative Sum)</h2>
+<p>Purpose: detect sustained small shifts.</p>
+<p>Binary-outcome version idea: - Compare observed outcomes to target p0 - Accumulate evidence: - add (x_t - p0) each time step - alarm when cum-sum crosses threshold</p>
+<p>Interpretation: - CUSUM is great when n is small but you monitor continuously.</p>
+</section>
+<section id="practical-setup-suggestion-small-herd" class="slide level2">
+<h2>Practical setup suggestion (small herd)</h2>
+<ul>
+<li>Track CR with:
+<ul>
+<li>rolling 8-week CR</li>
+<li>EWMA of weekly CR (= 0.2)</li>
+</ul></li>
+<li>Track IR similarly</li>
+<li>Keep an operational list:
+<ul>
+<li>overdue to first service</li>
+<li>3 services open</li>
+<li>open &gt;200 DIM</li>
+</ul></li>
+</ul>
+</section>
+<section id="take-home" class="slide level2">
+<h2>Take-home</h2>
+<ul>
+<li>Always decompose PR into <strong>submission (IR)</strong> and <strong>success (CR)</strong></li>
+<li>Rates need uncertainty (SE/CI), especially in small herds</li>
+<li>EWMA/CUSUM convert noisy signals into actionable monitoring</li>
+</ul>
 
 
 </section></section>
-
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/Bovi-Analytics-SmallLogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://bovi-analytics.github.io/BeastsAndBytes/">https://bovi-analytics.github.io/BeastsAndBytes/</a></p>
+<p>https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/</p>
 </div>
 </div></div>
 
@@ -833,7 +635,7 @@ date (1): date
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -938,7 +740,7 @@ date (1): date
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -992,44 +794,6 @@ date (1): date
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

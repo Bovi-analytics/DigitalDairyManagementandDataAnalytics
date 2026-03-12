@@ -9,8 +9,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="dcterms.date" content="2025-04-10">
-  <title>ANSC4940 – Data transformations</title>
+  <meta name="author" content="Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens">
+  <title>ANSC4940 – Lecture - Youngstock metrics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,74 +28,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-87fb683e42416cd7aecb8e577b091905.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -187,11 +121,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Data transformations – ANSC4940">
-<meta property="og:description" content="Lecture 10">
+<meta property="og:title" content="Lecture - Youngstock metrics – ANSC4940">
+<meta property="og:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Data transformations – ANSC4940">
-<meta name="twitter:description" content="Lecture 10">
+<meta name="twitter:title" content="Lecture - Youngstock metrics – ANSC4940">
+<meta name="twitter:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,220 +135,195 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data transformations</h1>
-  <p class="subtitle">Lecture 10</p>
+  <h1 class="title">Lecture - Youngstock metrics</h1>
+  <p class="subtitle">ANSCI 4040 – Dairy Data Analysis &amp; Analytics</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens 
+</div>
+</div>
 </div>
 
-  <p class="date">2025-04-10</p>
 </section>
-<section>
-<section id="sec-introduction" class="title-slide slide level1 center">
-<h1>Introduction to factors</h1>
-
-</section>
-<section id="sec-prerequisites" class="slide level2">
-<h2>Prerequisites</h2>
+<section id="learning-goals" class="slide level2">
+<h2>Learning goals</h2>
 <ul>
-<li>Base R provides some basic tools for creating and manipulating factors.</li>
-<li>We’ll supplement these with the <strong>forcats</strong> package, which is part of the core tidyverse. It provides tools for dealing with <strong>cat</strong>egorical variables (and it’s an anagram of factors!) using a wide range of helpers for working with factors.</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section></section>
-<section>
-<section id="sec-factors" class="title-slide slide level1 center">
-<h1>Factors</h1>
-
-</section>
-<section id="sec-factor-basics" class="slide level2">
-<h2>Factor basics</h2>
-<p>Imagine that you have a variable that records month:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>x1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Dec"</span>, <span class="st">"Apr"</span>, <span class="st">"Jan"</span>, <span class="st">"Mar"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="sec-factor-basics-2" class="slide level2">
-<h2>Factor basics</h2>
-<p>Using a string to record this variable has two problems:</p>
-<ol type="1">
-<li><p>There are only twelve possible months, and there’s nothing saving you from typos:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>x2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Dec"</span>, <span class="st">"Apr"</span>, <span class="st">"Jam"</span>, <span class="st">"Mar"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div></li>
-<li><p>It doesn’t sort in a useful way:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">sort</span>(x1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Apr" "Dec" "Jan" "Mar"</code></pre>
-</div>
-</div></li>
-</ol>
-</section>
-<section id="sec-factor-basics-3" class="slide level2">
-<h2>Factor basics</h2>
-<p>You can fix both of these problems with a factor.</p>
-<p>To create a factor you must start by creating a list of the valid <strong>levels</strong>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>month_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb6-2"><a></a>  <span class="st">"Jan"</span>, <span class="st">"Feb"</span>, <span class="st">"Mar"</span>, <span class="st">"Apr"</span>, <span class="st">"May"</span>, <span class="st">"Jun"</span>,</span>
-<span id="cb6-3"><a></a>  <span class="st">"Jul"</span>, <span class="st">"Aug"</span>, <span class="st">"Sep"</span>, <span class="st">"Oct"</span>, <span class="st">"Nov"</span>, <span class="st">"Dec"</span></span>
-<span id="cb6-4"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="sec-factor-basics-4" class="slide level2">
-<h2>Factor basics</h2>
-<p>Now you can create a factor:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>y1 <span class="ot">&lt;-</span> <span class="fu">factor</span>(x1, <span class="at">levels =</span> month_levels)</span>
-<span id="cb7-2"><a></a>y1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Dec Apr Jan Mar
-Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">sort</span>(y1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Jan Mar Apr Dec
-Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-factor-basics-6" class="slide level2">
-<h2>Factor NA</h2>
-<p>And any values not in the level will be silently converted to NA:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>x2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Dec"</span>, <span class="st">"Apr"</span>, <span class="st">"Jam"</span>, <span class="st">"Mar"</span>)</span>
-<span id="cb11-2"><a></a>y2 <span class="ot">&lt;-</span> <span class="fu">factor</span>(x2, <span class="at">levels =</span> month_levels)</span>
-<span id="cb11-3"><a></a>y2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Dec  Apr  &lt;NA&gt; Mar 
-Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-factor-basics-7" class="slide level2">
-<h2>Factor NA</h2>
-<p>This seems risky, so you might want to use <code>forcats::fct()</code> instead, which will throw a error warning:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>y2 <span class="ot">&lt;-</span> <span class="fu">fct</span>(x2, <span class="at">levels =</span> month_levels)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `fct()`:
-! All values of `x` must appear in `levels` or `na`
-ℹ Missing level: "Jam"</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-factor-basics-8" class="slide level2">
-<h2>Factor sorting</h2>
-<p>Sorting alphabetically is slightly risky because not every computer will sort strings in the same way. So <code>forcats::fct()</code> orders by first appearance in the original vector:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">fct</span>(x1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Dec Apr Jan Mar
-Levels: Dec Apr Jan Mar</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-factor-basics-9" class="slide level2">
-<h2>Factor access</h2>
-<p>If you ever need to see the set of valid levels directly, you can do so with <code>levels()</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">levels</span>(y2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="sec-factor-csv" class="title-slide slide level1 center">
-<h1>Reading factors from CSV</h1>
-
-</section>
-<section id="sec-reading-csvs" class="slide level2">
-<h2>Factors in CSV files</h2>
-<p>You can also create a factor when reading your data with readr with <code>col_factor()</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>csv <span class="ot">&lt;-</span> <span class="st">"</span></span>
-<span id="cb19-2"><a></a><span class="st">month,value</span></span>
-<span id="cb19-3"><a></a><span class="st">Jan,12</span></span>
-<span id="cb19-4"><a></a><span class="st">Feb,56</span></span>
-<span id="cb19-5"><a></a><span class="st">Mar,12"</span></span>
-<span id="cb19-6"><a></a></span>
-<span id="cb19-7"><a></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(csv, <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">month =</span> <span class="fu">col_factor</span>(month_levels)))</span>
-<span id="cb19-8"><a></a>df<span class="sc">$</span>month</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Jan Feb Mar
-Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="sec-factor-reorder-relevel" class="title-slide slide level1 center">
-<h1>Factors reordering and releveling</h1>
-
-</section>
-<section id="sec-factor-reorder-1" class="slide level2">
-<h2>Factor reorder</h2>
-<p>Imagine the following plot, what would you like to ameliorate it for</p>
-
-<img data-src="lec-10_files/figure-revealjs/unnamed-chunk-12-1.png" alt="A scatterplot of with tvhours on the x-axis and religion on the y-axis. The y-axis is ordered seemingly aribtrarily making it hard to get any sense of overall pattern." width="960" class="r-stretch"></section>
-<section id="sec-factor-reorder-2" class="slide level2">
-<h2>Factor reorder</h2>
-<p>It is hard to read this plot because there’s no overall pattern. We can improve it by reordering the levels of <code>relig</code> using <code>fct_reorder()</code>. <code>fct_reorder()</code> takes three arguments:</p>
-<ul>
-<li><code>.f</code>, the factor whose levels you want to modify.</li>
-<li><code>.x</code>, a numeric vector that you want to use to reorder the levels.</li>
-<li>Optionally, <code>.fun</code>, a function that’s used if there are mu</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(relig_summary, <span class="fu">aes</span>(<span class="at">x =</span> tvhours, <span class="at">y =</span> <span class="fu">fct_reorder</span>(relig, tvhours))) <span class="sc">+</span></span>
-<span id="cb21-2"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-10_files/figure-revealjs/unnamed-chunk-13-1.png" alt="The same scatterplot as above, but now the religion is displayed in increasing order of tvhours. &quot;Other eastern&quot; has the fewest tvhours under 2, and &quot;Don't know&quot; has the highest (over 5)." width="960" class="r-stretch"></section>
-<section id="sec-factor-reorder-3" class="slide level2">
-<h2>Factor reorder</h2>
-
-<img data-src="lec-10_files/figure-revealjs/unnamed-chunk-14-1.png" alt="The same scatterplot as above, but now the religion is displayed in increasing order of tvhours. &quot;Other eastern&quot; has the fewest tvhours under 2, and &quot;Don't know&quot; has the highest (over 5)." width="960" class="r-stretch"></section>
-<section id="sec-factor-relevel-1" class="slide level2">
-<h2>Factor relevel</h2>
-<p>Imagine the following plot, maybe you would like to have “Not applicable” not show up at the top of the graph.</p>
-
-<img data-src="lec-10_files/figure-revealjs/unnamed-chunk-15-1.png" alt="A scatterplot with age on the x-axis and income on the y-axis. Income has been reordered in order of average age which doesn't make much sense. One section of the y-axis goes from $6000-6999, then <$1000, then $8000-9999." width="960" class="r-stretch"></section>
-<section id="sec-factor-relevel-2" class="slide level2">
-<h2>Factor relevel</h2>
-<p>You can use <code>fct_relevel()</code>. It takes a factor, <code>.f</code>, and then any number of levels that you want to move to the front of the line.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(rincome_summary, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> <span class="fu">fct_relevel</span>(rincome, <span class="st">"Not applicable"</span>))) <span class="sc">+</span></span>
-<span id="cb22-2"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-10_files/figure-revealjs/unnamed-chunk-16-1.png" alt="The same scatterplot but now &quot;Not Applicable&quot; is displayed at the bottom of the y-axis. Generally there is a positive association between income and age, and the income band with the highethst average age is &quot;Not applicable&quot;." width="960" class="r-stretch"></section>
-<section id="sec-other-factor-1" class="slide level2">
-<h2>Other usefull refactoring functions</h2>
-<ul>
-<li><code>fct_reorder2(.f, .x, .y)</code> reorders the factor <code>.f</code> by the <code>.y</code> values associated with the largest <code>.x</code> values.</li>
-<li><code>fct_infreq()</code> to order levels in decreasing frequency.</li>
-<li>Combine it with <code>fct_rev()</code> if you want them in increasing frequency.</li>
-<li><code>fct_recode()</code> allows you to recode, or change, the value of each level.</li>
+<li>Define each <strong>youngstock reproductive KPI</strong> precisely</li>
+<li>Add common <strong>synonyms/aliases</strong></li>
+<li>For each metric: reflect on <strong>bias, momentum, variance, lag</strong></li>
+<li>What question can each metric answer, or not</li>
+<li>Identify minimum data fields needed to compute reliably</li>
 </ul>
 </section>
-<section id="sec-other-factor-2" class="slide level2">
-<h2>Other usefull re-factoring functions</h2>
+<section id="youngstock-kpis-why-theyre-different" class="slide level2">
+<h2>Youngstock KPIs: why they’re different</h2>
 <ul>
-<li><code>fct_collapse()</code> is a useful variant of <code>fct_recode()</code> using a vector of old levels.</li>
-<li><code>fct_lump_lowfreq()</code> is a simple starting point that progressively lumps the smallest groups categories into “Other”, always keeping “Other” as the smallest category.</li>
-<li><code>fct_lump_n()</code> specifies the exact number of groups.</li>
+<li>Heifers are not “DIM-based”; they’re <strong>age-based</strong> and <strong>growth/management</strong> dependent</li>
+<li>Denominators are often small and strongly affected by:
+<ul>
+<li>enrollment criteria (eligible/not eligible)</li>
+<li>missing heat detection and unrecorded services</li>
+<li>pregnancy confirmation practices</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-prerequisites-heifers" class="slide level2">
+<h2>Data prerequisites (heifers)</h2>
+<p>Minimum fields:</p>
+<ul>
+<li><p>Birth date, ID, breed</p></li>
+<li><p>First heat date (if observed/sensor)</p></li>
+<li><p>First service date(s)</p></li>
+<li><p>Pregnancy diagnosis date &amp; outcome</p></li>
+<li><p>Calving date (first calving) or removal date</p></li>
+</ul>
+</section>
+<section id="data-prerequisites-heifers-1" class="slide level2">
+<h2>Data prerequisites (heifers)</h2>
+<p>Optional but bias-reducing:</p>
+<ul>
+<li><p>Body weight / ADG, BCS (if used), health events</p></li>
+<li><p>Pen/group, breeding method (AI vs bull), semen ID</p></li>
+</ul>
+</section>
+<section id="age-at-first-heat" class="slide level2">
+<h2>Age at first heat</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> age at puberty, age at first estrus</p></li>
+<li><p><strong>Definition:</strong> age (days or months) at first recorded estrus event.</p></li>
+<li><p><strong>Bias</strong> - Under-detection (no sensors, low observation intensity) - “First recorded” ≠ “first occurred”</p></li>
+<li><p><strong>Momentum</strong> - Reflects months of rearing decisions (nutrition, health) → slow to change</p></li>
+<li><p><strong>Variance</strong> - Small cohorts + seasonality in observation/sensors</p></li>
+<li><p><strong>Lag</strong> - Management change today shows up only when new calves reach puberty age</p></li>
+</ul>
+</section>
+<section id="age-at-first-insemination" class="slide level2">
+<h2>Age at first insemination</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> age at first service, age at first AI</p></li>
+<li><p><strong>Definition:</strong> age at first recorded insemination (AI or bull service if recorded).</p></li>
+<li><p><strong>Bias</strong> - Eligibility rules (min BW/age) differ by farm - Unrecorded natural services inflate “late” ages</p></li>
+<li><p><strong>Momentum</strong> - Strongly driven by growth program (pipeline)</p></li>
+<li><p><strong>Variance</strong> - Clustered by breeding season / staffing</p></li>
+<li><p><strong>Lag</strong> - Nutrition changes → growth → later first service effects</p></li>
+</ul>
+</section>
+<section id="age-at-pregnancy" class="slide level2">
+<h2>Age at pregnancy</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> age at conception (often approximated), age at confirmed pregnancy</p></li>
+<li><p><strong>Definition (recommended):</strong> - age at <em>pregnancy confirmation date</em> - optionally infer conception date = AI date + 0 (for AI-based conception)</p></li>
+<li><p><strong>Bias</strong> - Delayed pregnancy diagnosis shifts ages later - Pregnancy loss misclassified if not rechecked</p></li>
+<li><p><strong>Momentum</strong> - Influenced by both service timing and conception success</p></li>
+<li><p><strong>Variance</strong> - Small n; strong clustering by bull/tech</p></li>
+<li><p><strong>Lag</strong> - Program changes impact after heifers reach breeding eligibility</p></li>
+</ul>
+</section>
+<section id="expected-calving-age" class="slide level2">
+<h2>Expected calving age</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> predicted calving age, due-date age</p></li>
+<li><p><strong>Definition:</strong> age at expected calving date = pregnancy date + gestation length (standardized or breed-specific).</p></li>
+<li><p><strong>Bias</strong> - If pregnancy date is “confirmation date,” due date is biased late unless corrected - Missing or incorrect gestation length assumptions</p></li>
+<li><p><strong>Momentum</strong> - Mirrors age at pregnancy with additional fixed lag</p></li>
+<li><p><strong>Variance</strong> - Minimal beyond pregnancy date noise</p></li>
+<li><p><strong>Lag</strong> - Inherent gestation lag</p></li>
+</ul>
+</section>
+<section id="number-of-inseminations-per-heifer" class="slide level2">
+<h2>Number of inseminations per heifer</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> services per heifer, service intensity</p></li>
+<li><p><strong>Definition:</strong> total services recorded for heifers in a defined cohort/time window.</p></li>
+<li><p><strong>Bias</strong> - Missing service records (especially natural service) - Heifers sold/culled mid-process (censoring)</p></li>
+<li><p><strong>Momentum</strong> - Will improve slowly; reflects both estrus detection and fertility</p></li>
+<li><p><strong>Variance</strong> - High at small n; outliers dominate (repeat breeders)</p></li>
+<li><p><strong>Lag</strong> - Responds after enough heifers complete breeding cycle</p></li>
+</ul>
+</section>
+<section id="number-of-heifers-pregnant" class="slide level2">
+<h2>Number of heifers pregnant</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> pregnant heifer inventory</p></li>
+<li><p><strong>Definition:</strong> count of heifers with confirmed pregnancy (cross-sectional).</p></li>
+<li><p><strong>Bias</strong> - Depends on pregnancy check schedule and recording - Pregnancy loss not updated → overcount</p></li>
+<li><p><strong>Momentum</strong> - Inventory responds slowly (pipeline)</p></li>
+<li><p><strong>Variance</strong> - Lower if herd is large; higher for small operations</p></li>
+<li><p><strong>Lag</strong> - Built-in due to breeding + preg-check delay</p></li>
+</ul>
+</section>
+<section id="number-of-youngstock-not-served-16-months" class="slide level2">
+<h2>Number of youngstock not served &gt; 16 months</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> overdue heifers, eligible-not-bred</p></li>
+<li><p><strong>Definition:</strong> count of heifers older than threshold (e.g., 16 mo) with no recorded service.</p></li>
+<li><p><strong>Bias</strong> - Missing service records; unrecorded bull exposure - “Eligibility” should ideally include weight/health, not just age</p></li>
+<li><p><strong>Momentum</strong> - Sensitive to backlog (can change fast if you “catch up”)</p></li>
+<li><p><strong>Variance</strong> - Strongly seasonal if breeding is seasonal</p></li>
+<li><p><strong>Lag</strong> - Low (operational metric)</p></li>
+</ul>
+</section>
+<section id="age-at-first-calving" class="slide level2">
+<h2>Age at first calving</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> AFC (age at first calving)</p></li>
+<li><p><strong>Definition:</strong> age at first calving date.</p></li>
+<li><p><strong>Bias</strong> - Sold/cull heifers excluded (survivorship bias) - Induced calving / abortion not handled consistently</p></li>
+<li><p><strong>Momentum</strong> - Highly “sticky”: reflects months/years of upstream decisions</p></li>
+<li><p><strong>Variance</strong> - Moderate; depends on cohort size</p></li>
+<li><p><strong>Lag</strong> - Long (breeding + gestation)</p></li>
+</ul>
+</section>
+<section id="conception-rate-first-insemination-heifers" class="slide level2">
+<h2>Conception rate first insemination (heifers)</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> first-service conception rate, P/AI at 1st service</p></li>
+<li><p><strong>Definition:</strong> among heifers receiving first service, proportion confirmed pregnant from that service.</p></li>
+<li><p><strong>Bias</strong> - Pregnancy diagnosis timing and loss confound “conception” - If rechecks aren’t done, early loss misclassified as failure or success</p></li>
+<li><p><strong>Momentum</strong> - Can change faster than AFC but still requires preg-check pipeline</p></li>
+<li><p><strong>Variance</strong> - High when few first services occur</p></li>
+<li><p><strong>Lag</strong> - At least until pregnancy confirmation</p></li>
+</ul>
+</section>
+<section id="total-number-of-pregnancies-heifers" class="slide level2">
+<h2>Total number of pregnancies (heifers)</h2>
+<ul>
+<li><p><strong>Synonyms:</strong> total heifer pregnancies, preg count</p></li>
+<li><p><strong>Definition:</strong> total confirmed pregnancies in a time window (cross-sectional or cohort).</p></li>
+<li><p><strong>Bias</strong> - Double counting if rechecks create duplicate pregnancy events - Under-count if no confirmation recorded</p></li>
+<li><p><strong>Momentum</strong> - Inventory-like</p></li>
+<li><p><strong>Variance</strong> - Depends on heifer flow</p></li>
+<li><p><strong>Lag</strong> - Driven by pregnancy diagnosis schedule</p></li>
+</ul>
+</section>
+<section id="total-number-of-inseminations-heifers" class="slide level2">
+<h2>Total number of inseminations (heifers)</h2>
+<ul>
+<li><p><strong>Definition:</strong> total recorded services for heifers over a period.</p></li>
+<li><p><strong>Bias</strong> - Missing recording, bull exposure, duplicate entries</p></li>
+<li><p><strong>Momentum</strong> - Responds quickly to management changes (technique, scheduling)</p></li>
+<li><p><strong>Variance</strong> - High if only a few breeding days</p></li>
+<li><p><strong>Lag</strong> - Minimal (event metric)</p></li>
+</ul>
+</section>
+<section id="implementation-notes-heifer-dashboard" class="slide level2">
+<h2>Implementation notes (heifer dashboard)</h2>
+<p>Recommended visuals:</p>
+<ul>
+<li><p>Cohort waterfall: birth → first service → pregnant → calved</p></li>
+<li><p>Histogram: age at first service, age at pregnancy, AFC</p></li>
+<li><p>“Overdue” list: &gt;16 mo not served (action list)</p></li>
 </ul>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/Bovi-Analytics-SmallLogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://bovi-analytics.github.io/BeastsAndBytes/">https://bovi-analytics.github.io/BeastsAndBytes/</a></p>
+<p>https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/</p>
 </div>
 </div></div>
 
@@ -467,7 +376,7 @@ Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -572,7 +481,7 @@ Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -626,44 +535,6 @@ Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</code></pre>
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
