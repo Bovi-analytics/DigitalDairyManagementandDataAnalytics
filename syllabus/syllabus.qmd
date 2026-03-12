@@ -53,7 +53,7 @@ A statistical course such one of the following is not required but strongly advi
 
 # Outline
 
-See [this link](https://bovi-analytics.github.io/BeastsAndBytes/course-overview.html) for details on course outline. As this course is the first of its kind, expect updates to happen to this course outline during the fall semester of 2024.
+See [this link](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/course-overview.html) for details on course outline. As this course is the first of its kind, expect updates to happen to this course outline during the fall semester of 2024.
 
 # Format
 

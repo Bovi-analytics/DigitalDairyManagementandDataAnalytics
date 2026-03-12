@@ -1,251 +1,216 @@
 ---
-title: "Data transformations"
-subtitle: "Lecture 10"
-date: "April 10, 2025"
-format: 
+title: "Lecture  - Youngstock metrics"
+subtitle: "ANSCI 4040 – Dairy Data Analysis & Analytics"
+author: "Ass. Prof. Dr. Miel Hostens"
+footer: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
   revealjs:
-    footer: "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-# Introduction to factors {#sec-introduction}
+## Learning goals
 
-## Prerequisites {#sec-prerequisites}
+-   Define each **youngstock reproductive KPI** precisely
+-   Add common **synonyms/aliases**
+-   For each metric: reflect on **bias, momentum, variance, lag**
+-   What question can each metric answer, or not
+-   Identify minimum data fields needed to compute reliably
 
--   Base R provides some basic tools for creating and manipulating factors.
--   We'll supplement these with the **forcats** package, which is part of the core tidyverse. It provides tools for dealing with **cat**egorical variables (and it's an anagram of factors!) using a wide range of helpers for working with factors.
+## Youngstock KPIs: why they’re different
 
-```{r}
-#| label: setup
-#| echo: true
-#| message: false
+-   Heifers are not “DIM-based”; they’re **age-based** and **growth/management** dependent
+-   Denominators are often small and strongly affected by:
+    -   enrollment criteria (eligible/not eligible)
+    -   missing heat detection and unrecorded services
+    -   pregnancy confirmation practices
 
-library(tidyverse)
-```
+## Data prerequisites (heifers)
 
-# Factors {#sec-factors}
+Minimum fields:
 
-## Factor basics {#sec-factor-basics}
+-   Birth date, ID, breed
 
-Imagine that you have a variable that records month:
+-   First heat date (if observed/sensor)
 
-```{r}
-#| echo: true
-x1 <- c("Dec", "Apr", "Jan", "Mar")
-```
+-   First service date(s)
 
-## Factor basics {#sec-factor-basics-2}
+-   Pregnancy diagnosis date & outcome
 
-Using a string to record this variable has two problems:
+-   Calving date (first calving) or removal date
 
-1.  There are only twelve possible months, and there's nothing saving you from typos:
+## Data prerequisites (heifers)
 
-    ```{r}
-    #| echo: true
-    x2 <- c("Dec", "Apr", "Jam", "Mar")
-    ```
+Optional but bias-reducing:
 
-2.  It doesn't sort in a useful way:
+-   Body weight / ADG, BCS (if used), health events
 
-    ```{r}
-    #| echo: true
-    sort(x1)
-    ```
+-   Pen/group, breeding method (AI vs bull), semen ID
 
-## Factor basics {#sec-factor-basics-3}
+## Age at first heat
 
-You can fix both of these problems with a factor.
+-   **Synonyms:** age at puberty, age at first estrus
 
-To create a factor you must start by creating a list of the valid **levels**:
+-   **Definition:** age (days or months) at first recorded estrus event.
 
-```{r}
-#| echo: true
-#| message: true
-month_levels <- c(
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-)
-```
+-   **Bias** - Under-detection (no sensors, low observation intensity) - “First recorded” ≠ “first occurred”
 
-## Factor basics {#sec-factor-basics-4}
+-   **Momentum** - Reflects months of rearing decisions (nutrition, health) → slow to change
 
-Now you can create a factor:
+-   **Variance** - Small cohorts + seasonality in observation/sensors
 
-```{r}
-#| echo: true
-#| message: true
-y1 <- factor(x1, levels = month_levels)
-y1
+-   **Lag** - Management change today shows up only when new calves reach puberty age
 
-sort(y1)
-```
+## Age at first insemination
 
-## Factor NA {#sec-factor-basics-6}
+-   **Synonyms:** age at first service, age at first AI
 
-And any values not in the level will be silently converted to NA:
+-   **Definition:** age at first recorded insemination (AI or bull service if recorded).
 
-```{r}
-#| echo: true
-#| message: true
-x2 <- c("Dec", "Apr", "Jam", "Mar")
-y2 <- factor(x2, levels = month_levels)
-y2
-```
+-   **Bias** - Eligibility rules (min BW/age) differ by farm - Unrecorded natural services inflate “late” ages
 
-## Factor NA {#sec-factor-basics-7}
+-   **Momentum** - Strongly driven by growth program (pipeline)
 
-This seems risky, so you might want to use `forcats::fct()` instead, which will throw a error warning:
+-   **Variance** - Clustered by breeding season / staffing
 
-```{r}
-#| echo: true
-#| message: true
-#| error: true
-y2 <- fct(x2, levels = month_levels)
-```
+-   **Lag** - Nutrition changes → growth → later first service effects
 
-## Factor sorting {#sec-factor-basics-8}
+## Age at pregnancy
 
-Sorting alphabetically is slightly risky because not every computer will sort strings in the same way. So `forcats::fct()` orders by first appearance in the original vector:
+-   **Synonyms:** age at conception (often approximated), age at confirmed pregnancy
 
-```{r}
-#| echo: true
-#| message: true
-fct(x1)
-```
+-   **Definition (recommended):** - age at *pregnancy confirmation date* - optionally infer conception date = AI date + 0 (for AI-based conception)
 
-## Factor access {#sec-factor-basics-9}
+-   **Bias** - Delayed pregnancy diagnosis shifts ages later - Pregnancy loss misclassified if not rechecked
 
-If you ever need to see the set of valid levels directly, you can do so with `levels()`:
+-   **Momentum** - Influenced by both service timing and conception success
 
-```{r}
-#| echo: true
-#| message: true
-levels(y2)
-```
+-   **Variance** - Small n; strong clustering by bull/tech
 
-# Reading factors from CSV {#sec-factor-csv}
+-   **Lag** - Program changes impact after heifers reach breeding eligibility
 
-## Factors in CSV files {#sec-reading-csvs}
+## Expected calving age
 
-You can also create a factor when reading your data with readr with `col_factor()`:
+-   **Synonyms:** predicted calving age, due-date age
 
-```{r}
-#| echo: true
-#| message: true
-csv <- "
-month,value
-Jan,12
-Feb,56
-Mar,12"
+-   **Definition:** age at expected calving date = pregnancy date + gestation length (standardized or breed-specific).
 
-df <- read_csv(csv, col_types = cols(month = col_factor(month_levels)))
-df$month
-```
+-   **Bias** - If pregnancy date is “confirmation date,” due date is biased late unless corrected - Missing or incorrect gestation length assumptions
 
-# Factors reordering and releveling {#sec-factor-reorder-relevel}
+-   **Momentum** - Mirrors age at pregnancy with additional fixed lag
 
-## Factor reorder {#sec-factor-reorder-1}
+-   **Variance** - Minimal beyond pregnancy date noise
 
-Imagine the following plot, what would you like to ameliorate it for
+-   **Lag** - Inherent gestation lag
 
-```{r}
-#| echo: false
-#| message: true
-#| fig-alt: |
-#|   A scatterplot of with tvhours on the x-axis and religion on the y-axis.
-#|   The y-axis is ordered seemingly aribtrarily making it hard to get
-#|   any sense of overall pattern.
-relig_summary <- gss_cat |>
-  group_by(relig) |>
-  summarize(
-    tvhours = mean(tvhours, na.rm = TRUE),
-    n = n()
-  )
+## Number of inseminations per heifer
 
-ggplot(relig_summary, aes(x = tvhours, y = relig)) +
-  geom_point()
-```
+-   **Synonyms:** services per heifer, service intensity
 
-## Factor reorder {#sec-factor-reorder-2}
+-   **Definition:** total services recorded for heifers in a defined cohort/time window.
 
-It is hard to read this plot because there's no overall pattern. We can improve it by reordering the levels of `relig` using `fct_reorder()`. `fct_reorder()` takes three arguments:
+-   **Bias** - Missing service records (especially natural service) - Heifers sold/culled mid-process (censoring)
 
--   `.f`, the factor whose levels you want to modify.
--   `.x`, a numeric vector that you want to use to reorder the levels.
--   Optionally, `.fun`, a function that's used if there are mu
+-   **Momentum** - Will improve slowly; reflects both estrus detection and fertility
 
-```{r}
-#| echo: true
-#| message: true
-#| fig-alt: |
-#|   The same scatterplot as above, but now the religion is displayed in
-#|   increasing order of tvhours. "Other eastern" has the fewest tvhours
-#|   under 2, and "Don't know" has the highest (over 5).
-ggplot(relig_summary, aes(x = tvhours, y = fct_reorder(relig, tvhours))) +
-  geom_point()
-```
+-   **Variance** - High at small n; outliers dominate (repeat breeders)
 
-## Factor reorder {#sec-factor-reorder-3}
+-   **Lag** - Responds after enough heifers complete breeding cycle
 
-```{r}
-#| echo: false
-#| message: true
-#| fig-alt: |
-#|   The same scatterplot as above, but now the religion is displayed in
-#|   increasing order of tvhours. "Other eastern" has the fewest tvhours
-#|   under 2, and "Don't know" has the highest (over 5).
-ggplot(relig_summary, aes(x = tvhours, y = fct_reorder(relig, tvhours))) +
-  geom_point()
-```
+## Number of heifers pregnant
 
-## Factor relevel {#sec-factor-relevel-1}
+-   **Synonyms:** pregnant heifer inventory
 
-Imagine the following plot, maybe you would like to have "Not applicable" not show up at the top of the graph.
+-   **Definition:** count of heifers with confirmed pregnancy (cross-sectional).
 
-```{r}
-#| echo: false
-#| message: true
-#| fig-alt: |
-#|   A scatterplot with age on the x-axis and income on the y-axis. Income
-#|   has been reordered in order of average age which doesn't make much
-#|   sense. One section of the y-axis goes from $6000-6999, then <$1000,
-#|   then $8000-9999.
-rincome_summary <- gss_cat |>
-  group_by(rincome) |>
-  summarize(
-    age = mean(age, na.rm = TRUE),
-    n = n()
-  )
+-   **Bias** - Depends on pregnancy check schedule and recording - Pregnancy loss not updated → overcount
 
-ggplot(rincome_summary, aes(x = age, y = fct_reorder(rincome, age))) +
-  geom_point()
-```
+-   **Momentum** - Inventory responds slowly (pipeline)
 
-## Factor relevel {#sec-factor-relevel-2}
+-   **Variance** - Lower if herd is large; higher for small operations
 
-You can use `fct_relevel()`. It takes a factor, `.f`, and then any number of levels that you want to move to the front of the line.
+-   **Lag** - Built-in due to breeding + preg-check delay
 
-```{r}
-#| echo: true
-#| message: true
-#| fig-alt: |
-#|   The same scatterplot but now "Not Applicable" is displayed at the
-#|   bottom of the y-axis. Generally there is a positive association
-#|   between income and age, and the income band with the highethst average
-#|   age is "Not applicable".
+## Number of youngstock not served \> 16 months
 
-ggplot(rincome_summary, aes(x = age, y = fct_relevel(rincome, "Not applicable"))) +
-  geom_point()
-```
+-   **Synonyms:** overdue heifers, eligible-not-bred
 
-## Other usefull refactoring functions {#sec-other-factor-1}
+-   **Definition:** count of heifers older than threshold (e.g., 16 mo) with no recorded service.
 
--   `fct_reorder2(.f, .x, .y)` reorders the factor `.f` by the `.y` values associated with the largest `.x` values.
--   `fct_infreq()` to order levels in decreasing frequency.
--   Combine it with `fct_rev()` if you want them in increasing frequency.
--   `fct_recode()` allows you to recode, or change, the value of each level.
+-   **Bias** - Missing service records; unrecorded bull exposure - “Eligibility” should ideally include weight/health, not just age
 
-## Other usefull re-factoring functions {#sec-other-factor-2}
+-   **Momentum** - Sensitive to backlog (can change fast if you “catch up”)
 
--   `fct_collapse()` is a useful variant of `fct_recode()` using a vector of old levels.
--   `fct_lump_lowfreq()` is a simple starting point that progressively lumps the smallest groups categories into "Other", always keeping "Other" as the smallest category.
--   `fct_lump_n()` specifies the exact number of groups.
+-   **Variance** - Strongly seasonal if breeding is seasonal
+
+-   **Lag** - Low (operational metric)
+
+## Age at first calving
+
+-   **Synonyms:** AFC (age at first calving)
+
+-   **Definition:** age at first calving date.
+
+-   **Bias** - Sold/cull heifers excluded (survivorship bias) - Induced calving / abortion not handled consistently
+
+-   **Momentum** - Highly “sticky”: reflects months/years of upstream decisions
+
+-   **Variance** - Moderate; depends on cohort size
+
+-   **Lag** - Long (breeding + gestation)
+
+## Conception rate first insemination (heifers)
+
+-   **Synonyms:** first-service conception rate, P/AI at 1st service
+
+-   **Definition:** among heifers receiving first service, proportion confirmed pregnant from that service.
+
+-   **Bias** - Pregnancy diagnosis timing and loss confound “conception” - If rechecks aren’t done, early loss misclassified as failure or success
+
+-   **Momentum** - Can change faster than AFC but still requires preg-check pipeline
+
+-   **Variance** - High when few first services occur
+
+-   **Lag** - At least until pregnancy confirmation
+
+## Total number of pregnancies (heifers)
+
+-   **Synonyms:** total heifer pregnancies, preg count
+
+-   **Definition:** total confirmed pregnancies in a time window (cross-sectional or cohort).
+
+-   **Bias** - Double counting if rechecks create duplicate pregnancy events - Under-count if no confirmation recorded
+
+-   **Momentum** - Inventory-like
+
+-   **Variance** - Depends on heifer flow
+
+-   **Lag** - Driven by pregnancy diagnosis schedule
+
+## Total number of inseminations (heifers)
+
+-   **Definition:** total recorded services for heifers over a period.
+
+-   **Bias** - Missing recording, bull exposure, duplicate entries
+
+-   **Momentum** - Responds quickly to management changes (technique, scheduling)
+
+-   **Variance** - High if only a few breeding days
+
+-   **Lag** - Minimal (event metric)
+
+## Implementation notes (heifer dashboard)
+
+Recommended visuals:
+
+-   Cohort waterfall: birth → first service → pregnant → calved
+
+-   Histogram: age at first service, age at pregnancy, AFC
+
+-   “Overdue” list: \>16 mo not served (action list)

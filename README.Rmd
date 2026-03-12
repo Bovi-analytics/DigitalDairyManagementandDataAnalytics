@@ -11,9 +11,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Website for Beasts & Bytes at Cornell University
+# Website for Digital Dairy Management and Data Analytics at Cornell University
 
-[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/DigitalAgriculture/){.uri}
+[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/){.uri}
 
 [Miel Hostens](https://bovi-analytics.com/researchers/miel-hostens.html) • College of Agriculture and Life Sciences • Cornell University
 

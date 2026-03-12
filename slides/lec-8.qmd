@@ -1,8 +1,8 @@
 ---
-title: "Lecture – DISC Assessment & Team Dynamics"
-subtitle: "ANSCI 4040 – Team Projects & Collaboration"
+title: "Lecture – Physiology basics → what data must answer"
+subtitle: "ANSCI 4040 – Dairy Data Analysis & Analytics"
 author: "Ass. Prof. Dr. Miel Hostens"
-footer: "https://bovi-analytics.github.io/BeastsAndBytes/"
+footer: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/"
 logo: "images/Bovi-Analytics-SmallLogo.png"
 format:
   revealjs:
@@ -32,409 +32,141 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Why talk about personality in team projects?
+## Learning goals
 
-## Context
+-   Refresh **core reproductive physiology** (enough to interpret data)
+-   Translate biology into **questions your database must answer**
+-   Identify common **failure modes** (estrus, ovulation, luteolysis, anovulation)
+-   Connect management levers to **measurable outcomes**
 
--   You are working **in teams** on a semester‑long project
--   Technical skills matter — but **how you work together** often matters more
--   Many team conflicts are **not about competence**, but about **differences in style**
+::: notes
+This deck is intentionally “physiology-light but analytics-heavy”. We focus on the minimum biology needed to interpret KPIs correctly.
+:::
 
-## Typical team friction (you’ve probably seen this)
+## Why repro is a data problem
 
--   “They never speak up” vs “They talk too much”
--   “Too slow and careful” vs “Too impulsive”
--   “Too emotional” vs “Too cold and distant”
+-   Reproductive efficiency drives:
+    -   Milk production dynamics (lactation length, calving pattern)
+    -   Replacement rate, culling risk, heifer inventory, genetic progress
+    -   Labor and treatment costs
+-   The industry’s challenge: fertility declined then rebounded—requiring integration of physiology, management, nutrition, genetics, economics, and records.
 
-> DISC gives us a **neutral language** to talk about these differences
+## Conceptual model: “open → pregnant”
 
-# 2‑minute warm‑up
+How fast the program turns **eligible non-pregnant** cows into **pregnant** cows.
 
-## Pair‑share
+Key workflow:
 
-In your project group:
+-   Calve → VWP (voluntary waiting period)
 
--   What is one behavior that **annoys you** in team work?
+-   Detect heat **or** timed AI (TAI) program
 
--   What is one behavior you **need from others** to do your best work?
+-   Inseminate (service)
 
-> The goal is not to judge people — it’s to notice *patterns*.
+## Conceptual model: “open → pregnant”
 
-```{r}
-#| echo: false
-countdown::countdown(2, top=TRUE)
-```
+-   Conceive (P/AI)
 
-# What is DISC?
+-   Maintain pregnancy (loss matters)
 
-## The big idea
+-   Diagnose (preg check)
 
-DISC is a **behavioral framework**, not a test of intelligence, values, or ability.
+-   Resync or rebreed non-pregnant cows
 
-It describes patterns in:
+## Minimal physiology you must know
 
--   How people **communicate**
+Estrous cycle in cattle:
 
--   How they **approach tasks**
+-   \~3 weeks, but **longer in lactating cows vs heifers** (≈23 d vs ≈21 d).
 
--   How they **respond to challenges and others**
+-   Ovarian structures:
 
-## Important disclaimers
+    -   Follicles (dominant follicle → ovulation)
 
--   DISC is **not** a diagnosis
--   There is **no good or bad type**
--   Most people are a **blend**, not a pure type
--   Styles describe **preferences**, not limits
+    -   Corpus luteum (CL → progesterone)
 
-# Two popular ways you’ll see DISC explained
+    -   Luteolysis timing differs (heifers vs lactating cows).
 
-## 1. Letters (classic DISC)
+## Minimal physiology you must know
 
--   **D** – Dominance
--   **I** – Influence
--   **S** – Steadiness
--   **C** – Conscientiousness
+Six key hormones and what they *mean* for data interpretation:
 
-## 2. Colors ("Surrounded by Idiots")
+-   **Progesterone (P4)**: from CL; maintains pregnancy; blocks estrus / GnRH surge
 
-Based on the book by Thomas Erikson:
+-   **Estradiol (E2)**: from follicle; standing heat; triggers GnRH surge
 
-![](images/clipboard-1798606863.png){width="105"}
+-   **GnRH**: hypothalamus; triggers LH surge
 
-## 2. Colors ("Surrounded by Idiots")
+## Minimal physiology you must know
 
--   **Red (D)** – Dominant
+-   **LH**: surge causes ovulation; pulses drive dominant follicle growth
 
--   **Yellow (I)** – Influential
+-   **FSH**: initiates follicular wave
 
--   **Green (S)** – Steady
+-   **PGF2α**: uterus; regresses CL (luteolysis)
 
--   **Blue (C)** – Conscientious
+## What high milk production changes (and why metrics mislead)
 
-> Same underlying ideas — different language
+High milk production is associated with:
 
-# The “map” of DISC
+-   Larger ovulatory follicles but **lower circulating E2**
 
-## A simple way to visualize
+-   Larger luteal tissue volume but **lower circulating P4**
 
-DISC is often described using two rough axes:
+-   Shorter estrus duration at higher production
 
--   **Pace:** Fast‑paced vs More measured
--   **Focus:** Task/results vs People/relationships
+-   Higher risk of double ovulation (twinning risk)
 
-|                   | **Task / Results focus** | **People / Relationship focus** |
-|------------------|------------------------|------------------------------|
-| **Fast‑paced**    | **Red (D)**              | **Yellow (I)**                  |
-| **More measured** | **Blue (C)**             | **Green (S)**                   |
+Analytics consequence: “heat detection looks worse” partly because **estrus expression is shorter**, not only because labor/observation is worse.
 
-> Not perfect science — but a helpful mental model.
+## Estrus: behavior vs biology
 
-# The DISC dimensions (letters + colors)
+-   Standing heat is driven by E2 and ends when E2 drops below threshold (often **before** ovulation).
+-   AI timing should relate to onset of estrus (biologically tied to GnRH/LH surge), not just “was she seen?”
+-   Therefore: “no observed heat” ≠ “no ovulation”
 
-## Red (D) – Dominance
+## Anovulation: big hidden driver
 
-**Focus:** Results, action, winning
+-   Anovulation commonly defined as failure to ovulate around **\~60–80 DIM**
+-   Multi-study summaries show \~**20–25% anovular** cows around 60–70 DIM (large between-farm variation).
+-   Two phenotypes (useful for interpreting progesterone/ultrasound data):
+    -   “Small-follicle” anovular (insufficient LH pulses → follicles don’t reach ovulatory size)
+    -   “Large-follicle/cystic” anovular (high E2 fails to induce GnRH/LH surge) [1](https://cornellprod.sharepoint.com/sites/Bovi-Analytics/Shared%20Documents/General/ANSC%204940%20%E2%80%93%20Bovi-Analytics/LDHM%20ebook/ADSA_LDHM_e-Book_Section_7_76797_20251223092016.pdf)
 
-**Typical behaviors**
+## Management lever: timed AI programs
 
--   Direct, fast‑paced, decisive
+Why TAI exists:
 
--   Comfortable with disagreement
+-   Detection-of-estrus-only programs often delay first service and reduce service rate.
 
--   Likes to take charge
+-   Ovsynch (GnRH → PGF2α → GnRH → TAI) coordinates ovulation and CL regression, enabling timed insemination without estrus detection.
 
-**Strengths** - Gets things moving - Clear decisions - Handles pressure well
+-   Presynchronization (PGF2α and/or GnRH combinations) aims to start protocols at an optimal cycle stage and address anovulation.
 
-## Red (D) – Dominance
+## “What questions must the data answer?”
 
-**Potential blind spots**
+For any herd (and each pen/group):
 
--   Can seem impatient or blunt
+1.  **Eligibility / exposure**
+    -   Who is eligible to be bred this week (DIM, VWP, health holds)?
+2.  **Submission**
+    -   Who was *submitted* to insemination (observed heat or protocol)?
+3.  **Service quality**
+    -   Was the insemination recorded correctly (date/time, technician, semen, bull)?
 
--   May skip details or others’ input
+## “What questions must the data answer?”
 
-**Often‑cited examples** *(illustrative, not diagnoses)*
+1.  **Fertility outcome**
+    -   Who conceived (preg check), who didn’t, who lost?
+2.  **Timeliness**
+    -   How long did it take from calving → first service → conception?
+3.  **Bottleneck diagnosis**
+    -   Is low pregnancy rate due to **service rate** or **P/AI**?
 
--   Elon Musk (entrepreneurial drive, speed)
+## Take-home summary
 
--   Gordon Ramsay (direct, high standards)
-
-## Yellow (I) – Influence
-
-**Focus:** People, ideas, energy
-
-**Typical behaviors**
-
--   Expressive, enthusiastic
-
--   Thinks out loud
-
--   Enjoys collaboration and recognition
-
-**Strengths** - Generates ideas - Motivates others - Creates momentum
-
-## Yellow (I) – Influence
-
-**Potential blind spots**
-
--   Can lose focus
-
--   May over‑promise / under‑deliver
-
-**Often‑cited examples**
-
--   Oprah Winfrey (connection, influence)
-
--   Richard Branson (vision, enthusiasm)
-
-## Green (S) – Steadiness
-
-**Focus:** Harmony, stability, trust
-
-**Typical behaviors**
-
--   Patient, calm, supportive
-
--   Good listener
-
--   Prefers predictable workflows
-
-**Strengths** - Team glue - Reliability - Conflict de‑escalation
-
-## Green (S) – Steadiness
-
-**Potential blind spots**
-
--   Avoids conflict
-
--   Resists rapid change
-
-**Often‑cited examples**
-
--   Keanu Reeves (calm, respectful presence)
-
--   Fred Rogers (empathy, consistency)
-
-## Blue (C) – Conscientiousness
-
-**Focus:** Accuracy, quality, logic
-
-**Typical behaviors**
-
--   Analytical, structured
-
--   Data‑driven
-
--   Asks critical questions
-
-**Strengths** - High‑quality output - Risk reduction - Clear documentation
-
-## Blue (C) – Conscientiousness
-
-**Potential blind spots**
-
--   Overthinking
-
--   Perfectionism
-
-**Often‑cited examples**
-
--   Bill Gates (systems thinking)
-
--   Marie Curie (rigor, precision)
-
-# DISC is about preferences, not skills
-
-## Key distinction
-
--   DISC = **how** you prefer to act
--   Skills = **what** you are capable of doing
-
-Examples:
-
--   A Green (S) can still lead
-
--   A Red (D) can still listen
-
--   A Yellow (I) can still analyze
-
--   A Blue (C) can still inspire
-
-> Awareness creates **choice**
-
-# DISC in student teams
-
-## Common team patterns
-
--   Reds (D) push decisions and deadlines
--   Yellows (I) generate ideas and energy
--   Greens (S) keep the team aligned
--   Blues (C) ensure rigor and quality
-
-Teams struggle when:
-
--   One style dominates
-
--   Differences are interpreted as personal flaws
-
-## Example misunderstanding
-
--   Blue (C): “This needs more checking.”
--   Red (D) hears: “You’re slowing us down.”
--   Red (D): “Let’s just decide.”
--   Blue (C) hears: “You don’t care about quality.”
-
-DISC helps translate **intent vs impact**.
-
-# Mini‑activity: “Translate the message”
-
-## Scenario
-
-Your teammate writes:
-
-> “Can you send me your part by tonight? We’re behind.”
-
-### Task
-
-Rewrite that same message in a way that would land best for each style:
-
--   Red (D)
-
--   Yellow (I)
-
--   Green (S)
-
--   Blue (C)
-
-# Using DISC constructively
-
-## Practical rules
-
--   Don’t label people — **describe behavior**
--   Adjust communication, not personality
--   Balance speed, people, and quality
-
-## Simple adaptations
-
--   Talking to a Red (D) → be concise, outcome‑focused
--   Talking to a Yellow (I) → show enthusiasm, brainstorm
--   Talking to a Green (S) → be patient, inclusive
--   Talking to a Blue (C) → bring structure and data
-
-# One‑slide matrix: strengths each style brings
-
-## If you have all four styles in a team…
-
--   **Red (D):** momentum and decisions
--   **Yellow (I):** creativity and energy
--   **Green (S):** trust and follow‑through
--   **Blue (C):** rigor and quality
-
-> Strong teams don’t all think alike — they **coordinate differences**.
-
-# DISC under stress
-
-## Stress amplifies defaults
-
-When pressure rises, people often **overdo** their preferred style.
-
--   **Red (D)** under stress: gets more controlling / impatient
-    -   Helpful response: give options + timelines, stay concise
--   **Yellow (I)** under stress: talks more, becomes scattered
-    -   Helpful response: summarize decisions, assign next steps
-
-## Stress amplifies defaults
-
--   **Green (S)** under stress: withdraws, avoids conflict
-    -   Helpful response: ask directly, create psychological safety
--   **Blue (C)** under stress: over‑checks, delays decisions
-    -   Helpful response: define “good enough,” set a decision point
-
-> “Under stress” is not a flaw — it’s a signal.
-
-# Team reflection worksheet
-
-## Individual reflection
-
-Write short answers (1–2 sentences each):
-
-1.  My likely style(s): \_\_\_\_\_\_ (e.g., Green (S) + Blue (C))
-
-2.  I’m at my best in a team when: \_\_\_\_\_\_
-
-3.  Under pressure, I tend to overdo: \_\_\_\_\_\_
-
-4.  A teammate behavior that triggers me is: \_\_\_\_\_\_
-
-5.  One thing I can do this week to adapt better is: \_\_\_\_\_\_
-
-# Connecting DISC to project roles
-
-## Typical fit (not a rule)
-
--   **Project manager / decision driver:** often Red (D) or Yellow (I)
--   **Stakeholder liaison / interviewer / presenter:** often Yellow (I)
--   **Operations / scheduling / keeping everyone aligned:** often Green (S)
--   **Data lead / QA / methods & documentation:** often Blue (C)
-
-## The key message
-
-You can do *any* role — but knowing your default style helps you:
-
--   Choose strategies that work for you
-
--   Ask for the support you need
-
--   Avoid predictable failure modes
-
-# Self‑awareness before team awareness
-
-## Why start with yourself?
-
--   You are always part of the system
--   Stress amplifies your default style
-
-Reflection questions:
-
--   What do I overdo under pressure?
-
--   Which style frustrates me most — and why?
-
--   What does my team need more of?
-
-# Your assignment (before next class)
-
-## DISC self‑assessment
-
-1.  Complete the **free DISC assessment**: [Follow this link](https://professionalleadershipinstitute.com/disc-assessment/)
-2.  Download your **results PDF**
-3.  Share the PDF with me, if you feel comfortable
-
-I will:
-
--   Combine results across the class
-
-## Privacy / professionalism
-
--   This is for **learning and reflection**, not labeling
--   If you prefer, you may **remove your name** from the PDF before sharing
-
-# What we’ll do next class
-
-## In‑class follow‑up
-
--   Look at class‑level DISC distributions
--   Discuss strengths and gaps across teams
--   Connect DISC insights to your ongoing project work
-
-> The goal is not to change who you are — but to work **better together**.
-
-# Final takeaway
-
-## Remember
-
--   Differences are normal
--   Awareness reduces friction
--   Adaptation improves teams
-
-DISC gives us a **shared language** — what you do with it is up to you.
+-   Physiology gives you *mechanisms*; metrics give you *signals*
+-   High production alters hormone dynamics → affects estrus expression and twinning risk
+-   Anovulation is common around breeding start and requires protocol-aware interpretation
+-   Your monitoring framework must separate:
+    -   **Exposure (service/submission)** from **success (conception/pregnancy)**

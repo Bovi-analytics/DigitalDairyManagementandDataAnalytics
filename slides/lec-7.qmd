@@ -4,7 +4,7 @@ subtitle: "Lecture 7"
 date: "March 10, 2025"
 format: 
   revealjs:
-    footer: "[https://bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/)"
+    footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
 ---
 
 # Warm up
