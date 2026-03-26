@@ -35,7 +35,7 @@ This page contains an outline of the topics, content, and assignments for the co
 | 9 | 3/17 | Midterm Review: CURC Data – Addressing Phase I Questions (Meeting & Presentation with CURC Manager)  | Dr. Hostens | 📖 | 🖥️ |
 | 9 | 3/19 | No class |  |  |  |
 | 9 | 3/19 | (LAB) Analyze CURC SCC Trends | Dr. Hostens | 📖 | 🖥️ |
-| 10 | 3/24 | Nutrition Basics and Data-Driven Feeding Strategies | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/24 | Handling Uncertainty in Farm Data | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/26 | CURC Data Discussion – Phase II: Questions from Initial Meeting | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/26 | (LAB) CURC Data Discussion – Phase II: Addressing Raised Questions | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/31 | Spring Break (no class) |  |  |  |
