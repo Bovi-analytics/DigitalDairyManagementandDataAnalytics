@@ -28,7 +28,7 @@ This page contains an outline of the topics, content, and assignments for the co
 | 6 | 2/26 | (LAB) Inventory Calculations | Dr. Hostens |  |  |
 | 7 | 3/3 | Integrating Reproductive Management with Farm Systems | Dr. Hostens | 📖 | 🖥️ |
 | 7 | 3/5 | No class |  |  |  |
-| 7 | 3/5 | No lab |  |  |  |
+| 7 | 3/5 | No Lab (Dairy Fellows Program) |  |  |  |
 | 8 | 3/10 | DISC Assessment & Team Dynamics | Dr. Hostens | [📖](weeks/week-8.html) | [🖥️](slides/lec-8.html) |
 | 8 | 3/12 | Midterm Prep: CURC Data – Planning Phase I Presentation | Dr. Hostens | 📖 | 🖥️ |
 | 8 | 3/12 | (LAB) (LAB) Midterm Presentation Prep: CURC Data Discussion | Dr. Hostens | 📖 | 🖥️ |
