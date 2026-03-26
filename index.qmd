@@ -30,14 +30,14 @@ This page contains an outline of the topics, content, and assignments for the co
 | 7 | 3/5 | No class |  |  |  |
 | 7 | 3/5 | No lab |  |  |  |
 | 8 | 3/10 | DISC Assessment & Team Dynamics | Dr. Hostens | [📖](weeks/week-8.html) | [🖥️](slides/lec-8.html) |
-| 8 | 3/12 | Midterm preperation | Dr. Hostens | 📖 | 🖥️ |
-| 8 | 3/12 | (LAB) Midterm Exam Presentation | Dr. Hostens | 📖 | 🖥️ |
-| 9 | 3/17 | Animal Health Monitoring and Data-Driven Interventions | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/12 | Midterm Prep: CURC Data – Planning Phase I Presentation | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/12 | (LAB) (LAB) Midterm Presentation Prep: CURC Data Discussion | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/17 | Midterm Review: CURC Data – Addressing Phase I Questions (Meeting & Presentation with CURC Manager)  | Dr. Hostens | 📖 | 🖥️ |
 | 9 | 3/19 | No class |  |  |  |
 | 9 | 3/19 | (LAB) Analyze CURC SCC Trends | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/24 | Nutrition Basics and Data-Driven Feeding Strategies | Dr. Hostens | 📖 | 🖥️ |
-| 10 | 3/26 | Interpreting Feed Analysis Reports and Intake Data | Dr. Hostens | 📖 | 🖥️ |
-| 10 | 3/26 | (LAB) CURC Visit - Feed Systems | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/26 | CURC Data Discussion – Phase II: Questions from Initial Meeting | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/26 | (LAB) CURC Data Discussion – Phase II: Addressing Raised Questions | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/31 | Spring Break (no class) |  |  |  |
 | 10 | 4/2 | Spring Break (no class) |  |  |  |
 | 11 | 4/7 | Systems Thinking: Connecting Health, Nutrition, and Production | Dr. Hostens | 📖 | 🖥️ |
