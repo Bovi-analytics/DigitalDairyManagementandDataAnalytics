@@ -6,7 +6,7 @@ footer: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics
 logo: "images/Bovi-Analytics-SmallLogo.png"
 format:
   revealjs:
-    theme: slides.scss
+    theme: slides
     transition: fade
     slide-number: true
 editor: visual
