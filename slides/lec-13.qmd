@@ -2,9 +2,11 @@
 title: "Regular expressions"
 subtitle: "Lecture 13"
 date: "April 20, 2025"
-format: 
+format:
   revealjs:
-    footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
 ---
 
 # Introduction to Regular Expressions {#sec-introduction}
