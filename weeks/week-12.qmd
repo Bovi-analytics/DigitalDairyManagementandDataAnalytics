@@ -1,25 +1,25 @@
 ---
-title: "Lecture — How to Get Things Done"
+title: "Journal club heifer weight"
 subtitle: "ANSCI 4040 – Dairy Data Analysis & Analytics"
 editor: visual
 ---
 
 # Details/Subtopics 
-- 
-- 
--  
+- Peer presentations about four different papers highlighting different aspects of heifer weight at insemination. 
 
 # Activities/Tasks 
-- Lecture: How to Get Things Done 
-- Discussion: 
-- Lab:  
-  - 
-  -  
-  - 
+Questions:
+- What is the lay-out of the study? 
+- Which statistics were used?
+- How strong do you think the evidence is?
+- Potential pitfalls/sources of bias?
+- What does this study tell us that helps us answer the question?
+- How applicable is this to CDREC
+- What data can we look at to verify this?
 
 # Due Dates 
-- None 
+- April 16 2:30 pm
 
 # Datasets/Resources 
-- Course materials and lecture notes
+- Course materials and lecture notes > canvas 
 
