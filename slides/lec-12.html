@@ -6,17 +6,20 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
-  <meta name="dcterms.date" content="2025-04-17">
-  <title>ANSC4940 – Decision Trees</title>
+  <meta name="author" content="Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens">
+  <title>ANSC4940 – Lecture — How to Get Things Done</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -28,74 +31,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f0594785aaed3d091f712140715742e2.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -187,11 +124,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Decision Trees – ANSC4940">
-<meta property="og:description" content="Lecture 12">
+<meta property="og:title" content="Lecture — How to Get Things Done – ANSC4940">
+<meta property="og:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta property="og:site_name" content="ANSC4940">
-<meta name="twitter:title" content="Decision Trees – ANSC4940">
-<meta name="twitter:description" content="Lecture 12">
+<meta name="twitter:title" content="Lecture — How to Get Things Done – ANSC4940">
+<meta name="twitter:description" content="ANSCI 4040 – Dairy Data Analysis &amp; Analytics">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens @EnhongLiu">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,708 +138,293 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Decision Trees</h1>
-  <p class="subtitle">Lecture 12</p>
+  <h1 class="title">Lecture — How to Get Things Done</h1>
+  <p class="subtitle">ANSCI 4040 – Dairy Data Analysis &amp; Analytics</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ass. Prof.&nbsp;Dr.&nbsp;Miel Hostens 
+</div>
+</div>
 </div>
 
-  <p class="date">2025-04-17</p>
 </section>
-<section>
-<section id="sec-introduction" class="title-slide slide level1 center">
-<h1>Introduction to Decision Trees</h1>
-
-</section>
-<section id="sec-prerequisites" class="slide level2">
-<h2>Prerequisites</h2>
+<section id="todays-promise" class="slide level2">
+<h2>Today’s promise</h2>
+<p>By the end of this lecture you will be able to:</p>
 <ul>
-<li>This lecture will focus on <strong>Decision Trees</strong> and introduce <strong>Random Forests</strong>, powerful techniques for classification and regression tasks.</li>
-<li>We’ll use the <code>rpart</code> package for decision trees and the <code>randomForest</code> package for random forests.</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Install necessary packages if not already installed</span></span>
-<span id="cb1-2"><a></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(tidyverse)) <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb1-3"><a></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(rpart)) <span class="fu">install.packages</span>(<span class="st">"rpart"</span>)</span>
-<span id="cb1-4"><a></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(rpart.plot)) <span class="fu">install.packages</span>(<span class="st">"rpart.plot"</span>) <span class="co"># Install rpart.plot</span></span>
-<span id="cb1-5"><a></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(caret)) <span class="fu">install.packages</span>(<span class="st">"caret"</span>)</span>
-<span id="cb1-6"><a></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(randomForest)) <span class="fu">install.packages</span>(<span class="st">"randomForest"</span>)</span>
-<span id="cb1-7"><a></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(DiagrammeR)) <span class="fu">install.packages</span>(<span class="st">"DiagrammeR"</span>)</span>
-<span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a><span class="co"># Load the libraries</span></span>
-<span id="cb1-10"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-11"><a></a><span class="fu">library</span>(rpart)</span>
-<span id="cb1-12"><a></a><span class="fu">library</span>(rpart.plot) <span class="co"># Load rpart.plot</span></span>
-<span id="cb1-13"><a></a><span class="fu">library</span>(caret)</span>
-<span id="cb1-14"><a></a><span class="fu">library</span>(randomForest)</span>
-<span id="cb1-15"><a></a><span class="fu">library</span>(DiagrammeR) <span class="co"># Load DiagrammeR</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section></section>
-<section>
-<section id="sec-what-are-decision-trees" class="title-slide slide level1 center">
-<h1>What are Decision Trees?</h1>
-
-</section>
-<section id="sec-dt-intuitive" class="slide level2">
-<h2>Decision Trees: An Intuitive Approach</h2>
-<p>Decision trees are a widely-used and intuitive machine learning technique used to solve prediction problems. They work through a series of yes-no questions to arrive at an outcome.</p>
-<blockquote>
-<p><em>Some of the conceptual explanation here is inspired by Shaw Talebi’s excellent work on decision trees. For a Python-oriented approach, see his <a href="https://medium.com/data-science/decision-trees-introduction-intuition-dac9592f4b7f">blog post</a>.</em></p>
-</blockquote>
-</section>
-<section id="sec-dt-example" class="slide level2">
-<h2>A Simple Example</h2>
-<p>Imagine deciding whether to drink tea or coffee based on: - Time of day - Hours of sleep from last night</p>
-
-<img data-src="images/lec-12/1.png" class="r-stretch quarto-figure-center"><p class="caption">Simple decision tree example</p></section>
-<section id="sec-dt-structure" class="slide level2">
-<h2>Decision Tree Structure</h2>
-<p>A decision tree consists of:</p>
-<ul>
-<li><strong>Root Node</strong>: The initial splitting point (Is it after 4 PM?)</li>
-<li><strong>Internal/Splitting Nodes</strong>: Further split data based on conditions (Hours of sleep &gt; 6?)</li>
-<li><strong>Leaf/Terminal Nodes</strong>: Final outcome where no further splits occur (Tea 🍵 or Coffee ☕)</li>
-<li><strong>Edges</strong>: Connect nodes and represent decision paths (Yes/No)</li>
+<li>Build a <strong>trusted workflow</strong> for handling <em>everything that shows up</em> (ideas, tasks, emails, requests)</li>
+<li>Turn vague obligations into <strong>clear next actions</strong></li>
+<li>Run a <strong>lightweight project system</strong> (team Kanban + milestones) without over-engineering</li>
+<li>Communicate tasks and expectations in a way that fits different <strong>DISC styles</strong></li>
 </ul>
 </section>
-<section id="sec-dt-with-data" class="slide level2">
-<h2>Using Decision Trees with Data</h2>
-<p>In practice, we use tabular data where each row is evaluated through the tree:</p>
-
-<img data-src="images/lec-12/2.png" class="r-stretch quarto-figure-center"><p class="caption">Tabular data example</p></section>
-<section id="sec-dt-graphical" class="slide level2">
-<h2>Graphical View of a Decision Tree</h2>
-<p>Decision trees partition the feature space into regions:</p>
-
-<img data-src="images/lec-12/3.png" class="r-stretch quarto-figure-center"><p class="caption">Graphical view of decision tree partitioning</p></section></section>
-<section>
-<section id="sec-grow-dt" class="title-slide slide level1 center">
-<h1>How to Grow a Decision Tree</h1>
-
-</section>
-<section id="sec-dt-training" class="slide level2">
-<h2>Training Decision Trees from Data</h2>
-<p>Decision trees are grown using an optimization process:</p>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
 <ol type="1">
-<li><strong>Starting Point</strong>: Begin with all data in a single node</li>
-<li><strong>Greedy Search</strong>: Find the “best” variable and splitting point</li>
-<li><strong>Recursive Splitting</strong>: Repeat the process on each resulting partition</li>
-<li><strong>Stopping</strong>: Continue until a stopping criterion is met</li>
+<li>Why we get stuck</li>
+<li>The 5-step workflow (GTD-inspired)</li>
+<li>Turning tasks into projects + Kanban</li>
+<li>DISC-aware communication &amp; delegation</li>
+<li>Weekly review + staying consistent</li>
 </ol>
 </section>
-<section id="sec-split-criteria" class="slide level2">
-<h2>Split Criteria</h2>
-<p>Decision trees use various metrics to determine the best split:</p>
+<section>
+<section id="why-we-get-stuck" class="title-slide slide level1 center">
+<h1>Why we get stuck</h1>
+
+</section>
+<section id="the-real-problem-isnt-effort" class="slide level2">
+<h2>The real problem isn’t effort</h2>
 <ul>
-<li><strong>Classification Trees</strong>:
+<li><u>Most</u> students are not lazy — they’re <strong>overloaded with inputs</strong>:
 <ul>
-<li>Gini impurity (default in many implementations)</li>
-<li>Information gain / Entropy reduction</li>
-</ul></li>
-<li><strong>Regression Trees</strong>:
-<ul>
-<li>Mean Squared Error (MSE)</li>
-<li>Mean Absolute Error (MAE)</li>
+<li>team messages, emails, Canvas updates, data files, meeting notes</li>
+<li>half-formed ideas, “we should…” tasks, unclear responsibilities</li>
 </ul></li>
 </ul>
 </section>
-<section id="sec-dt-overfitting" class="slide level2">
-<h2>Overfitting in Decision Trees</h2>
-<p>A fully grown tree might perfectly classify training data but perform poorly on new data:</p>
-
-<img data-src="images/lec-12/4.png" class="r-stretch quarto-figure-center"><p class="caption">Comparison of simple vs.&nbsp;complex decision boundaries</p></section>
-<section id="sec-control-growth" class="slide level2">
-<h2>Controlling Tree Growth</h2>
-<p>To prevent overfitting, we can use:</p>
+<section id="typical-failure-modes" class="slide level2">
+<h2>Typical failure modes</h2>
+<ul>
+<li><strong>Open loops</strong>: you keep thinking “don’t forget…”</li>
+<li><strong>Vague tasks</strong>: “work on the project” has no action</li>
+<li><strong>Hidden work</strong>: waiting on someone, but nobody tracks it</li>
+<li><strong>Communication mismatch</strong>: same message lands differently across people</li>
+</ul>
+</section>
+<section id="the-5-step-workflow" class="slide level2">
+<h2>The 5-step workflow</h2>
+<p>A widely used productivity approach describes five steps:</p>
 <ol type="1">
-<li><strong>Hyperparameter Tuning</strong>:
-<ul>
-<li>Maximum tree depth</li>
-<li>Minimum samples per leaf</li>
-<li>Minimum samples for split</li>
-</ul></li>
-<li><strong>Pruning</strong>:
-<ul>
-<li>Grow a full tree, then remove branches that don’t improve performance</li>
-<li>Cost-complexity pruning</li>
-</ul></li>
+<li><strong>Capture</strong> — collect what has your attention</li>
+<li><strong>Clarify</strong> — decide what it means</li>
+<li><strong>Organize</strong> — put it where it belongs</li>
+<li><strong>Reflect</strong> — review frequently</li>
+<li><strong>Engage</strong> — do the work with confidence</li>
 </ol>
+<p><a href="https://gettingthingsdone.com/what-is-gtd/">https://gettingthingsdone.com</a></p>
 </section></section>
 <section>
-<section id="sec-dt-in-r" class="title-slide slide level1 center">
-<h1>Decision Trees in R</h1>
+<section id="step-1-capture" class="title-slide slide level1 center">
+<h1>Step 1 — Capture</h1>
 
 </section>
-<section id="sec-rpart-pkg" class="slide level2">
-<h2>The <code>rpart</code> Package</h2>
-<p>R has excellent support for decision trees through the <code>rpart</code> package:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Load a sample dataset - iris</span></span>
-<span id="cb2-2"><a></a><span class="fu">data</span>(iris)</span>
-<span id="cb2-3"><a></a><span class="fu">head</span>(iris)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa
-4          4.6         3.1          1.5         0.2  setosa
-5          5.0         3.6          1.4         0.2  setosa
-6          5.4         3.9          1.7         0.4  setosa</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-simple-dt" class="slide level2">
-<h2>Building a Simple Decision Tree</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Build a decision tree model</span></span>
-<span id="cb4-2"><a></a>iris_tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Species <span class="sc">~</span> ., </span>
-<span id="cb4-3"><a></a>                  <span class="at">data =</span> iris,</span>
-<span id="cb4-4"><a></a>                  <span class="at">method =</span> <span class="st">"class"</span>)</span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="co"># Print the model</span></span>
-<span id="cb4-7"><a></a><span class="fu">print</span>(iris_tree)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>n= 150 
-
-node), split, n, loss, yval, (yprob)
-      * denotes terminal node
-
-1) root 150 100 setosa (0.33333333 0.33333333 0.33333333)  
-  2) Petal.Length&lt; 2.45 50   0 setosa (1.00000000 0.00000000 0.00000000) *
-  3) Petal.Length&gt;=2.45 100  50 versicolor (0.00000000 0.50000000 0.50000000)  
-    6) Petal.Width&lt; 1.75 54   5 versicolor (0.00000000 0.90740741 0.09259259) *
-    7) Petal.Width&gt;=1.75 46   1 virginica (0.00000000 0.02173913 0.97826087) *</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-visualize-dt" class="slide level2">
-<h2>Visualizing the Decision Tree</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Plot the decision tree</span></span>
-<span id="cb6-2"><a></a><span class="fu">rpart.plot</span>(iris_tree, </span>
-<span id="cb6-3"><a></a>           <span class="at">extra =</span> <span class="dv">104</span>,      <span class="co"># Show sample sizes and percentage</span></span>
-<span id="cb6-4"><a></a>           <span class="at">box.palette =</span> <span class="st">"GnBu"</span>, <span class="co"># Color scheme</span></span>
-<span id="cb6-5"><a></a>           <span class="at">fallen.leaves =</span> <span class="cn">TRUE</span>) <span class="co"># Align leaves</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-12_files/figure-revealjs/unnamed-chunk-4-1.png" width="768" class="r-stretch"></section>
-<section id="sec-interpret-dt" class="slide level2">
-<h2>Interpreting the Tree</h2>
+<section id="rule-one-inbox-per-input-type" class="slide level2">
+<h2>Rule: one inbox per input type</h2>
 <ul>
-<li>At each node, we see:
+<li>A single place for:
 <ul>
-<li>The predicted class</li>
-<li>The probability distribution</li>
-<li>The percentage of observations</li>
-<li>The splitting criterion</li>
+<li>quick notes</li>
+<li>meeting follow-ups</li>
+<li>“someone asked me to…”</li>
+<li>ideas</li>
 </ul></li>
-<li>For the iris dataset:
+<li>What happens when multiple communication channels are used…</li>
+</ul>
+</section>
+<section id="what-counts-as-capture" class="slide level2">
+<h2>What counts as “capture”</h2>
 <ul>
-<li>The first split is on Petal.Length &lt; 2.5</li>
-<li>This perfectly separates setosa from the other species</li>
-<li>The second split uses Petal.Width to separate versicolor and virginica</li>
-</ul></li>
+<li><p>Anything you <em>might</em> need to remember later</p></li>
+<li><p>Anything that triggers a feeling of “I should…”</p></li>
 </ul>
 </section></section>
 <section>
-<section id="sec-practical-example" class="title-slide slide level1 center">
-<h1>Practical Example: Diabetes Prediction</h1>
+<section id="step-2-clarify" class="title-slide slide level1 center">
+<h1>Step 2 — Clarify</h1>
 
 </section>
-<section id="sec-diabetes-data" class="slide level2">
-<h2>Diabetes Dataset</h2>
-<p>Let’s use the Pima Indians Diabetes Dataset to predict diabetes risk:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Load diabetes data</span></span>
-<span id="cb7-2"><a></a>diabetes_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.csv"</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="co"># Set column names</span></span>
-<span id="cb7-5"><a></a><span class="fu">colnames</span>(diabetes_data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Pregnancies"</span>, <span class="st">"Glucose"</span>, <span class="st">"BloodPressure"</span>, <span class="st">"SkinThickness"</span>, </span>
-<span id="cb7-6"><a></a>                            <span class="st">"Insulin"</span>, <span class="st">"BMI"</span>, <span class="st">"DiabetesPedigreeFunction"</span>, <span class="st">"Age"</span>, <span class="st">"Outcome"</span>)</span>
-<span id="cb7-7"><a></a></span>
-<span id="cb7-8"><a></a><span class="co"># Check the data</span></span>
-<span id="cb7-9"><a></a><span class="fu">glimpse</span>(diabetes_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 768
-Columns: 9
-$ Pregnancies              &lt;int&gt; 6, 1, 8, 1, 0, 5, 3, 10, 2, 8, 4, 10, 10, 1, …
-$ Glucose                  &lt;int&gt; 148, 85, 183, 89, 137, 116, 78, 115, 197, 125…
-$ BloodPressure            &lt;int&gt; 72, 66, 64, 66, 40, 74, 50, 0, 70, 96, 92, 74…
-$ SkinThickness            &lt;int&gt; 35, 29, 0, 23, 35, 0, 32, 0, 45, 0, 0, 0, 0, …
-$ Insulin                  &lt;int&gt; 0, 0, 0, 94, 168, 0, 88, 0, 543, 0, 0, 0, 0, …
-$ BMI                      &lt;dbl&gt; 33.6, 26.6, 23.3, 28.1, 43.1, 25.6, 31.0, 35.…
-$ DiabetesPedigreeFunction &lt;dbl&gt; 0.627, 0.351, 0.672, 0.167, 2.288, 0.201, 0.2…
-$ Age                      &lt;int&gt; 50, 31, 32, 21, 33, 30, 26, 29, 53, 54, 30, 3…
-$ Outcome                  &lt;int&gt; 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, …</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-understand-data" class="slide level2">
-<h2>Understanding the Dataset</h2>
-<p>The dataset contains information about females of Pima Indian heritage with the following variables:</p>
-<ul>
-<li><strong>Pregnancies</strong>: Number of pregnancies</li>
-<li><strong>Glucose</strong>: Plasma glucose concentration (2 hours after oral glucose tolerance test)</li>
-<li><strong>BloodPressure</strong>: Diastolic blood pressure (mm Hg)</li>
-<li><strong>SkinThickness</strong>: Triceps skin fold thickness (mm)</li>
-<li><strong>Insulin</strong>: 2-Hour serum insulin (mu U/ml)</li>
-<li><strong>BMI</strong>: Body mass index (weight in kg/(height in m)^2)</li>
-<li><strong>DiabetesPedigreeFunction</strong>: A function of diabetes family history</li>
-<li><strong>Age</strong>: Age in years</li>
-<li><strong>Outcome</strong>: Class variable (0 = no diabetes, 1 = diabetes)</li>
-</ul>
-</section>
-<section id="sec-data-prep" class="slide level2">
-<h2>Preprocessing the Data</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Convert target to factor for classification</span></span>
-<span id="cb9-2"><a></a>diabetes_data<span class="sc">$</span>Outcome <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(diabetes_data<span class="sc">$</span>Outcome)</span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a><span class="co"># Recode target for interpretability</span></span>
-<span id="cb9-5"><a></a><span class="fu">levels</span>(diabetes_data<span class="sc">$</span>Outcome) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Healthy"</span>, <span class="st">"Diabetic"</span>)</span>
-<span id="cb9-6"><a></a></span>
-<span id="cb9-7"><a></a><span class="co"># Handle missing values (zeros are unlikely values for many of these measurements)</span></span>
-<span id="cb9-8"><a></a>diabetes_data<span class="sc">$</span>Glucose[diabetes_data<span class="sc">$</span>Glucose <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb9-9"><a></a>diabetes_data<span class="sc">$</span>BloodPressure[diabetes_data<span class="sc">$</span>BloodPressure <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb9-10"><a></a>diabetes_data<span class="sc">$</span>SkinThickness[diabetes_data<span class="sc">$</span>SkinThickness <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb9-11"><a></a>diabetes_data<span class="sc">$</span>Insulin[diabetes_data<span class="sc">$</span>Insulin <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb9-12"><a></a>diabetes_data<span class="sc">$</span>BMI[diabetes_data<span class="sc">$</span>BMI <span class="sc">==</span> <span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb9-13"><a></a></span>
-<span id="cb9-14"><a></a><span class="co"># Impute missing values with median</span></span>
-<span id="cb9-15"><a></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) {</span>
-<span id="cb9-16"><a></a>  diabetes_data[<span class="fu">is.na</span>(diabetes_data[,i<span class="sc">+</span><span class="dv">1</span>]), i<span class="sc">+</span><span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">median</span>(diabetes_data[,i<span class="sc">+</span><span class="dv">1</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb9-17"><a></a>}</span>
-<span id="cb9-18"><a></a></span>
-<span id="cb9-19"><a></a><span class="co"># Check class balance</span></span>
-<span id="cb9-20"><a></a><span class="fu">table</span>(diabetes_data<span class="sc">$</span>Outcome)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
- Healthy Diabetic 
-     500      268 </code></pre>
-</div>
-</div>
-</section>
-<section id="sec-data-split" class="slide level2">
-<h2>Data Preparation</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># Split into training and testing sets</span></span>
-<span id="cb11-2"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb11-3"><a></a>train_index <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(diabetes_data<span class="sc">$</span>Outcome, <span class="at">p =</span> <span class="fl">0.7</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb11-4"><a></a>train_data <span class="ot">&lt;-</span> diabetes_data[train_index, ]</span>
-<span id="cb11-5"><a></a>test_data <span class="ot">&lt;-</span> diabetes_data[<span class="sc">-</span>train_index, ]</span>
-<span id="cb11-6"><a></a></span>
-<span id="cb11-7"><a></a><span class="co"># Check class balance</span></span>
-<span id="cb11-8"><a></a><span class="fu">prop.table</span>(<span class="fu">table</span>(train_data<span class="sc">$</span>Outcome))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-  Healthy  Diabetic 
-0.6505576 0.3494424 </code></pre>
-</div>
-</div>
-</section>
-<section id="sec-train-model" class="slide level2">
-<h2>Training the Model</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Train a decision tree model</span></span>
-<span id="cb13-2"><a></a>diabetes_tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Outcome <span class="sc">~</span> ., </span>
-<span id="cb13-3"><a></a>                      <span class="at">data =</span> train_data,</span>
-<span id="cb13-4"><a></a>                      <span class="at">method =</span> <span class="st">"class"</span>,</span>
-<span id="cb13-5"><a></a>                      <span class="at">control =</span> <span class="fu">rpart.control</span>(<span class="at">cp =</span> <span class="fl">0.01</span>)) <span class="co"># complexity parameter</span></span>
-<span id="cb13-6"><a></a></span>
-<span id="cb13-7"><a></a><span class="co"># View the result</span></span>
-<span id="cb13-8"><a></a><span class="fu">rpart.plot</span>(diabetes_tree, </span>
-<span id="cb13-9"><a></a>           <span class="at">extra =</span> <span class="dv">106</span>,      </span>
-<span id="cb13-10"><a></a>           <span class="at">box.palette =</span> <span class="st">"RdBu"</span>,</span>
-<span id="cb13-11"><a></a>           <span class="at">fallen.leaves =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb13-12"><a></a>           <span class="at">main =</span> <span class="st">"Diabetes Classification Decision Tree"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-12_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
-<section id="sec-evaluate-model" class="slide level2">
-<h2>Evaluating the Model</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Make predictions on test data</span></span>
-<span id="cb14-2"><a></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(diabetes_tree, test_data, <span class="at">type =</span> <span class="st">"class"</span>)</span>
-<span id="cb14-3"><a></a></span>
-<span id="cb14-4"><a></a><span class="co"># Create confusion matrix</span></span>
-<span id="cb14-5"><a></a>conf_matrix <span class="ot">&lt;-</span> <span class="fu">confusionMatrix</span>(predictions, test_data<span class="sc">$</span>Outcome)</span>
-<span id="cb14-6"><a></a>conf_matrix</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Confusion Matrix and Statistics
-
-          Reference
-Prediction Healthy Diabetic
-  Healthy      134       35
-  Diabetic      16       45
-                                         
-               Accuracy : 0.7783         
-                 95% CI : (0.719, 0.8302)
-    No Information Rate : 0.6522         
-    P-Value [Acc &gt; NIR] : 2.232e-05      
-                                         
-                  Kappa : 0.4826         
-                                         
- Mcnemar's Test P-Value : 0.01172        
-                                         
-            Sensitivity : 0.8933         
-            Specificity : 0.5625         
-         Pos Pred Value : 0.7929         
-         Neg Pred Value : 0.7377         
-             Prevalence : 0.6522         
-         Detection Rate : 0.5826         
-   Detection Prevalence : 0.7348         
-      Balanced Accuracy : 0.7279         
-                                         
-       'Positive' Class : Healthy        
-                                         </code></pre>
-</div>
-</div>
-</section>
-<section id="sec-feature-importance" class="slide level2">
-<h2>Feature Importance</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># Extract variable importance</span></span>
-<span id="cb16-2"><a></a>var_importance <span class="ot">&lt;-</span> diabetes_tree<span class="sc">$</span>variable.importance</span>
-<span id="cb16-3"><a></a>var_importance_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb16-4"><a></a>  <span class="at">Variable =</span> <span class="fu">names</span>(var_importance),</span>
-<span id="cb16-5"><a></a>  <span class="at">Importance =</span> var_importance</span>
-<span id="cb16-6"><a></a>)</span>
-<span id="cb16-7"><a></a></span>
-<span id="cb16-8"><a></a><span class="co"># Plot variable importance</span></span>
-<span id="cb16-9"><a></a><span class="fu">ggplot</span>(var_importance_df, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(Variable, Importance), <span class="at">y =</span> Importance)) <span class="sc">+</span></span>
-<span id="cb16-10"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb16-11"><a></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb16-12"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Variables"</span>, <span class="at">y =</span> <span class="st">"Importance"</span>, </span>
-<span id="cb16-13"><a></a>       <span class="at">title =</span> <span class="st">"Variable Importance in Diabetes Prediction"</span>) <span class="sc">+</span></span>
-<span id="cb16-14"><a></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-12_files/figure-revealjs/unnamed-chunk-10-1.png" width="768" class="r-stretch"></section>
-<section id="sec-hyperparameter" class="slide level2">
-<h2>Hyperparameter Tuning</h2>
-<p>We can tune the complexity parameter (cp) to control tree growth:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># Plot cp values</span></span>
-<span id="cb17-2"><a></a><span class="fu">plotcp</span>(diabetes_tree)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lec-12_files/figure-revealjs/unnamed-chunk-11-1.png" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co"># Find optimal cp value</span></span>
-<span id="cb18-2"><a></a>optimal_cp <span class="ot">&lt;-</span> diabetes_tree<span class="sc">$</span>cptable[<span class="fu">which.min</span>(diabetes_tree<span class="sc">$</span>cptable[,<span class="st">"xerror"</span>]),<span class="st">"CP"</span>]</span>
-<span id="cb18-3"><a></a><span class="fu">cat</span>(<span class="st">"Optimal CP value:"</span>, optimal_cp, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Optimal CP value: 0.0106383 </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Train model with optimal cp</span></span>
-<span id="cb20-2"><a></a>pruned_tree <span class="ot">&lt;-</span> <span class="fu">prune</span>(diabetes_tree, <span class="at">cp =</span> optimal_cp)</span>
-<span id="cb20-3"><a></a></span>
-<span id="cb20-4"><a></a><span class="co"># Plot pruned tree</span></span>
-<span id="cb20-5"><a></a><span class="fu">rpart.plot</span>(pruned_tree,</span>
-<span id="cb20-6"><a></a>           <span class="at">extra =</span> <span class="dv">106</span>,</span>
-<span id="cb20-7"><a></a>           <span class="at">box.palette =</span> <span class="st">"RdBu"</span>,</span>
-<span id="cb20-8"><a></a>           <span class="at">fallen.leaves =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb20-9"><a></a>           <span class="at">main =</span> <span class="st">"Pruned Diabetes Classification Tree"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lec-12_files/figure-revealjs/unnamed-chunk-11-2.png" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="sec-model-comparison" class="slide level2">
-<h2>Model Comparison</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Evaluate pruned model</span></span>
-<span id="cb21-2"><a></a>pruned_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(pruned_tree, test_data, <span class="at">type =</span> <span class="st">"class"</span>)</span>
-<span id="cb21-3"><a></a>pruned_conf_matrix <span class="ot">&lt;-</span> <span class="fu">confusionMatrix</span>(pruned_predictions, test_data<span class="sc">$</span>Outcome)</span>
-<span id="cb21-4"><a></a></span>
-<span id="cb21-5"><a></a><span class="co"># Compare metrics</span></span>
-<span id="cb21-6"><a></a>metrics_comparison <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb21-7"><a></a>  <span class="at">Model =</span> <span class="fu">c</span>(<span class="st">"Full Tree"</span>, <span class="st">"Pruned Tree"</span>),</span>
-<span id="cb21-8"><a></a>  <span class="at">Accuracy =</span> <span class="fu">c</span>(conf_matrix<span class="sc">$</span>overall[<span class="st">"Accuracy"</span>], </span>
-<span id="cb21-9"><a></a>               pruned_conf_matrix<span class="sc">$</span>overall[<span class="st">"Accuracy"</span>]),</span>
-<span id="cb21-10"><a></a>  <span class="at">Sensitivity =</span> <span class="fu">c</span>(conf_matrix<span class="sc">$</span>byClass[<span class="st">"Sensitivity"</span>], </span>
-<span id="cb21-11"><a></a>                  pruned_conf_matrix<span class="sc">$</span>byClass[<span class="st">"Sensitivity"</span>]),</span>
-<span id="cb21-12"><a></a>  <span class="at">Specificity =</span> <span class="fu">c</span>(conf_matrix<span class="sc">$</span>byClass[<span class="st">"Specificity"</span>], </span>
-<span id="cb21-13"><a></a>                  pruned_conf_matrix<span class="sc">$</span>byClass[<span class="st">"Specificity"</span>])</span>
-<span id="cb21-14"><a></a>)</span>
-<span id="cb21-15"><a></a></span>
-<span id="cb21-16"><a></a>metrics_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>        Model  Accuracy Sensitivity Specificity
-1   Full Tree 0.7782609   0.8933333      0.5625
-2 Pruned Tree 0.7913043   0.8933333      0.6000</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="sec-advantages-limitations" class="title-slide slide level1 center">
-<h1>Advantages &amp; Limitations</h1>
-
-</section>
-<section id="sec-advantages" class="slide level2">
-<h2>Advantages of Decision Trees</h2>
-<ul>
-<li><strong>Interpretability</strong>: Easy to understand and visualize</li>
-<li><strong>No scaling required</strong>: Doesn’t require feature normalization</li>
-<li><strong>Handles mixed data types</strong>: Can process numerical and categorical variables</li>
-<li><strong>Captures non-linear relationships</strong>: Can model complex decision boundaries</li>
-<li><strong>Feature importance</strong>: Naturally reveals important variables</li>
-</ul>
-</section>
-<section id="sec-limitations" class="slide level2">
-<h2>Limitations of Decision Trees</h2>
-<ul>
-<li><strong>Overfitting</strong>: Prone to capturing noise in training data</li>
-<li><strong>Instability</strong>: Small changes in data can result in very different trees</li>
-<li><strong>Bias toward variables with many levels</strong>: Can favor categorical variables with many categories</li>
-<li><strong>Suboptimal global decisions</strong>: Greedy approach may not find globally optimal tree</li>
-<li><strong>Limited prediction smoothness</strong>: Step-wise predictions rather than smooth functions</li>
-</ul>
-</section></section>
-<section>
-<section id="sec-random-forests" class="title-slide slide level1 center">
-<h1>Introduction to Random Forests</h1>
-
-</section>
-<section id="sec-ensemble" class="slide level2">
-<h2>Ensemble Learning</h2>
-<p>Random Forests overcome many limitations of single decision trees through:</p>
-<ul>
-<li><strong>Bootstrap Aggregation (Bagging)</strong>: Training many trees on random subsets of data</li>
-<li><strong>Feature Randomization</strong>: Considering only a subset of features at each split</li>
-<li><strong>Voting/Averaging</strong>: Combining predictions from all trees</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lec-12_files/figure-revealjs/unnamed-chunk-13-1.png" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/lec-12/5.png"></p>
-<figcaption>Random Forest Intuitive Implementation</figcaption>
-</figure>
-</div>
-</section>
-<section id="sec-rf-implement" class="slide level2">
-<h2>Random Forest Implementation</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co"># Train Random Forest model</span></span>
-<span id="cb23-2"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb23-3"><a></a>diabetes_rf <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Outcome <span class="sc">~</span> ., </span>
-<span id="cb23-4"><a></a>                           <span class="at">data =</span> train_data,</span>
-<span id="cb23-5"><a></a>                           <span class="at">ntree =</span> <span class="dv">100</span>,    <span class="co"># Number of trees</span></span>
-<span id="cb23-6"><a></a>                           <span class="at">mtry =</span> <span class="fu">sqrt</span>(<span class="fu">ncol</span>(train_data)<span class="sc">-</span><span class="dv">1</span>)) <span class="co"># Number of variables tried at each split</span></span>
-<span id="cb23-7"><a></a></span>
-<span id="cb23-8"><a></a><span class="co"># Print the model</span></span>
-<span id="cb23-9"><a></a><span class="fu">print</span>(diabetes_rf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
- randomForest(formula = Outcome ~ ., data = train_data, ntree = 100,      mtry = sqrt(ncol(train_data) - 1)) 
-               Type of random forest: classification
-                     Number of trees: 100
-No. of variables tried at each split: 3
-
-        OOB estimate of  error rate: 26.77%
-Confusion matrix:
-         Healthy Diabetic class.error
-Healthy      285       65   0.1857143
-Diabetic      79      109   0.4202128</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># Variable importance</span></span>
-<span id="cb25-2"><a></a><span class="fu">varImpPlot</span>(diabetes_rf, <span class="at">main =</span> <span class="st">"Variable Importance in Random Forest"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-12_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
-<section id="sec-rf-performance" class="slide level2">
-<h2>Random Forest Performance</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co"># Make predictions</span></span>
-<span id="cb26-2"><a></a>rf_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(diabetes_rf, test_data)</span>
-<span id="cb26-3"><a></a>rf_conf_matrix <span class="ot">&lt;-</span> <span class="fu">confusionMatrix</span>(rf_predictions, test_data<span class="sc">$</span>Outcome)</span>
-<span id="cb26-4"><a></a></span>
-<span id="cb26-5"><a></a><span class="co"># Add to comparison</span></span>
-<span id="cb26-6"><a></a>metrics_comparison <span class="ot">&lt;-</span> <span class="fu">rbind</span>(metrics_comparison,</span>
-<span id="cb26-7"><a></a>                           <span class="fu">data.frame</span>(</span>
-<span id="cb26-8"><a></a>                             <span class="at">Model =</span> <span class="st">"Random Forest"</span>,</span>
-<span id="cb26-9"><a></a>                             <span class="at">Accuracy =</span> rf_conf_matrix<span class="sc">$</span>overall[<span class="st">"Accuracy"</span>],</span>
-<span id="cb26-10"><a></a>                             <span class="at">Sensitivity =</span> rf_conf_matrix<span class="sc">$</span>byClass[<span class="st">"Sensitivity"</span>],</span>
-<span id="cb26-11"><a></a>                             <span class="at">Specificity =</span> rf_conf_matrix<span class="sc">$</span>byClass[<span class="st">"Specificity"</span>]</span>
-<span id="cb26-12"><a></a>                           ))</span>
-<span id="cb26-13"><a></a></span>
-<span id="cb26-14"><a></a>metrics_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                 Model  Accuracy Sensitivity Specificity
-1            Full Tree 0.7782609   0.8933333      0.5625
-2          Pruned Tree 0.7913043   0.8933333      0.6000
-Accuracy Random Forest 0.7608696   0.8533333      0.5875</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-oob-error" class="slide level2">
-<h2>Out-of-Bag Error Estimation</h2>
-<p>One unique advantage of Random Forests is out-of-bag (OOB) error estimation:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="co"># Plot error vs number of trees</span></span>
-<span id="cb28-2"><a></a><span class="fu">plot</span>(diabetes_rf, <span class="at">main =</span> <span class="st">"Random Forest Error Rates vs Number of Trees"</span>)</span>
-<span id="cb28-3"><a></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">colnames</span>(diabetes_rf<span class="sc">$</span>err.rate), <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">lty =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-12_files/figure-revealjs/unnamed-chunk-16-1.png" width="672" class="r-stretch"></section></section>
-<section>
-<section id="sec-advanced-topics" class="title-slide slide level1 center">
-<h1>Advanced Topics</h1>
-
-</section>
-<section id="sec-tree-ensembles" class="slide level2">
-<h2>Tree Ensembles Beyond Random Forests</h2>
-<p>Other tree-based ensemble methods include:</p>
-<ul>
-<li><strong>Gradient Boosting</strong>: Builds trees sequentially, each correcting errors of previous trees
-<ul>
-<li>XGBoost, LightGBM, CatBoost</li>
-</ul></li>
-<li><strong>AdaBoost</strong>: Boosts performance by giving higher weight to misclassified instances</li>
-<li><strong>Extremely Randomized Trees</strong>: Adds additional randomization in splitting</li>
-</ul>
-</section>
-<section id="sec-regression-trees" class="slide level2">
-<h2>Regression Trees</h2>
-<p>Decision trees can also be used for regression problems:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="co"># Create a simple regression tree example</span></span>
-<span id="cb29-2"><a></a><span class="fu">data</span>(Boston, <span class="at">package =</span> <span class="st">"MASS"</span>)</span>
-<span id="cb29-3"><a></a></span>
-<span id="cb29-4"><a></a><span class="co"># Train a regression tree</span></span>
-<span id="cb29-5"><a></a>boston_tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(medv <span class="sc">~</span> ., <span class="at">data =</span> Boston)</span>
-<span id="cb29-6"><a></a></span>
-<span id="cb29-7"><a></a><span class="co"># Plot the regression tree</span></span>
-<span id="cb29-8"><a></a><span class="fu">rpart.plot</span>(boston_tree, </span>
-<span id="cb29-9"><a></a>           <span class="at">main =</span> <span class="st">"Boston Housing Price Regression Tree"</span>,</span>
-<span id="cb29-10"><a></a>           <span class="at">box.palette =</span> <span class="st">"BuPu"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="lec-12_files/figure-revealjs/unnamed-chunk-17-1.png" width="672" class="r-stretch"></section></section>
-<section>
-<section id="sec-conclusion" class="title-slide slide level1 center">
-<h1>Conclusion</h1>
-
-</section>
-<section id="sec-summary" class="slide level2">
-<h2>Summary</h2>
-<ul>
-<li>Decision trees provide an intuitive approach to classification and regression</li>
-<li>They work by recursively partitioning data based on feature values</li>
-<li>Controlling tree growth is crucial to prevent overfitting</li>
-<li>Random forests improve performance by combining many trees</li>
-<li>Both algorithms provide interpretable models with built-in feature importance</li>
-</ul>
-</section>
-<section id="sec-takeaways" class="slide level2">
-<h2>Key Takeaways</h2>
+<section id="clariry" class="slide level2">
+<h2>Clariry</h2>
+<p>For each item in your inbox, decide:</p>
 <ol type="1">
-<li>Decision trees are excellent for initial modeling and understanding data</li>
-<li>Hyperparameter tuning and pruning help prevent overfitting</li>
-<li>Random forests generally outperform single decision trees</li>
-<li>Consider the tradeoff between interpretability and performance</li>
-<li>These techniques work well across many domains and data types</li>
+<li>Is it actionable?</li>
+</ol>
+<ul>
+<li><strong>No</strong> → trash / reference / someday</li>
+<li><strong>Yes</strong> → what’s the <strong>next action</strong>?</li>
+</ul>
+<ol start="2" type="1">
+<li>If it takes &lt;2 minutes, do it now (optional habit)</li>
 </ol>
 </section>
-<section id="sec-references" class="slide level2">
-<h2>References</h2>
+<section id="next-action-test" class="slide level2">
+<h2>Next action test</h2>
+<p>A “next action” must be:</p>
+<ul>
+<li>physical/visible (send, call, draft, run, compute)</li>
+<li>doable in one sitting</li>
+<li>context-bound (where/with what tools)</li>
+</ul>
+</section>
+<section id="examples-vague-next-action" class="slide level2">
+<h2>Examples: vague → next action</h2>
+<ul>
+<li>“Work on the reproduction dashboard”
+<ul>
+<li>✅ “Compute SR/CR/PR for last 6 cycles and draft 3 bullet insights”</li>
+</ul></li>
+<li>“Talk to farmer”
+<ul>
+<li>✅ “Email farmer with 3 proposed call times + 4 questions to prep”</li>
+</ul></li>
+<li>“Fix the code”
+<ul>
+<li>✅ “Re-run notebook, log failing cell, create minimal reproducible example”</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="step-3-organize" class="title-slide slide level1 center">
+<h1>Step 3 — Organize</h1>
+
+</section>
+<section id="minimal-set-of-lists" class="slide level2">
+<h2>Minimal set of lists</h2>
+<ul>
+<li><strong>Next Actions</strong> (doable tasks)</li>
+<li><strong>Projects</strong> (outcomes requiring &gt;1 action)</li>
+<li><strong>Calendar</strong> (time-specific)</li>
+<li><strong>Waiting For</strong> (delegated/blocked)</li>
+<li><strong>Reference</strong> (info only)</li>
+<li><strong>Someday/Maybe</strong> (not now)</li>
+</ul>
+</section>
+<section id="team-friendly-implementation" class="slide level2">
+<h2>Team-friendly implementation</h2>
+<ul>
+<li>Personal: any tool you trust</li>
+<li>Team: a <strong>Kanban board</strong> (To Do → Doing → Done)</li>
+</ul>
+</section>
+<section id="using-tools-you-already-have-cornell-o365" class="slide level2">
+<h2>Using tools you already have (Cornell-O365)</h2>
+<p>For team projects:</p>
+<ul>
+<li>using <strong>Planner</strong> (Office365) with a <strong>Kanban</strong> style board</li>
+<li>linking it to a <strong>Teams channel</strong> for project communication</li>
+</ul>
+</section>
+<section id="the-project-definition" class="slide level2">
+<h2>The project definition</h2>
+<p>A <strong>project</strong> is an outcome that needs multiple actions.</p>
+<ul>
+<li>“Finish our dashboard” is not a project.</li>
+<li>“Publish a dashboard that computes SR/CR/PR with QA checks and a one-page interpretation” is.</li>
+</ul>
+</section>
+<section id="project-clarity-template" class="slide level2">
+<h2>Project clarity template</h2>
+<ul>
+<li>Outcome (one sentence):</li>
+<li>Definition of Done (3–5 bullets):</li>
+<li>Owner:</li>
+<li>Due date / checkpoint:</li>
+<li>Next action (must exist):</li>
+</ul>
+</section>
+<section id="kanban-basics-that-actually-work" class="slide level2">
+<h2>Kanban basics that actually work</h2>
+<p><strong>Columns</strong> (recommended for student teams):</p>
 <ol type="1">
-<li>Talebi, S. (2023). “Decision Trees: Introduction &amp; Intuition”. <a href="https://medium.com/data-science/decision-trees-introduction-intuition-dac9592f4b7f">Medium</a></li>
-<li>Breiman, L., Friedman, J., Stone, C.J., &amp; Olshen, R.A. (1984). “Classification and Regression Trees”</li>
-<li>Breiman, L. (2001). “Random Forests”. Machine Learning, 45(1), 5-32</li>
-<li>James, G., Witten, D., Hastie, T., &amp; Tibshirani, R. (2013). “An Introduction to Statistical Learning”</li>
-<li>Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., &amp; Johannes, R.S. (1988). “Using the ADAP learning algorithm to forecast the onset of diabetes mellitus”</li>
-<li>Normalized Nerd. (2022). “Random Forest Algorithm Clearly Explained!”. (https://www.youtube.com/watch?v=v6VJ2RO66Ag&amp;ab_channel=NormalizedNerd)</li>
+<li>Backlog</li>
+<li>This week</li>
+<li>Doing (limit to 1–2 per person)</li>
+<li>Blocked / Waiting</li>
+<li>Done</li>
 </ol>
 </section></section>
 <section>
-<section id="sec-thank-you" class="title-slide slide level1 center">
-<h1>Thank You!</h1>
+<section id="disc-aware-collaboration" class="title-slide slide level1 center">
+<h1>DISC-aware collaboration</h1>
 
 </section>
-<section id="sec-questions" class="slide level2">
-<h2>Questions?</h2>
-<p>Feel free to reach out with any questions about decision trees or random forests!</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.0 (2024-04-24)
-Platform: x86_64-pc-linux-gnu
-Running under: Ubuntu 24.04.3 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0
-
-locale:
- [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
- [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
- [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-
-time zone: UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices datasets  utils     methods   base     
-
-other attached packages:
- [1] DiagrammeR_1.0.11    randomForest_4.7-1.2 caret_7.0-1         
- [4] lattice_0.22-6       rpart.plot_3.1.2     rpart_4.1.23        
- [7] lubridate_1.9.4      forcats_1.0.0        stringr_1.5.1       
-[10] dplyr_1.1.4          purrr_1.0.4          readr_2.1.5         
-[13] tidyr_1.3.1          tibble_3.2.1         ggplot2_3.5.1       
-[16] tidyverse_2.0.0     
-
-loaded via a namespace (and not attached):
- [1] tidyselect_1.2.1     timeDate_4041.110    farver_2.1.2        
- [4] fastmap_1.2.0        pROC_1.18.5          digest_0.6.36       
- [7] timechange_0.3.0     lifecycle_1.0.4      survival_3.5-8      
-[10] magrittr_2.0.3       compiler_4.4.0       rlang_1.1.6         
-[13] tools_4.4.0          yaml_2.3.9           data.table_1.17.0   
-[16] knitr_1.48           labeling_0.4.3       htmlwidgets_1.6.4   
-[19] plyr_1.8.9           RColorBrewer_1.1-3   withr_3.0.2         
-[22] nnet_7.3-19          grid_4.4.0           stats4_4.4.0        
-[25] e1071_1.7-16         colorspace_2.1-1     future_1.34.0       
-[28] globals_0.16.3       scales_1.3.0         iterators_1.0.14    
-[31] MASS_7.3-60.2        cli_3.6.4            rmarkdown_2.27      
-[34] generics_0.1.3       future.apply_1.11.3  reshape2_1.4.4      
-[37] tzdb_0.5.0           visNetwork_2.1.2     proxy_0.4-27        
-[40] splines_4.4.0        parallel_4.4.0       vctrs_0.6.5         
-[43] hardhat_1.4.1        Matrix_1.7-0         jsonlite_1.8.8      
-[46] hms_1.1.3            listenv_0.9.1        foreach_1.5.2       
-[49] gower_1.0.2          recipes_1.2.0        glue_1.7.0          
-[52] parallelly_1.43.0    codetools_0.2-20     stringi_1.8.4       
-[55] gtable_0.3.6         munsell_0.5.1        pillar_1.10.1       
-[58] htmltools_0.5.8.1    ipred_0.9-15         lava_1.8.1          
-[61] R6_2.5.1             evaluate_0.24.0      renv_1.1.4          
-[64] class_7.3-22         Rcpp_1.0.14          nlme_3.1-164        
-[67] prodlim_2024.06.25   xfun_0.45            pkgconfig_2.0.3     
-[70] ModelMetrics_1.2.2.2</code></pre>
-</div>
-</div>
-
-
+<section id="why-disc-matters-for-getting-things-done" class="slide level2">
+<h2>Why DISC matters for “getting things done”</h2>
+<ul>
+<li><p>A task system fails if communication fails.</p></li>
+<li><p>People differ in:</p>
+<ul>
+<li><p>preferred speed</p></li>
+<li><p>detail tolerance</p></li>
+<li><p>comfort with conflict</p></li>
+<li><p>need for structure</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="if-your-team-mates-lean-d-red" class="slide level2">
+<h2>If your team mates lean D (Red)</h2>
+<ul>
+<li>Lead with the ask + deadline</li>
+<li>Offer 2 options, request a decision</li>
+</ul>
+</section>
+<section id="if-your-team-mates-lean-i-yellow" class="slide level2">
+<h2>If your team mates lean I (Yellow)</h2>
+<ul>
+<li>Start with purpose and energy</li>
+<li>Make the ask collaborative (“Let’s decide together”)</li>
+</ul>
+</section>
+<section id="if-your-team-mates-lean-s-green" class="slide level2">
+<h2>If your team mates lean S (Green)</h2>
+<ul>
+<li>Provide stability: what changes, what doesn’t</li>
+<li>Ask for concerns and confirm agreement</li>
+</ul>
+</section>
+<section id="if-your-team-mates-lean-c-blue" class="slide level2">
+<h2>If your team mates lean C (Blue)</h2>
+<ul>
+<li>Provide detail, evidence, definitions</li>
+<li>Put assumptions and acceptance criteria in writing</li>
+</ul>
+</section>
+<section id="delegation-that-sticks-disc-gtd" class="slide level2">
+<h2>Delegation that sticks (DISC + GTD)</h2>
+<p>When you delegate, don’t just say “can you handle X?”</p>
+<p>Use:</p>
+<ul>
+<li><p>Outcome</p></li>
+<li><p>Definition of Done</p></li>
+<li><p>Next check-in</p></li>
+<li><p>Track it on</p></li>
+<li><p>Waiting For</p></li>
+</ul>
+</section>
+<section id="one-sentence-delegation-format" class="slide level2">
+<h2>One-sentence delegation format</h2>
+<p>“Could you <strong>deliver [outcome]</strong> by <strong>[date]</strong>, with <strong>[DoD bullets]</strong>? Let’s check in <strong>[time]</strong>.”</p>
 </section></section>
+<section>
+<section id="step-4-reflect" class="title-slide slide level1 center">
+<h1>Step 4 — Reflect</h1>
+
+</section>
+<section id="why-weekly-reviews-matter" class="slide level2">
+<h2>Why weekly reviews matter</h2>
+<p>Even the best system decays unless you refresh it.</p>
+<p>A weekly review is a dedicated time to:</p>
+<ul>
+<li><p>clear inboxes</p></li>
+<li><p>update next actions</p></li>
+<li><p>ensure each project has a next action</p></li>
+<li><p>look ahead at the calendar</p></li>
+</ul>
+<p>The weekly review is widely described as a core habit in GTD-style approaches.</p>
+</section></section>
+<section id="step-5-engage" class="title-slide slide level1 center">
+<h1>Step 5 — Engage</h1>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/Bovi-Analytics-SmallLogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://bovi-analytics.github.io/BeastsAndBytes/">https://bovi-analytics.github.io/BeastsAndBytes/</a></p>
+<p><a href="https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/">https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/</a></p>
 </div>
 </div></div>
 
@@ -955,7 +477,7 @@ loaded via a namespace (and not attached):
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1060,7 +582,7 @@ loaded via a namespace (and not attached):
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
