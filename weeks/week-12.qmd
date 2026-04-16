@@ -1,16 +1,25 @@
 ---
 title: "Lecture — How to Get Things Done"
 subtitle: "ANSCI 4040 – Dairy Data Analysis & Analytics"
-author: "Ass. Prof. Dr. Miel Hostens"
-footer: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/"
-logo: "images/Bovi-Analytics-SmallLogo.png"
-format:
-  revealjs:
-    theme: slides
-    transition: fade
-    slide-number: true
 editor: visual
-execute:
-  freeze: auto
 ---
+
+# Details/Subtopics 
+- 
+- 
+-  
+
+# Activities/Tasks 
+- Lecture: How to Get Things Done 
+- Discussion: 
+- Lab:  
+  - 
+  -  
+  - 
+
+# Due Dates 
+- None 
+
+# Datasets/Resources 
+- Course materials and lecture notes
 
