@@ -1,0 +1,672 @@
+---
+title: "Lecture – Working with uncertainty in dairy science"
+subtitle: "ANSCI 4040 – Dairy Data Analysis & Analytics"
+author: "Ass. Prof. Dr. Miel Hostens"
+footer: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/"
+logo: "images/Bovi-Analytics-SmallLogo.png"
+format:
+  revealjs:
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
+---
+
+## Big idea
+
+**Every number you see on a farm is an estimate.**
+
+-   It has **sampling uncertainty** (finite cows, finite days)
+-   It has **measurement uncertainty** (sensor error, missingness)
+-   It has **model uncertainty** (assumptions, misspecification)
+
+Today we learn how to **reason, quantify, and communicate** that uncertainty.
+
+## Learning goals (part 1)
+
+1.  Translate a dairy question into **(data type → model → test)**
+
+2.  Run and interpret:
+
+    -   a hypothesis test for a **normal** outcome (mean difference)
+    -   a hypothesis test for a **binomial** outcome (proportion difference)
+
+3.  Explain the **true value** of a *p*-value (what it is / is not)
+
+## Learning goals (part 2)
+
+4.  Distinguish **statistically different** vs **biologically different**
+
+5.  Distinguish **association** vs **prediction**, and interpret **Se/Sp/PPV/NPV/Accuracy**
+
+::: notes
+Key teaching emphasis: Students often confuse “significant” with “important” and “correlation” with “usable prediction”.
+:::
+
+# Part 1 — Uncertainty: where it enters the dairy pipeline
+
+## Where does uncertainty come from?
+
+**A. Sampling** (finite cows, finite events)
+
+Example: pregnancy rate on 25 AIs is noisier than on 250 AIs
+
+**B. Measurement** (sensors, humans, lab assays)
+
+Example: activity sensor misses mild estrus; SCC lab has CV
+
+## Where does uncertainty come from?
+
+**C. Model** (assumptions)
+
+Example: t-test assumes approximate normality / equal variances
+
+**D. Decision context** (costs and consequences)
+
+Example: a mastitis alert that fires too often wastes time
+
+::: notes
+Bring this back later: statistical test choice is about *data-generating process*.
+:::
+
+## “Uncertainty” is not the enemy
+
+In dairy science we often use data to:
+
+-   **Understand** (association, mechanism)
+-   **Decide** (intervention, management)
+-   **Predict** (risk scores, alerts)
+
+Uncertainty can be:
+
+-   **Quantified** (SE, CI, posterior)
+-   **Reduced** (better design, more cows, better sensors)
+-   **Managed** (thresholds, decision analysis)
+
+# Part 2 — P-values: what they are, and what they are NOT
+
+## What a p-value *is*
+
+A *p*-value is:
+
+> The probability (under the **null hypothesis**) of observing a result **as extreme or more extreme** than what you observed.
+
+So it is a statement about **data under a model**, not about “truth”.
+
+## What a p-value is *not*
+
+A *p*-value is **NOT**:
+
+-   The probability that the null hypothesis is true
+-   The probability your result will replicate
+-   A measure of effect size or biological relevance
+-   A “proof” of causality
+
+::: notes
+Students often interpret p=0.03 as “97% chance the treatment works”. That is wrong.
+:::
+
+## Why reporting *exact* p-values matters
+
+When reporting results:
+
+-   Prefer **exact p-values** (e.g., *P* = 0.003; *P* = 0.71) rather than only “*P* \< 0.05”.
+-   Prefer **effect sizes + confidence intervals** around effects.
+
+This matches good reporting guidance in dairy research.
+
+*Example reporting guidance:* quantify p-values to \<0.001 and prefer 95% confidence intervals around effect estimates. (Lean et al., 2016)\[doi:10.3168/jds.2015-9445\]
+
+::: notes
+This point is explicitly recommended in the attached JDS invited review.
+:::
+
+# Part 3 — From question → data type → model → test
+
+## Decision tree: which test?
+
+```{mermaid}
+flowchart TD
+    Q["Start: What is your outcome?"] --> A{"Outcome type"}
+
+    A -->|Continuous| C{"Independent groups"}
+    A -->|Binary 0-1| B{"Groups"}
+    A -->|Counts| K{"Rate or exposure"}
+    A -->|Time-to-event| S["Survival model: Kaplan-Meier or Cox"]
+
+    C -->|2 independent groups| C2{"Approx normal?"}
+    C -->|Paired or repeated| CP["Paired t-test or mixed model"]
+    C -->|3 or more groups| CA["ANOVA or linear model"]
+
+    C2 -->|Yes| CT["t-test (Welch if variances differ)"]
+    C2 -->|No| CW["Wilcoxon, transform, or robust"]
+
+    B -->|1 proportion vs target| B1["Binomial test"]
+    B -->|2 proportions| B2{"Expected counts large?"}
+    B2 -->|Yes| B2a["Chi-square or two-proportion z test"]
+    B2 -->|No| B2b["Fisher exact test"]
+    B -->|Many covariates| BL["Logistic regression or mixed logistic"]
+
+    K -->|Counts per time/unit| KP{"Overdispersed?"}
+    KP -->|No| K1["Poisson regression"]
+    KP -->|Yes| K2["Negative binomial regression"]
+    K -->|Many zeros| KZ["Zero-inflated or hurdle models"]
+
+    S --> S2{"Clustering (herd or cow)?"}
+    S2 -->|Yes| S3["Frailty or mixed-effects survival"]
+    S2 -->|No| S4["Standard survival analysis"]
+```
+
+::: notes
+This slide is your “visual”. Emphasize: pick the test by (1) outcome distribution, (2) design/independence, (3) sample size and assumptions.
+:::
+
+## Data science × statistics: the handshake
+
+Statistics helps you:
+
+-   Choose a model aligned with the data-generating process
+
+-   Quantify uncertainty (SE/CI)
+
+-   Avoid false discoveries / overconfidence
+
+## Data science × statistics: the handshake
+
+Data science helps you:
+
+-   Build reproducible pipelines
+
+-   Validate models out-of-sample
+
+-   Scale to large, messy farm data
+
+**Best practice:** combine both.
+
+# Part 4 — Hypothesis testing examples
+
+## Example 1 (Normal): milk yield change vs a target
+
+**Question:** A farm says the new ration should increase 30-d milk yield by **+4 lbs/day**. We sample 24 cows and compute their *change* (after–before).
+
+-   Outcome: continuous (lbs/day)
+-   Design: paired (same cows)
+-   Model: approx normal differences
+-   Test: **paired t-test**
+
+## Code (R)
+
+```{r}
+#| echo: true
+n <- 24
+true_effect <- 2.4     # true mean change (lbs/d)
+sd_change <- 3.0
+
+change <- rnorm(n, mean=true_effect, sd=sd_change)
+
+# H0: mean change = 4 lbs/d (the claim) HA: mean change != 4
+res <- t.test(change, mu = 4)
+res
+```
+
+::: notes
+This is a deliberately realistic scenario: lots of biological noise. Ask: even if p\>0.05, what is the CI around the effect?
+:::
+
+## Interpreting the result: emphasize effect size
+
+The test checks whether the mean of the variable change is equal to 4.
+
+Hypotheses:
+
+-   H0: The mean = 4
+
+-   H1: The mean ≠ 4
+
+## What does the t-value mean?
+
+**t = -3.7808**
+
+-   The negative sign means the sample mean is **below 4**
+-   The larger the absolute value of t, the stronger the evidence against H0
+
+This suggests the mean is far from 4.
+
+## Degrees of Freedom
+
+**df = 23**
+
+This means:
+
+-   Number of observations = 24\
+    (because df = n − 1)
+
+## The *P-value*
+
+***P*****-value = 0.0009681**
+
+What this means:
+
+-   The probability of getting this result if the true mean were 4 is very small
+
+-   Since 0.0009681\< 0.05, the result is **statistically significant**
+
+Conclusion:
+
+We reject the null hypothesis.
+
+## Confidence Interval
+
+**95% Confidence Interval:**
+
+1.077941 → 3.144723
+
+Important:
+
+-   The value **4 is not inside the interval**
+
+-   This confirms that the mean is significantly different from 4
+
+## Sample Mean
+
+**Mean of change = 2.111332**
+
+Interpretation:
+
+-   The average value is about **2.11**
+
+-   This is clearly lower than 4
+
+## Final Conclusion
+
+The data show that:
+
+-   The mean of *change* is significantly different from 4
+
+-   The true mean is most likely between **1.08 and 3.14**
+
+-   The sample mean is **2.11**
+
+**Final conclusion:**
+
+-   The average change is significantly lower than 4.
+
+-   Is it **biologically meaningful** for the farm?
+
+------------------------------------------------------------------------
+
+## Example 2 (Binomial): conception rate vs a baseline
+
+**Question:** In a timed-AI protocol, baseline **P/AI = 0.35**. After a management tweak we observe **x = 18 pregnancies out of n = 40 AIs**.
+
+-   Outcome: pregnancy (0/1)
+-   Model: binomial
+-   Test: **binomial test** (one-sample proportion)
+
+## Example 2 (Binomial): conception rate vs a baseline
+
+```{r}
+#| echo: true
+x <- 18
+n <- 40
+p0 <- 0.35
+
+#Binomial test
+binom.test(x, n, p = p0, alternative = "two.sided")
+```
+
+::: notes
+Highlight: with n=40, uncertainty is still big. Ask students to inspect CI for the proportion.
+:::
+
+## Example 3 (Two groups): pregnancy probability in 2 treatments
+
+**Question:** Treatment A vs B; outcome is pregnant yes/no.
+
+-   If expected counts are large → chi-square / two-proportion test
+-   If expected counts are small → Fisher exact
+
+## Example 3 (Two groups): pregnancy probability in 2 treatments
+
+```{r}
+#| echo: true
+# Example counts
+# A: 55 preg / 145 not
+# B: 70 preg / 130 not
+
+tab <- matrix(c(55,145,70,130), nrow=2, byrow=TRUE)
+colnames(tab) <- c("Preg", "Not")
+rownames(tab) <- c("A", "B")
+tab
+```
+
+## Example 3 (Two groups): pregnancy probability in 2 treatments
+
+```{r}
+#| echo: true
+#Chi-square
+prop.test(tab)
+```
+
+## Example 3 (Two groups): pregnancy probability in 2 treatments
+
+```{r}
+#| echo: true
+#Fisher exact
+fisher.test(tab)
+```
+
+::: notes
+Teach students: prop.test uses approximate methods; fisher is exact for small counts.
+:::
+
+# Part 5 — Beyond normal & binomial: common distributions in dairy
+
+## Quick map: outcome → typical distribution
+
+-   **Milk yield (daily)**: roughly normal after removing extremes; often needs mixed models
+-   **SCC**: often log-normal (or gamma) after log transform
+-   **Clinical mastitis events per lactation**: Poisson-like, but often overdispersed → negative binomial
+-   **Time to pregnancy**: survival/time-to-event
+-   **Proportions** (e.g., % infected): beta distribution on (0,1)
+
+::: notes
+You can show raw SCC vs log(SCC) histograms to motivate transformations.
+:::
+
+## Example: SCC looks log-normal (why we log-transform)
+
+```{r}
+set.seed(10)
+
+# Simulate SCC-like data (cells/mL) with a log-normal shape
+n <- 800
+scc <- rlnorm(n, meanlog = log(120000), sdlog = 0.8)
+
+par(mfrow=c(1,2))
+hist(scc, breaks=30, main="Raw SCC", xlab="cells/mL")
+hist(log10(scc), breaks=30, main="log10(SCC)", xlab="log10 cells/mL")
+par(mfrow=c(1,1))
+```
+
+::: notes
+Connect this to model assumptions: many tests/regressions behave better after transformation.
+:::
+
+## Visual: same mean, different uncertainty
+
+```{r}
+set.seed(1)
+
+# Compare sampling uncertainty for a proportion with different n
+p <- 0.35
+n_small <- 20
+n_large <- 200
+
+x_small <- rbinom(5000, n_small, p)/n_small
+x_large <- rbinom(5000, n_large, p)/n_large
+
+par(mfrow=c(1,2))
+hist(x_small, breaks=20, main="Estimated P/AI, n=20", xlab="p-hat")
+hist(x_large, breaks=20, main="Estimated P/AI, n=200", xlab="p-hat")
+par(mfrow=c(1,1))
+```
+
+## Poisson vs negative binomial
+
+**Question:** Count of clinical mastitis cases per cow-year.
+
+-   Poisson assumes mean = variance
+-   Dairy health data often have variance \> mean (**overdispersion**) → negative binomial
+
+## Poisson vs negative binomial
+
+```{r}
+set.seed(2)
+
+# Simulate overdispersed counts
+n <- 300
+mu <- 0.6
+# Negative binomial with size parameter (smaller = more dispersion)
+size <- 0.8
+counts <- rnbinom(n, mu=mu, size=size)
+
+mean(counts)
+var(counts)
+
+hist(counts, breaks=0:max(counts), main="Mastitis cases per cow-year", xlab="count")
+```
+
+## Time-to-pregnancy is survival data
+
+```{r}
+set.seed(12)
+library(survival)
+
+N <- 250
+
+# --- Define cure fraction (40% never pregnant) ---
+cure_prob <- 0.40
+is_cured <- rbinom(N, 1, cure_prob)  # 1 = will never conceive
+
+# --- Generate event times for the susceptible group ---
+# Use Weibull to control the shape (delay + decreasing hazard)
+# Shape >1 gives increasing hazard, scale controls timing
+shape <- 3       # sharper increase after ~60 days
+scale <- 80      # controls where the drop starts
+event_time <- rweibull(N, shape = shape, scale = scale) + 60  # delay ~60 days
+
+# Assign large times to cured individuals
+true_time <- ifelse(is_cured == 1, 999, event_time)
+
+# Administrative censoring at 200 days
+censor <- 200
+obs_time <- pmin(true_time, censor)
+status <- ifelse(true_time <= censor, 1, 0)
+
+# Kaplan–Meier curve
+fit <- survfit(Surv(obs_time, status) ~ 1)
+
+plot(fit,
+     xlab = "Days",
+     ylab = "Open cows",
+     main = "Time to pregnancy",
+     xlim = c(0, 200))
+grid()
+```
+
+::: notes
+Use this slide to reinforce: for time-to-event outcomes, survival analysis is the right tool and avoids bias from excluding cows that never conceive.
+:::
+
+# Part 6 — Statistical vs biological difference
+
+## Why “statistically significant” can be misleading
+
+You can get *P* \< 0.05 when:
+
+-   The effect is tiny but **n is huge**
+-   The effect is real but **irrelevant** for welfare, economics, or practicality
+
+You can also get *P* \> 0.05 when:
+
+-   The effect might be meaningful but **n is small**
+-   There is high biological variability
+
+## Why “statistically significant” can be misleading
+
+So always report:
+
+-   **Effect size**
+-   **Confidence interval**
+-   **Context-specific threshold** (“what difference matters?”)
+
+## Practical tool: define a “biological minimum important difference”
+
+Examples (illustrative):
+
+-   Milk yield: +2 lbs/d might matter economically on some farms
+
+-   Conception rate: +3 to +5 percentage points might matter if sustained
+
+-   Disease incidence: -2% incidence might matter if treatment cost is high
+
+::: notes
+Let students propose what “biologically meaningful” means for one KPI.
+:::
+
+## Sample size: how many cows do we need?
+
+Effect size you care about drives sample size.
+
+From the invited review on reproductive intervention studies:
+
+-   To detect an increase in pregnancy probability per insemination from **35% to 40%** with **power = 0.8** and **α = 0.05**, requires **1,471 cows per group**.
+-   Additional cows may be required when there is **clustering** (e.g., cows within herds). (Lean et al., 2016)\[doi:10.3168/jds.2015-9445\]
+
+# Part 7 — Association vs prediction
+
+## Association answers “is X related to Y?”
+
+-   Goal: inference, explanation, mechanism
+-   Output: coefficients, CI, p-values
+-   Example: higher rumination is associated with lower disease odds
+
+## Prediction answers “can we forecast Y for a new cow?”
+
+-   Goal: accurate out-of-sample performance
+-   Output: sensitivity, specificity, PPV/NPV, ROC-AUC, calibration
+-   Example: build an early-lactation alert for ketosis
+
+**A model can have association without useful prediction.**
+
+::: notes
+Key message: prediction needs validation on new data and pays attention to prevalence and decision thresholds.
+:::
+
+## A quick demonstration: strong association, weak prediction
+
+If an outcome is rare, even a decent model can have low PPV.
+
+-   Prevalence: 5% disease
+-   Sensitivity: 80%
+-   Specificity: 90%
+
+## A quick demonstration: strong association, weak prediction
+
+Let’s compute PPV/NPV.
+
+```{r}
+#| echo: true
+prev <- 0.05
+se <- 0.80
+sp <- 0.90
+
+ppv <- (se*prev) / (se*prev + (1-sp)*(1-prev))
+npv <- (sp*(1-prev)) / ((1-se)*prev + sp*(1-prev))
+
+ppv; npv
+```
+
+## Confusion matrix (definitions)
+
+Let:
+
+-   TP = true positives
+-   FP = false positives
+-   TN = true negatives
+-   FN = false negatives
+
+Then:
+
+-   **Sensitivity (Se)** = TP / (TP + FN)
+-   **Specificity (Sp)** = TN / (TN + FP)
+-   **Accuracy** = (TP + TN) / total
+-   **PPV** = TP / (TP + FP)
+-   **NPV** = TN / (TN + FN)
+
+**PPV/NPV depend strongly on prevalence.**
+
+## Worked dairy example: mastitis alert
+
+Assume 1,000 cows monitored in a period:
+
+-   True mastitis prevalence = 8% → 80 true cases
+-   Algorithm: Se = 75%, Sp = 92%
+
+Compute counts:
+
+```{r}
+N <- 1000
+prev <- 0.08
+se <- 0.75
+sp <- 0.92
+
+D <- round(N*prev)
+ND <- N - D
+
+TP <- round(se*D)
+FN <- D - TP
+TN <- round(sp*ND)
+FP <- ND - TN
+
+c(TP=TP, FP=FP, TN=TN, FN=FN)
+
+accuracy <- (TP+TN)/N
+ppv <- TP/(TP+FP)
+npv <- TN/(TN+FN)
+
+c(accuracy=accuracy, PPV=ppv, NPV=npv)
+```
+
+-   If the algorithm flags a cow as having mastitis, there’s about a 45% chance it actually has mastitis.
+
+-   So negatives are much more reliable than positives here.
+
+::: notes
+Discuss: Is PPV high enough to justify an alert? What is the cost of FP vs FN on this farm?
+:::
+
+------------------------------------------------------------------------
+
+# Part 8 — A light touch: regression and ANOVA
+
+## Why regression shows up everywhere
+
+A linear regression is:
+
+-   A model for **continuous** outcomes
+-   With predictors (continuous or categorical)
+
+ANOVA is a special case:
+
+-   Same linear model
+-   Predictors can be categorical group indicators
+
+## Lactation yield vs DIM and parity
+
+```{r}
+set.seed(3)
+
+n <- 200
+DIM <- sample(1:305, n, replace=TRUE)
+parity <- factor(sample(c(1,2,3), n, replace=TRUE))
+
+# Simulate a simple relationship
+milk <- 35 + 0.02*(150 - abs(DIM-150)) +
+  ifelse(parity=="1", -2, ifelse(parity=="2", 0, 1)) +
+  rnorm(n, 0, 3)
+
+d <- data.frame(milk, DIM, parity)
+
+fit <- lm(milk ~ DIM + parity, data=d)
+summary(fit)
+```
+
+# References
+
+-   Lean, I.J. et al. (2016). *Recommendations for reporting intervention studies on reproductive performance in dairy cattle: Improving design, analysis, and interpretation of research on reproduction.* Journal of Dairy Science 99:1–17. doi:10.3168/jds.2015-9445.

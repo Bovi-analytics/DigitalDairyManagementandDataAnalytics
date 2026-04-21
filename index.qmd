@@ -28,28 +28,28 @@ This page contains an outline of the topics, content, and assignments for the co
 | 6 | 2/26 | (LAB) Inventory Calculations | Dr. Hostens |  |  |
 | 7 | 3/3 | Inventory Management in Dairy Systems | Dr. Hostens | \- | 🖥️ |
 | 7 | 3/5 | No class |  |  |  |
-| 7 | 3/5 | No lab |  |  |  |
+| 7 | 3/5 | (LAB) No Lab |  |  |  |
 | 8 | 3/10 | DISC Assessment & Team Dynamics | Dr. Hostens | [📖](weeks/week-8.html) | [🖥️](slides/lec-8.html) |
-| 8 | 3/12 | Midterm preperation | Dr. Hostens | 📖 | 🖥️ |
-| 8 | 3/12 | Reproduction management (part 1) | Dr. Hostens | 📖 | 🖥️ |
-| 9 | 3/17 | Reproduction manangement (part 2) | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/12 | Midterm Prep: CURC Data – Planning Phase I Presentation | Dr. Hostens | 📖 | 🖥️ |
+| 8 | 3/12 | (LAB) (LAB) Midterm Presentation Prep: CURC Data Discussion | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/17 | Midterm Review: CURC Data – Addressing Phase I Questions (Meeting & Presentation with CURC Manager)  | Dr. Hostens | 📖 | 🖥️ |
 | 9 | 3/19 | No class |  |  |  |
-| 9 | 3/19 | (LAB) Analyze CURC SCC Trends | Dr. Hostens | 📖 | 🖥️ |
-| 10 | 3/24 | Nutrition Basics and Data-Driven Feeding Strategies | Dr. Hostens | 📖 | 🖥️ |
-| 10 | 3/26 | Interpreting Feed Analysis Reports and Intake Data | Dr. Hostens | 📖 | 🖥️ |
-| 10 | 3/26 | (LAB) CURC Visit - Feed Systems | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/19 | (LAB) No Lab (Dairy Fellows Program) | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/24 | Handling Uncertainty in Farm Data | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/26 | CURC Data Discussion – Phase II: Questions from Initial Meeting | Dr. Hostens | 📖 | 🖥️ |
+| 10 | 3/26 | (LAB) CURC Data Discussion – Phase II: Addressing Raised Questions | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/31 | Spring Break (no class) |  |  |  |
 | 10 | 4/2 | Spring Break (no class) |  |  |  |
-| 11 | 4/7 | Systems Thinking: Connecting Health, Nutrition, and Production | Dr. Hostens | 📖 | 🖥️ |
-| 11 | 4/9 | Student Team Presentations on Health/Nutrition | Dr. Hostens | 📖 | 🖥️ |
-| 11 | 4/9 | (LAB) Peer Evaluation & Group Discussion | Dr. Hostens | 📖 | 🖥️ |
-| 12 | 4/14 | No class |  |  |  |
-| 12 | 4/16 | Case Study: Using Data to Evaluate Management Changes | Dr. Hostens | 📖 | 🖥️ |
-| 12 | 4/16 | (LAB) Calculate IOFC & Economic Modeling | Dr. Hostens | 📖 | 🖥️ |
-| 13 | 4/21 | Integrating Data for Strategic Decision-Making | Dr. Hostens | 📖 | 🖥️ |
-| 13 | 4/23 | SWOT Analysis Framework and Capstone Expectations | Dr. Hostens | 📖 | 🖥️ |
-| 13 | 4/23 | (LAB) Synthesize Data & Draft SWOT | Dr. Hostens | 📖 | 🖥️ |
-| 14 | 4/28 | Effective Communication for Decision-Makers | Dr. Hostens | 📖 | 🖥️ |
+| 11 | 4/7 | Discuss progress questions Matt | Sumit | 📖 | 🖥️ |
+| 11 | 4/9 | Discuss progress questions Matt | Dr. Hostens | 📖 | 🖥️ |
+| 11 | 4/9 | Lab discussion beef vs dairy semen | Dr. Hostens | 📖 | 🖥️ |
+| 12 | 4/14 | No class (Dairy Fellows Class) |  |  |  |
+| 12 | 4/16 | Discuss progress questions Matt | Dr. Hostens or TA | 📖 | 🖥️ |
+| 12 | 4/16 | Journal club heifer weight | Dr. Hostens | 📖 | 🖥️ |
+| 13 | 4/21 | Discuss the dairy business summary 2025 | Dr. Karszes | 📖 | 🖥️ |
+| 13 | 4/23 | Benchmark CDREC vs dairy business summary | Dr. Karszes | 📖 | 🖥️ |
+| 13 | 4/23 | Economical data deep dive and apply to questions Matt | Dr. Karszes | 📖 | 🖥️ |
+| 14 | 4/28 | Monitoring Transition succes through data | Kylie | 📖 | 🖥️ |
 | 14 | 4/30 | Practice Presentations (Internal Peer Review) | Dr. Hostens | 📖 | 🖥️ |
 | 14 | 4/30 | (LAB) Finalize SWOT & Peer Feedback | Dr. Hostens | 📖 | 🖥️ |
 | 15 | 5/5 | Capstone Management Meeting & Course Wrap-Up | Dr. Hostens | 📖 | 🖥️ |

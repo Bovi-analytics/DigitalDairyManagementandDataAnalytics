@@ -9,6 +9,7 @@ format:
     theme: slides.scss
     transition: fade
     slide-number: true
+    footer: "[https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/)"
 editor: visual
 execute:
   freeze: auto

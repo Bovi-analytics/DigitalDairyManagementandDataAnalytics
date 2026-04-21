@@ -1,16 +1,25 @@
 ---
-title: "Lecture — How to Get Things Done"
+title: "Journal club heifer weight"
 subtitle: "ANSCI 4040 – Dairy Data Analysis & Analytics"
-author: "Ass. Prof. Dr. Miel Hostens"
-footer: "https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/"
-logo: "images/Bovi-Analytics-SmallLogo.png"
-format:
-  revealjs:
-    theme: slides.scss
-    transition: fade
-    slide-number: true
 editor: visual
-execute:
-  freeze: auto
 ---
+
+# Details/Subtopics 
+- Peer presentations about four different papers highlighting different aspects of heifer weight at insemination. 
+
+# Activities/Tasks 
+Questions:
+- What is the lay-out of the study? 
+- Which statistics were used?
+- How strong do you think the evidence is?
+- Potential pitfalls/sources of bias?
+- What does this study tell us that helps us answer the question?
+- How applicable is this to CDREC
+- What data can we look at to verify this?
+
+# Due Dates 
+- April 16 2:30 pm
+
+# Datasets/Resources 
+- Course materials and lecture notes > canvas 
 
