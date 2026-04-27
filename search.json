@@ -454,7 +454,7 @@
     "href": "slides/lecture_uncertainty_dairy.html#code-r",
     "title": "Lecture – Working with uncertainty in dairy science",
     "section": "Code (R)",
-    "text": "Code (R)\n\nn &lt;- 24\ntrue_effect &lt;- 2.4     # true mean change (lbs/d)\nsd_change &lt;- 3.0\n\nchange &lt;- rnorm(n, mean=true_effect, sd=sd_change)\n\n# H0: mean change = 4 lbs/d (the claim) HA: mean change != 4\nres &lt;- t.test(change, mu = 4)\nres\n\n\n    One Sample t-test\n\ndata:  change\nt = -3.6805, df = 23, p-value = 0.001239\nalternative hypothesis: true mean is not equal to 4\n95 percent confidence interval:\n 0.3950024 2.9893134\nsample estimates:\nmean of x \n 1.692158 \n\n\n\nThis is a deliberately realistic scenario: lots of biological noise. Ask: even if p&gt;0.05, what is the CI around the effect?"
+    "text": "Code (R)\n\nn &lt;- 24\ntrue_effect &lt;- 2.4     # true mean change (lbs/d)\nsd_change &lt;- 3.0\n\nchange &lt;- rnorm(n, mean=true_effect, sd=sd_change)\n\n# H0: mean change = 4 lbs/d (the claim) HA: mean change != 4\nres &lt;- t.test(change, mu = 4)\nres\n\n\n    One Sample t-test\n\ndata:  change\nt = -3.379, df = 23, p-value = 0.002587\nalternative hypothesis: true mean is not equal to 4\n95 percent confidence interval:\n 1.212550 3.329529\nsample estimates:\nmean of x \n  2.27104 \n\n\n\nThis is a deliberately realistic scenario: lots of biological noise. Ask: even if p&gt;0.05, what is the CI around the effect?"
   },
   {
     "objectID": "slides/lecture_uncertainty_dairy.html#interpreting-the-result-emphasize-effect-size",
