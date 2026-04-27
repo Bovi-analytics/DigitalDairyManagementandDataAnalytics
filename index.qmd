@@ -7,7 +7,7 @@ This page contains an outline of the topics, content, and assignments for the co
 
 ::: column-screen-inset-right
 | Week | Date | Topic | Teachers | Prepare | Lecture |
-|:----------:|:-----------|------------|------------|:----------:|:----------:|
+|:--:|:---|----|----|:--:|:--:|
 | 1 | 1/20 | Introductory Multiple Choice Questions and Inventory Management | Dr. Hostens and Sumit Sharma | \- | 🖥️ |
 | 1 | 1/22 | Syllabus Review and Introduction | Dr. Hostens | \- | 🖥️ |
 | 1 | 1/22 | (LAB) CURC Farm Tour & Presentation from CURC Manager | Dr. Hostens and Sumit Sharma | \- | 🖥️ |
@@ -32,7 +32,7 @@ This page contains an outline of the topics, content, and assignments for the co
 | 8 | 3/10 | DISC Assessment & Team Dynamics | Dr. Hostens | [📖](weeks/week-8.html) | [🖥️](slides/lec-8.html) |
 | 8 | 3/12 | Midterm Prep: CURC Data – Planning Phase I Presentation | Dr. Hostens | 📖 | 🖥️ |
 | 8 | 3/12 | (LAB) (LAB) Midterm Presentation Prep: CURC Data Discussion | Dr. Hostens | 📖 | 🖥️ |
-| 9 | 3/17 | Midterm Review: CURC Data – Addressing Phase I Questions (Meeting & Presentation with CURC Manager)  | Dr. Hostens | 📖 | 🖥️ |
+| 9 | 3/17 | Midterm Review: CURC Data – Addressing Phase I Questions (Meeting & Presentation with CURC Manager) | Dr. Hostens | 📖 | 🖥️ |
 | 9 | 3/19 | No class |  |  |  |
 | 9 | 3/19 | (LAB) No Lab (Dairy Fellows Program) | Dr. Hostens | 📖 | 🖥️ |
 | 10 | 3/24 | Handling Uncertainty in Farm Data | Dr. Hostens | 📖 | 🖥️ |

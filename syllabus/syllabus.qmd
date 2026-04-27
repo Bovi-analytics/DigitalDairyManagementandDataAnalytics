@@ -1,8 +1,6 @@
 ---
-title: "Beasts & Bytes"
-subtitle: "Data Science Applications in Agriculture"
+title: "Digital Dairy Management and Data Analytics"
 date: today
-author: "Miel Hostens"
 format:
   pdf:
     toc: false
@@ -11,142 +9,205 @@ format:
     papersize: letter
 ---
 
-![](/images/B&BLogo.png){fig-align="center" width="300"}
+| ![](images/CornellUniversity.png){width="257"}  ![](images/Bovi-Analytics.png){width="79"} 
 
-# Course description and aims
+# Course
 
-This course offers an undergraduate experience in challenge-based learning, where students tackle data-driven problems within the agricultural sector. If you have never heard about it, check out this [Solar Car Challenge](https://www.solarcarchallenge.org/challenge/) that you might recognize. Working in collaborative teams, students will engage directly with farmers and industry stakeholders to understand a real-world challenge and develop an innovative, data-driven solutions.
+Digital Dairy Management and Data Analytics
 
-Throughout the course, students will learn to utilize a range of digital tools essential for modern data science. Key topics covered include data governance, ensuring data privacy, effective data collection methods, efficient data storage solutions, data processing techniques, and advanced data visualization. Students will also delve into data modeling and the art of presenting data in a clear and impactful manner.
+Spring - 2027
 
-Project management is a core component of the course, with students learning to manage projects effectively, adhere to deadlines, and deliver results in a timely manner. The course emphasizes the importance of teamwork, communication, and collaboration, preparing students to work in diverse and dynamic environments.
+Department of Animal Science, ANSCI 4940
 
-By the end of the course, students will have gained practical experience and developed a skill set that includes problem-solving, critical thinking, and the ability to create sustainable solutions for the agricultural industry. This course is ideal for students interested in applying data science to real-world problems and making a tangible impact in the field of agriculture.
+## Instructor
 
-# Credits
+-   Assoc. Prof. Dr. DVM Miel Hostens
 
-This course accounts for 4 credits
+-   Robert and Anne Everett Endowed Associate Professor
 
-# Prerequisites
+-   Office : 273 Morrison Hall, Ithaca, NY 14853
 
-A statistical course such one of the following is not required but strongly advised:
+-   Email : [miel.hostens\@cornell.edu](mailto:miel.hostens@cornell.edu)
+
+-   Office Hours: [Schedule an appointment](https://outlook.office.com/bookwithme/user/81c7a026deb04fc9a3c8251ceeb24e81@cornell.edu?anonymous&ep=signature)
+
+## Teaching Assistants
+
+### DVM Meike van Leerdam
+
+-   Office location : B16 Morrison Hall, Ithaca, NY 14853
+
+-   Email : [mbv32\@cornell.edu](mailto:mbv32@cornell.edu)
+
+### DVM Sumit Sharma
+
+-   Office location : B16 Morrison Hall, Ithaca, NY 14853
+
+-   Email : [ss4452\@cornell.edu](mailto:ss4452@cornell.edu){.email}
+
+# Overview
+
+## Credits
+
+This course accounts for **3 credits**.
+
+## Description
+
+This **3 credit course** introduces sophomore, junior, senior level undergraduate or graduate level students to the principles and applications of data analytics in modern dairy herd management. Students will learn how to collect, clean, analyze, and interpret farm-level data from the Cornell Dairy Research and Education Centre (CDREC). Through hands-on labs, students will apply statistical and computational tools to evaluate herd performance in key management areas, including nutrition, reproduction, animal health, and farm economics.
+
+By the end of the course, students will integrate these data into a digital management framework and engage in a managerial decision-making exercise, including a SWOT analysis with farm stakeholders.
+
+This course emphasizes data literacy, statistical reasoning, and ethical interpretation of agricultural data. It satisfies the **CALS Data Literacy (Statistics)** requirement by developing student competencies in data manipulation, analysis, interpretation, and communication within the context of dairy science.
+
+## Aims
+
+-   Provide students with knowledge and practical skills in the use of data for dairy herd management.
+-   Train students in statistical and computational methods relevant to agricultural datasets
+-   Encourage critical evaluation of data quality, limitations, and biases in animal production systems
+-   Develop students’ ability to communicate data-driven insights to both scientific and farm management audiences
+
+## Learning Outcomes
+
+Upon successful completion, students will be able to:
+
+1.  Collect, organize, and clean dairy farm datasets
+2.  Apply statistical and computational methods (Excel, R, Python, etc.)
+3.  Identify strengths, weaknesses, and limitations of data types
+4.  Interpret and critique datasets in biological, economic, and management contexts
+5.  Create visualizations and communicate insights ethically
+6.  Synthesize data into a decision-support framework and contribute to a SWOT analysis
+
+## Prerequisites
+
+A statistics course is **not** required but **recommended**:
 
 -   STSCI 2150/5150 Introductory Statistics for Biology
-
 -   BTRY3010/STSCI2200 & BTRY5010/STSCI5200: Biological Statistics I
-
 -   ILRST/STSCI 2100: Introductory Statistics
 
-# Learning outcomes
+## Materials, Textbook and Website
 
-1.  Explain the fundamentals of data science and digital agriculture including their interdisciplinary challenges.
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website at [Digital Dairy Management and Data Analytics](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics).
 
-2.  Implement the various data science technologies, precision farming techniques and digital tools used in modern agriculture.
+No official textbook but the following textbook is recommended:
 
-3.  Conduct data collection, visualization, analysis, and interpretation within the context of digital agriculture.
+-   [*Large Dairy Herd Management*](https://ldhm.adsa.org/)
 
-4.  Acquire practical skills through hands-on programming activities.
+Although I will try to avoid last minute changes to the schedule this might happen given this project oriented learning course. I will send course announcements via email.
 
-5.  Explore the applications of machine learning and artificial intelligence in agriculture.
+## Topics and Outline
 
-6.  Recognize the significance of, and apply data privacy and security techniques in digital agriculture.
+See [course website](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/course-overview.html) for details as updates may occur during the semester given the project and data driven nature of the class.
 
-# Outline
+| Week | Topic |
+|:-----------------:|-----------------------------------------------------|
+| 1 | Introductory multiple choice questions and inventory management |
+| 1 | Syllabus Review and Introduction |
+| 1 | (LAB ) CDREC Farm Tour & Presentation from farm manager |
+| 2 | Principles of Data Collection |
+| 2 | Principles of Data Visualization |
+| 2 | (LAB) Effective visualization using Tableau |
+| 3 | Understanding Milk Production Data (part 1) |
+| 3 | Understanding Milk Production Data (part 2) |
+| 3 | (LAB) Analyze CDREC Milk Production Records |
+| 4 | Using Relationships and Joins Between Datasets |
+| 4 | (LAB) Analyze CDREC Milk Production Records |
+| 5 | February break (no class) |
+| 5 | CDREC Project status discussion |
+| 5 | (LAB) Analyze CDREC Milk Production Records |
+| 6 | FAIR data principles for animal science |
+| 6 | Inventory Management in Dairy Systems |
+| 6 | (LAB) Inventory Calculations |
+| 7 | Inventory Management in Dairy Systems |
+| 8 | DISC Assessment & Team Dynamics |
+| 8 | Midterm Prep: CDREC Data – Planning Phase I Presentation |
+| 8 | (LAB) Midterm Presentation Prep: CDREC Data Discussion |
+| 9 | Midterm Review: CDREC Data – Addressing Phase I Questions (Meeting & Presentation with CDREC Manager) |
+| 9 | No class |
+| 9 | (LAB) No Lab (Dairy Fellows Program) |
+| 10 | Handling uncertainty in farm data |
+| 10 | CDREC Data Discussion – Phase II: Questions from Initial Meeting |
+| 10 | (LAB) CDREC Data Discussion – Phase II: Addressing Raised Questions |
+| 10 | Spring Break (no class) |
+| 10 | Spring Break (no class) |
+| 11 | Discuss progress questions farm manager |
+| 11 | Discuss progress questions farm manager |
+| 11 | (LAB) discussion beef vs dairy semen |
+| 12 | Discuss progress questions farm manager |
+| 12 | Journal club heifer rearing |
+| 13 | Discuss the dairy business summary 2025 |
+| 13 | Benchmark CDREC vs dairy business summary |
+| 13 | (LAB) Economical data deep dive and apply questions farm manager |
+| 14 | Monitoring transition succes through data |
+| 14 | Practice capstone meeting (Internal Peer Review) |
+| 14 | (LAB) Finalize SWOT & Peer Feedback |
+| 15 | Capstone Management Meeting & Course Wrap-Up |
 
-See [this link](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/course-overview.html) for details on course outline. As this course is the first of its kind, expect updates to happen to this course outline during the fall semester of 2024.
+## Format and Expectations
 
-# Format
+This course will consist of a combination of lectures, hands-on practical lab sessions, group discussions, and guest lectures from domain experts.
 
-This course will consist of a combination of lectures, hands-on practical sessions, a case study, group discussions, and guest lectures from domain experts. Students will have the opportunity to work on a real-world project related to digital agriculture.
+Students will have the opportunity to work with data from the Cornell Dairy Research and Education Centre (CDREC).
 
-## General week format
+### General weekly format
 
-+----------------+---------+---------+--------------------+----------+--------------------+
-|                | Monday  | Tuesday | Wednesday          | Thursday | Friday             |
-+================+=========+=========+====================+==========+====================+
-| 10:10-11:00 am | Lecture |         |                    |          | Project discussion |
-+----------------+---------+---------+--------------------+----------+--------------------+
-| 1:25-4:25 pm   |         |         | Lab -              | Lab -    |                    |
-|                |         |         |                    |          |                    |
-|                |         |         | Code'n in practice | Project  |                    |
-+----------------+---------+---------+--------------------+----------+--------------------+
+| Day      | Time        | Activity             |
+|----------|-------------|----------------------|
+| Tuesday  | 10:10–11:00 | Lecture              |
+| Thursday | 10:10–11:00 | Lecture / Discussion |
+| Thursday | 13:25–16:25 | Lab / Project        |
 
-## Lectures
+### Lectures
 
 The goal of the lectures is to have them as interactive as possible (which requires your attendance and participation). My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them.
 
-## Labs
+### Labs
 
-One the things you will definitely learn in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will need to finish a weekly coding assignment. Every week a new assignment will be opened for each of you on the online coding platform [Dodona](https://www.dodona.be/). There is a strict deadline at Friday evening 17:00 to finish the assignment, individually. The number of successfully finished assignments at the end of the course is part of your individual grading (see below).
+Labs will use real-world datasets from the Cornell University Research Centre. Students will work individually and in teams to:
 
-## Weekly project meetings
+-   Work with herd management software across the different management domains.
 
-We will hold weekly project meetings during which we will discuss the groups overall progress, address any challenges, and provide guidance. These meetings are an opportunity for you to share updates, receive feedback, and collaborate with your peers and instructors. Your active participation is crucial to ensure that you stay on track and achieve the project goals.
+-   Clean and curate datasets (Excel, R, Python and Tableau).
 
-# Project
+-   Conduct statistical analyses on herd-level data.
 
-Throughout the course, you will engage in a group project that involves solving a real-world, data-intensive problem in agriculture. Working in teams, you will collaborate with farmers and stakeholders to identify the exact problem. Your task will be to develop a data-driven solution using digital tools and techniques learned during the course.
+-   Develop visualizations, reports and presentations for practical decision-making.
 
-## Differrent project phases we will tackle together
+-   Interact with students and herd managers to interpret results in a farm management context.
 
-1.  **Problem Identification:** We will begin by meeting with the farmer (and other stakeholders involved) to understand the problem and their needs. This will include conducting an initial research to better define and scope the problem clearly.
+# Alignment with CALS Data Literacy (Statistics)
 
-2.  **Data Collection:** You will gather relevant data from various sources, ensuring adherence to data privacy and governance standards.
+This course fulfills the Data Literacy: Statistics (DLS-AG) requirement by focusing on:
 
-3.  **Data Analysis and Visualization:** You will analyze the collected data (using techniques covered in the labs) to describe insights and trends, including the use of visualization tools to present your findings effectively.
+-   Data Manipulating & Analysis (primary competency): applying statistical methods to agricultural data.
 
-4.  **Solution Development:** Next, different statistical, or machine learning techniques will be explored to develop a practical solution. This phase will involve hands-on programming.
+-   Data Reading, Cleaning, Curating, Securing: preparing and standardizing raw dairy datasets.
 
-5.  **Implementation Plan:** Create a detailed plan for implementing the proposed solution.
+-   Data Interpretation & Critique: understanding strengths, limitations, and biases in farm data.
 
-6.  **Presentation and report:** You will prepare and present your project to the farmer, including your methodology, findings, and proposed solution. This will be summarized in a final project report
+-   Communicating & Arguing with Data: visualizing and presenting data ethically to support arguments.
 
-# Textbook
+At least 75% of course content is centered on these competencies, and Learning Outcomes 2, 3, 4, and 5 explicitly support them.
 
-While there is no official textbook for the course, we will be assigning readings from the following some of the following textbooks.
+# Grading
 
--   [R for Data Science](https://r4ds.had.co.nz/) by Garret Grolemund and Hadley Wickham.
+## Practices and Policies
 
--   Weekly assignments from the [Introduction to Data Science](https://rafalab.dfci.harvard.edu/dsbook-part-1/) handbook by Rafael Irizarry.
+Grading in this course is centered on a collaborative, transparent evaluation process. At the beginning of the semester, students and the instructor will jointly define an “[A+ eligibility](https://bovi-analytics.github.io/DigitalDairyManagementandDataAnalytics/project-agreement.html)” checklist that outlines the standards for exceptional performance. Throughout the term, students will engage in structured peer evaluation, providing feedback on individual contributions and team outcomes in alignment with this agreed framework. An interim capstone management meeting will serve as a formal checkpoint to assess progress, address challenges, and recalibrate expectations. Final grades will be informed by peer evaluations, the extent to which the A+ criteria have been met, and performance during the final capstone presentation and review, ensuring that both process and outcomes are fairly recognized.
 
--   Others related to the project will be proposed during the course
+## Capstone Management Meeting
 
-# Website
+The course culminates in a capstone management meeting in which student teams present a comprehensive SWOT (Strengths, Weaknesses, Opportunities, and Threats) analysis of the Cornell Dairy Research and Education Centre to farm managers and invited stakeholders. Drawing on data from across the semester—including feeding, reproduction, health, and economics— students will synthesize their findings into a decision-support framework that highlights both current performance and future strategies for improvement. The meeting emphasizes not only technical accuracy and analytical depth but also clarity of communication, professional presentation, and the ability to translate complex datasets into actionable insights for practical dairy management. This exercise mirrors real-world decision-making processes and challenges students to engage directly with farm leaders in a professional, evidence-based dialogue, but within a safe environment of CDREC.
 
-All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website at [bovi-analytics.github.io/BeastsAndBytes/](https://bovi-analytics.github.io/BeastsAndBytes/).
+## Grading Distribution
 
-Although I will try to avoid last minute changes to the schedule this might happen given this challenged based learning course. I will send course announcements via email.
+| Component | Description | Weight |
+|-------------------------|-----------------------------|------------------|
+| Peer evaluation | Feedback on presentations and collaboration | 20% |
+| Interim capstone management meeting | Interim assessment and presentation | 30% |
+| Final capstone management meeting | SWOT analysis presentation and teamwork | 50% |
 
-# Assessment & grading
-
-Assessment methods will include individual coding assignments and a group project including presentations and group report.
-
-## Group assessment
-
-| Component graded | Remark | Weight |
-|----|----|----|
-| Use of appropriate naming conventions used throughout project (subgroups) | Failure to use any naming convention in the project will result in failing the entire group project. | 20% |
-| FAIR principle compliance in reporting, documentation of data and coding through notebooks | Failure to implement the FAIR principles will result in failing the entire group project. | 20% |
-| Project presentation | We will discuss within the group how to assess each individuals contribution, as some people maybe will not be presenting but will have had other contribution. | 30% |
-| Project report (entire group) |  | 30% |
-
-## Individual assessment
-
-**It is very important to read this part as your individual assessments will be influencing your individual gradings.**
-
-At the end of the course you will be evaluated on the % of weekly assignments you have coded correctly in the Dodona framework (which you will learn during the course). That percentage will be multiplied with the overal group project grade, resulting in your final individual grade.
-
-For example:
-
--   The group project was finally graded at 95%
-
--   Student A successfully finished 75% of the coding assignments within each deadline. As a result student A gets 95% x 75% = 71% as the final individual grade.
-
--   Student B successfully finished 100% of the coding assignments within each deadline. As a result student B gets 95% x 100% as the final individual grade.
-
-Finishing each of the assignments within each deadline is not that difficult. You "just" need to devote the time to it. I have used this method a lot during my courses. It is not to annoy students, but to make sure the entire group keeps progressing on the programming skills during the project. You will thank me for that at a certain moment. For full transparency, I learned to code Python using a similar approach. Once I understood why this was done, I started appreciating this method as one of the most inspiring learning methods I have ever seen.
-
-## Final grading scale
+## Grade Scale
 
 | Grade | Low   | High  |
 |:------|:------|:------|
@@ -166,9 +227,17 @@ Finishing each of the assignments within each deadline is not that difficult. Yo
 
 Each grade range includes the score on the left, and excludes the score on the right. For example, a 90.0 is an A-, and not a B+. An 89.99 is a B+, not an A-.
 
-# Policies
+# Course Management and Policies
 
-## Inclusive community
+## Course Attendance
+
+Attendance is expected for all scheduled lectures. Students may miss up to two sessions without penalty, provided they review the material independently. Beginning with the third absence, each additional missed class will result in a deduction from the participation grade, and excessive absences may affect overall course performance. In cases of documented illness or exceptional circumstances, accommodations may be considered at the instructor’s discretion.
+
+## Mental Health and Stress management
+
+If you are feeling overwhelmed, or are worrying about a friend, please reach out to me, one of your instructors or your academic adviser. We can try to help, or we can put you in touch with someone who can help. Cornell has trained counselors available to listen and help: [Cornell Health's Counseling and Psychological Services](https://health.cornell.edu/services/counseling-psychiatry) (CAPS, 607-255-5155); [Student Support and Advocacy Services](https://scl.cornell.edu/student-support); [Empathy, Assistance, and Referral Service](http://orgsync.rso.cornell.edu/org/ears) (EARS, 213 Willard Straight Hall, 607-255-3277), and [Let’s Talk](https://health.cornell.edu/services/counseling-psychiatry/lets-talk). The [Learning Strategies Center](http://lsc.cornell.edu/) offers a range of academic resources.
+
+## Inclusive Community
 
 I grew up in a family in which values as diversity, equity and inclusion were at the core of our everyday life. My parents were both involved taking care of people struggling with equity and inclusion, and as a result these values are deeply embedded in my character.
 
@@ -176,10 +245,26 @@ I aim to ensure that students from all diverse backgrounds and perspectives are 
 
 Additionally, I aim to foster a learning environment that embraces a diversity of thoughts, perspectives, and experiences, and respects your identities. If your experiences outside of class are affecting your performance, please feel free to talk with me. Alternatively, your academic dean is a great resource if you prefer to speak with someone outside the course.
 
-## Academic Integrity
+## Academic Integrity, Academic Freedom and Building Trust in the Classroom
+
+Each student in this course is expected to abide by the Cornell University Code of Academic Integrity. Any work submitted by a student in this course for academic credit will be the student's own work.
 
 Absolute integrity is expected of every Cornell student in all academic undertakings. Integrity entails a firm adherence to a set of values, and the values most essential to an academic community are grounded on the concept of honesty with respect to the intellectual efforts of oneself and others, and free and open inquiry and discussion in the classroom. Academic integrity is expected not only in formal coursework situations, but in all University relationships and interactions connected to the educational process, including the use of University resources. While both students and faculty of Cornell assume the responsibility of maintaining and furthering these values, this document is concerned specifically with the conduct of students.
 
 A Cornell student’s submission of work for academic credit indicates that the work is the student’s own. All outside assistance should be acknowledged, and the student’s academic position truthfully reported at all times. In addition, Cornell students have a right to expect academic integrity from each of their peers.
 
 This a [guideline for students](https://deanoffaculty.cornell.edu/faculty-and-academic-affairs/academic-integrity/guidelines-for-students/) offered through the [Office of the Dean of Faculty](https://deanoffaculty.cornell.edu/).
+
+Each person in this class is expected to respect the principles of academic freedom for instructors and classmates and will maintain the privacy of the classroom environment, as outlined in [Cornell’s S20 Commitment to Academic Integrity, Equitable Instruction, Trust, and Respect](https://bpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/3/6798/files/2020/03/HonorFinal.pdf). 
+
+This commitment to building respect and trust in the classroom means members of this class will not: record, photograph, or share online any interactions that involve classmates or any member of the teaching team. Students will also respect the intellectual property rights of the instructor and will not share or otherwise make accessible any course materials to anyone not enrolled in the course, without the instructor’s written permission.
+
+This policy is not meant to restrict students’ ability to use classroom recordings in ways beneficial to their learning. Students who may benefit from recorded lectures and lecture playback, including students who use English as an additional language or who have accommodations from SDS, should speak to the course instructor to maintain transparency and trust in the classroom. Students approved to record lectures are expected to maintain the respect and privacy of the learning environment, as stated above.
+
+Students will also not enable anyone not enrolled in the course to participate in any activity that is associated with the course.
+
+Exceptions to this require the instructor’s written permission.
+
+## Accommodations for Students with Disabilities
+
+Students with Disabilities: Your access in this course is important. Please give me your [Student Disability Services (SDS)](https://sds.cornell.edu/) accommodation letter early in the semester so that we have adequate time to arrange your approved academic accommodations. If you need an immediate accommodation for equal access, please speak with me after class or send an email message to me and/or SDS at sds_cu\@cornell.edu. If the need arises for additional accommodations during the semester, please contact SDS. Student Disability Services is located at Cornell Health Level 5, 110 Ho Plaza, 607-254-4545, sds.cornell.edu.
