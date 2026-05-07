@@ -139,39 +139,6 @@
     ]
   },
   {
-    "objectID": "course-overview.html#group-assessment",
-    "href": "course-overview.html#group-assessment",
-    "title": "Digital Dairy Management and Data Analytics",
-    "section": "Group assessment",
-    "text": "Group assessment\n\n\n\n\n\n\n\n\nComponent graded\nRemark\nWeight\n\n\n\n\nPeer evaluation by team members\n\n40%\n\n\nMultiple Choice Questions\n\n40%\n\n\nProject\n\n20%",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "course-overview.html#individual-assessment",
-    "href": "course-overview.html#individual-assessment",
-    "title": "Digital Dairy Management and Data Analytics",
-    "section": "Individual assessment",
-    "text": "Individual assessment\nIt is very important to read this part as your individual assessments will be influencing your individual gradings.\nAt the end of the course you will be evaluated on the % of weekly assignments you have coded correctly in the Dodona framework (which you will learn during the course). That percentage will be multiplied with the overal group project grade, resulting in your final individual grade.\nFor example:\n\nThe group project was finally graded at 95%\nStudent A successfully finished 75% of the coding assignments within each deadline. As a result student A gets 95% x 75% = 71% as the final individual grade.\nStudent B successfully finished 100% of the coding assignments within each deadline. As a result student B gets 95% x 100% as the final individual grade.\n\nFinishing each of the assignments within each deadline is not that difficult. You “just” need to devote the time to it. I have used this method a lot during my courses. It is not to annoy students, but to make sure the entire group keeps progressing on the programming skills during the project. You will thank me for that at a certain moment. For full transparency, I learned to code Python using a similar approach. Once I understood why this was done, I started appreciating this method as one of the most inspiring learning methods I have ever seen.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "course-overview.html#final-grading-scale",
-    "href": "course-overview.html#final-grading-scale",
-    "title": "Digital Dairy Management and Data Analytics",
-    "section": "Final grading scale",
-    "text": "Final grading scale\n\n\n\nGrade\nLow\nHigh\n\n\n\n\nA+\n99.80\n100.0\n\n\nA\n93.33\n99.80\n\n\nA-\n90.00\n93.33\n\n\nB+\n86.66\n90.00\n\n\nB\n83.33\n86.66\n\n\nB-\n80.00\n83.33\n\n\nC+\n76.66\n80.00\n\n\nC\n73.33\n76.66\n\n\nC-\n70.00\n73.33\n\n\nD+\n66.66\n70.00\n\n\nD\n63.33\n66.66\n\n\nD-\n60.00\n63.36\n\n\nF\n0.00\n60.00\n\n\n\nEach grade range includes the score on the left, and excludes the score on the right. For example, a 90.0 is an A-, and not a B+. An 89.99 is a B+, not an A-.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
     "objectID": "course-overview.html#inclusive-community",
     "href": "course-overview.html#inclusive-community",
     "title": "Digital Dairy Management and Data Analytics",
@@ -454,7 +421,7 @@
     "href": "slides/lecture_uncertainty_dairy.html#code-r",
     "title": "Lecture – Working with uncertainty in dairy science",
     "section": "Code (R)",
-    "text": "Code (R)\n\nn &lt;- 24\ntrue_effect &lt;- 2.4     # true mean change (lbs/d)\nsd_change &lt;- 3.0\n\nchange &lt;- rnorm(n, mean=true_effect, sd=sd_change)\n\n# H0: mean change = 4 lbs/d (the claim) HA: mean change != 4\nres &lt;- t.test(change, mu = 4)\nres\n\n\n    One Sample t-test\n\ndata:  change\nt = -3.379, df = 23, p-value = 0.002587\nalternative hypothesis: true mean is not equal to 4\n95 percent confidence interval:\n 1.212550 3.329529\nsample estimates:\nmean of x \n  2.27104 \n\n\n\nThis is a deliberately realistic scenario: lots of biological noise. Ask: even if p&gt;0.05, what is the CI around the effect?"
+    "text": "Code (R)\n\nn &lt;- 24\ntrue_effect &lt;- 2.4     # true mean change (lbs/d)\nsd_change &lt;- 3.0\n\nchange &lt;- rnorm(n, mean=true_effect, sd=sd_change)\n\n# H0: mean change = 4 lbs/d (the claim) HA: mean change != 4\nres &lt;- t.test(change, mu = 4)\nres\n\n\n    One Sample t-test\n\ndata:  change\nt = -1.5803, df = 23, p-value = 0.1277\nalternative hypothesis: true mean is not equal to 4\n95 percent confidence interval:\n 1.314708 4.359369\nsample estimates:\nmean of x \n 2.837038 \n\n\n\nThis is a deliberately realistic scenario: lots of biological noise. Ask: even if p&gt;0.05, what is the CI around the effect?"
   },
   {
     "objectID": "slides/lecture_uncertainty_dairy.html#interpreting-the-result-emphasize-effect-size",
