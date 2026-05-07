@@ -118,54 +118,8 @@ port arguments.
 At least 75% of course content is centered on these competencies, and Learning Outcomes 2,
 3, 4, and 5 explicitly support them.
 
-## Group assessment
+The final grade will be dictated by the evaluation of the project agreement in a final evaluation meeting. It is very important that all students are present during this meeting as peer evaluation is a big component of this. Please fill in the evaluation survey before the final meeting. 
 
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-| Component graded                                                                           | Remark                                                                                                                                                          | Weight      |
-+============================================================================================+=================================================================================================================================================================+=============+
-| Peer evaluation by team members                                                            |                                                                                                                                                                 | 40%         |
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-| Multiple Choice Questions                                                                  |                                                                                                                                                                 | 40%         |
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-| Project                                                                                    |                                                                                                                                                                 | 20%         |
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-
-
-## Individual assessment
-
-**It is very important to read this part as your individual assessments will be influencing your individual gradings.**
-
-At the end of the course you will be evaluated on the % of weekly assignments you have coded correctly in the Dodona framework (which you will learn during the course). That percentage will be multiplied with the overal group project grade, resulting in your final individual grade.
-
-For example:
-
--   The group project was finally graded at 95%
-
--   Student A successfully finished 75% of the coding assignments within each deadline. As a result student A gets 95% x 75% = 71% as the final individual grade.
-
--   Student B successfully finished 100% of the coding assignments within each deadline. As a result student B gets 95% x 100% as the final individual grade.
-
-Finishing each of the assignments within each deadline is not that difficult. You "just" need to devote the time to it. I have used this method a lot during my courses. It is not to annoy students, but to make sure the entire group keeps progressing on the programming skills during the project. You will thank me for that at a certain moment. For full transparency, I learned to code Python using a similar approach. Once I understood why this was done, I started appreciating this method as one of the most inspiring learning methods I have ever seen.
-
-## Final grading scale
-
-| Grade | Low   | High  |
-|:------|:------|:------|
-| A+    | 99.80 | 100.0 |
-| A     | 93.33 | 99.80 |
-| A-    | 90.00 | 93.33 |
-| B+    | 86.66 | 90.00 |
-| B     | 83.33 | 86.66 |
-| B-    | 80.00 | 83.33 |
-| C+    | 76.66 | 80.00 |
-| C     | 73.33 | 76.66 |
-| C-    | 70.00 | 73.33 |
-| D+    | 66.66 | 70.00 |
-| D     | 63.33 | 66.66 |
-| D-    | 60.00 | 63.36 |
-| F     | 0.00  | 60.00 |
-
-Each grade range includes the score on the left, and excludes the score on the right. For example, a 90.0 is an A-, and not a B+. An 89.99 is a B+, not an A-.
 
 # Policies
 
